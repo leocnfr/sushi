@@ -18,7 +18,7 @@
                 <td>{{$product->name}}</td>
                 <td>{{$product->count}}</td>
                 <td>{{$product->price}}</td>
-                <td><img src="{{$product->productImage}}" alt="" style="width: 50px;height: 50px"></td>
+                <td><img src="{{URL::asset('/storage/uploads/'.$product->productImage)}}" alt="" style="width: 50px;height: 50px"></td>
                 <td>
                     <button class="btn btn-danger">删除</button>
                     <a href="{{url('/admin/products/'.$product->id)}}" class="btn btn-default">编辑</a>
