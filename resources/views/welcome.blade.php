@@ -42,4 +42,5 @@
             </div>
         </div>
     </body>
+    <a href="{{/admin/products}}">Admin</a>
 </html>
