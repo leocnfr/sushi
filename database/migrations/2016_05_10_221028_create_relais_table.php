@@ -14,6 +14,9 @@ class CreateRelaisTable extends Migration
     {
         Schema::create('relais', function (Blueprint $table) {
             $table->increments('id');
+            $table->text('name');
+            $table->text('address');
+            $table->text('intro');
             $table->timestamps();
         });
     }
