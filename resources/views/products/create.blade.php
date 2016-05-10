@@ -2,7 +2,7 @@
 @section('page_title','添加产品')
 @section('productactive','active')
 @section('content')
-    <form action="{{url('/admin/product/store')}}" method="post" role="form">
+    <form action="{{url('/admin/product/store')}}" method="post" role="form" enctype="multipart/form-data">
 
     	<div class="form-group">
     		<label for="">产品名称</label>
