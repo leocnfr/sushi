@@ -18,10 +18,14 @@ Route::get('/admin','ProductController@index');
 //Route::get('admin', function () {
 //    return view('admin.admin_template');
 //});
+/**
+ * PRODUCT 产品路由
+ */
 Route::get('/admin/products','ProductController@index');
 Route::get('/admin/products/create','ProductController@create');
 Route::get('/admin/products/{id}','ProductController@edit');
 Route::get('/admin/products/update/','ProductController@update');
+Route::post('/admin/product/store','ProductController@store');
 
 Route::get('/admin/relais','RelaisController@show');
 Route::get('/admin/relais/create','RelaisController@create');

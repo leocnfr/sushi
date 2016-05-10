@@ -31,4 +31,19 @@ class ProductController extends Controller
             file_get_contents($request->file('avatar')->getRealPath())
         );
     }
+
+    public function store(Request $request)
+    {
+        $product= new Product();
+        $product->name=$request->get('name');
+        $product->price=$request->get('price');
+        $product->count=$request->get('count');
+        $product->content=$request->get('intro');
+        $file=$request->file('photo');
+        $request->file('photo')->move(('storage/uploads'),$file->getClientOriginalName());
+        $product->productImage=$file->getClientOriginalName();
+        $product->save();
+
+        return redirect('/admin/products');
+    }
 }
