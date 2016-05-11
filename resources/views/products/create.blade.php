@@ -9,6 +9,14 @@
     		<input type="text" class="form-control" name="name" id="" placeholder="产品名称" required>
     	</div>
         <div class="form-group">
+            <label for="">产品分类</label>
+            <select name="cat" id="inputID" class="form-control" required>
+                @foreach( $cates as $cate)
+                    <option value="{{$cate->id}}">{{$cate->cat_name}}</option>
+                @endforeach
+            </select>
+        </div>
+        <div class="form-group">
             <label for="">产品图片</label>
             <input type="file" class="form-control" name="photo" id="" placeholder="">
         </div>

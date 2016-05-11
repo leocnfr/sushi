@@ -29,3 +29,11 @@ Route::post('/admin/product/store','ProductController@store');
 
 Route::get('/admin/relais','RelaisController@show');
 Route::get('/admin/relais/create','RelaisController@create');
+
+/**
+ *产品分类路由
+ */
+Route::get('/admin/category','CategoryController@show');
+Route::post('/admin/category/update','CategoryController@update');
+Route::post('/admin/category/store','CategoryController@store');
+Route::post('/admin/category/{id}','CategoryController@destroy');

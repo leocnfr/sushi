@@ -13,7 +13,7 @@
             <input type="text" class="form-control" name="address" id="" placeholder="地址">
         </div>
         <div class="form-group">
-            <label for="">Point Relais地址</label>
+            <label for="">Point Relais介绍</label>
             <textarea type="text" class="form-control" name="intro" id="" placeholder="介绍" rows="10"></textarea>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>

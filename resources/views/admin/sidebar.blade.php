@@ -36,6 +36,7 @@
                 <ul class="treeview-menu">
                     <li><a href="{{url("/admin/products")}}">产品列表</a></li>
                     <li><a href="{{url("/admin/products/create")}}">添加产品</a></li>
+                    <li><a href="{{url("/admin/category")}}">产品分类管理</a></li>
                 </ul>
             </li>
             <li class="treeview @yield('relaisactive')">
