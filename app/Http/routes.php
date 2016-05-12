@@ -46,6 +46,6 @@ Route::post('/admin/category/{id}','CategoryController@destroy');
 /**
  * 首页路由
  */
-Route::get('/',function(){
-    return view('app.index');
-});
+//Route::get('/',function(){
+//    return view('app.index');
+//});
