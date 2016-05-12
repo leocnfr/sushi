@@ -16,7 +16,6 @@ class CreateProductsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->integer('price');
-            $table->integer('count');
             $table->text('content');
             $table->text('productImage');
             $table->timestamps();
@@ -31,5 +30,11 @@ class CreateProductsTable extends Migration
     public function down()
     {
         Schema::drop('products');
+    }
+
+    public function update(){
+        Schema::table('products', function ($table) {
+            $table->integer('count');
+        });
     }
 }
