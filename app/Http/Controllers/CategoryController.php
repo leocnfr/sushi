@@ -22,7 +22,7 @@ class CategoryController extends Controller
          $cate=Category::findOrFail($request->get('cat_id'));
          $cate->cat_name=$request->get('cat_name');
          $cate->save();
-        return redirect('/admin/category');
+        return redirect('/admin/category')->with('status','更新成功');
     }
 
     public function store(Request $request)

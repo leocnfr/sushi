@@ -30,7 +30,7 @@
                         <td>{{$cate->cat_name}}</td>
                         <td>
                             <a class="btn btn-info" href="#modal-id" data-toggle="modal" data-whatever="{{$cate->cat_name}}" data-num="{{$cate->id}}">编辑</a>
-                            <button class="btn btn-danger" id="del" type="submit">删除</button>
+                            <button class="btn btn-danger" id="del" type="submit" onclick="return confirm('确定删除')">删除</button>
                             {!! csrf_field() !!}
                         </td>
                 </form>
@@ -38,6 +38,13 @@
             @endforeach
     	</tbody>
     </table>
+    @if(session('status'))
+        <div class="alert alert-success">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            {{session('status')}}
+        </div>
+    @endif
+
     <div class="modal fade" id="modal-id">
     	<div class="modal-dialog">
     		<div class="modal-content">

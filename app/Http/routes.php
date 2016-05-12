@@ -24,9 +24,13 @@ Route::get('/admin','ProductController@index');
 Route::get('/admin/products','ProductController@index');
 Route::get('/admin/products/create','ProductController@create');
 Route::get('/admin/products/{id}','ProductController@edit');
-Route::get('/admin/products/update/','ProductController@update');
+Route::put('/admin/product/update/','ProductController@update');
 Route::post('/admin/product/store','ProductController@store');
+Route::delete('/admin/product/delete','ProductController@delete');
 
+/**
+ * point relais路由
+ */
 Route::get('/admin/relais','RelaisController@show');
 Route::get('/admin/relais/create','RelaisController@create');
 
@@ -37,3 +41,11 @@ Route::get('/admin/category','CategoryController@show');
 Route::post('/admin/category/update','CategoryController@update');
 Route::post('/admin/category/store','CategoryController@store');
 Route::post('/admin/category/{id}','CategoryController@destroy');
+
+
+/**
+ * 首页路由
+ */
+Route::get('/',function(){
+    return view('app.index');
+});

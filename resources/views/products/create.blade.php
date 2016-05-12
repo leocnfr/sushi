@@ -17,8 +17,12 @@
             </select>
         </div>
         <div class="form-group">
+            <label for="">产品数量</label>
+            <input type="number" class="form-control" name="count" id="" placeholder="piece">
+        </div>
+        <div class="form-group">
             <label for="">产品图片</label>
-            <input type="file" class="form-control" name="photo" id="" placeholder="">
+            <input type="file" class="form-control" name="photo" id="" placeholder="" required>
         </div>
         <div class="form-group">
             <label for="">产品价格</label>

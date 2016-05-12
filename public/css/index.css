@@ -1,0 +1,67 @@
+/*头部样式*/
+.navbar{
+    background: black;
+    border-radius: 0px;
+    height: 134px;
+    margin: 0px;
+    border: 1px;
+    width: 100%;
+}
+.nav.navbar-nav{
+    position: relative;
+    top: 46px;
+}
+.nav.navbar-nav li{
+    padding: 0px 35px;
+}
+.nav.navbar-nav li a
+{
+    color: #BAAA76;
+    font-size: 20px;
+    font-weight: bold;
+}
+.nav.navbar-nav li a:hover{
+    background: black;
+}
+.nav.navbar-nav li a:focus{
+    background: black;
+}
+.nav.navbar-nav li:nth-of-type(2)
+{
+    border-left: 1px solid #BAAA76;
+    border-right: 1px solid #BAAA76;
+
+}
+
+.nav.navbar-nav li:nth-of-type(3)
+{
+    border-right: 1px solid #BAAA76;
+}
+.nav.navbar-nav.navbar-right{
+    top: 55px;
+    width: 240px;
+    margin: 0;
+}
+
+/*首页*/
+.carousel-inner img
+{
+    width: 100%;
+}
+.carousel-inner > .item{
+height: 501px;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus
+{
+    color: #BAAA76;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a
+{
+    font-size: 18px;
+    font-weight: bold;
+    color: #BAAA76;
+}
+.nav.navbar-nav.navbar-foot  li{
+
+    padding: 0px 15px;
+}
