@@ -38,7 +38,7 @@ class NewsController extends Controller
     public function edit($id)
     {
         $news=News::findOrFail($id);
-        return view('news.edit',compact('news','test'));
+        return view('news.edit',compact('news'));
     }
 
     public function destroy(Request $request)
@@ -46,5 +46,17 @@ class NewsController extends Controller
         $id=$request->get('id');
         News::destroy($id);
         return redirect()->back();
+    }
+
+    public function update($id)
+    {
+        $news=News::findOrFail($id);
+        return view('news.update',compact('news'));
+    }
+
+    public function storeUpdate(Request $request)
+    {
+        News::findOrFail($request->get('id'))->update($request->all());
+        return redirect('/admin/news/'.$request->get('id'));
     }
 }
