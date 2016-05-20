@@ -52,7 +52,7 @@ Route::post('/admin/category/{id}','CategoryController@destroy');
 Route::get('/admin/news/create','NewsController@create');
 Route::get('/admin/news/{id}','NewsController@edit');
 Route::get('/admin/news/edit/{id}','NewsController@update');
-Route::get('/admin/news','NewsController@show');
+Route::get('/admin/news{name?}','NewsController@show');
 Route::post('/admin/news/create','NewsController@store');
 Route::post('/admin/news/uploadImg','NewsController@upload');
 Route::post('/admin/news/destroy','NewsController@destroy');

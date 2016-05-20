@@ -12,9 +12,8 @@ class CategoryController extends Controller
     //
     public function show()
     {
-        $cates= Category::all();
-        $index=1;
-        return view('category.category',compact('cates','index'));
+        $cates= Category::latest()->paginate(10);
+        return view('category.category',compact('cates'));
     }
 
     public function update(Request $request)

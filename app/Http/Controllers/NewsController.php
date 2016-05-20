@@ -31,7 +31,7 @@ class NewsController extends Controller
 
     public function show()
     {
-       $news =  News::all();
+        $news =  News::latest()->paginate(10);
         return view('news.show',compact('news'));
     }
 
