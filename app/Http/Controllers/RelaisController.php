@@ -23,10 +23,9 @@ class RelaisController extends Controller
     public function insert(Request $request)
     {
 
-        $relais = new Relais();
         $data=$request->all();
-        $relais->create($data);
-        return view('pointrelais.relais');
+        Relais::create($data);
+        return redirect('admin/relais');
     }
 
     public function destroy(Request $request)
