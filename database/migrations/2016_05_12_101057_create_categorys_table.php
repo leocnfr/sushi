@@ -16,6 +16,7 @@ class CreateCategorysTable extends Migration
             $table->increments('id');
             $table->text('cat_name');
             $table->timestamps();
+
         });
     }
 

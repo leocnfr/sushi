@@ -21,6 +21,10 @@ class CreateProductsTable extends Migration
             $table->text('content');
             $table->text('productImage');
             $table->timestamps();
+            $table->foreign('cat_id')
+                ->references('id')->on('categorys')
+                ->onDelete('cascade');
+
         });
     }
 
