@@ -30,7 +30,7 @@
         </div>
         <div class="form-group">
             <label for="">产品介绍</label>
-            <textarea type="text" class="form-control" name="intro" id="" placeholder="产品介绍" rows="10" required></textarea>
+            <textarea type="text" class="form-control" name="intro" id="" placeholder="产品介绍" rows="10" ></textarea>
         </div>
         {!! csrf_field() !!}
         <button type="submit" class="btn btn-primary">Submit</button>
