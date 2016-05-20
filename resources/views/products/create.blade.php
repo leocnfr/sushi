@@ -10,7 +10,7 @@
     	</div>
         <div class="form-group">
             <label for="">产品分类</label>
-            <select name="cat" id="inputID" class="form-control" required>
+            <select name="cat_id" id="inputID" class="form-control" required>
                 @foreach( $cates as $cate)
                     <option value="{{$cate->id}}">{{$cate->cat_name}}</option>
                 @endforeach
@@ -22,7 +22,7 @@
         </div>
         <div class="form-group">
             <label for="">产品图片</label>
-            <input type="file" class="form-control" name="photo" id="" placeholder="" required>
+            <input type="file" class="form-control" name="productImage" id="" placeholder="" required>
         </div>
         <div class="form-group">
             <label for="">产品价格</label>

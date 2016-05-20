@@ -39,7 +39,6 @@ class ProductController extends Controller
             $file=$request->file('photo');
             $request->file('photo')->move(('storage/uploads'),$file->getClientOriginalName());
             $product->productImage=$file->getClientOriginalName();
-            unlink('storage/uploads/'.$product->productImage);
         }
         $product->save();
         return redirect()->back()->with('status','更新成功');
@@ -53,8 +52,9 @@ class ProductController extends Controller
         $product->price=$request->get('price');
         $product->content=$request->get('intro');
         $product->count=$request->get('count');
-        $file=$request->file('photo');
-        $request->file('photo')->move(('storage/uploads'),$file->getClientOriginalName());
+        $product->cat_id=$request->get('cat_id');
+        $file=$request->file('productImage');
+        $request->file('productImage')->move(('storage/uploads'),$file->getClientOriginalName());
         $product->productImage=$file->getClientOriginalName();
         $product->save();
         return redirect('/admin/products');

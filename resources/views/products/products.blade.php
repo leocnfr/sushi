@@ -9,6 +9,7 @@
                 <th>数量</th>
                 <th>价格</th>
                 <th>图片</th>
+                <th>产品类别</th>
                 <th>操作</th>
     		</tr>
     	</thead>
@@ -20,6 +21,7 @@
                 <td>{{$product->count}}</td>
                 <td>{{$product->price}}</td>
                 <td><img src="{{URL::asset('/storage/uploads/'.$product->productImage)}}" alt="" style="width: 50px;height: 50px"></td>
+                <td>{{$product->category->cat_name}}</td>
                 <td>
                     <input type="hidden" name="_method" value="DELETE">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
