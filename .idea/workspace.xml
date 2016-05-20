@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="757db07e-5d4b-47ff-a67a-dd6a19559214" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2016_05_12_090103_create_products_table.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2016_05_20_143706_create_products_table.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="sushi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -84,11 +85,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2016_05_20_143706_create_products_table.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2016_05_20_143706_create_products_table.php">
+      <file leaf-file-name="2016_05_20_144029_create_products_table.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2016_05_20_144029_create_products_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8102767">
-              <caret line="21" column="30" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.8735178">
+              <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -141,7 +142,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/resources/views/admin/products.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/products/edit.balde.php" />
@@ -192,6 +192,7 @@
         <option value="$PROJECT_DIR$/resources/views/products/products.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_05_20_143706_create_products_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2016_05_20_144029_create_products_table.php" />
       </list>
     </option>
   </component>
@@ -928,10 +929,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2016_05_20_143706_create_products_table.php">
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_05_20_144029_create_products_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8102767">
-          <caret line="21" column="30" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.8735178">
+          <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
           <folding />
         </state>
       </provider>
