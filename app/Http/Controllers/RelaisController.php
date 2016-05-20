@@ -13,20 +13,38 @@ class RelaisController extends Controller
     //
     public  function show()
     {
-        return view('pointrelais.relais');
+        $relais=Relais::showAll();
+        return view('pointrelais.relais',compact('relais'));
     }
     public function create()
     {
         return view('pointrelais.create');
     }
-    public function insert(Request $request){
-//        $validator=Validator::make($request->all())
-        $pointRelais= new Relais();
-        $pointRelais->name=$request->name;
-        $pointRelais->address=$request->address;
-        $pointRelais->intro=$request->intro;
-        $pointRelais->save();
-        dd($request);
+    public function insert(Request $request)
+    {
 
+        $relais = new Relais();
+        $data=$request->all();
+        $relais->create($data);
+        return view('pointrelais.relais');
+    }
+
+    public function destroy(Request $request)
+    {
+        $id=$request->id;
+        Relais::delRelais($id);
+        return redirect()->back();
+    }
+
+    public function edit($id)
+    {
+        $relais=Relais::findOrFail($id);
+        return view('pointrelais.edit',compact('relais'));
+    }
+
+    public function update(Request $request)
+    {
+          Relais::updateRelais($request->id,$request->all());
+          return redirect()->back();
     }
 }

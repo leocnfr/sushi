@@ -46,6 +46,13 @@
                     <li><a href="{{url("/admin/relais/create")}}">添加Poin Realis</a></li>
                 </ul>
             </li>
+            <li class="treeview @yield('newsactive')">
+                <a href="#"><span>新闻活动</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <ul class="treeview-menu">
+                    <li><a href="{{url("/admin/news")}}">文章列表</a></li>
+                    <li><a href="{{url("/admin/news/create")}}">添加文章</a></li>
+                </ul>
+            </li>
             {{--<li><a href="#"><span>Another Link</span></a></li>--}}
 
         </ul><!-- /.sidebar-menu -->

@@ -31,8 +31,12 @@ Route::delete('/admin/product/delete','ProductController@delete');
 /**
  * point relais路由
  */
-Route::get('/admin/relais','RelaisController@show');
 Route::get('/admin/relais/create','RelaisController@create');
+Route::get('/admin/relais/{id}','RelaisController@edit');
+Route::get('/admin/relais','RelaisController@show');
+Route::post('/admin/relais/create','RelaisController@insert');
+Route::post('/admin/relais/destroy','RelaisController@destroy');
+Route::post('/admin/relais/{id}','RelaisController@update');
 
 /**
  *产品分类路由
@@ -42,6 +46,15 @@ Route::post('/admin/category/update','CategoryController@update');
 Route::post('/admin/category/store','CategoryController@store');
 Route::post('/admin/category/{id}','CategoryController@destroy');
 
+/**
+ * 新闻活动
+ */
+Route::get('/admin/news/create','NewsController@create');
+Route::get('/admin/news/{id}','NewsController@edit');
+Route::get('/admin/news','NewsController@show');
+Route::post('/admin/news/create','NewsController@store');
+Route::post('/admin/news/uploadImg','NewsController@upload');
+Route::post('/admin/news/destroy','NewsController@destroy');
 
 /**
  * 首页路由
