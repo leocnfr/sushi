@@ -20,7 +20,7 @@
             <tr>
                 <td>{{$product->name}}</td>
                 <td>{{$product->count}}</td>
-                <td>{{$product->price}}</td>
+                <td>{{number_format($product->price,2)}}</td>
                 <td><img src="{{URL::asset('/storage/uploads/'.$product->productImage)}}" alt="" style="width: 50px;height: 50px"></td>
                 <td>
                     @if(!empty($product->category->cat_name))
