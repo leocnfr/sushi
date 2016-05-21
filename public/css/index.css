@@ -1,3 +1,12 @@
+/*字体*/
+@font-face {
+    font-family: "Corbel";
+    /*src: url('/public/fonts/Corbel.ttf');*/
+    src: url("URL::asset('fonts/Corbel.ttf')");
+}
+html{
+    font-family: Corbel;
+}
 /*头部样式*/
 .navbar{
     background: black;

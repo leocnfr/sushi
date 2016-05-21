@@ -26,7 +26,7 @@
         </div>
         <div class="form-group">
             <label for="">产品价格</label>
-            <input type="number" class="form-control" name="price" id="" placeholder="产品价格">
+            <input type="number" class="form-control" name="price" id="" placeholder="产品价格" step="0.1">
         </div>
         <div class="form-group">
             <label for="">产品介绍</label>

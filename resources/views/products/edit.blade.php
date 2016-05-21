@@ -27,7 +27,7 @@
     </div>
     <div class="form-group">
         <label for="">产品价格</label>
-        <input type="text" class="form-control" name="price" id="" placeholder="产品价格" value="{{$product->price}}">
+        <input type="number" class="form-control" name="price" id="" placeholder="产品价格" value="{{$product->price}}" step="0.1">
     </div>
     <div class="form-group">
         <label for="">产品介绍</label>
