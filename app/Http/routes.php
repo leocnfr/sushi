@@ -21,7 +21,7 @@ Route::get('/admin','ProductController@index');
 /**
  * PRODUCT 产品路由
  */
-Route::get('/admin/products','ProductController@index');
+Route::get('/admin/products{cateBy?}','ProductController@index');
 Route::get('/admin/products/create','ProductController@create');
 Route::get('/admin/products/{id}','ProductController@edit');
 Route::put('/admin/product/update/','ProductController@update');

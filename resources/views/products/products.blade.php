@@ -12,6 +12,22 @@
                 <th>产品类别</th>
                 <th>创建时间</th>
                 <th>操作</th>
+                <th>
+                    <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            按分类查看
+                            <span class="caret"></span>
+                        </button>
+                        @if(count($cates)>0)
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                @foreach($cates as $cate)
+                                    <li><a href="{{url('admin/products?cateBy='.$cate->cat_name)}}">{{$cate->cat_name}}</a></li>
+                                @endforeach
+                            </ul>
+                        @endif
+
+                    </div>
+                </th>
     		</tr>
     	</thead>
     	<tbody>

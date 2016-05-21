@@ -16,9 +16,30 @@
             font-weight: bold;
             font-size: 16px;
         }
+        .item>img{
+            display: block;
+            margin: 0px auto;
+        }
         #content
         {
-            background: ;
+            color: #BAAA76;
+        }
+        .button-ajouter
+        {
+            background: grey;
+            border-radius: 10px;
+            color: white;
+            display: block;
+            margin: 0px auto;
+        }
+        #sidebar>li:not(:last-child)
+        {
+            border-bottom: 1px solid #BAAA76;
+        }
+        .col-md-4.item:nth-of-type(2n)
+        {
+            border-left: 1px solid #BAAA76;
+            border-right: 1px solid #BAAA76;
         }
     </style>
     <div class="container-fluid " style="padding:0 ">
@@ -54,23 +75,26 @@
         </ul>
         <div id="content" class="col-md-8" style="background: rgba(0,0,0,0.2);width: 788px">
 
-            <div class="col-md-4">
+            <div class="col-md-4 item">
                 <img src="{{URL::asset('images/menu-saumon-xl.png')}}" alt="" style="width: 152px;height: 117px;">
                   <p>MENU LUNCH A</p>
                     <span>12 piece</span>
                     <span class="pull-right">15.90€</span>
+                    <button class="button-ajouter">AJOUTER<span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 item">
                 <img src="{{URL::asset('images/menu-saumon-xl.png')}}" alt="" style="width: 152px;height: 117px;">
                 <p>MENU LUNCH A</p>
-                    <span>12 piece</span>
-                    <span class="pull-right">15.90€</span>
+                <span>12 piece</span>
+                <span class="pull-right">15.90€</span>
+                <button class="button-ajouter">AJOUTER<span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 item">
                 <img src="{{URL::asset('images/menu-saumon-xl.png')}}" alt="" style="width: 152px;height: 117px;">
                 <p>MENU LUNCH A</p>
-                    <span>12 piece</span>
-                    <span class="pull-right">15.90€</span>
+                <span>12 piece</span>
+                <span class="pull-right">15.90€</span>
+                <button class="button-ajouter">AJOUTER<span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
             </div>
         </div>
         <div class="col-md-2" style="background: rgba(0,0,0,0.2);margin-left: 18px;text-align: center;color: #BAAA76;width: 223px">

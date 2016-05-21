@@ -12,10 +12,17 @@ use Illuminate\Support\Facades\DB;
 class ProductController extends Controller
 {
     //显示产品
-    public function index()
+    public function index(Request $request)
     {
-        $products=Product::latest()->paginate(10);
-        return view('products.products',compact('products'));
+        if($request->get('cateBy'))
+        {
+            $cate=Category::where('cat_name',$request->get('cateBy'))->first();
+            $products=Product::where('cat_id',$cate->id)->latest()->paginate(10);
+        }else{
+            $products=Product::latest()->paginate(10);
+        }
+        $cates=Category::all();
+        return view('products.products',compact('products','cates'));
     }
     //显示创建产品页面
     public function create(){
