@@ -70,6 +70,11 @@ height: 501px;
     font-weight: bold;
     color: #BAAA76;
 }
+.navbar.navbar-default.navbar-foot
+{
+
+    bottom: 0px;
+}
 .nav.navbar-nav.navbar-foot  li{
 
     padding: 0px 15px;

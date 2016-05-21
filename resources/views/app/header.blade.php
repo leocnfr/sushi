@@ -4,7 +4,7 @@
     </a>
 	<ul class="nav navbar-nav">
 		<li class="active">
-			<a href="#">MENU</a>
+			<a href="{{url('/menus')}}">MENU</a>
 		</li>
 		<li>
 			<a href="#">PROMOTION</a>

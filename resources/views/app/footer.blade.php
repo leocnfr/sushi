@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default " role="navigation">
+<nav class="navbar navbar-default navbar-foot" role="navigation">
 	<ul class="nav navbar-nav navbar-foot">
 		<li>
 			<a href="#">CONTACTEZ-NOUS</a>

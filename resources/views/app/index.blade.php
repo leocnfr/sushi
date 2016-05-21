@@ -11,13 +11,12 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <img src="{{URL::asset('images/compte-01.png')}}" alt="...">
+                <img src="{{URL::asset('images/show1.jpg')}}" alt="...">
                 <div class="carousel-caption">
-                    ...
                 </div>
             </div>
             <div class="item">
-                <img src="{{URL::asset('images/shopping-01.png')}}" alt="...">
+                <img src="{{URL::asset('images/show1.jpg')}}" alt="...">
                 <div class="carousel-caption">
                     ...
                 </div>

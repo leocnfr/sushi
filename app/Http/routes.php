@@ -61,6 +61,14 @@ Route::post('/admin/news/edit/{id}','NewsController@storeUpdate');
 /**
  * 首页路由
  */
-Route::get('/',function(){
+Route::get('/show',function(){
     return view('app.index');
+});
+
+/*
+ * menu展示
+ */
+
+Route::get('/menus',function(){
+   return view('app.menus');
 });
