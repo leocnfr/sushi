@@ -56,5 +56,8 @@
         @endforeach
     	</tbody>
     </table>
-    {!! $products->render() !!}
+    @if(isset($_REQUEST['cateBy']))
+        @else
+        {!! $products->render() !!}
+    @endif
 @endsection
