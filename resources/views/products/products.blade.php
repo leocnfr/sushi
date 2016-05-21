@@ -20,6 +20,7 @@
                         </button>
                         @if(count($cates)>0)
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <li><a href="{{url('admin/products')}}">所有产品</a></li>
                                 @foreach($cates as $cate)
                                     <li><a href="{{url('admin/products?cateBy='.$cate->cat_name)}}">{{$cate->cat_name}}</a></li>
                                 @endforeach
