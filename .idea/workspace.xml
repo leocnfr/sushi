@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="757db07e-5d4b-47ff-a67a-dd6a19559214" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/app/menus.blade.php" afterPath="$PROJECT_DIR$/resources/views/app/menus.blade.php" />
     </list>
     <ignored path="sushi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,12 +26,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="routes.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.17460318">
-              <caret line="66" column="39" selection-start-line="66" selection-start-column="39" selection-end-line="66" selection-end-column="39" />
+            <state vertical-scroll-proportion="-14.068966">
+              <caret line="76" column="45" selection-start-line="76" selection-start-column="45" selection-end-line="76" selection-end-column="45" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="menus.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/app/menus.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.63492066">
+              <caret line="130" column="67" selection-start-line="130" selection-start-column="67" selection-end-line="130" selection-end-column="67" />
+              <folding>
+                <element signature="e#1851#1887#0#HTML" expanded="true" />
+                <element signature="e#2096#2129#0#HTML" expanded="true" />
+                <element signature="e#2313#2346#0#HTML" expanded="true" />
+                <element signature="e#2530#2563#0#HTML" expanded="true" />
+                <element signature="e#2747#2780#0#HTML" expanded="true" />
+                <element signature="e#2964#2997#0#HTML" expanded="true" />
+                <element signature="e#3181#3214#0#HTML" expanded="true" />
+                <element signature="e#3398#3431#0#HTML" expanded="true" />
+                <element signature="e#3508#3559#0#HTML" expanded="true" />
+                <element signature="e#5074#5115#0#HTML" expanded="true" />
+                <element signature="e#5153#5176#0#HTML" expanded="true" />
+                <element signature="e#5216#5280#0#HTML" expanded="true" />
+                <element signature="e#5390#5422#0#HTML" expanded="true" />
+                <element signature="e#5553#5576#0#HTML" expanded="true" />
+                <element signature="e#5631#5658#0#HTML" expanded="true" />
+                <element signature="e#5682#5724#0#HTML" expanded="true" />
+                <element signature="e#5757#5780#0#HTML" expanded="true" />
+                <element signature="e#5817#5840#0#HTML" expanded="true" />
+                <element signature="e#5870#5893#0#HTML" expanded="true" />
+                <element signature="e#5944#5964#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -60,7 +93,7 @@
       <file leaf-file-name="header.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/app/header.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.137931">
+            <state vertical-scroll-proportion="-28.413794">
               <caret line="44" column="14" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#!!top" expanded="true" />
@@ -171,7 +204,6 @@
         <option value="$PROJECT_DIR$/resources/views/products/create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/app/footer.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/app/app_template.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/app/menus.blade.php" />
         <option value="$PROJECT_DIR$/app/Category.php" />
         <option value="$PROJECT_DIR$/resources/views/products/products.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/test.blade.php" />
@@ -184,6 +216,7 @@
         <option value="$PROJECT_DIR$/resources/views/app/header.blade.php" />
         <option value="$PROJECT_DIR$/public/css/index.css" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/resources/views/app/menus.blade.php" />
       </list>
     </option>
   </component>
@@ -246,6 +279,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="sushi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sushi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sushi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sushi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sushi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -696,28 +769,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/app/menus.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11316397">
-          <caret line="38" column="17" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
-          <folding>
-            <element signature="e#1009#1027#0#HTML" expanded="true" />
-            <element signature="e#1228#1261#0#HTML" expanded="true" />
-            <element signature="e#1437#1471#0#HTML" expanded="true" />
-            <element signature="e#1647#1681#0#HTML" expanded="true" />
-            <element signature="e#1857#1891#0#HTML" expanded="true" />
-            <element signature="e#2067#2101#0#HTML" expanded="true" />
-            <element signature="e#2277#2311#0#HTML" expanded="true" />
-            <element signature="e#2487#2521#0#HTML" expanded="true" />
-            <element signature="e#2598#2646#0#HTML" expanded="true" />
-            <element signature="e#2767#2802#0#HTML" expanded="true" />
-            <element signature="e#3213#3248#0#HTML" expanded="true" />
-            <element signature="e#3645#3680#0#HTML" expanded="true" />
-            <element signature="e#4004#4104#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.073903">
@@ -854,9 +905,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.103448">
+          <caret line="60" column="14" selection-start-line="60" selection-start-column="14" selection-end-line="60" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.068966">
+          <caret line="76" column="45" selection-start-line="76" selection-start-column="45" selection-end-line="76" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/app/header.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.137931">
+        <state vertical-scroll-proportion="-28.413794">
           <caret line="44" column="14" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
           <folding>
             <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#!!top" expanded="true" />
@@ -869,19 +936,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/index.css">
+    <entry file="file://$PROJECT_DIR$/resources/views/app/menus.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.103448">
-          <caret line="60" column="14" selection-start-line="60" selection-start-column="14" selection-end-line="60" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17460318">
-          <caret line="66" column="39" selection-start-line="66" selection-start-column="39" selection-end-line="66" selection-end-column="39" />
-          <folding />
+        <state vertical-scroll-proportion="0.63492066">
+          <caret line="130" column="67" selection-start-line="130" selection-start-column="67" selection-end-line="130" selection-end-column="67" />
+          <folding>
+            <element signature="e#1851#1887#0#HTML" expanded="true" />
+            <element signature="e#2096#2129#0#HTML" expanded="true" />
+            <element signature="e#2313#2346#0#HTML" expanded="true" />
+            <element signature="e#2530#2563#0#HTML" expanded="true" />
+            <element signature="e#2747#2780#0#HTML" expanded="true" />
+            <element signature="e#2964#2997#0#HTML" expanded="true" />
+            <element signature="e#3181#3214#0#HTML" expanded="true" />
+            <element signature="e#3398#3431#0#HTML" expanded="true" />
+            <element signature="e#3508#3559#0#HTML" expanded="true" />
+            <element signature="e#5074#5115#0#HTML" expanded="true" />
+            <element signature="e#5153#5176#0#HTML" expanded="true" />
+            <element signature="e#5216#5280#0#HTML" expanded="true" />
+            <element signature="e#5390#5422#0#HTML" expanded="true" />
+            <element signature="e#5553#5576#0#HTML" expanded="true" />
+            <element signature="e#5631#5658#0#HTML" expanded="true" />
+            <element signature="e#5682#5724#0#HTML" expanded="true" />
+            <element signature="e#5757#5780#0#HTML" expanded="true" />
+            <element signature="e#5817#5840#0#HTML" expanded="true" />
+            <element signature="e#5870#5893#0#HTML" expanded="true" />
+            <element signature="e#5944#5964#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -73,7 +73,8 @@ Route::get('/show',function(){
  */
 
 Route::get('/menus',function(){
-   return view('app.menus');
+    $products=Product::groupBy('cat_id')->orderBy('cat_id','desc')->get();
+    return view('app.menus',compact('products'));
 });
 
 Route::get('/test',function(){
