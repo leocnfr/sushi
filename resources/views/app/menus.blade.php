@@ -75,34 +75,12 @@
     </style>
     <div class="container-fluid " style="padding:0;background: black ">
         <ul id="sidebar" class="col-md-2">
-            <li class="sidebar-item list-unstyled">
-                <p>MENU LUNCH</p>
-                <img src="{{URL::asset('images/menu-saumon-xl.png')}}" alt="" style="width: 119px;height: 68px">
-            </li>
-            <li class="sidebar-item list-unstyled">
-                <p>MENU LUNCH</p>
-                <img src="{{URL::asset('images/menu-saumon-xl.png')}}" alt="" style="width: 119px;height: 68px">
-            </li>
-            <li class="sidebar-item list-unstyled">
-                <p>MENU LUNCH</p>
-                <img src="{{URL::asset('images/menu-saumon-xl.png')}}" alt="" style="width: 119px;height: 68px">
-            </li>
-            <li class="sidebar-item list-unstyled">
-                <p>MENU LUNCH</p>
-                <img src="{{URL::asset('images/menu-saumon-xl.png')}}" alt="" style="width: 119px;height: 68px">
-            </li>
-            <li class="sidebar-item list-unstyled">
-                <p>MENU LUNCH</p>
-                <img src="{{URL::asset('images/menu-saumon-xl.png')}}" alt="" style="width: 119px;height: 68px">
-            </li>
-            <li class="sidebar-item list-unstyled">
-                <p>MENU LUNCH</p>
-                <img src="{{URL::asset('images/menu-saumon-xl.png')}}" alt="" style="width: 119px;height: 68px">
-            </li>
-            <li class="sidebar-item list-unstyled">
-                <p>MENU LUNCH</p>
-                <img src="{{URL::asset('images/menu-saumon-xl.png')}}" alt="" style="width: 119px;height: 68px">
-            </li>
+            @foreach($products as $key=>$product)
+                <li class="sidebar-item list-unstyled">
+                    <p>{{$product->category->cat_name}}</p>
+                    <img src="{{URL::asset('/storage/uploads/'.$product->productImage)}}" alt="{{$product->category->cat_name}}" style="width: 119px;height: 68px">
+                </li>
+            @endforeach
         </ul>
         <div id="content" class="col-md-8" style="background: rgba(94,93,91,0.4);width: 788px">
 
