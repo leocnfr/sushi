@@ -42,16 +42,16 @@
 </div>
 <script>
     $('#show-drop-bar').hover(function () {
-        $('ul#drop-bar').stop().fadeIn(500);
+        $('div#drop-bar').stop().fadeIn(500);
 
     }, function () {
-        $('ul#drop-bar').stop().fadeOut(500);
+        $('div#drop-bar').stop().fadeOut(500);
     });
-    $('ul#drop-bar').hover(function () {
-        $('ul#drop-bar').stop().fadeIn(500);
+    $('div#drop-bar').hover(function () {
+        $('div#drop-bar').stop().fadeIn(500);
 
     }, function () {
-        $('ul#drop-bar').stop().fadeOut(500);
+        $('div#drop-bar').stop().fadeOut(500);
     });
     $('.drop-bar-item').hover(function () {
         var index = $(".drop-bar-item").index(this);
