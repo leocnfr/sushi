@@ -42,26 +42,18 @@
     <script>
         function initMap() {
             var geocoder = new google.maps.Geocoder();
-            var myLatLng = [
-                {lat: 50.6310465, lng: 2.9771208},
-                {lat: 51.6310465, lng: 2.8771208}
-
-            ];
+            var myLatLng = {lat: 50.6310465, lng: 2.9771208};
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 9,
                 center: {lat: 50.6310465, lng: 2.9771208}
             });
-            var bounds = map.getBounds();
-             var southWest = bounds.getSouthWest();
-           var northEast = bounds.getNorthEast();
-             var lngSpan = northEast.lng() - southWest.lng();
-        var latSpan = northEast.lat() - southWest.lat();
-            for (var i = 0; i < 10; i++)
-            {
-                var point = new GLatLng(southWest.lat() + latSpan * Math.random(),
-                        southWest.lng() + lngSpan * Math.random());
-                map.addOverlay(new GMarker(point));
-            }
+            var image='/images/position-icon.png';
+            var marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                title: 'Hello World!',
+                icon:image
+            });
         }
         initMap();
     </script>
