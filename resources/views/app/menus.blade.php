@@ -24,6 +24,10 @@
             margin: 0px auto;
             cursor: pointer;
         }
+        .item>a{
+            cursor: pointer;
+
+        }
         #content
         {
             color: #BAAA76;
@@ -135,7 +139,10 @@
                 <div class="row item-list">
                     @foreach($chunk as $item)
                     <div class="col-md-4 item" >
-                        <img src="{{URL::asset('/storage/uploads/'.$item->productImage)}}" alt="" style="width: 152px;height: 117px;">
+                        <a  data-toggle="modal" data-target="#exampleModal" data-name="{{$item->name}}" data-count="{{$item->count}}" data-price="{{$item->price}}" data-content="{{$item->content}}">
+                            <img src="{{URL::asset('/storage/uploads/'.$item->productImage)}}" alt="" style="width: 152px;height: 117px;">
+                        </a>
+
                         <p>{{$item->name}}</p>
                         <span>{{$item->count}} piece</span>
                         <span class="pull-right">{{$item->price}}€</span>
@@ -172,4 +179,5 @@
             </aside>
         </div>
     </div>
+    @include('app.modal')
 @endsection
