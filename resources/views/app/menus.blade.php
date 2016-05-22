@@ -100,6 +100,9 @@
             border-right: 15px solid rgba(94,93,91,0.4);
             border-bottom: 15px solid transparent;
         }
+        .fa-plus-circle{
+            margin-left: 5px;
+        }
     </style>
     <div class="container-fluid " style="padding:0;background: black ">
         <ul id="sidebar" class="col-md-2">
@@ -119,21 +122,21 @@
                   <p>MENU LUNCH A</p>
                     <span>12 piece</span>
                     <span class="pull-right">15.90€</span>
-                    <button class="button-ajouter">AJOUTER<span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+                <button class="button-ajouter">AJOUTER<i class="fa fa-plus-circle" aria-hidden="true"></i></button>
             </div>
             <div class="col-md-4 item">
                 <img src="{{URL::asset('images/menu-saumon-xl.png')}}" alt="" style="width: 152px;height: 117px;">
                 <p>MENU LUNCH A</p>
                 <span>12 piece</span>
                 <span class="pull-right">15.90€</span>
-                <button class="button-ajouter">AJOUTER<span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+                <button class="button-ajouter">AJOUTER<i class="fa fa-plus-circle" aria-hidden="true"></i></button>
             </div>
             <div class="col-md-4 item">
                 <img src="{{URL::asset('images/menu-saumon-xl.png')}}" alt="" style="width: 152px;height: 117px;">
                 <p>MENU LUNCH A</p>
                 <span>12 piece</span>
                 <span class="pull-right">15.90€</span>
-                <button class="button-ajouter">AJOUTER<span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+                <button class="button-ajouter">AJOUTER<i class="fa fa-plus-circle" aria-hidden="true"></i></button>
             </div>
         </div>
         <div class="col-md-2" style="background: rgba(94,93,91,0.4);margin-left: 18px;text-align: center;color: #BAAA76;width: 250px;padding: 0px">
