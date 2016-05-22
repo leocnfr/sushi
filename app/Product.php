@@ -17,4 +17,9 @@ class Product extends Model
         return $this->belongsTo('App\Category','cat_id');
     }
 
+    public static function showAll()
+    {
+        return Product::all();
+    }
+
 }

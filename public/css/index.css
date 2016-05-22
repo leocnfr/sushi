@@ -2,10 +2,10 @@
 @font-face {
     font-family: "Corbel";
     /*src: url('/public/fonts/Corbel.ttf');*/
-    src: url("URL::asset('fonts/Corbel.ttf')");
+    src: url('/fonts/Corbel.ttf');
 }
-html{
-    font-family: Corbel;
+body{
+    font-family:Corbel;
 }
 /*头部样式*/
 .navbar{
@@ -16,9 +16,16 @@ html{
     border: 1px;
     width: 100%;
 }
+.navbar-brand
+{
+    left: 89px;
+    position: relative;
+    top:7.5px;
+}
 .nav.navbar-nav{
     position: relative;
-    top: 46px;
+    height: 100%;
+    padding-top: 72px;
 }
 .nav.navbar-nav li{
     padding: 0px 35px;
@@ -28,6 +35,10 @@ html{
     color: #BAAA76;
     font-size: 20px;
     font-weight: bold;
+    padding: 0px;
+    margin: 0px;
+    line-height: 36px;
+    height: 36px;
 }
 .nav.navbar-nav li a:hover{
     background: black;
@@ -47,7 +58,7 @@ html{
     border-right: 1px solid #BAAA76;
 }
 .nav.navbar-nav.navbar-right{
-    top: 55px;
+    top: 72px;
     width: 240px;
     margin: 0;
 }
@@ -56,9 +67,10 @@ html{
 .carousel-inner img
 {
     width: 100%;
+    height: 100%;
 }
 .carousel-inner > .item{
-height: 501px;
+height: 608px;
 }
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus
 {
@@ -74,8 +86,96 @@ height: 501px;
 {
 
     bottom: 0px;
+    padding-left: 62px;
 }
 .nav.navbar-nav.navbar-foot  li{
 
-    padding: 0px 15px;
+    padding: 0px 35px;
+}
+.nav.navbar-nav.navbar-foot >li{
+    border-right:1px solid #BAAA76;
+}
+#line
+{
+    width: 100%;
+    height: 10px;
+    background-image:-webkit-linear-gradient(to left, #939598, #000000);
+    background-image:linear-gradient(to left, #939598, #000000);
+    box-shadow: 1px 0px 5px 2px #ffffff;
+    position: absolute;
+    bottom: 107px;
+}
+#livraison
+{
+    height: 107px;
+    width: 100%;
+    background: rgba(255,255,255,0.2);
+    position: absolute;
+    bottom: 0px;
+    color: #BAAA76;
+    font-size: 33px;
+    font-weight: bold;
+}
+
+#commandBtn
+{
+    width: 150px;
+    height: 150px;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    bottom: 38px;
+    margin-left: 44%;
+    background-image: url("/images/command.png");
+    background-size: 150px;
+    cursor: pointer;
+}
+.carousel-indicators
+{
+    bottom: 137px;
+}
+.carousel-indicators>li
+{
+    float: right;
+    margin-right: 5px;
+}
+.livraison-icon{
+    width: 450px;
+    position: relative;
+    top: 30px;
+}
+
+.drop-bar-item
+{
+    width: 211px;
+    height: 95px;
+    color: #BAAA76;
+    text-align: center;
+    position: relative;
+    float:left;
+    opacity: 0.4;
+    left: 170px;
+    -webkit-transition: left 2s;
+    -moz-transition: left 2s;
+    -ms-transition: left 2s;
+    -o-transition: left 2s;
+    transition: left 2s;
+}
+.drop-bar-item:hover
+{
+    opacity:1;
+    cursor: pointer;
+
+}
+
+#drop-bar
+{
+    width: 100%;
+    position: absolute;
+    height: 95px;
+    z-index: 1;
+    background: rgba(0,0,0,0.4);
+    border-top: 2px solid #BAAA76;
+    overflow: hidden;
+    display: none;
 }

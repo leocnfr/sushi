@@ -1,9 +1,9 @@
 <div class="navbar">
 	<a class="navbar-brand" href="#">
-        <img src="{{URL::asset('/images/logo-01.png')}}" alt="logo" style="width: 151px;height: 82.5px">
+        <img src="{{URL::asset('/images/logo.png')}}" alt="logo" style="width: 151px;height: 103px">
     </a>
-	<ul class="nav navbar-nav">
-		<li class="active">
+	<ul class="nav navbar-nav" style="left: 70px">
+		<li class="active" id="show-drop-bar">
 			<a href="{{url('/menus')}}">MENU</a>
 		</li>
 		<li>
@@ -17,8 +17,35 @@
         </li>
 	</ul>
     <ul class="nav navbar-nav navbar-right">
-        <li><img src="{{URL::asset('/images/compte-01.png')}}" alt="compte" style="width: 21px"></li>
-        <li><img src="{{URL::asset('/images/shopping-01.png')}}"  alt="shopping" style="width: 26px"></li>
+        <li><a href=""><img src="{{URL::asset('/images/compte-01.png')}}" alt="compte" style="width: 21px"></a></li>
+        <li><a href=""><img src="{{URL::asset('/images/shopping-01.png')}}"  alt="shopping" style="width: 26px"></a></li>
     </ul>
-</div>
 
+</div>
+<ul class="list-unstyled" id="drop-bar">
+    @foreach($products as $product)
+        <li class="drop-bar-item">
+            <img src="{{URL::asset('/storage/uploads/'.$product->productImage)}}" alt="{{$product->name}}" style="width: 119px;height: 68px;display: block;margin: 0px auto">
+            <p>{{$product->name}}</p>
+        </li>
+    @endforeach
+</ul>
+<script>
+    $('#show-drop-bar').hover(function () {
+        $('ul#drop-bar').stop().fadeIn(500);
+
+    }, function () {
+        $('ul#drop-bar').stop().fadeOut(500);
+    });
+    $('ul#drop-bar').hover(function () {
+        $('ul#drop-bar').stop().fadeIn(500);
+
+    }, function () {
+        $('ul#drop-bar').stop().fadeOut(500);
+    });
+    $('.drop-bar-item').hover(function () {
+        var index = $(".drop-bar-item").index(this);
+        var left=(170-50*index)+'px';
+        $('.drop-bar-item').stop().animate({left:left},10);
+    })
+</script>

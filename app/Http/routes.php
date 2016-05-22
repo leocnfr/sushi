@@ -11,6 +11,8 @@
 |
 */
 
+use App\Product;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -62,7 +64,8 @@ Route::post('/admin/news/edit/{id}','NewsController@storeUpdate');
  * 首页路由
  */
 Route::get('/show',function(){
-    return view('app.index');
+    $products=Product::all();
+    return view('app.index',compact('products'));
 });
 
 /*
@@ -72,3 +75,11 @@ Route::get('/show',function(){
 Route::get('/menus',function(){
    return view('app.menus');
 });
+
+Route::get('/test',function(){
+   return view('test');
+});
+
+//Route::get('testViewHello',function(){
+//    return view('welcome');
+//});
