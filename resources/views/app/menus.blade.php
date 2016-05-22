@@ -66,16 +66,38 @@
         }
         #btn_panier{
             display: block;
-            margin: 0pt auto;
+            margin: 15px auto 0 auto;
             background: #BAAA76;
             color: black;
             border: 0pt;
             box-shadow: none;
-            border-radius: 5px
+            border-radius: 5px;
         }
         #btn_panier:focus
         {
             outline: none;
+        }
+        #panier_inro{
+            height: 61px;
+        }
+        #panier_inro>span:nth-of-type(n)
+        {
+            position: relative;
+            font-size: 11pt;
+        }
+        #panier_inro>span:nth-of-type(2n)
+        {
+            position: relative;
+            font-size: 13pt;
+        }
+        #triangle-left {
+            width: 0;
+            height: 0;
+            position: absolute;
+            right: 0px;
+            border-top: 30px solid transparent;
+            border-right: 30px solid rgba(94,93,91,0.4);
+            border-bottom: 30px solid transparent;
         }
     </style>
     <div class="container-fluid " style="padding:0;background: black ">
@@ -86,9 +108,11 @@
                     <img src="{{URL::asset('/storage/uploads/'.$product->productImage)}}" alt="{{$product->category->cat_name}}" style="width: 119px;height: 68px">
                 </li>
             @endforeach
-        </ul>
-        <div id="content" class="col-md-8" style="background: rgba(94,93,91,0.4);width: 788px">
+                <div id="triangle-left"></div>
 
+        </ul>
+
+        <div id="content" class="col-md-8" style="background: rgba(94,93,91,0.4);width: 788px">
             <div class="col-md-4 item">
                 <img src="{{URL::asset('images/menu-saumon-xl.png')}}" alt="" style="width: 152px;height: 117px;">
                   <p>MENU LUNCH A</p>
@@ -112,8 +136,8 @@
             </div>
         </div>
         <div class="col-md-2" style="background: rgba(94,93,91,0.4);margin-left: 18px;text-align: center;color: #BAAA76;width: 250px;padding: 0px">
-            <aside>
-                <p style="font-size: 19pt;font-weight: bold">MON PANIER</p>
+            <aside style="height: 123px">
+                <p style="font-size: 19pt;font-weight: bold;margin-bottom: 30px">MON PANIER</p>
                 <span style="font-size: 12pt">MENU BOTAN</span>
                 <div style="display: inline-block;background: black;padding: 0px 1px">
                     <i class="fa fa-minus" aria-hidden="true"></i>
@@ -122,12 +146,12 @@
                 </div>
                 <span style="font-size: 16pt">15.90€</span>
             </aside>
-            <aside style="text-align: justify">
-                <span style="font-size: 11pt;position:relative;">Nombre de projduts</span> <span style="font-size: 13pt">1</span> <br>
-                <span style="font-size: 11pt">Nombre de piece</span> <span style="font-size: 13pt">24</span>
+            <aside id="panier_inro">
+                <span style="margin-right: 70px">Nombre de projduts</span> <span >1</span> <br>
+                <span style="margin-right: 80px">Nombre de piece</span> <span >24</span>
             </aside>
-            <aside style="color: white">
-                <span>Total</span>
+            <aside style="color: white;padding-bottom: 38px;margin-top: 10px">
+                <span style="margin-right:120px">Total</span>
                 <span>14.90€</span>
                 <button  id="btn_panier">
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>

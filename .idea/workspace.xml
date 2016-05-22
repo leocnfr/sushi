@@ -37,24 +37,26 @@
       <file leaf-file-name="menus.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/app/menus.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.36507937">
-              <caret line="39" column="25" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.44444445">
+              <caret line="98" column="55" selection-start-line="98" selection-start-column="55" selection-end-line="98" selection-end-column="55" />
               <folding>
-                <element signature="e#1996#2032#0#HTML" expanded="true" />
-                <element signature="e#2372#2405#0#HTML" expanded="true" />
-                <element signature="e#2510#2561#0#HTML" expanded="true" />
-                <element signature="e#3919#4035#0#HTML" expanded="true" />
-                <element signature="e#4076#4117#0#HTML" expanded="true" />
-                <element signature="e#4155#4178#0#HTML" expanded="true" />
-                <element signature="e#4218#4282#0#HTML" expanded="true" />
-                <element signature="e#4392#4424#0#HTML" expanded="true" />
-                <element signature="e#4555#4578#0#HTML" expanded="true" />
-                <element signature="e#4633#4660#0#HTML" expanded="true" />
-                <element signature="e#4684#4726#0#HTML" expanded="true" />
-                <element signature="e#4759#4782#0#HTML" expanded="true" />
-                <element signature="e#4819#4842#0#HTML" expanded="true" />
-                <element signature="e#4872#4895#0#HTML" expanded="true" />
-                <element signature="e#4946#4966#0#HTML" expanded="true" />
+                <element signature="e#2600#2636#0#HTML" expanded="true" />
+                <element signature="e#2976#3009#0#HTML" expanded="true" />
+                <element signature="e#3163#3214#0#HTML" expanded="true" />
+                <element signature="e#3334#3369#0#HTML" expanded="true" />
+                <element signature="e#3780#3815#0#HTML" expanded="true" />
+                <element signature="e#4212#4247#0#HTML" expanded="true" />
+                <element signature="e#4571#4687#0#HTML" expanded="true" />
+                <element signature="e#4708#4729#0#HTML" expanded="true" />
+                <element signature="e#4750#4811#0#HTML" expanded="true" />
+                <element signature="e#4849#4872#0#HTML" expanded="true" />
+                <element signature="e#4912#4976#0#HTML" expanded="true" />
+                <element signature="e#5086#5118#0#HTML" expanded="true" />
+                <element signature="e#5249#5272#0#HTML" expanded="true" />
+                <element signature="e#5367#5393#0#HTML" expanded="true" />
+                <element signature="e#5463#5489#0#HTML" expanded="true" />
+                <element signature="e#5570#5628#0#HTML" expanded="true" />
+                <element signature="e#5652#5678#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -931,24 +933,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/app/menus.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36507937">
-          <caret line="39" column="25" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.44444445">
+          <caret line="98" column="55" selection-start-line="98" selection-start-column="55" selection-end-line="98" selection-end-column="55" />
           <folding>
-            <element signature="e#1996#2032#0#HTML" expanded="true" />
-            <element signature="e#2372#2405#0#HTML" expanded="true" />
-            <element signature="e#2510#2561#0#HTML" expanded="true" />
-            <element signature="e#3919#4035#0#HTML" expanded="true" />
-            <element signature="e#4076#4117#0#HTML" expanded="true" />
-            <element signature="e#4155#4178#0#HTML" expanded="true" />
-            <element signature="e#4218#4282#0#HTML" expanded="true" />
-            <element signature="e#4392#4424#0#HTML" expanded="true" />
-            <element signature="e#4555#4578#0#HTML" expanded="true" />
-            <element signature="e#4633#4660#0#HTML" expanded="true" />
-            <element signature="e#4684#4726#0#HTML" expanded="true" />
-            <element signature="e#4759#4782#0#HTML" expanded="true" />
-            <element signature="e#4819#4842#0#HTML" expanded="true" />
-            <element signature="e#4872#4895#0#HTML" expanded="true" />
-            <element signature="e#4946#4966#0#HTML" expanded="true" />
+            <element signature="e#2600#2636#0#HTML" expanded="true" />
+            <element signature="e#2976#3009#0#HTML" expanded="true" />
+            <element signature="e#3163#3214#0#HTML" expanded="true" />
+            <element signature="e#3334#3369#0#HTML" expanded="true" />
+            <element signature="e#3780#3815#0#HTML" expanded="true" />
+            <element signature="e#4212#4247#0#HTML" expanded="true" />
+            <element signature="e#4571#4687#0#HTML" expanded="true" />
+            <element signature="e#4708#4729#0#HTML" expanded="true" />
+            <element signature="e#4750#4811#0#HTML" expanded="true" />
+            <element signature="e#4849#4872#0#HTML" expanded="true" />
+            <element signature="e#4912#4976#0#HTML" expanded="true" />
+            <element signature="e#5086#5118#0#HTML" expanded="true" />
+            <element signature="e#5249#5272#0#HTML" expanded="true" />
+            <element signature="e#5367#5393#0#HTML" expanded="true" />
+            <element signature="e#5463#5489#0#HTML" expanded="true" />
+            <element signature="e#5570#5628#0#HTML" expanded="true" />
+            <element signature="e#5652#5678#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
