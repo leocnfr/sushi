@@ -16,7 +16,7 @@
                         <p style="font-size: 40px;font-weight: bold" id="name">MENU LUNCH A</p>
                         <span style="font-size: 35px" id="count">12piece </span>
                         <span style="font-size: 35px" id="price">15.90€</span>
-                        <table class="table table-condensed ">
+                        <table>
                             <thead>
                                 <th></th>
                                 <th>Quantité</th>
