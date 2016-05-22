@@ -57,11 +57,11 @@
                     map: map,
                     title: 'Hello World!'
                 });
-            var marker = new google.maps.Marker({
-                position:{lat: 51.6310465, lng: 2.8771208},
-                map: map,
-                title: 'Hello World!'
-            });
+                var marker = new google.maps.Marker({
+                    position:{lat: 41.6310465, lng: 4.8771208},
+                    map: map,
+                    title: 'Hello World!'
+                });
 //                console.log(val.lat,val.lng);
 //            });
 
