@@ -81,7 +81,7 @@ class ProductController extends Controller
     {
         if($request->get('cat'))
         {
-            $product_menu=Product::where('cat_id',$request->get('cat'))->get();
+            $product_menu=Product::where('cat_id',$request->get('cat'))->get()->paginate(6);
         }
         $products=Product::groupBy('cat_id')->orderBy('cat_id','desc')->get();
         return view('app.menus',compact('products','product_menu'));
