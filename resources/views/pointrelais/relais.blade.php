@@ -2,6 +2,9 @@
 @section('page_title','Relais列表')
 @section('relaisactive','active')
 @section('content')
+    <style>
+        #map { height: 300px; }
+    </style>
 
     <div id="map">
 
