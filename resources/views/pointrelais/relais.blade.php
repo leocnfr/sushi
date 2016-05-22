@@ -52,12 +52,12 @@
                 center: {lat: 50.6310465, lng: 2.9771208}
             });
 //            $.each(myLatLng, function (key,val) {
-                var marker = new google.maps.Marker({
+                new google.maps.Marker({
                     position:{lat: 50.6310465, lng: 2.9771208},
                     map: map,
                     title: 'Hello World!'
                 });
-                var marker = new google.maps.Marker({
+                 new google.maps.Marker({
                     position:{lat: 41.6310465, lng: 4.8771208},
                     map: map,
                     title: 'Hello World!'
