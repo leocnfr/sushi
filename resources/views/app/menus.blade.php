@@ -130,6 +130,7 @@
                         <button class="button-ajouter">AJOUTER<i class="fa fa-plus-circle" aria-hidden="true"></i></button>
                     </div>
                     @endforeach
+                        <hr>
                 </div>
 
             @endforeach
