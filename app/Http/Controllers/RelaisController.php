@@ -46,4 +46,9 @@ class RelaisController extends Controller
           Relais::updateRelais($request->id,$request->all());
           return redirect()->back();
     }
+
+    public function toJson()
+    {
+        return Relais::all();
+    }
 }

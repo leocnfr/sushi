@@ -82,3 +82,9 @@ Route::get('/test',function(){
 //Route::get('testViewHello',function(){
 //    return view('welcome');
 //});
+
+
+/*
+ * relais to json
+ */
+Route::get('/json','RelaisController@toJson');
