@@ -26,7 +26,10 @@
         }
         .item>a{
             cursor: pointer;
-
+            display: block;
+            width: 152px;
+            height: 117px;
+            margin: 0px auto;
         }
         #content
         {

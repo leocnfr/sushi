@@ -30,9 +30,15 @@
         </div>
         <div class="form-group">
             <label for="">产品介绍</label>
-            <textarea type="text" class="form-control" name="intro" id="" placeholder="产品介绍" rows="10" ></textarea>
+			<textarea id="textarea1" class="form-control" rows="15" name="content" required>
+			</textarea>
         </div>
         {!! csrf_field() !!}
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+        <script type="text/javascript">
+        var editor = new wangEditor('textarea1');
+
+        editor.create();
+    </script>
 @endsection
