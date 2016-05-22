@@ -107,17 +107,14 @@
         }
         .item-list:first-child{
             border-top: 1px solid rgba(186,170,118,0.4);
-            border-right: 1px solid rgba(186,170,118,0.4);
-            border-left: 1px solid rgba(186,170,118,0.4);
         }
         .item-list:last-child{
             border-bottom: 1px solid rgba(186,170,118,0.4);
-            border-right: 1px solid rgba(186,170,118,0.4);
-            border-left: 1px solid rgba(186,170,118,0.4);
         }
         .item-list{
             border-right: 1px solid rgba(186,170,118,0.4);
             border-left: 1px solid rgba(186,170,118,0.4);
+            border-bottom: 1px solid rgba(186,170,118,0.4);
             padding: 10px;
         }
     </style>
