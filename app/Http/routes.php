@@ -64,7 +64,7 @@ Route::post('/admin/news/edit/{id}','NewsController@storeUpdate');
  * 首页路由
  */
 Route::get('/show',function(){
-    $products=Product::all();
+    $products=Product::groupBy('cat_id')->get();
     return view('app.index',compact('products'));
 });
 
