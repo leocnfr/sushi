@@ -44,7 +44,7 @@
             var geocoder = new google.maps.Geocoder();
             var myLatLng = [
                 {lat: 50.6310465, lng: 2.9771208},
-                {lat: 52.6310465, lng: 2.3771208}
+                {lat: 51.6310465, lng: 2.8771208},
 
             ];
             var map = new google.maps.Map(document.getElementById('map'), {
@@ -53,7 +53,7 @@
             });
 
             var marker = new google.maps.Marker({
-                position: myLatLng,
+                position: {lat: 50.6310465, lng: 2.9771208},
                 map: map,
                 title: 'Hello World!'
             });
