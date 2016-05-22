@@ -54,5 +54,6 @@
                 title: 'Hello World!'
             });
         }
+        initMap();
     </script>
 @endsection
