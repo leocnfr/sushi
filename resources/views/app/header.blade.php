@@ -56,8 +56,8 @@
         $('div#drop-bar').stop().fadeOut(500);
     });
     $('.drop-bar-item').hover(function () {
-        var index = $(".drop-bar-item").index(this);
-        var left = (-110*index)+'px';
+//        var index = $(".drop-bar-item").index(this);
+        var left = (-110)+'px';
         $('ul.list-unstyled').stop().animate({left:left},150);
     })
 </script>
