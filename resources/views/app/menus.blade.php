@@ -47,8 +47,8 @@
         }
         .col-md-4.item:nth-of-type(2n)
         {
-            border-left: 1px solid #BAAA76;
-            border-right: 1px solid #BAAA76;
+            border-left: 1px solid rgba(186,170,118,0.4);
+            border-right: 1px solid rgba(186,170,118,0.4);
         }
         .sidebar-item
         {
@@ -106,18 +106,19 @@
             margin-left: 5px;
         }
         .item-list:first-child{
-            border-top: 1px solid #BAAA76;
-            border-right: 1px solid #BAAA76;
-            border-left: 1px solid #BAAA76;
+            border-top: 1px solid rgba(186,170,118,0.4);
+            border-right: 1px solid rgba(186,170,118,0.4);
+            border-left: 1px solid rgba(186,170,118,0.4);
         }
         .item-list:last-child{
-            border-bottom: 1px solid #BAAA76;
-            border-right: 1px solid #BAAA76;
-            border-left: 1px solid #BAAA76;
+            border-bottom: 1px solid rgba(186,170,118,0.4);
+            border-right: 1px solid rgba(186,170,118,0.4);
+            border-left: 1px solid rgba(186,170,118,0.4);
         }
         .item-list{
-            border-right: 1px solid #BAAA76;
-            border-left: 1px solid #BAAA76;
+            border-right: 1px solid rgba(186,170,118,0.4);
+            border-left: 1px solid rgba(186,170,118,0.4);
+            padding: 10px;
         }
     </style>
     <div class="container-fluid " style="padding:0;background: black ">
