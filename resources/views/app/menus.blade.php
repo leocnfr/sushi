@@ -95,9 +95,10 @@
             height: 0;
             position: absolute;
             right: 0px;
-            border-top: 30px solid transparent;
-            border-right: 30px solid rgba(94,93,91,0.4);
-            border-bottom: 30px solid transparent;
+            top: 135px;
+            border-top: 15px solid transparent;
+            border-right: 15px solid rgba(94,93,91,0.4);
+            border-bottom: 15px solid transparent;
         }
     </style>
     <div class="container-fluid " style="padding:0;background: black ">
