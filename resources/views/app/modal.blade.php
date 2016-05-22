@@ -16,7 +16,34 @@
                         <p style="font-size: 40px;font-weight: bold" id="name">MENU LUNCH A</p>
                         <span style="font-size: 35px" id="count">12piece </span>
                         <span style="font-size: 35px" id="price">15.90€</span>
-                        <p id="content"></p>
+                        <table>
+                            <thead>
+                                <th></th>
+                                <th>Quantité</th>
+                                <th>Energie</th>
+                                <th>Protéines</th>
+                                <th>Lipides</th>
+                                <th>Glucides</th>
+                            </thead>
+                           <tbody>
+                                <tr>
+                                    <td>6 california thon cuit avocat</td>
+                                    <td>169</td>
+                                    <td>276</td>
+                                    <td>9.7</td>
+                                    <td>7.6</td>
+                                    <td>42.7</td>
+                                </tr>
+                                <tr>
+                                    <td>6 california thon cuit avocat</td>
+                                    <td>169</td>
+                                    <td>276</td>
+                                    <td>9.7</td>
+                                    <td>7.6</td>
+                                    <td>42.7</td>
+                                </tr>
+                           </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
@@ -32,14 +59,14 @@
         var button = $(event.relatedTarget); // Button that triggered the modal
         var recipient = button.data('whatever');
         var name = button.data('name');
-        var count = button.data('count');
-        var price = button.data('price');
+        var count = button.data('count')+'piece';
+        var price = button.data('price')+'€';
         var content = button.data('content');
         var modal = $(this);
         $('#name').html(name);
         $('#count').html(count);
         $('#price').html(price);
-        $('#content').html(content);
+//        $('#content').html(content);
 
     })
 </script>
