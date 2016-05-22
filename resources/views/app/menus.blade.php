@@ -105,6 +105,20 @@
         .fa-plus-circle{
             margin-left: 5px;
         }
+        .item-list:first-child{
+            border-top: 1px solid #BAAA76;
+            border-right: 1px solid #BAAA76;
+            border-left: 1px solid #BAAA76;
+        }
+        .item-list:last-child{
+            border-bottom: 1px solid #BAAA76;
+            border-right: 1px solid #BAAA76;
+            border-left: 1px solid #BAAA76;
+        }
+        .item-list{
+            border-right: 1px solid #BAAA76;
+            border-left: 1px solid #BAAA76;
+        }
     </style>
     <div class="container-fluid " style="padding:0;background: black ">
         <ul id="sidebar" class="col-md-2">
@@ -120,7 +134,7 @@
 
         <div id="content" class="col-md-8" style="background: rgba(94,93,91,0.4);width: 788px">
             @foreach($product_menu->chunk(3)  as $chunk)
-                <div class="row">
+                <div class="row item-list">
                     @foreach($chunk as $item)
                     <div class="col-md-4 item" >
                         <img src="{{URL::asset('/storage/uploads/'.$item->productImage)}}" alt="" style="width: 152px;height: 117px;">
