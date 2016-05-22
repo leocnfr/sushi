@@ -130,9 +130,9 @@
                         <button class="button-ajouter">AJOUTER<i class="fa fa-plus-circle" aria-hidden="true"></i></button>
                     </div>
                     @endforeach
-                        <hr>
-                </div>
 
+                </div>
+                <hr>
             @endforeach
         </div>
         <div class="col-md-2" style="background: rgba(94,93,91,0.4);margin-left: 18px;text-align: center;color: #BAAA76;width: 250px;padding: 0px">
