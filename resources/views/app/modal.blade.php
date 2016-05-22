@@ -23,7 +23,7 @@
 
                 <div class="row">
                     <div class="col-md-5" >
-                        <img src="{{URL::asset('/storage/uploads/menu1.png')}}" style="width: 353px;height: 275px;display: block;margin: 0px auto">
+                        <img id="modal-img" src="{{URL::asset('/storage/uploads/menu1.png')}}" style="width: 353px;height: 275px;display: block;margin: 0px auto">
                     </div>
                     <div class="col-md-7" style="color: #BAAA76;text-align: center;border-left: 1px solid #BAAA76">
                         <p style="font-size: 40px;font-weight: bold" id="name">MENU LUNCH A</p>
@@ -75,11 +75,13 @@
         var count = button.data('count')+'piece';
         var price = button.data('price')+'€';
         var content = button.data('content');
+        var src = button.data('src');
         var modal = $(this);
         $('#name').html(name);
         $('#count').html(count);
         $('#price').html(price);
         $('#intro').html(content);
+        $('#modal-img').attr('src','/storage/uploads/'+src);
 
     })
 </script>
