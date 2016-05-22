@@ -42,9 +42,13 @@
     <script>
         function initMap() {
             var geocoder = new google.maps.Geocoder();
-            var myLatLng = {lat: 50.6310465, lng: 2.9771208};
+            var myLatLng = [
+                {lat: 50.6310465, lng: 2.9771208},
+                {lat: 52.6310465, lng: 2.3771208}
+
+            ];
             var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 5,
+                zoom: 9,
                 center: myLatLng
             });
 
