@@ -51,20 +51,17 @@
                 zoom: 9,
                 center: {lat: 50.6310465, lng: 2.9771208}
             });
-//            $.each(myLatLng, function (key,val) {
-                new google.maps.Marker({
-                    position:{lat: 50.6310465, lng: 2.9771208},
-                    map: map,
-                    title: 'Hello World!'
-                });
-                 new google.maps.Marker({
-                    position:{lat: 141.6310465, lng: 14.8771208},
-                    map: map,
-                    title: 'Hello World!'
-                });
-//                console.log(val.lat,val.lng);
-//            });
-
+            var bounds = map.getBounds();
+             var southWest = bounds.getSouthWest();
+           var northEast = bounds.getNorthEast();
+             var lngSpan = northEast.lng() - southWest.lng();
+        var latSpan = northEast.lat() - southWest.lat();
+            for (var i = 0; i < 10; i++)
+            {
+                var point = new GLatLng(southWest.lat() + latSpan * Math.random(),
+                        southWest.lng() + lngSpan * Math.random());
+                map.addOverlay(new GMarker(point));
+            }
         }
         initMap();
     </script>
