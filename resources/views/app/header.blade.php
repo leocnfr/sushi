@@ -45,7 +45,7 @@
     });
     $('.drop-bar-item').hover(function () {
         var index = $(".drop-bar-item").index(this);
-        var left=(170-50*index)+'px';
+        var left=(170-60*index)+'px';
         $('.drop-bar-item').stop().animate({left:left},10);
     })
 </script>
