@@ -32,7 +32,12 @@
             border-radius: 10px;
             color: white;
             display: block;
-            margin: 0px auto;
+            margin: 10px auto ;
+            border: none;
+            box-shadow: 1px 1px 6px 1px #000000;
+        }
+        .button-ajouter:focus{
+            outline: none;
         }
         #sidebar>li:not(:last-child)
         {
