@@ -44,7 +44,7 @@
             var geocoder = new google.maps.Geocoder();
             var myLatLng = {lat: 50.6310465, lng: 2.9771208};
             var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 4,
+                zoom: 5,
                 center: myLatLng
             });
 
