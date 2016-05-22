@@ -1,26 +1,59 @@
-
+<style>
+    table{
+        width: 500px;
+        margin-top: 20px;
+        font-size: 13px;
+    }
+</style>
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
     <div class="modal-dialog" role="document" style="width: 920px;margin-top: 130px">
         <div class="modal-content" >
             {{--<div class="modal-header">--}}
                 {{--<h4 class="modal-title" id="exampleModalLabel">New message</h4>--}}
             {{--</div>--}}
-            <div class="modal-body" style="width: 920px;background: rgba(94,93,91,0.3);">
+            <div class="modal-body" style="width: 920px;background: rgb(37,37,36);">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 
                 <div class="row">
-                    <div class="col-md-6" style="width: 444px;border-right: 1px solid #BAAA76">
+                    <div class="col-md-5" style="border-right: 1px solid #BAAA76">
                         <img src="{{URL::asset('/storage/uploads/menu1.png')}}" style="width: 353px;height: 275px;display: block;margin: 0px auto">
                     </div>
-                    <div class="col-md-6" style="width: 476px;color: #BAAA76;text-align: center">
+                    <div class="col-md-7" style="color: #BAAA76;text-align: center">
                         <p style="font-size: 40px;font-weight: bold" id="name">MENU LUNCH A</p>
-                        <span style="font-size: 35px" id="count">12piece </span>
+                        <span style="font-size: 35px;margin-right: 60px" id="count" >12piece </span>
                         <span style="font-size: 35px" id="price">15.90€</span>
-                    </div>
-                </div>
-                <div class="row">
-                    <div id="content" style="height: 146px;display: block"></div>
+                        {{--<table style="width: 500px;margin-top: 20px">--}}
+                            {{--<thead>--}}
+                                {{--<th></th>--}}
+                                {{--<th>Quantité</th>--}}
+                                {{--<th>Energie</th>--}}
+                                {{--<th>Protéines</th>--}}
+                                {{--<th>Lipides</th>--}}
+                                {{--<th>Glucides</th>--}}
+                            {{--</thead>--}}
+                           {{--<tbody>--}}
+                                {{--<tr>--}}
+                                    {{--<td>6 california thon cuit avocat</td>--}}
+                                    {{--<td>169</td>--}}
+                                    {{--<td>276</td>--}}
+                                    {{--<td>9.7</td>--}}
+                                    {{--<td>7.6</td>--}}
+                                    {{--<td>42.7</td>--}}
+                                {{--</tr>--}}
+                                {{--<tr>--}}
+                                    {{--<td>6 california thon cuit avocat</td>--}}
+                                    {{--<td>169</td>--}}
+                                    {{--<td>276</td>--}}
+                                    {{--<td>9.7</td>--}}
+                                    {{--<td>7.6</td>--}}
+                                    {{--<td>42.7</td>--}}
+                                {{--</tr>--}}
+                           {{--</tbody>--}}
+                        {{--</table>--}}
+                        <div id="intro">
 
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -39,7 +72,7 @@
         $('#name').html(name);
         $('#count').html(count);
         $('#price').html(price);
-        $('#content').html(content);
+        $('#intro').html(content);
 
     })
 </script>

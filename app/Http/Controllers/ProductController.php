@@ -40,7 +40,7 @@ class ProductController extends Controller
         $product=Product::findOrFail($request->id);
         $product->name=$request->get('name');
         $product->price=$request->get('price');
-        $product->content=$request->get('intro');
+        $product->content=$request->get('content');
         $product->count=$request->get('count');
         if ($request->hasFile('photo')) {
             $file=$request->file('photo');

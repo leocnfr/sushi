@@ -31,7 +31,9 @@
     </div>
     <div class="form-group">
         <label for="">产品介绍</label>
-        <textarea type="text" class="form-control" name="intro" id="" placeholder="产品介绍" rows="10">{{$product->content}}</textarea>
+        <textarea id="textarea1" class="form-control" rows="15" name="content" required>
+			{{$product->content}}
+        </textarea>
     </div>
     <input type="hidden" name="_method" value="PUT">
     <input type="hidden" name="id" value="{{$product->id}}" >
@@ -39,5 +41,8 @@
     <button type="button" class="btn btn-default" onclick="history.go(-1)">Back</button>
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
-
+<script type="text/javascript">
+    var editor = new wangEditor('textarea1');
+    editor.create();
+</script>
 @endsection
