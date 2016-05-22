@@ -41,8 +41,9 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIbJ48RCsE-UPzW9y-3hmxWpNVKm6tYho" type="text/javascript"></script>
     <script>
         function initMap() {
-            var myLatLng = {lat: -25.363, lng: 131.044};
-
+            var geocoder = new google.maps.Geocoder();
+            var myLatLng = {lat: 50.6310465, lng: 2.9771208};
+            var myLatLng =
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 4,
                 center: myLatLng
