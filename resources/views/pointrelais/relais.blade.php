@@ -35,7 +35,7 @@
             @endforeach
     	</tbody>
     </table>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnx6xBL6gsxf5NQIHoHALwIeAGLmeXqu8&signed_in=true&callback=initMap"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIbJ48RCsE-UPzW9y-3hmxWpNVKm6tYho&signed_in=true&callback=initMap"></script>
     <script>
         function initMap() {
             var myLatLng = {lat: -25.363, lng: 131.044};
