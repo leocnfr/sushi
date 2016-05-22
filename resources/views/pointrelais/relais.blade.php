@@ -51,12 +51,14 @@
                 zoom: 9,
                 center: {lat: 50.6310465, lng: 2.9771208}
             });
-
-            var marker = new google.maps.Marker({
-                position: myLatLng,
-                map: map,
-                title: 'Hello World!'
+            $.each(myLatLng, function (key,val) {
+                var marker = new google.maps.Marker({
+                    position: {lat:val.lat,lang:val.lang},
+                    map: map,
+                    title: 'Hello World!'
+                });
             });
+            
         }
         initMap();
     </script>
