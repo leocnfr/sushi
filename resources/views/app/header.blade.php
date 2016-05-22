@@ -24,8 +24,8 @@
 </div>
 <div style="width: 100%;" id="drop-bar">
     <ul class="list-unstyled" style="position: relative;">
-        @foreach($products as $product)
-        <li class="drop-bar-item">
+        @foreach($products as $key=>$product)
+        <li class="drop-bar-item" style="position: absolute;left: {{165*($key+1)}}px">
         <img src="{{URL::asset('/storage/uploads/'.$product->productImage)}}" alt="{{$product->name}}" style="width: 119px;height: 68px;display: block;margin: 0px auto">
         <p>{{$product->name}}1</p>
         </li>
