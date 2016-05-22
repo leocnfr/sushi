@@ -9,12 +9,15 @@ body{
 }
 /*头部样式*/
 .navbar{
-    background: black;
+    /*background: black;*/
     border-radius: 0px;
     height: 134px;
     margin: 0px;
     border: 1px;
     width: 100%;
+    background-image:url("/images/top_bottom.png") ;
+    -webkit-background-size:cover;
+    background-size:cover;
 }
 .navbar-brand
 {
@@ -41,7 +44,7 @@ body{
     height: 36px;
 }
 .nav.navbar-nav li a:hover{
-    background: black;
+    background: none;
 }
 .nav.navbar-nav li a:focus{
     background: black;
