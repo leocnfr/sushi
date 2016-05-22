@@ -27,7 +27,7 @@
         @foreach($products as $key=>$product)
         <li class="drop-bar-item" style="position: absolute;left: {{165*($key+1)}}px">
         <img src="{{URL::asset('/storage/uploads/'.$product->productImage)}}" alt="{{$product->name}}" style="width: 119px;height: 68px;display: block;margin: 0px auto">
-        <p>{{$product->name}}1</p>
+        <p>{{$product->category->cat_name}}</p>
         </li>
         @endforeach
         {{--@for($i=0;$i<13;$i++)--}}
