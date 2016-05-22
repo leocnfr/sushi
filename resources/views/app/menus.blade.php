@@ -117,9 +117,9 @@
         </ul>
 
         <div id="content" class="col-md-8" style="background: rgba(94,93,91,0.4);width: 788px">
-            @foreach($products as $item)
+            @foreach($product_menu as $item)
                 <div class="col-md-4 item">
-                    <img src="{{URL::asset('/storage/uploads/'.$product->productImage)}}" alt="" style="width: 152px;height: 117px;">
+                    <img src="{{URL::asset('/storage/uploads/'.$item->productImage)}}" alt="" style="width: 152px;height: 117px;">
                     <p>{{$item->name}}</p>
                     <span>{{$item->count}} piece</span>
                     <span class="pull-right">{{$item->price}}€</span>
