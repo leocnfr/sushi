@@ -1,6 +1,6 @@
 
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-    <div class="modal-dialog" role="document" style="width: 920px">
+    <div class="modal-dialog" role="document" style="width: 920px;margin-top: 130px">
         <div class="modal-content" >
             {{--<div class="modal-header">--}}
                 {{--<h4 class="modal-title" id="exampleModalLabel">New message</h4>--}}
@@ -16,7 +16,7 @@
                         <p style="font-size: 40px;font-weight: bold" id="name">MENU LUNCH A</p>
                         <span style="font-size: 35px" id="count">12piece </span>
                         <span style="font-size: 35px" id="price">15.90€</span>
-                        <table>
+                        <table class="table table-condensed ">
                             <thead>
                                 <th></th>
                                 <th>Quantité</th>
@@ -47,7 +47,7 @@
                     </div>
                 </div>
             </div>
-           
+
         </div>
     </div>
 </div>
