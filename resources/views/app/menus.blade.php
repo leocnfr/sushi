@@ -117,27 +117,15 @@
         </ul>
 
         <div id="content" class="col-md-8" style="background: rgba(94,93,91,0.4);width: 788px">
-            <div class="col-md-4 item">
-                <img src="{{URL::asset('images/menu-saumon-xl.png')}}" alt="" style="width: 152px;height: 117px;">
-                  <p>MENU LUNCH A</p>
-                    <span>12 piece</span>
-                    <span class="pull-right">15.90€</span>
-                <button class="button-ajouter">AJOUTER<i class="fa fa-plus-circle" aria-hidden="true"></i></button>
-            </div>
-            <div class="col-md-4 item">
-                <img src="{{URL::asset('images/menu-saumon-xl.png')}}" alt="" style="width: 152px;height: 117px;">
-                <p>MENU LUNCH A</p>
-                <span>12 piece</span>
-                <span class="pull-right">15.90€</span>
-                <button class="button-ajouter">AJOUTER<i class="fa fa-plus-circle" aria-hidden="true"></i></button>
-            </div>
-            <div class="col-md-4 item">
-                <img src="{{URL::asset('images/menu-saumon-xl.png')}}" alt="" style="width: 152px;height: 117px;">
-                <p>MENU LUNCH A</p>
-                <span>12 piece</span>
-                <span class="pull-right">15.90€</span>
-                <button class="button-ajouter">AJOUTER<i class="fa fa-plus-circle" aria-hidden="true"></i></button>
-            </div>
+            @foreach($products as $item)
+                <div class="col-md-4 item">
+                    <img src="{{URL::asset('/storage/uploads/'.$product->productImage)}}" alt="" style="width: 152px;height: 117px;">
+                    <p>{{$item->name}}</p>
+                    <span>{{$item->count}} piece</span>
+                    <span class="pull-right">{{$item->price}}€</span>
+                    <button class="button-ajouter">AJOUTER<i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+                </div>
+            @endforeach
         </div>
         <div class="col-md-2" style="background: rgba(94,93,91,0.4);margin-left: 18px;text-align: center;color: #BAAA76;width: 250px;padding: 0px">
             <aside style="height: 123px">

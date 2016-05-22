@@ -76,5 +76,18 @@ class ProductController extends Controller
         return redirect()->back();
     }
 
+    //menu显示
+    public function getMenu(Request $request)
+    {
+//        if($request->get('cat'))
+//        {
+//
+//            $product=Product::where('cat_id',$request->get('cat'))->get();
+//        }
+
+        $products=Product::groupBy('cat_id')->orderBy('cat_id','desc')->get();
+        return view('app.menus',compact('products'));
+
+    }
 
 }

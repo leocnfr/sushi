@@ -26,8 +26,10 @@
     <ul class="list-unstyled" style="position: relative;">
         @foreach($products as $key=>$product)
         <li class="drop-bar-item" style="position: absolute;left: {{165*($key+1)}}px">
+            <a href="{{url('/menus?cat='.$product->cat_id)}}">
         <img src="{{URL::asset('/storage/uploads/'.$product->productImage)}}" alt="{{$product->name}}" style="width: 119px;height: 68px;display: block;margin: 0px auto">
         <p>{{$product->category->cat_name}}</p>
+            </a>
         </li>
         @endforeach
         {{--@for($i=0;$i<13;$i++)--}}

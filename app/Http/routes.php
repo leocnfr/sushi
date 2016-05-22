@@ -12,6 +12,7 @@
 */
 
 use App\Product;
+use Illuminate\Support\Facades\Request;
 
 Route::get('/', function () {
     return view('welcome');
@@ -72,10 +73,7 @@ Route::get('/show',function(){
  * menu展示
  */
 
-Route::get('/menus',function(){
-    $products=Product::groupBy('cat_id')->orderBy('cat_id','desc')->get();
-    return view('app.menus',compact('products'));
-});
+Route::get('/menus/{cat?}','ProductController@getMenu');
 
 Route::get('/test',function(){
    return view('test');
