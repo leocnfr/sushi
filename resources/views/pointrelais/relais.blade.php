@@ -49,11 +49,11 @@
             ];
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 9,
-                center: myLatLng
+                center: {lat: 50.6310465, lng: 2.9771208}
             });
 
             var marker = new google.maps.Marker({
-                position: {lat: 50.6310465, lng: 2.9771208},
+                position: myLatLng,
                 map: map,
                 title: 'Hello World!'
             });
