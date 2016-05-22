@@ -119,14 +119,19 @@
         </ul>
 
         <div id="content" class="col-md-8" style="background: rgba(94,93,91,0.4);width: 788px">
-            @foreach($product_menu as $item)
-                <div class="col-md-4 item" >
-                    <img src="{{URL::asset('/storage/uploads/'.$item->productImage)}}" alt="" style="width: 152px;height: 117px;">
-                    <p>{{$item->name}}</p>
-                    <span>{{$item->count}} piece</span>
-                    <span class="pull-right">{{$item->price}}€</span>
-                    <button class="button-ajouter">AJOUTER<i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+            @foreach($product_menu->chunk(3)  as $chunk)
+                <div class="row">
+                    @foreach($chunk as $item)
+                    <div class="col-md-4 item" >
+                        <img src="{{URL::asset('/storage/uploads/'.$item->productImage)}}" alt="" style="width: 152px;height: 117px;">
+                        <p>{{$item->name}}</p>
+                        <span>{{$item->count}} piece</span>
+                        <span class="pull-right">{{$item->price}}€</span>
+                        <button class="button-ajouter">AJOUTER<i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+                    </div>
+                    @endforeach
                 </div>
+
             @endforeach
         </div>
         <div class="col-md-2" style="background: rgba(94,93,91,0.4);margin-left: 18px;text-align: center;color: #BAAA76;width: 250px;padding: 0px">
