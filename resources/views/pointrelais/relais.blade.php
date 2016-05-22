@@ -58,7 +58,7 @@
                     title: 'Hello World!'
                 });
                  new google.maps.Marker({
-                    position:{lat: 41.6310465, lng: 4.8771208},
+                    position:{lat: 141.6310465, lng: 14.8771208},
                     map: map,
                     title: 'Hello World!'
                 });
