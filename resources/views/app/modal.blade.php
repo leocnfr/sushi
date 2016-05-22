@@ -4,6 +4,13 @@
         margin-top: 20px;
         font-size: 13px;
     }
+    #intro>p{
+        float: left;
+        margin-top: 5px;
+    }
+    tr>td:first-child{
+        text-align: left;
+    }
 </style>
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
     <div class="modal-dialog" role="document" style="width: 920px;margin-top: 130px">
@@ -15,10 +22,10 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 
                 <div class="row">
-                    <div class="col-md-5" style="border-right: 1px solid #BAAA76">
+                    <div class="col-md-5" >
                         <img src="{{URL::asset('/storage/uploads/menu1.png')}}" style="width: 353px;height: 275px;display: block;margin: 0px auto">
                     </div>
-                    <div class="col-md-7" style="color: #BAAA76;text-align: center">
+                    <div class="col-md-7" style="color: #BAAA76;text-align: center;border-left: 1px solid #BAAA76">
                         <p style="font-size: 40px;font-weight: bold" id="name">MENU LUNCH A</p>
                         <span style="font-size: 35px;margin-right: 60px" id="count" >12piece </span>
                         <span style="font-size: 35px" id="price">15.90€</span>

@@ -43,6 +43,7 @@
 </form>
 <script type="text/javascript">
     var editor = new wangEditor('textarea1');
+    editor.config.pasteText = true;
     editor.create();
 </script>
 @endsection
