@@ -176,7 +176,7 @@ height: 608px;
     position: absolute;
     height: 95px;
     z-index: 1;
-    background: rgba(0,0,0,0.4);
+    background: black;
     border-top: 2px solid #BAAA76;
     overflow: hidden;
     display: none;

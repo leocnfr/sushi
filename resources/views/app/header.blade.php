@@ -44,16 +44,16 @@
 </div>
 <script>
     $('#show-drop-bar').hover(function () {
-        $('div#drop-bar').stop().fadeIn(500);
+        $('div#drop-bar').stop().slideDown(500);
 
     }, function () {
-        $('div#drop-bar').stop().fadeOut(500);
+        $('div#drop-bar').stop().slideUp(500);
     });
     $('div#drop-bar').hover(function () {
-        $('div#drop-bar').stop().fadeIn(500);
+        $('div#drop-bar').stop().slideDown(500);
 
     }, function () {
-        $('div#drop-bar').stop().fadeOut(500);
+        $('div#drop-bar').stop().slideUp(500);
     });
     $('.drop-bar-item').hover(function () {
 //        var index = $(".drop-bar-item").index(this);
