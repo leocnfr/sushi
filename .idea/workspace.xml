@@ -25,34 +25,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ProductController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ProductController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProductController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6205534">
-              <caret line="90" column="19" selection-start-line="90" selection-start-column="19" selection-end-line="90" selection-end-column="19" />
+            <state vertical-scroll-proportion="-5.3103447">
+              <caret line="89" column="13" selection-start-line="89" selection-start-column="13" selection-end-line="89" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="menus.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="menus.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/app/menus.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-24.068966">
-              <caret line="157" column="0" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.11462451">
+              <caret line="140" column="36" selection-start-line="140" selection-start-column="36" selection-end-line="140" selection-end-column="36" />
               <folding>
-                <element signature="e#4501#4536#0#HTML" expanded="true" />
-                <element signature="e#5026#5142#0#HTML" expanded="true" />
-                <element signature="e#5163#5184#0#HTML" expanded="true" />
-                <element signature="e#5205#5266#0#HTML" expanded="true" />
-                <element signature="e#5304#5327#0#HTML" expanded="true" />
-                <element signature="e#5367#5431#0#HTML" expanded="true" />
-                <element signature="e#5541#5573#0#HTML" expanded="true" />
-                <element signature="e#5704#5727#0#HTML" expanded="true" />
-                <element signature="e#5822#5848#0#HTML" expanded="true" />
-                <element signature="e#5918#5944#0#HTML" expanded="true" />
-                <element signature="e#6025#6083#0#HTML" expanded="true" />
-                <element signature="e#6107#6133#0#HTML" expanded="true" />
+                <element signature="e#4505#4540#0#HTML" expanded="true" />
+                <element signature="e#5245#5361#0#HTML" expanded="true" />
+                <element signature="e#5382#5403#0#HTML" expanded="true" />
+                <element signature="e#5424#5485#0#HTML" expanded="true" />
+                <element signature="e#5523#5546#0#HTML" expanded="true" />
+                <element signature="e#5586#5650#0#HTML" expanded="true" />
+                <element signature="e#5760#5792#0#HTML" expanded="true" />
+                <element signature="e#5923#5946#0#HTML" expanded="true" />
+                <element signature="e#6041#6067#0#HTML" expanded="true" />
+                <element signature="e#6137#6163#0#HTML" expanded="true" />
+                <element signature="e#6244#6302#0#HTML" expanded="true" />
+                <element signature="e#6326#6352#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -132,8 +132,8 @@
         <option value="$PROJECT_DIR$/public/css/index.css" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" />
         <option value="$PROJECT_DIR$/resources/views/category/category.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/app/menus.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" />
+        <option value="$PROJECT_DIR$/resources/views/app/menus.blade.php" />
       </list>
     </option>
   </component>
@@ -800,32 +800,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/app/menus.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProductController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-24.068966">
-          <caret line="157" column="0" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
-          <folding>
-            <element signature="e#4501#4536#0#HTML" expanded="true" />
-            <element signature="e#5026#5142#0#HTML" expanded="true" />
-            <element signature="e#5163#5184#0#HTML" expanded="true" />
-            <element signature="e#5205#5266#0#HTML" expanded="true" />
-            <element signature="e#5304#5327#0#HTML" expanded="true" />
-            <element signature="e#5367#5431#0#HTML" expanded="true" />
-            <element signature="e#5541#5573#0#HTML" expanded="true" />
-            <element signature="e#5704#5727#0#HTML" expanded="true" />
-            <element signature="e#5822#5848#0#HTML" expanded="true" />
-            <element signature="e#5918#5944#0#HTML" expanded="true" />
-            <element signature="e#6025#6083#0#HTML" expanded="true" />
-            <element signature="e#6107#6133#0#HTML" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-5.3103447">
+          <caret line="89" column="13" selection-start-line="89" selection-start-column="13" selection-end-line="89" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProductController.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/app/menus.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6205534">
-          <caret line="90" column="19" selection-start-line="90" selection-start-column="19" selection-end-line="90" selection-end-column="19" />
-          <folding />
+        <state vertical-scroll-proportion="0.11462451">
+          <caret line="140" column="36" selection-start-line="140" selection-start-column="36" selection-end-line="140" selection-end-column="36" />
+          <folding>
+            <element signature="e#4505#4540#0#HTML" expanded="true" />
+            <element signature="e#5245#5361#0#HTML" expanded="true" />
+            <element signature="e#5382#5403#0#HTML" expanded="true" />
+            <element signature="e#5424#5485#0#HTML" expanded="true" />
+            <element signature="e#5523#5546#0#HTML" expanded="true" />
+            <element signature="e#5586#5650#0#HTML" expanded="true" />
+            <element signature="e#5760#5792#0#HTML" expanded="true" />
+            <element signature="e#5923#5946#0#HTML" expanded="true" />
+            <element signature="e#6041#6067#0#HTML" expanded="true" />
+            <element signature="e#6137#6163#0#HTML" expanded="true" />
+            <element signature="e#6244#6302#0#HTML" expanded="true" />
+            <element signature="e#6326#6352#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

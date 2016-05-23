@@ -86,15 +86,12 @@ class ProductController extends Controller
         $products=Product::groupBy('cat_id')->orderBy('cat_id','desc')->get();
         if($menu==null)
         {
-            $cates=Category::all();
-            foreach ($cates  as $cate) {
-                dd()
-            }
+            $cate=Category::all();
             return view('app.menus',compact('products','cate'));
         }else{
             $menu=str_replace('-',' ',$menu);
-            $cate=Category::where('cat_name',$menu)->first();
-            return view('app.menus',compact('products','cate'));
+            $cates=Category::where('cat_name',$menu)->first();
+            return view('app.menus',compact('products','cates'));
         }
 
 

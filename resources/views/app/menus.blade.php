@@ -138,23 +138,28 @@
         </ul>
 
         <div id="content" class="col-md-8" style="background: rgba(94,93,91,0.4);width: 788px">
-                @foreach($cate->product->chunk(3)  as $chunk)
-                <div class="row item-list">
+            @foreach($cate as $item)
+                @foreach($item->product->chunk(3) as $chunk)
                     @foreach($chunk as $item)
-                    <div class="col-md-4 item" >
-                        <a  data-toggle="modal" data-target="#exampleModal" data-name="{{$item->name}}" data-count="{{$item->count}}" data-price="{{$item->price}}" data-content="{{$item->content}}" data-src="{{$item->productImage}}">
-                            <img src="{{URL::asset('/storage/uploads/'.$item->productImage)}}" alt="" style="width: 152px;height: 117px;">
-                        </a>
+                        <div class="col-md-4 item" >
+                            <a  data-toggle="modal" data-target="#exampleModal" data-name="{{$item->name}}" data-count="{{$item->count}}" data-price="{{$item->price}}" data-content="{{$item->content}}" data-src="{{$item->productImage}}">
+                                <img src="{{URL::asset('/storage/uploads/'.$item->productImage)}}" alt="" style="width: 152px;height: 117px;">
+                            </a>
 
-                        <p>{{$item->name}}</p>
-                        <span>{{$item->count}} piece</span>
-                        <span class="pull-right">{{$item->price}}€</span>
-                        <button class="button-ajouter">AJOUTER<i class="fa fa-plus-circle" aria-hidden="true"></i></button>
-                    </div>
+                            <p>{{$item->name}}</p>
+                            <span>{{$item->count}} piece</span>
+                            <span class="pull-right">{{$item->price}}€</span>
+                            <button class="button-ajouter">AJOUTER<i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+                        </div>
                     @endforeach
-
-                </div>
+                @endforeach
             @endforeach
+                {{--@foreach($cate->product->chunk(3)  as $chunk)--}}
+                {{--<div class="row item-list">--}}
+
+
+                {{--</div>--}}
+            {{--@endforeach--}}
 
         </div>
         <div class="col-md-2" style="background: rgba(94,93,91,0.4);margin-left: 18px;text-align: center;color: #BAAA76;width: 250px;padding: 0px">
