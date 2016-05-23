@@ -12,6 +12,9 @@ class Category extends Model
         'cat_name'
     ];
 
-
+    public function product()
+    {
+        return $this->hasMany('App\Product','cat_id');
+    }
 
 }

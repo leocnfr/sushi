@@ -26,7 +26,7 @@
     <ul class="list-unstyled" style="position: relative;left: -110px">
         @foreach($products as $key=>$product)
         <li class="drop-bar-item" style="position: absolute;left: {{165*($key+1)}}px">
-            <a href="{{url('/menus?cat='.$product->cat_id)}}" style="text-decoration: none;color: #BAAA76">
+            <a href="{{url('/menus/'.str_slug($product->category->cat_name))}}" style="text-decoration: none;color: #BAAA76">
         <img src="{{URL::asset('/storage/uploads/'.$product->productImage)}}" alt="{{$product->name}}" style="width: 119px;height: 68px;display: block;margin: 0px auto">
         <p>{{$product->category->cat_name}}</p>
             </a>

@@ -77,14 +77,21 @@ class ProductController extends Controller
     }
 
     //menu显示
-    public function getMenu(Request $request)
+    public function getMenu($menu=null)
     {
-        if($request->get('cat'))
+//        if($request->get('cat'))
+//        {
+//            $product_menu=Product::where('cat_id',$request->get('cat'))->get();
+//        }
+        if($menu==null)
         {
-            $product_menu=Product::where('cat_id',$request->get('cat'))->get();
+            $product_menu=Product::all();
+        }else{
+            $menu=str_replace('-',' ',$menu);
+            $cate=Category::where('cat_name',$menu)->first();
         }
         $products=Product::groupBy('cat_id')->orderBy('cat_id','desc')->get();
-        return view('app.menus',compact('products','product_menu'));
+        return view('app.menus',compact('products','cate'));
 
     }
 
