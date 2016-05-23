@@ -20,6 +20,11 @@ class CategoryController extends Controller
     {
          $cate=Category::findOrFail($request->get('cat_id'));
          $cate->cat_name=$request->get('cat_name');
+         if($request->file('src')){
+             $file=$request->file('src');
+             $request->file('src')->move(('storage/uploads'),$file->getClientOriginalName());
+             $cate->src=$file->getClientOriginalName();
+         }
          $cate->save();
         return redirect('/admin/category')->with('status','更新成功');
     }
@@ -27,7 +32,10 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         $cate = new Category();
+        $file=$request->file('src');
+        $request->file('src')->move(('storage/uploads'),$file->getClientOriginalName());
         $cate->cat_name=$request->get('cat_name');
+        $cate->src=$file->getClientOriginalName();
         $cate->save();
         return redirect('/admin/category');
     }

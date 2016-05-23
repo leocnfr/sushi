@@ -83,15 +83,16 @@ class ProductController extends Controller
 //        {
 //            $product_menu=Product::where('cat_id',$request->get('cat'))->get();
 //        }
+        $products=Product::groupBy('cat_id')->orderBy('cat_id','desc')->get();
         if($menu==null)
         {
-            $product_menu=Product::all();
+            return view('app.menus',compact('products'));
         }else{
             $menu=str_replace('-',' ',$menu);
             $cate=Category::where('cat_name',$menu)->first();
+            return view('app.menus',compact('products','cate'));
         }
-        $products=Product::groupBy('cat_id')->orderBy('cat_id','desc')->get();
-        return view('app.menus',compact('products','cate'));
+
 
     }
 
