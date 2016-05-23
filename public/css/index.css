@@ -173,11 +173,12 @@ height: 608px;
 #drop-bar
 {
     width: 100%;
-    position: absolute;
+    position: relative;
     height: 95px;
     z-index: 1;
     background: black;
     border-top: 2px solid #BAAA76;
     overflow: hidden;
     display: none;
+
 }

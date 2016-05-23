@@ -3,7 +3,7 @@
         <img src="{{URL::asset('/images/logo.png')}}" alt="logo" style="width: 151px;height: 103px">
     </a>
 	<ul class="nav navbar-nav" style="left: 70px">
-		<li class="active" id="show-drop-bar">
+		<li class="active" id="show-drop-bar" style="height: 63px">
 			<a href="{{url('/menus')}}">MENU</a>
 		</li>
 		<li>
@@ -23,7 +23,7 @@
 
 </div>
 <div style="width: 100%;" id="drop-bar">
-    <ul class="list-unstyled" style="position: relative;">
+    <ul class="list-unstyled" style="position: relative;left: -110px">
         @foreach($products as $key=>$product)
         <li class="drop-bar-item" style="position: absolute;left: {{165*($key+1)}}px">
             <a href="{{url('/menus?cat='.$product->cat_id)}}" style="text-decoration: none;color: #BAAA76">
@@ -55,9 +55,9 @@
     }, function () {
         $('div#drop-bar').stop().slideUp(500);
     });
-    $('.drop-bar-item').hover(function () {
-//        var index = $(".drop-bar-item").index(this);
-        var left = (-110)+'px';
-        $('ul.list-unstyled').stop().animate({left:left},150);
-    })
+//    $('.drop-bar-item').hover(function () {
+////        var index = $(".drop-bar-item").index(this);
+//        var left = (-110)+'px';
+//        $('ul.list-unstyled').stop().animate({left:left},150);
+//    })
 </script>
