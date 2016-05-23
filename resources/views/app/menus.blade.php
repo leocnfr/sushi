@@ -138,7 +138,7 @@
         </ul>
 
         <div id="content" class="col-md-8" style="background: rgba(94,93,91,0.4);width: 788px">
-            @foreach($cate->product->chunk(3)  as $chunk)
+                @foreach($cate->product->chunk(3)  as $chunk)
                 <div class="row item-list">
                     @foreach($chunk as $item)
                     <div class="col-md-4 item" >
