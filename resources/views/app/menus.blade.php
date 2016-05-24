@@ -55,8 +55,8 @@
         }
         .col-md-4.item:nth-of-type(2n)
         {
-            border-left: 1px solid rgba(186,170,118,0.4);
-            border-right: 1px solid rgba(186,170,118,0.4);
+            border-left: 2px solid rgba(186,170,118,0.4);
+            border-right: 2px solid rgba(186,170,118,0.4);
         }
         .sidebar-item
         {
