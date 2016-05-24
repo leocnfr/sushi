@@ -35,6 +35,7 @@
         #content
         {
             color: #BAAA76;
+            margin-top: 10px;
         }
         .button-ajouter
         {
@@ -192,7 +193,7 @@
 
 
         </div>
-        <div class="col-md-2" style="background: rgba(94,93,91,0.4);margin-left: 18px;text-align: center;color: #BAAA76;width: 250px;padding: 0px">
+        <div class="col-md-2" style="background: rgba(94,93,91,0.4);margin-left: 18px;text-align: center;color: #BAAA76;width: 250px;padding: 0px;margin-top: 10px">
             <aside style="height: 123px">
                 <p style="font-size: 19pt;font-weight: bold;margin-bottom: 30px">MON PANIER</p>
                 <span style="font-size: 12pt">MENU BOTAN</span>
