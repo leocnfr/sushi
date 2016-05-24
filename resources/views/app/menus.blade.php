@@ -137,6 +137,7 @@
         {
             background: #BAAA76;
             color: black;
+            border: 1px solid black;
         }
     </style>
     <div class="container-fluid " style="padding:0;background: black ">
