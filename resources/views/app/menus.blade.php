@@ -133,6 +133,11 @@
             border-radius: 50%;
             margin: 0px 1px;
         }
+        .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus
+        {
+            background: #BAAA76;
+            color: black;
+        }
     </style>
     <div class="container-fluid " style="padding:0;background: black ">
         <ul id="sidebar" class="col-md-2">
