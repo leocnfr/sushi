@@ -22,6 +22,7 @@
     			<th>编号</th>
                 <th>分类名称</th>
                 <th>图片</th>
+                <th>显示顺序</th>
                 <th>操作</th>
     		</tr>
     	</thead>
@@ -37,6 +38,7 @@
                                 <img src="/storage/uploads/{{$cate->src}}" alt="" style="width: 50px;height: 50px">
                             @endif
                         </td>
+                        <td>{{$cate->order}}</td>
                         <td>
                             <a class="btn btn-info" href="#modal-id" data-toggle="modal" data-whatever="{{$cate->cat_name}}" data-num="{{$cate->id}}" data-src="{{$cate->src}}">编辑</a>
                             <button class="btn btn-danger" id="del" type="submit" onclick="return confirm('确定删除')">删除</button>
@@ -69,6 +71,10 @@
                         <div class="form-group">
                             <label for="">更换图片</label>
                             <input type="file" class="form-control" name="src">
+                        </div>
+                        <div class="form-group">
+                            <label for="">显示顺序</label>
+                            <input type="number" class="form-control" name="order">
                         </div>
                         <input type="hidden" id="cat-id" name="cat_id" >
                         {!! csrf_field() !!}
