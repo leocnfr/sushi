@@ -11,7 +11,7 @@
 			<a href="#">PROMOTION</a>
 		</li>
         <li>
-            <a href="#">PIOINTS RELIAS</a>
+            <a href="/pointrelais">PIOINTS RELIAS</a>
         </li>
         <li>
             <a href="#">NEWS</a>

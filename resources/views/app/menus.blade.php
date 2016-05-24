@@ -1,6 +1,8 @@
 @inject('cates','App\Category')
 @extends('app.app_template')
 @section('content')
+    <meta name="_token" content="<?php echo csrf_token() ?>"/>
+
     <style>
         #sidebar
         {
@@ -187,7 +189,7 @@
                                 <p>{{$item->name}}</p>
                                 <span>{{$item->count}} piece</span>
                                 <span class="pull-right">{{$item->price}}€</span>
-                                <button class="button-ajouter">AJOUTER<i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+                                <button class="button-ajouter" data-productId="{{$item->id}}">AJOUTER<i class="fa fa-plus-circle" aria-hidden="true"></i></button>
                             </div>
                         @endforeach
                     </div>
@@ -203,9 +205,9 @@
                 <p style="font-size: 19pt;font-weight: bold;margin-bottom: 30px">MON PANIER</p>
                 <span style="font-size: 12pt">MENU BOTAN</span>
                 <div style="display: inline-block;background: black;padding: 0px 1px">
-                    <i class="fa fa-minus" aria-hidden="true"></i>
-                    <input type="number" style="width: 15px;height: 15px" min="1" value="1">
-                    <i class="fa fa-plus" aria-hidden="true"></i>
+                    <i class="fa fa-minus" aria-hidden="true" id="minus"></i>
+                    <input type="number" style="width: 15px;height: 15px" min="1" value="1" id="">
+                    <i class="fa fa-plus" aria-hidden="true" id="plus"></i>
                 </div>
                 <span style="font-size: 16pt">15.90€</span>
             </aside>
@@ -225,9 +227,12 @@
     </div>
     @include('app.modal')
     <script>
-        $('.button-ajouter').click(function () {
-            
-        })
+        $('.button-ajouter').on('click', function (event) {
+            var button = $(event.relatedTarget); // Button that triggered the modal
+            productId=button.data('productId');
+            console.log(productId);
+        });
+
 
     </script>
 @endsection
