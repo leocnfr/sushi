@@ -223,4 +223,10 @@
         </div>
     </div>
     @include('app.modal')
+    <script>
+        $('.button-ajouter').click(function () {
+            
+        })
+
+    </script>
 @endsection
