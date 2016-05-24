@@ -133,7 +133,12 @@
             border-radius: 50%;
             margin: 0px 1px;
         }
-        
+        .pagination > li > a:hover, .pagination > li > span:hover, .pagination > li > a:focus, .pagination > li > span:focus
+        {
+            background: #BAAA76;
+            color: black;
+            border: 1px solid black;
+        }
         .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus
         {
             background: #BAAA76;
