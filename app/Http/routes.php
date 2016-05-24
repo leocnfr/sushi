@@ -11,6 +11,7 @@
 |
 */
 
+use App\Category;
 use App\Product;
 use Illuminate\Support\Facades\Request;
 
@@ -65,8 +66,9 @@ Route::post('/admin/news/edit/{id}','NewsController@storeUpdate');
  * 首页路由
  */
 Route::get('/show',function(){
+    $cates=Category::all();
     $products=Product::groupBy('cat_id')->orderBy('cat_id','desc')->get();
-    return view('app.index',compact('products'));
+    return view('app.index',compact('products','cates'));
 });
 
 /*

@@ -25,7 +25,7 @@
                     <div class="col-md-5" >
                         <img id="modal-img" src="{{URL::asset('/storage/uploads/menu1.png')}}" style="width: 353px;height: 275px;display: block;margin: 0px auto">
                     </div>
-                    <div class="col-md-7" style="color: #BAAA76;text-align: center;border-left: 1px solid #BAAA76">
+                    <div class="col-md-7" style="color: #BAAA76;text-align: center;border-left: 1px solid #BAAA76;min-height: 244px">
                         <p style="font-size: 40px;font-weight: bold" id="name">MENU LUNCH A</p>
                         <span style="font-size: 35px;margin-right: 60px" id="count" >12piece </span>
                         <span style="font-size: 35px" id="price">15.90€</span>

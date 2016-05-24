@@ -127,10 +127,10 @@
     </style>
     <div class="container-fluid " style="padding:0;background: black ">
         <ul id="sidebar" class="col-md-2">
-            @foreach($products as $key=>$product)
+            @foreach($cates as $key=>$cate)
                 <li class="sidebar-item list-unstyled">
-                    <p>{{$product->category->cat_name}}</p>
-                    <img src="{{URL::asset('/storage/uploads/'.$product->productImage)}}" alt="{{$product->category->cat_name}}" style="width: 119px;height: 68px">
+                    <p>{{$cate->cat_name}}</p>
+                    <img src="{{URL::asset('/storage/uploads/'.$cate->src)}}" alt="{{$cate->cat_name}}" style="width: 119px;height: 68px">
                 </li>
             @endforeach
                 <div id="triangle-left"></div>
@@ -138,28 +138,27 @@
         </ul>
 
         <div id="content" class="col-md-8" style="background: rgba(94,93,91,0.4);width: 788px">
-            @foreach($cate as $item)
-                @foreach($item->product->chunk(3) as $chunk)
-                    @foreach($chunk as $item)
-                        <div class="col-md-4 item" >
-                            <a  data-toggle="modal" data-target="#exampleModal" data-name="{{$item->name}}" data-count="{{$item->count}}" data-price="{{$item->price}}" data-content="{{$item->content}}" data-src="{{$item->productImage}}">
-                                <img src="{{URL::asset('/storage/uploads/'.$item->productImage)}}" alt="" style="width: 152px;height: 117px;">
-                            </a>
+            @if(isset($cate))
+                @foreach($cate->product->chunk(3)  as $chunk)
+                    <div class="row item-list">
+                        @foreach($chunk as $item)
+                            <div class="col-md-4 item" >
+                                <a  data-toggle="modal" data-target="#exampleModal" data-name="{{$item->name}}" data-count="{{$item->count}}" data-price="{{$item->price}}" data-content="{{$item->content}}" data-src="{{$item->productImage}}">
+                                    <img src="{{URL::asset('/storage/uploads/'.$item->productImage)}}" alt="" style="width: 152px;height: 117px;">
+                                </a>
 
-                            <p>{{$item->name}}</p>
-                            <span>{{$item->count}} piece</span>
-                            <span class="pull-right">{{$item->price}}€</span>
-                            <button class="button-ajouter">AJOUTER<i class="fa fa-plus-circle" aria-hidden="true"></i></button>
-                        </div>
-                    @endforeach
+                                <p>{{$item->name}}</p>
+                                <span>{{$item->count}} piece</span>
+                                <span class="pull-right">{{$item->price}}€</span>
+                                <button class="button-ajouter">AJOUTER<i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+                            </div>
+                        @endforeach
+
+                    </div>
                 @endforeach
-            @endforeach
-                {{--@foreach($cate->product->chunk(3)  as $chunk)--}}
-                {{--<div class="row item-list">--}}
+                @else
+                @endif
 
-
-                {{--</div>--}}
-            {{--@endforeach--}}
 
         </div>
         <div class="col-md-2" style="background: rgba(94,93,91,0.4);margin-left: 18px;text-align: center;color: #BAAA76;width: 250px;padding: 0px">
