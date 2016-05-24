@@ -129,7 +129,9 @@
         {
             color: #BAAA76;
             background: black;
-            border:none;
+            border:1px solid #BAAA76;
+            border-radius: 50%;
+            margin: 0px 1px;
         }
     </style>
     <div class="container-fluid " style="padding:0;background: black ">
