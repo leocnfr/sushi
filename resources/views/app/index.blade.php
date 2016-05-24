@@ -57,5 +57,9 @@
         </div>
     </div>
 
-
+    <script>
+        $('#commandBtn').click(function () {
+            window.location.href='/menus'
+        })
+    </script>
 @endsection

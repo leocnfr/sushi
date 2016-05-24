@@ -36,6 +36,7 @@
         {
             color: #BAAA76;
             margin-top: 21.5px;
+            margin-bottom: 83px;
         }
         .button-ajouter
         {
