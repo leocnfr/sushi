@@ -83,7 +83,7 @@ class ProductController extends Controller
 //        {
 //            $product_menu=Product::where('cat_id',$request->get('cat'))->get();
 //        }
-        $cates=Category::all();
+        $cates=Category::where('order','>','0')->orderBy('order')->get();
         $products=Product::groupBy('cat_id')->orderBy('cat_id','desc')->get();
         if($menu==null)
         {
