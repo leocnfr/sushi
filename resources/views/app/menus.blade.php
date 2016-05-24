@@ -172,12 +172,11 @@
                                 <button class="button-ajouter">AJOUTER<i class="fa fa-plus-circle" aria-hidden="true"></i></button>
                             </div>
                         @endforeach
-                            {!! $products->render() !!}
-
                     </div>
+                @endforeach
+                {!! $products->render() !!}
 
-                    @endforeach
-                @endif
+            @endif
 
 
         </div>
