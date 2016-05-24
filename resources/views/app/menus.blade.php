@@ -125,6 +125,12 @@
             border-bottom: 1px solid rgba(186,170,118,0.4);
             padding: 10px;
         }
+        .pagination > li > a, .pagination > li > span
+        {
+            color: #BAAA76;
+            background: black;
+            border:none;
+        }
     </style>
     <div class="container-fluid " style="padding:0;background: black ">
         <ul id="sidebar" class="col-md-2">
