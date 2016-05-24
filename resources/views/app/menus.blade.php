@@ -1,7 +1,7 @@
 @inject('cates','App\Category')
 @extends('app.app_template')
 @section('content')
-    <meta name="_token" content="<?php echo csrf_token() ?>"/>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <style>
         #sidebar
@@ -145,6 +145,29 @@
             color: black;
             border: 1px solid black;
         }
+        .result_price_list{
+            padding: 0px;
+        }
+        .result_price_list>li
+        {
+            border-bottom: 1px dashed grey
+        }
+        .result_name{
+            font-size: 12pt;
+            float: left;
+            width: 33%;
+        }
+        .result_number_info
+        {
+            width: 33%;
+            display: inline-block;
+            background: black;
+            padding: 0px 1px
+        }
+        .result_price{
+            font-size: 16pt;
+            width: 33%;
+        }
     </style>
     <div class="container-fluid " style="padding:0;background: black ">
         <ul id="sidebar" class="col-md-2">
@@ -171,7 +194,7 @@
                                 <p>{{$item->name}}</p>
                                 <span>{{$item->count}} piece</span>
                                 <span class="pull-right">{{$item->price}}€</span>
-                                <button class="button-ajouter">AJOUTER<i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+                                <button class="button-ajouter" data-productid="{{$item->id}}" data-name="{{$item->name}}" data-piece="{{$item->count}}" data-price="{{$item->price}}">AJOUTER<i class="fa fa-plus-circle" aria-hidden="true"></i></button>
                             </div>
                         @endforeach
 
@@ -189,7 +212,7 @@
                                 <p>{{$item->name}}</p>
                                 <span>{{$item->count}} piece</span>
                                 <span class="pull-right">{{$item->price}}€</span>
-                                <button class="button-ajouter" data-productId="{{$item->id}}">AJOUTER<i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+                                <button class="button-ajouter" data-productid="{{$item->id}}">AJOUTER<i class="fa fa-plus-circle" aria-hidden="true"></i></button>
                             </div>
                         @endforeach
                     </div>
@@ -200,20 +223,24 @@
 
 
         </div>
-        <div class="col-md-2" style="background: rgba(94,93,91,0.4);margin-left: 18px;text-align: center;color: #BAAA76;width: 250px;padding: 0px;margin-top: 21.5px">
-            <aside style="height: 123px">
+        <div id="cart-info" class="col-md-2" style="background: rgba(94,93,91,0.4);margin-left: 18px;text-align: center;color: #BAAA76;width: 250px;padding: 0px;margin-top: 21.5px;">
+            <aside id="result" style="min-height: 123px">
                 <p style="font-size: 19pt;font-weight: bold;margin-bottom: 30px">MON PANIER</p>
-                <span style="font-size: 12pt">MENU BOTAN</span>
-                <div style="display: inline-block;background: black;padding: 0px 1px">
-                    <i class="fa fa-minus" aria-hidden="true" id="minus"></i>
-                    <input type="number" style="width: 15px;height: 15px" min="1" value="1" id="">
-                    <i class="fa fa-plus" aria-hidden="true" id="plus"></i>
-                </div>
-                <span style="font-size: 16pt">15.90€</span>
+                <ul class="result_price_list">
+                   {{--<li class="list-unstyled">--}}
+                       {{--<span class="result_name">MENU BOTAN</span>--}}
+                       {{--<div class="result_number_info" >--}}
+                           {{--<i class="fa fa-minus" aria-hidden="true" id="minus"></i>--}}
+                           {{--<input type="number" style="width: 15px;height: 15px" min="1" value="1" id="product_number">--}}
+                           {{--<i class="fa fa-plus" aria-hidden="true" id="plus"></i>--}}
+                       {{--</div>--}}
+                       {{--<span  class="result_price">15.90€</span>--}}
+                   {{--</li>--}}
+                </ul>
             </aside>
             <aside id="panier_inro">
-                <span style="margin-right: 70px">Nombre de projduts</span> <span >1</span> <br>
-                <span style="margin-right: 80px">Nombre de piece</span> <span >24</span>
+                <span style="margin-right: 70px">Nombre de projduts</span> <span id="product-total-count">0</span> <br>
+                <span style="margin-right: 80px">Nombre de piece</span> <span id="product-total-piece">0</span>
             </aside>
             <aside style="color: white;padding-bottom: 38px;margin-top: 10px">
                 <span style="margin-right:120px">Total</span>
@@ -227,12 +254,37 @@
     </div>
     @include('app.modal')
     <script>
-        $('.button-ajouter').on('click', function (event) {
-            var button = $(event.relatedTarget); // Button that triggered the modal
-            productId=button.data('productId');
-            console.log(productId);
-        });
+//        $('.button-ajouter').on('click', function (event) {
+//            var button = $(event.relatedTarget); // Button that triggered the modal
+//            productId=button.data('productId');
+//            console.log(productId);
+//            $('#cart-info').show();
+//        });
+        $('.button-ajouter').click(function () {
+            $.ajaxSetup(
+                    {
+                        headers: {
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                        },
+                        url:'/cart',
+                        type: "post"
+                    });
 
+            var productId=$(this).data('productid');
+            $.ajax({ data: {productId:productId} }).done(function (response) {
+                var html='<li class="list-unstyled">';
+                html+='<span class="result_name">'+response.name+'</span>';
+                html+='<div class="result_number_info">';
+                html+='<i class="fa fa-minus" aria-hidden="true" id="minus"></i>';
+                html+='<input type="number" style="width: 15px;height: 15px" min="1" value="1" id="product_number">';
+                html+='<i class="fa fa-plus" aria-hidden="true" id="plus"></i>';
+                html+='</div>';
+                html+='<span class="result_price ">'+response.price+'</span>';
+                html+='</li>';
+                $('.result_price_list').append(html);
+            });
+
+        })
 
     </script>
 @endsection

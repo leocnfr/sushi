@@ -100,7 +100,7 @@ Route::get('/connection',function(){
     return view('app.connection');
 });
 
-Route::get('/cart','OrderController@store');
+Route::post('/cart','OrderController@store');
 Route::get('/pointrelais',function(){
     return view('app.points');
 });
