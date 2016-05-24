@@ -17,4 +17,9 @@ class Category extends Model
         return $this->hasMany('App\Product','cat_id');
     }
 
+    //导航栏显示
+    public function getMenu()
+    {
+        return Category::where('order','>','0')->orderBy('order')->get();
+    }
 }

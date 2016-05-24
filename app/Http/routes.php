@@ -66,9 +66,8 @@ Route::post('/admin/news/edit/{id}','NewsController@storeUpdate');
  * 首页路由
  */
 Route::get('/show',function(){
-    $cates=Category::where('order','>','0')->orderBy('order')->get();
     $products=Product::groupBy('cat_id')->orderBy('cat_id','desc')->get();
-    return view('app.index',compact('products','cates'));
+    return view('app.index',compact('products'));
 });
 
 /*
@@ -90,3 +89,13 @@ Route::get('/test',function(){
  * relais to json
  */
 Route::get('/json','RelaisController@toJson');
+
+//panier
+Route::get('/panier',function(){
+   return view('app.panier');
+});
+
+//connection
+Route::get('/connection',function(){
+    return view('app.connection');
+});

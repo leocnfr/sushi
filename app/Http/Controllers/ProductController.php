@@ -42,6 +42,7 @@ class ProductController extends Controller
         $product->price=$request->get('price');
         $product->content=$request->get('content');
         $product->count=$request->get('count');
+        $product->cat_id=$request->get('cat');
         if ($request->hasFile('photo')) {
             $file=$request->file('photo');
             $request->file('photo')->move(('storage/uploads'),$file->getClientOriginalName());
@@ -87,8 +88,8 @@ class ProductController extends Controller
         $products=Product::groupBy('cat_id')->orderBy('cat_id','desc')->get();
         if($menu==null)
         {
-            $products=Product::all();
-            return view('app.menus',compact('products','cates'));
+            $products=Product::orderBy('cat_id','desc')->paginate(9);
+            return view('app.menus',compact('products'));
         }else{
             $menu=str_replace('-',' ',$menu);
             $cate=Category::where('cat_name',$menu)->first();

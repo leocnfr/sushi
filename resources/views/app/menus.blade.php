@@ -1,3 +1,4 @@
+@inject('cates','App\Category')
 @extends('app.app_template')
 @section('content')
     <style>
@@ -127,10 +128,10 @@
     </style>
     <div class="container-fluid " style="padding:0;background: black ">
         <ul id="sidebar" class="col-md-2">
-            @foreach($cates as $key=>$cate)
+            @foreach($cates->getMenu() as $key=>$value)
                 <li class="sidebar-item list-unstyled">
-                    <p>{{$cate->cat_name}}</p>
-                    <img src="{{URL::asset('/storage/uploads/'.$cate->src)}}" alt="{{$cate->cat_name}}" style="width: 119px;height: 68px">
+                    <p>{{$value->cat_name}}</p>
+                    <img src="{{URL::asset('/storage/uploads/'.$value->src)}}" alt="{{$value->cat_name}}" style="width: 119px;height: 68px">
                 </li>
             @endforeach
                 <div id="triangle-left"></div>
@@ -157,6 +158,25 @@
                     </div>
                 @endforeach
                 @else
+                    @foreach($products->chunk(3) as $chunk)
+                    <div class="row item-list">
+                        @foreach($chunk as $item)
+                            <div class="col-md-4 item" >
+                                <a  data-toggle="modal" data-target="#exampleModal" data-name="{{$item->name}}" data-count="{{$item->count}}" data-price="{{$item->price}}" data-content="{{$item->content}}" data-src="{{$item->productImage}}">
+                                    <img src="{{URL::asset('/storage/uploads/'.$item->productImage)}}" alt="" style="width: 152px;height: 117px;">
+                                </a>
+
+                                <p>{{$item->name}}</p>
+                                <span>{{$item->count}} piece</span>
+                                <span class="pull-right">{{$item->price}}€</span>
+                                <button class="button-ajouter">AJOUTER<i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+                            </div>
+                        @endforeach
+                            {!! $products->render() !!}
+
+                    </div>
+
+                    @endforeach
                 @endif
 
 

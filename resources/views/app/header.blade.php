@@ -1,3 +1,4 @@
+@inject('cates','App\Category')
 <div class="navbar">
 	<a class="navbar-brand" href="#">
         <img src="{{URL::asset('/images/logo.png')}}" alt="logo" style="width: 151px;height: 103px">
@@ -24,7 +25,7 @@
 </div>
 <div style="width: 100%;" id="drop-bar">
     <ul class="list-unstyled" style="position: relative;left: -110px">
-        @foreach($cates as $key=>$cate)
+        @foreach($cates->getMenu() as $key=>$cate)
         <li class="drop-bar-item" style="position: absolute;left: {{165*($key+1)}}px">
             <a href="{{url('/menus/'.str_slug($cate->cat_name))}}" style="text-decoration: none;color: #BAAA76">
         <img src="{{URL::asset('/storage/uploads/'.$cate->src)}}" alt="{{$cate->name}}" style="width: 119px;height: 68px;display: block;margin: 0px auto">
