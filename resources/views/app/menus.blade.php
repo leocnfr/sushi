@@ -68,9 +68,10 @@
         }
         .sidebar-item
         {
-            margin-top: 54px;
+            top: 54px;
             text-align: center;
             cursor: pointer;
+            position: relative;
         }
         input::-webkit-outer-spin-button,
         input::-webkit-inner-spin-button {
@@ -285,6 +286,9 @@
 //            });
 //
 //        })
+        $('li.sidebar-item').hover(function () {
+            var index = $(".drop-bar-item").index(this);
+        })
 
     </script>
 @endsection
