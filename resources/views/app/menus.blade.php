@@ -294,7 +294,7 @@
            }else if(index=='2'){
                 $('li.sidebar-item').stop().animate({top:'-230px'},350)
            }else if(index =='0'){
-               $('li.sidebar-item').stop().animate({top:'24px'},350)
+               $('li.sidebar-item').stop().animate({top:'20px'},350)
 
            }
         })
