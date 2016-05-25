@@ -13,7 +13,7 @@
                     <p>Chaque menu offert un bol de riz blanc et un boisson au choix dans le menu dessous</p>
                     <p>BOISSON</p>
                     @foreach($boissons->showBoisson() as $boisson)
-                        <div class="col-md-4" style="width: 299px;height: 131px;color: #BAAA76">
+                        <div class="col-md-4" style="width: 299px;height: 70px;color: #BAAA76">
                             <div class="checkbox">
                                 <label>
                                     <input type="checkbox" value="" id="" name="">
