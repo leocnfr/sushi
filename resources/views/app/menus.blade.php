@@ -290,11 +290,11 @@
         $('li.sidebar-item').hover(function () {
             var index = $(".sidebar-item").index(this);
            if (index=='1'){
-               $('li.sidebar-item').stop().animate({top:'-97px'},250)
+               $('li.sidebar-item').stop().animate({top:'-97px'},350)
            }else if(index=='2'){
-                $('li.sidebar-item').stop().animate({top:'-217px'},250)
+                $('li.sidebar-item').stop().animate({top:'-227px'},350)
            }else if(index =='0'){
-               $('li.sidebar-item').stop().animate({top:'24px'},250)
+               $('li.sidebar-item').stop().animate({top:'24px'},350)
 
            }
         })
