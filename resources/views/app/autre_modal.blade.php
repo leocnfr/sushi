@@ -1,4 +1,7 @@
 @inject('boissons','App\Product')
+<style>
+
+</style>
 <div class="modal fade" id="autre" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
     <div class="modal-dialog" role="document" style="width: 920px;margin-top: 130px">
         <div class="modal-content" >
@@ -23,7 +26,7 @@
                             </div>
                         </div>
                     @endforeach
-                    <br>
+                    <hr>
                     <p>AUTRES</p>
                     <div class="col-md-4" style="width: 299px;height: 131px;color: #BAAA76">
                         <div class="checkbox">
@@ -41,7 +44,7 @@
                         	{{--</label>--}}
                         {{--</div>--}}
                     {{--</div>--}}
-                </div>
+                </hr>
             </div>
 
         </div>
