@@ -15,7 +15,7 @@
                     <p>COMPOSITION DE MA FORMULE</p>
                     <p>Chaque menu offert un bol de riz blanc et un boisson au choix dans le menu dessous</p>
                     <p>BOISSON</p>
-                    @foreach($boissons->showBoisson()->chun(3) as $boissons)
+                    @foreach($boissons->showBoisson()->chunk(3) as $boissons)
                         <div class="row">
                             @foreach($boissons as $boisson)
                                 <div class="col-md-4" style="width: 299px;height: 70px;color: #BAAA76">
