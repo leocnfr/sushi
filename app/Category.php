@@ -29,7 +29,7 @@ class Category extends Model
     }
     public function getOther($cateId)
     {
-        return Category::where('id','!=',$cateId)->get();
+        return Category::where('id','!=',$cateId)->where('order','>','0')->get();
 
     }
 }
