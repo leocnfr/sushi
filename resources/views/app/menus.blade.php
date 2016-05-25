@@ -68,10 +68,11 @@
         }
         .sidebar-item
         {
-            top: 54px;
+            top: 24px;
             text-align: center;
             cursor: pointer;
             position: relative;
+            padding: 7px 0;
         }
         input::-webkit-outer-spin-button,
         input::-webkit-inner-spin-button {
@@ -287,7 +288,16 @@
 //
 //        })
         $('li.sidebar-item').hover(function () {
-            var index = $(".drop-bar-item").index(this);
+            var index = $(".sidebar-item").index(this);
+            if (index=='1')
+            {
+                $("li.sidebar-item").stop.animate({top:'-98px'},150);
+
+            }
+            else if (index=='2')
+            {
+                $("li.sidebar-item").stop.animate({top:'-207px'},150);
+            }
         })
 
     </script>
