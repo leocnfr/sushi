@@ -19,17 +19,17 @@
                 
             </div>
             <div class="item">
-                <img src="{{URL::asset('images/IMG_0316.png')}}" alt="...">
+                <img src="{{URL::asset('/images/IMG_0316.png')}}" alt="...">
                 <div class="carousel-caption">
                 </div>
             </div>
             <div class="item">
-                <img src="{{URL::asset('images/IMG_0317.png')}}" alt="...">
+                <img src="{{URL::asset('/images/IMG_0317.png')}}" alt="...">
                 <div class="carousel-caption">
                 </div>
             </div>
             <div class="item">
-                <img src="{{URL::asset('images/IMG_0318.png')}}" alt="...">
+                <img src="{{URL::asset('/images/IMG_0318.png')}}" alt="...">
                 <div class="carousel-caption">
                 </div>
             </div>
