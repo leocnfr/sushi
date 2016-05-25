@@ -15,18 +15,22 @@
                     <p>COMPOSITION DE MA FORMULE</p>
                     <p>Chaque menu offert un bol de riz blanc et un boisson au choix dans le menu dessous</p>
                     <p>BOISSON</p>
-                    @foreach($boissons->showBoisson() as $boisson)
-                        <div class="col-md-4" style="width: 299px;height: 70px;color: #BAAA76">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" value="" id="" name="">
-                                    {{$boisson->name}}
-                                </label>
-                                <img src="/storage/uploads/{{$boisson->productImage}}" alt="" style="width: 50px">
-                            </div>
+                    @foreach($boissons->showBoisson()->chun(3) as $boissons)
+                        <div class="row">
+                            @foreach($boissons as $boisson)
+                                <div class="col-md-4" style="width: 299px;height: 70px;color: #BAAA76">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="" id="" name="">
+                                            {{$boisson->name}}
+                                        </label>
+                                        <img src="/storage/uploads/{{$boisson->productImage}}" alt="" style="width: 50px">
+                                    </div>
+                                </div>
+                            @endforeach
                         </div>
+
                     @endforeach
-                    <hr>
                     <p>AUTRES</p>
                     <div class="col-md-4" style="width: 299px;height: 131px;color: #BAAA76">
                         <div class="checkbox">
