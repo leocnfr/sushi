@@ -222,7 +222,7 @@
                                 </a>
 
                                 <p>{{$item->name}}</p>
-                                <span>{{$item->count}} piece</span>
+                                <span>{{$item->count}} pièce</span>
                                 <span class="pull-right">{{$item->price}}€</span>
                                 <button class="button-ajouter" data-productid="{{$item->id}}" data-toggle="modal" data-target="#autre">AJOUTER<i class="fa fa-plus-circle" aria-hidden="true"></i></button>
                             </div>

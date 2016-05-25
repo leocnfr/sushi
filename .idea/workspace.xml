@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="757db07e-5d4b-47ff-a67a-dd6a19559214" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/app/menus.blade.php" afterPath="$PROJECT_DIR$/resources/views/app/menus.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/app/modal.blade.php" afterPath="$PROJECT_DIR$/resources/views/app/modal.blade.php" />
     </list>
     <ignored path="sushi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,11 +34,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="menus.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="menus.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/app/menus.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.75862">
-              <caret line="242" column="58" selection-start-line="242" selection-start-column="58" selection-end-line="242" selection-end-column="58" />
+            <state vertical-scroll-proportion="0.4920635">
+              <caret line="224" column="58" selection-start-line="224" selection-start-column="58" selection-end-line="224" selection-end-column="58" />
               <folding>
                 <element signature="e#4661#4697#0#HTML" expanded="true" />
                 <element signature="e#5120#5153#0#HTML" expanded="true" />
@@ -55,7 +54,7 @@
                 <element signature="e#10141#10167#0#HTML" expanded="true" />
                 <element signature="e#10271#10329#0#HTML" expanded="true" />
                 <element signature="e#10353#10379#0#HTML" expanded="true" />
-                <marker date="1464144835000" expanded="true" signature="11849:11873" placeholder="..." />
+                <marker date="1464144891000" expanded="true" signature="11849:11873" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -73,10 +72,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="modal.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="modal.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/app/modal.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.23809524">
+            <state vertical-scroll-proportion="-35.03448">
               <caret line="75" column="43" selection-start-line="75" selection-start-column="43" selection-end-line="75" selection-end-column="43" />
               <folding />
             </state>
@@ -222,8 +221,8 @@
         <option value="$PROJECT_DIR$/storage/framework/views/8f7d57f06da04becb2aef055722584e04c42d1be.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" />
         <option value="$PROJECT_DIR$/app/Category.php" />
-        <option value="$PROJECT_DIR$/resources/views/app/menus.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/app/modal.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/app/menus.blade.php" />
       </list>
     </option>
   </component>
@@ -956,10 +955,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/app/modal.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-35.03448">
+          <caret line="75" column="43" selection-start-line="75" selection-start-column="43" selection-end-line="75" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/app/menus.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.75862">
-          <caret line="242" column="58" selection-start-line="242" selection-start-column="58" selection-end-line="242" selection-end-column="58" />
+        <state vertical-scroll-proportion="0.4920635">
+          <caret line="224" column="58" selection-start-line="224" selection-start-column="58" selection-end-line="224" selection-end-column="58" />
           <folding>
             <element signature="e#4661#4697#0#HTML" expanded="true" />
             <element signature="e#5120#5153#0#HTML" expanded="true" />
@@ -975,16 +982,8 @@
             <element signature="e#10141#10167#0#HTML" expanded="true" />
             <element signature="e#10271#10329#0#HTML" expanded="true" />
             <element signature="e#10353#10379#0#HTML" expanded="true" />
-            <marker date="1464144835000" expanded="true" signature="11849:11873" placeholder="..." />
+            <marker date="1464144891000" expanded="true" signature="11849:11873" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/app/modal.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23809524">
-          <caret line="75" column="43" selection-start-line="75" selection-start-column="43" selection-end-line="75" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
