@@ -19,10 +19,11 @@
                                     <input type="checkbox" value="" id="" name="">
                                     {{$boisson->name}}
                                 </label>
-                                <img src="/storage/uploads/{{$boisson->productImg}}" alt="" style="width: 50px">
+                                <img src="/storage/uploads/{{$boisson->productImage}}" alt="" style="width: 50px">
                             </div>
                         </div>
                     @endforeach
+                    <br>
                     <p>AUTRES</p>
                     <div class="col-md-4" style="width: 299px;height: 131px;color: #BAAA76">
                         <div class="checkbox">
