@@ -318,11 +318,11 @@
         $('li.sidebar-item').hover(function () {
             var index = $(".sidebar-item").index(this);
            if (index=='1'){
-               $('li.sidebar-item').stop().animate({top:'-97px'},350)
+               $('li.sidebar-item').stop().animate({top:'-97px'},500)
            }else if(index=='2'){
-                $('li.sidebar-item').stop().animate({top:'-230px'},350)
+                $('li.sidebar-item').stop().animate({top:'-230px'},500)
            }else if(index =='0'){
-               $('li.sidebar-item').stop().animate({top:'20px'},350)
+               $('li.sidebar-item').stop().animate({top:'20px'},500)
 
            }
         })
