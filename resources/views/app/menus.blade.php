@@ -292,7 +292,7 @@
            if (index=='1'){
                $('li.sidebar-item').stop().animate({top:'-97px'},250)
            }else if(index=='2'){
-                $('li.sidebar-item').stop().animate({top:'-207px'},250)
+                $('li.sidebar-item').stop().animate({top:'-217px'},250)
            }else if(index =='0'){
                $('li.sidebar-item').stop().animate({top:'24px'},250)
 
