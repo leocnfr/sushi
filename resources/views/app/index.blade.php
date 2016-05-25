@@ -19,17 +19,17 @@
                 
             </div>
             <div class="item">
-                <img src="/images/IMG_0316.png" alt="...">
+                <img src="/images/index1.PNG" alt="...">
                 <div class="carousel-caption">
                 </div>
             </div>
             <div class="item">
-                <img src="/images/IMG_0317.png" alt="...">
+                <img src="/images/index2.PNG" alt="...">
                 <div class="carousel-caption">
                 </div>
             </div>
             <div class="item">
-                <img src="/images/IMG_0318.png" alt="...">
+                <img src="/images/index3.PNG" alt="...">
                 <div class="carousel-caption">
                 </div>
             </div>

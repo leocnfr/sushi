@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="757db07e-5d4b-47ff-a67a-dd6a19559214" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/images/IMG_0316.PNG" afterPath="$PROJECT_DIR$/public/images/index1.PNG" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/images/IMG_0317.PNG" afterPath="$PROJECT_DIR$/public/images/index3.PNG" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/images/IMG_0318.PNG" afterPath="$PROJECT_DIR$/public/images/index2.PNG" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/app/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/app/index.blade.php" />
     </list>
     <ignored path="sushi.iws" />
@@ -103,13 +106,13 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/app/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7619048">
-              <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.8730159">
+              <caret line="31" column="44" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
               <folding>
-                <element signature="e#2072#2103#0#HTML" expanded="true" />
-                <element signature="e#2247#2281#0#HTML" expanded="true" />
-                <marker date="1464140171000" expanded="true" signature="2488:2553" placeholder="..." />
-                <marker date="1464140171000" expanded="true" signature="2501:2552" placeholder="..." />
+                <element signature="e#2066#2097#0#HTML" expanded="true" />
+                <element signature="e#2241#2275#0#HTML" expanded="true" />
+                <marker date="1464140303000" expanded="true" signature="2482:2547" placeholder="..." />
+                <marker date="1464140303000" expanded="true" signature="2495:2546" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -980,13 +983,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/app/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7619048">
-          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.8730159">
+          <caret line="31" column="44" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
           <folding>
-            <element signature="e#2072#2103#0#HTML" expanded="true" />
-            <element signature="e#2247#2281#0#HTML" expanded="true" />
-            <marker date="1464140171000" expanded="true" signature="2488:2553" placeholder="..." />
-            <marker date="1464140171000" expanded="true" signature="2501:2552" placeholder="..." />
+            <element signature="e#2066#2097#0#HTML" expanded="true" />
+            <element signature="e#2241#2275#0#HTML" expanded="true" />
+            <marker date="1464140303000" expanded="true" signature="2482:2547" placeholder="..." />
+            <marker date="1464140303000" expanded="true" signature="2495:2546" placeholder="..." />
           </folding>
         </state>
       </provider>
