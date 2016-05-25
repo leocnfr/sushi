@@ -31,7 +31,7 @@
             });
             var geocoder = new google.maps.Geocoder();
 
-            var markers = [];
+//            var markers = [];
 
 //            var image = '/images/position-icon.png';
             var image = {
@@ -46,6 +46,7 @@
                 map: map,
                 icon: image
             });
+
             function geocodeAddress(address,geocoder, resultsMap,index) {
                 var address = address;
                 geocoder.geocode({'address': address}, function(results, status) {
@@ -56,27 +57,43 @@
 //                            icon: image,
 //                            position: results[0].geometry.location
 //                        });
-                        addMarkerWithTimeout(results[0].geometry.location,400*(index+1))
+                        var content=address;
+                        addMarkerWithTimeout(results[0].geometry.location,400*(index+1),index,content)
                     } else {
                         alert('Geocode was not successful for the following reason: ' + status);
                     }
                 });
             }
+            function attachSecretMessage(marker, secretMessage) {
+                var infowindow = new google.maps.InfoWindow({
+                    content: secretMessage
+                });
+                marker.addListener('click', function() {
+
+                    infowindow.open(marker.get('map'), marker);
+                });
+            }
+            function addMarkerWithTimeout(position, timeout,index,content) {
+                window.setTimeout(function () {
+                    var markers =new google.maps.Marker({
+                        position: position,
+                        map: map,
+//                        icon: image,
+                        animation: google.maps.Animation.DROP,
+                        label:(index+1)+''
+                    });
+                    attachSecretMessage(markers, content);
+
+                },timeout);
+            }
+
+
+
             $.get('/json', function (data) {
                 $.each(data, function (key,val) {
                     geocodeAddress(val.address,geocoder, map,key);
                 })
             });
-            function addMarkerWithTimeout(position, timeout) {
-                window.setTimeout(function() {
-                    markers.push(new google.maps.Marker({
-                        position: position,
-                        map: map,
-                        icon: image,
-                        animation: google.maps.Animation.DROP
-                    }));
-                }, timeout);
-            }
 
         }
 
