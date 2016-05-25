@@ -17,7 +17,7 @@
                             <div class="checkbox">
                                 <label>
                                     <input type="checkbox" value="" id="" name="">
-                                    Coca-cola zero
+                                    {{$boisson->name}}
                                 </label>
                             </div>
                         </div>

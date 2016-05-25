@@ -61,7 +61,7 @@
         {
             border-left: 2px solid rgba(186,170,118,0.4);
         }
-        .col-md-4.item:last-child
+        .col-md-4.item:nth-of-type(3n)
         {
             border-left: 2px solid rgba(186,170,118,0.4);
 
