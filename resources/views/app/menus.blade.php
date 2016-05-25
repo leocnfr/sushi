@@ -291,12 +291,12 @@
             var index = $(".sidebar-item").index(this);
             if (index=='1')
             {
-                $("li.sidebar-item").stop.animate({top:'-98px'},150);
+                $("li.sidebar-item").stop.animate({top:-98+'px'},150);
 
             }
             else if (index=='2')
             {
-                $("li.sidebar-item").stop.animate({top:'-207px'},150);
+                $("li.sidebar-item").stop.animate({top:-207+'px'},150);
             }
         })
 
