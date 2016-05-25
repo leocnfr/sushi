@@ -27,7 +27,7 @@
                     </div>
                     <div class="col-md-7" style="color: #BAAA76;text-align: center;border-left: 1px solid #BAAA76;min-height: 244px">
                         <p style="font-size: 40px;font-weight: bold" id="name">MENU LUNCH A</p>
-                        <span style="font-size: 35px;margin-right: 60px" id="count" >12piece </span>
+                        <span style="font-size: 35px;margin-right: 60px" id="count" >12pièce </span>
                         <span style="font-size: 35px" id="price">15.90€</span>
                         {{--<table style="width: 500px;margin-top: 20px">--}}
                             {{--<thead>--}}
@@ -72,8 +72,8 @@
         var button = $(event.relatedTarget); // Button that triggered the modal
         var recipient = button.data('whatever');
         var name = button.data('name');
-        var count = button.data('count')+'piece';
-        var price = button.data('price')+'€';
+        var count = button.data('count')+' pièce';
+        var price = button.data('price')+' €';
         var content = button.data('content');
         var src = button.data('src');
         var modal = $(this);
