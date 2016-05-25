@@ -74,6 +74,11 @@
             position: relative;
             padding: 10px 0;
         }
+        .sidebar-item > a
+        {
+            color: #BAAA76;
+            text-decoration: none;
+        }
         input::-webkit-outer-spin-button,
         input::-webkit-inner-spin-button {
             -webkit-appearance: none;
@@ -176,24 +181,29 @@
         <ul id="sidebar" class="col-md-2">
             @foreach($cates->getMenu() as $key=>$value)
                 <li class="sidebar-item list-unstyled">
-                    <p>{{$value->cat_name}}</p>
-                    <img src="{{URL::asset('/storage/uploads/'.$value->src)}}" alt="{{$value->cat_name}}" style="width: 119px;height: 68px">
+                    <a href="{{url('/menus/'.str_slug($value->cat_name))}}">
+                        <p>{{$value->cat_name}}</p>
+                        <img src="{{URL::asset('/storage/uploads/'.$value->src)}}" alt="{{$value->cat_name}}" style="width: 119px;height: 68px">
+                    </a>
+
                 </li>
             @endforeach
-                <div id="triangle-left"></div>
 
         </ul>
         @else
             <ul id="sidebar" class="col-md-2">
                 <li class="sidebar-item list-unstyled">
+                    <a href="{{url('/menus/'.str_slug($cates->getSideMenu($cate->id)->cat_name))}}">
                     <p>{{$cates->getSideMenu($cate->id)->cat_name}}</p>
                     <img src="{{URL::asset('/storage/uploads/'.$cates->getSideMenu($cate->id)->src)}}" alt="{{$cates->getSideMenu($cate->id)->cat_name}}" style="width: 119px;height: 68px">
-
+                    </a>
                 </li>
                 @foreach($cates->getOther($cate->id) as $key=>$value)
                     <li class="sidebar-item list-unstyled">
+                        <a href="{{url('/menus/'.str_slug($value->cat_name))}}">
                         <p>{{$value->cat_name}}</p>
                         <img src="{{URL::asset('/storage/uploads/'.$value->src)}}" alt="{{$value->cat_name}}" style="width: 119px;height: 68px">
+                        </a>
                     </li>
                 @endforeach
                 <div id="triangle-left"></div>
