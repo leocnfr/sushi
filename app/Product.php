@@ -22,4 +22,9 @@ class Product extends Model
         return Product::all();
     }
 
+    public function showBoisson()
+    {
+        return Product::where('cat_id','6');
+    }
+
 }

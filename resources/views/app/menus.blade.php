@@ -194,7 +194,7 @@
                                 <p>{{$item->name}}</p>
                                 <span>{{$item->count}} piece</span>
                                 <span class="pull-right">{{$item->price}}€</span>
-                                <button class="button-ajouter" data-productid="{{$item->id}}" data-name="{{$item->name}}" data-piece="{{$item->count}}" data-price="{{$item->price}}">AJOUTER<i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+                                <button class="button-ajouter" data-productid="{{$item->id}}" data-toggle="modal" data-target="#autre">AJOUTER<i class="fa fa-plus-circle" aria-hidden="true"></i></button>
                             </div>
                         @endforeach
 
@@ -218,7 +218,6 @@
                     </div>
                 @endforeach
                 {!! $products->render() !!}
-
             @endif
 
 
@@ -253,6 +252,7 @@
         </div>
     </div>
     @include('app.modal')
+    @include('app.autre_modal')
     <script>
 //        $('.button-ajouter').on('click', function (event) {
 //            var button = $(event.relatedTarget); // Button that triggered the modal
@@ -260,31 +260,31 @@
 //            console.log(productId);
 //            $('#cart-info').show();
 //        });
-        $('.button-ajouter').click(function () {
-            $.ajaxSetup(
-                    {
-                        headers: {
-                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                        },
-                        url:'/cart',
-                        type: "post"
-                    });
-
-            var productId=$(this).data('productid');
-            $.ajax({ data: {productId:productId} }).done(function (response) {
-                var html='<li class="list-unstyled">';
-                html+='<span class="result_name">'+response.name+'</span>';
-                html+='<div class="result_number_info">';
-                html+='<i class="fa fa-minus" aria-hidden="true" id="minus"></i>';
-                html+='<input type="number" style="width: 15px;height: 15px" min="1" value="1" id="product_number">';
-                html+='<i class="fa fa-plus" aria-hidden="true" id="plus"></i>';
-                html+='</div>';
-                html+='<span class="result_price ">'+response.price+'</span>';
-                html+='</li>';
-                $('.result_price_list').append(html);
-            });
-
-        })
+//        $('.button-ajouter').click(function () {
+//            $.ajaxSetup(
+//                    {
+//                        headers: {
+//                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+//                        },
+//                        url:'/cart',
+//                        type: "post"
+//                    });
+//
+//            var productId=$(this).data('productid');
+//            $.ajax({ data: {productId:productId} }).done(function (response) {
+//                var html='<li class="list-unstyled">';
+//                html+='<span class="result_name">'+response.name+'</span>';
+//                html+='<div class="result_number_info">';
+//                html+='<i class="fa fa-minus" aria-hidden="true" id="minus"></i>';
+//                html+='<input type="number" style="width: 15px;height: 15px" min="1" value="1" id="product_number">';
+//                html+='<i class="fa fa-plus" aria-hidden="true" id="plus"></i>';
+//                html+='</div>';
+//                html+='<span class="result_price ">'+response.price+'</span>';
+//                html+='</li>';
+//                $('.result_price_list').append(html);
+//            });
+//
+//        })
 
     </script>
 @endsection
