@@ -89,7 +89,7 @@ class ProductController extends Controller
         if($menu==null)
         {
             $products=Product::orderBy('cat_id','desc')->paginate(9);
-            return view('app.menus',compact('products'));
+            return view('app.menus',compact('products','cates'));
         }else{
             $menu=str_replace('-',' ',$menu);
             $cate=Category::where('cat_name',$menu)->first();

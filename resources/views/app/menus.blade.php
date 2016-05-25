@@ -172,6 +172,7 @@
         }
     </style>
     <div class="container-fluid " style="padding:0;background: black ">
+        @if(!isset($cate))
         <ul id="sidebar" class="col-md-2">
             @foreach($cates->getMenu() as $key=>$value)
                 <li class="sidebar-item list-unstyled">
@@ -182,6 +183,23 @@
                 <div id="triangle-left"></div>
 
         </ul>
+        @else
+            <ul id="sidebar" class="col-md-2">
+                <li class="sidebar-item list-unstyled">
+                    <p>{{$cates->getSideMenu($cate->id)->cat_name}}</p>
+                    <img src="{{URL::asset('/storage/uploads/'.$cates->getSideMenu($cate->id)->src)}}" alt="{{$cates->getSideMenu($cate->id)->cat_name}}" style="width: 119px;height: 68px">
+
+                </li>
+                @foreach($cates->getOther($cate->id) as $key=>$value)
+                    <li class="sidebar-item list-unstyled">
+                        <p>{{$value->cat_name}}</p>
+                        <img src="{{URL::asset('/storage/uploads/'.$value->src)}}" alt="{{$value->cat_name}}" style="width: 119px;height: 68px">
+                    </li>
+                @endforeach
+                <div id="triangle-left"></div>
+
+            </ul>
+        @endif
 
         <div id="content" class="col-md-8" style="background: rgba(94,93,91,0.4);width: 788px">
             @if(isset($cate))

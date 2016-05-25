@@ -22,4 +22,14 @@ class Category extends Model
     {
         return Category::where('order','>','0')->orderBy('order')->get();
     }
+    //sidebar
+    public function getSideMenu($cateId)
+    {
+        return Category::where('id',$cateId)->first();
+    }
+    public function getOther($cateId)
+    {
+        return Category::where('id','!=',$cateId)->get();
+
+    }
 }
