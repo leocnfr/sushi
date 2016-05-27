@@ -30,6 +30,32 @@
         <input type="number" class="form-control" name="price" id="" placeholder="产品价格" value="{{$product->price}}" step="0.1">
     </div>
     <div class="form-group">
+        <label for="">产品送货时间</label>
+        <div class="checkbox">
+            @if(str_contains($product->send_time,'1'))
+            <label>
+                <input type="checkbox" value="1" id="" name="time[]" checked>中午
+            </label>
+                @else
+                <label>
+                    <input type="checkbox" value="1" id="" name="time[]" checked>中午
+                </label>
+            @endif
+        </div>
+        <div class="checkbox">
+            @if(str_contains($product->send_time,'2'))
+                <label>
+                    <input type="checkbox" value="2" id="" name="time[]" checked>晚上
+                </label>
+                @else
+                <label>
+                    <input type="checkbox" value="2" id="" name="time[]">晚上
+                </label>
+            @endif
+
+        </div>
+    </div>
+    <div class="form-group">
         <label for="">产品介绍</label>
         <textarea id="textarea1" class="form-control" rows="15" name="content" required>
 			{{$product->content}}

@@ -60,7 +60,8 @@
                     <li><a href="{{url("/admin/news/create")}}">全部订单</a></li>
                 </ul>
             </li>
-            <li><a href="#"><i class="fa fa-user"></i><span>用户列表</span></a></li>
+            <li><a href="{{url('/admin/users')}}"><i class="fa fa-user"></i><span>用户列表</span></a></li>
+            <li><a href="{{url('/admin/points')}}"><i class="fa fa-user"></i><span>积分设置</span></a></li>
 
 
             {{--<li><a href="#"><span>Another Link</span></a></li>--}}

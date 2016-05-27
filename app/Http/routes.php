@@ -62,6 +62,14 @@ Route::post('/admin/news/uploadImg','NewsController@upload');
 Route::post('/admin/news/destroy','NewsController@destroy');
 Route::post('/admin/news/edit/{id}','NewsController@storeUpdate');
 
+//后台用户列表
+Route::get('/admin/users',function(){
+   return  view('user');
+});
+//积分设置
+Route::get('/admin/point',function(){
+   return view('point');
+});
 /**
  * 首页路由
  */

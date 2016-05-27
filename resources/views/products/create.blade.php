@@ -29,6 +29,19 @@
             <input type="number" class="form-control" name="price" id="" placeholder="产品价格" step="0.1">
         </div>
         <div class="form-group">
+            <label for="">产品送货时间</label>
+                <div class="checkbox">
+                	<label>
+                		<input type="checkbox" value="1" id="" name="time[]">中午
+                    </label>
+                </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="2" id="" name="time[]">晚上
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
             <label for="">产品介绍</label>
 			<textarea id="textarea1" class="form-control" rows="15" name="content" required>
 			</textarea>
