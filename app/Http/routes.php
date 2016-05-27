@@ -67,7 +67,7 @@ Route::get('/admin/users',function(){
    return  view('user');
 });
 //积分设置
-Route::get('/admin/point',function(){
+Route::get('/admin/points',function(){
    return view('point');
 });
 /**

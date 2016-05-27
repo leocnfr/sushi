@@ -38,7 +38,13 @@ class ProductController extends Controller
     //更新
     public function update(Request $request){
         $product=Product::findOrFail($request->id);
-        $product->send_time=implode(',',$request->get('time'));
+        if($request->get('time'))
+        {
+            $product->send_time=implode(',',$request->get('time'));
+        }else
+        {
+            $product->send_time='';
+        }
         $product->name=$request->get('name');
         $product->price=$request->get('price');
         $product->content=$request->get('content');
@@ -57,7 +63,13 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $product= new Product();
-        $product->send_time=implode(',',$request->get('time'));
+        if($request->get('time'))
+        {
+            $product->send_time=implode(',',$request->get('time'));
+        }else
+        {
+            $product->send_time='';
+        }
         $product->name=$request->get('name');
         $product->price=$request->get('price');
         $product->content=$request->get('content');
