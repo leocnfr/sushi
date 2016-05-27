@@ -25,10 +25,42 @@
 
     <script>
         function initMap() {
+            //map style
+            var styles = [
+                {
+                    stylers: [
+                        { hue: 340 },
+                        { saturation: 5.6 },
+                        { lightness: 21.2 },
+                        { gamma: 1.51 }
+                    ]
+                },{
+                    featureType: "road",
+                    elementType: "geometry",
+                    stylers: [
+                        { hue: "#00ffee" },
+                        { lightness: 100 },
+                        { visibility: "simplified" }
+                    ]
+                },{
+                    featureType: "road",
+                    elementType: "labels",
+                    stylers: [
+                        { visibility: "off" }
+                    ]
+                }
+            ];
+            var styledMap = new google.maps.StyledMapType(styles,
+                    {name: "Styled Map"});
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 11,
-                center: {lat: 48.8588377, lng: 2.2775171}
+                center: {lat: 48.8588377, lng: 2.2775171},
+                mapTypeControlOptions: {
+                    mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
+                }
             });
+            map.mapTypes.set('map_style', styledMap);
+            map.setMapTypeId('map_style');
             var geocoder = new google.maps.Geocoder();
 
 //            var markers = [];
@@ -57,7 +89,7 @@
 //                            icon: image,
 //                            position: results[0].geometry.location
 //                        });
-                        var content=address;
+                        var content="<div style='color: #BAAA76'>"+address+"</div>";
                         addMarkerWithTimeout(results[0].geometry.location,400*(index+1),index,content)
                     } else {
                         alert('Geocode was not successful for the following reason: ' + status);

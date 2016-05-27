@@ -135,9 +135,8 @@
         .pagination > li > a, .pagination > li > span
         {
             color: #BAAA76;
-            background: black;
-            border:1px solid #BAAA76;
-            border-radius: 50%;
+            background: none;
+            border:none;
             margin: 0px 1px;
         }
         .pagination > li > a:hover, .pagination > li > span:hover, .pagination > li > a:focus, .pagination > li > span:focus
