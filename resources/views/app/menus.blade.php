@@ -146,7 +146,7 @@
             color: black;
             border: 1px solid black;
         }
-        .pagination > li:first-child > a, .pagination > li:first-child > span, .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus
+        .pagination > li:first-child > a
         {
             border-radius: 50%;
             background: #BAAA76;
