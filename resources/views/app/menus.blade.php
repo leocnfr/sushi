@@ -148,9 +148,7 @@
         }
         .pagination > li:first-child > a, .pagination > li:first-child > span, .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus
         {
-            background: #BAAA76;
-            color: black;
-            border: 1px solid black;
+            border-radius: 50%;
         }
         .pagination > li:last-child > a, .pagination > li:last-child > span{
             border-radius: 50%;
@@ -160,6 +158,7 @@
             background: #BAAA76;
             color: black;
             border: 1px solid black;
+            border-radius: 50%;
         }
         .result_price_list{
             padding: 0px;
