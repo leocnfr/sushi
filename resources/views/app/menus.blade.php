@@ -137,6 +137,7 @@
             color: #BAAA76;
             background: none;
             border:none;
+            border-radius: 50%;
             margin: 0px 1px;
         }
         .pagination > li > a:hover, .pagination > li > span:hover, .pagination > li > a:focus, .pagination > li > span:focus
