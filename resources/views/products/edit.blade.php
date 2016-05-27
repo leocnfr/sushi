@@ -38,7 +38,7 @@
             </label>
                 @else
                 <label>
-                    <input type="checkbox" value="1" id="" name="time[]" checked>中午
+                    <input type="checkbox" value="1" id="" name="time[]" >中午
                 </label>
             @endif
         </div>
