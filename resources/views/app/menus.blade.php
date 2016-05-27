@@ -149,6 +149,8 @@
         .pagination > li:first-child > a, .pagination > li:first-child > span, .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus
         {
             border-radius: 50%;
+            background: #BAAA76;
+
         }
         .pagination > li:last-child > a, .pagination > li:last-child > span{
             border-radius: 50%;
