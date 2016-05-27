@@ -150,7 +150,7 @@
         {
             border-radius: 50%;
             background: #BAAA76;
-
+            color: black;
         }
         .pagination > li:last-child > a, .pagination > li:last-child > span{
             border-radius: 50%;

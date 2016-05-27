@@ -28,9 +28,9 @@
         <entry file="file://$PROJECT_DIR$/resources/views/app/menus.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.8095238">
-              <caret line="152" column="0" selection-start-line="152" selection-start-column="0" selection-end-line="152" selection-end-column="0" />
+              <caret line="152" column="25" selection-start-line="152" selection-start-column="25" selection-end-line="152" selection-end-column="25" />
               <folding>
-                <marker date="1464377651000" expanded="true" signature="12357:12381" placeholder="..." />
+                <marker date="1464377720000" expanded="true" signature="12382:12406" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -667,9 +667,9 @@
     <entry file="file://$PROJECT_DIR$/resources/views/app/menus.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8095238">
-          <caret line="152" column="0" selection-start-line="152" selection-start-column="0" selection-end-line="152" selection-end-column="0" />
+          <caret line="152" column="25" selection-start-line="152" selection-start-column="25" selection-end-line="152" selection-end-column="25" />
           <folding>
-            <marker date="1464377651000" expanded="true" signature="12357:12381" placeholder="..." />
+            <marker date="1464377720000" expanded="true" signature="12382:12406" placeholder="..." />
           </folding>
         </state>
       </provider>
