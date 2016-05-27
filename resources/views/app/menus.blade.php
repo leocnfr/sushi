@@ -146,7 +146,16 @@
             color: black;
             border: 1px solid black;
         }
-        .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus
+        .pagination > li:first-child > a, .pagination > li:first-child > span, .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus
+        {
+            background: #BAAA76;
+            color: black;
+            border: 1px solid black;
+        }
+        .pagination > li:last-child > a, .pagination > li:last-child > span{
+            border-radius: 50%;
+        }
+        .pagination > .disabled > span, .pagination > .disabled > span:hover, .pagination > .disabled > span:focus, .pagination > .disabled > a, .pagination > .disabled > a:hover, .pagination > .disabled > a:focus
         {
             background: #BAAA76;
             color: black;
