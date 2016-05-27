@@ -32,7 +32,7 @@
             <li class="header">HEADER</li>
             <!-- Optionally, you can add icons to the links -->
             <li class="treeview @yield('productactive')">
-                <a href="#"><span>产品管理</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <a href="#"><i class="fa fa-database"></i><span>产品管理</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
                     <li><a href="{{url("/admin/products")}}">产品列表</a></li>
                     <li><a href="{{url("/admin/products/create")}}">添加产品</a></li>
@@ -40,19 +40,29 @@
                 </ul>
             </li>
             <li class="treeview @yield('relaisactive')">
-                <a href="#"><span>Point realis</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <a href="#"><i class="fa fa-map-marker"></i><span>Point realis</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
                     <li><a href="{{url("/admin/relais")}}">Poin Realis列表</a></li>
                     <li><a href="{{url("/admin/relais/create")}}">添加Poin Realis</a></li>
                 </ul>
             </li>
             <li class="treeview @yield('newsactive')">
-                <a href="#"><span>新闻活动</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <a href="#"><i class="fa fa-newspaper-o"></i><span>新闻活动</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
                     <li><a href="{{url("/admin/news")}}">文章列表</a></li>
                     <li><a href="{{url("/admin/news/create")}}">添加文章</a></li>
                 </ul>
             </li>
+            <li class="treeview @yield('orderactive')">
+                <a href="#"><i class="fa fa-shopping-cart"></i><span>订单管理</span>  <i class="fa fa-angle-left pull-right"></i></a>
+                <ul class="treeview-menu">
+                    <li><a href="{{url("/admin/news")}}">今日订单<small class="label pull-right bg-yellow">12</small></a></li>
+                    <li><a href="{{url("/admin/news/create")}}">全部订单</a></li>
+                </ul>
+            </li>
+            <li><a href="#"><i class="fa fa-user"></i><span>用户列表</span></a></li>
+
+
             {{--<li><a href="#"><span>Another Link</span></a></li>--}}
 
         </ul><!-- /.sidebar-menu -->
