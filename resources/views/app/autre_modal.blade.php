@@ -82,8 +82,8 @@
 
     $(".check_boisson").click( function() {
         if ( $(".check_boisson:checked").length > 1) {
-            $(this).attr("checked","");
-            alert("最多能选5个");
+            $(this).removeAttr("checked","");
+            alert("最多能选1个");
         }
     } );
     
