@@ -78,13 +78,12 @@
         $('#intro').html(content);
         $('#modal-img').attr('src','/storage/uploads/'+src);
 
-    })
-    var allBox = $(":checkbox");
-    allBox.click(function () {
-        allBox.removeAttr("checked");
-        $(this).attr("checked", "checked");
     });
-    $(":button").click(function () {
-        alert($(":checkbox:checked").val());
+    jQuery("#list input[type='checkbox']").click(function() {
+        if (jQuery(this).attr("checked") == true) {
+            jQuery("#list input[type='checkbox']").attr("checked", false);
+            jQuery(this).attr("checked", true);
+        }
     });
+
 </script>
