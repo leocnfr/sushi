@@ -29,7 +29,7 @@
                                 <div class="col-md-4 bossion-list" style="width: 246px;height: 70px;color: #BAAA76">
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" value="{{$boisson->name}}" id="" name="boissons[]">
+                                            <input type="checkbox" value="{{$boisson->name}}" id="" name="boissons[]" class="check_boisson">
                                             {{$boisson->name}}
                                         </label>
                                         <img src="/storage/uploads/{{$boisson->productImage}}" alt="" style="width: 50px">
@@ -79,11 +79,12 @@
         $('#modal-img').attr('src','/storage/uploads/'+src);
 
     });
-    jQuery("#list input[type='checkbox']").click(function() {
-        if (jQuery(this).attr("checked") == true) {
-            jQuery("#list input[type='checkbox']").attr("checked", false);
-            jQuery(this).attr("checked", true);
-        }
-    });
 
+    $(".check_boisson").click( function() {
+        if ( $(".check_boisson:checked").length > 1) {
+            $(this).attr("checked","");
+            alert("最多能选5个");
+        }
+    } );
+    
 </script>
