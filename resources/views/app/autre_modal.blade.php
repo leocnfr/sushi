@@ -18,10 +18,10 @@
                     @foreach($boissons->showBoisson()->chunk(3) as $boissons)
                         <div class="row">
                             @foreach($boissons as $boisson)
-                                <div class="col-md-4" style="width: 299px;height: 70px;color: #BAAA76">
+                                <div class="col-md-4" style="width: 230px;height: 70px;color: #BAAA76">
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" value="" id="" name="">
+                                            <input type="checkbox" value="{{$boisson->name}}" id="" name="boissons[]">
                                             {{$boisson->name}}
                                         </label>
                                         <img src="/storage/uploads/{{$boisson->productImage}}" alt="" style="width: 50px">
