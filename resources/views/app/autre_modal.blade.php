@@ -21,6 +21,7 @@
                         <p>COMPOSITION DE MA FORMULE</p>
                         <p>Chaque menu offert un bol de riz blanc et un boisson au choix dans le menu dessous</p>
                         <p>BOISSON</p>
+                        <small id="error" style="color: red;display: none">Veuillez choisir 1 accompagnements de la catégorie "Accompagnements offerts" maximum</small>
                     </div>
 
                     @foreach($boissons->showBoisson()->chunk(3) as $boissons)
@@ -83,7 +84,7 @@
     $(".check_boisson").click( function() {
         if ( $(".check_boisson:checked").length > 1) {
             $(this).removeAttr("checked","");
-            alert("最多能选1个");
+            $('#error').show();
         }
     } );
     
