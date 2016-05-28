@@ -47,11 +47,15 @@
                         <div class="col-md-4" style="width: 299px;height: 131px;color: #BAAA76">
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" value="" id="" name="">
+                                    <input type="checkbox" value="" id="" name="riz blanc">
                                     Riz blanc
                                 </label>
                             </div>
                         </div>
+                    </div>
+                    <div class="row" style="width: 81%;margin: 0px auto">
+                        <button>NON,MERCI</button>
+                        <button>VALIDER</button>
                     </div>
 
                     {{--<div class="col-md-4" style="width: 299px;height: 131px;color: #BAAA76">--}}

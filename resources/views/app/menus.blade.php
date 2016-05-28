@@ -301,18 +301,18 @@
 //            console.log(productId);
 //            $('#cart-info').show();
 //        });
-//        $('.button-ajouter').click(function () {
-//            $.ajaxSetup(
-//                    {
-//                        headers: {
-//                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-//                        },
-//                        url:'/cart',
-//                        type: "post"
-//                    });
-//
-//            var productId=$(this).data('productid');
-//            $.ajax({ data: {productId:productId} }).done(function (response) {
+        $('.button-ajouter').click(function () {
+            $.ajaxSetup(
+                    {
+                        headers: {
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                        },
+                        url:'/cart',
+                        type: "post"
+                    });
+
+            var productId=$(this).data('productid');
+            $.ajax({ data: {productId:productId} }).done(function (response) {
 //                var html='<li class="list-unstyled">';
 //                html+='<span class="result_name">'+response.name+'</span>';
 //                html+='<div class="result_number_info">';
@@ -323,9 +323,9 @@
 //                html+='<span class="result_price ">'+response.price+'</span>';
 //                html+='</li>';
 //                $('.result_price_list').append(html);
-//            });
-//
-//        })
+            });
+
+        })
         $('li.sidebar-item').hover(function () {
             var index = $(".sidebar-item").index(this);
            if (index=='1'){
