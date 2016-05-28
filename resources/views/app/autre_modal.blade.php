@@ -16,9 +16,9 @@
                     <p>Chaque menu offert un bol de riz blanc et un boisson au choix dans le menu dessous</p>
                     <p>BOISSON</p>
                     @foreach($boissons->showBoisson()->chunk(3) as $boissons)
-                        <div class="row">
+                        <div class="row" style="width: 90%;margin: 0px auto">
                             @foreach($boissons as $boisson)
-                                <div class="col-md-4" style="width: 230px;height: 70px;color: #BAAA76">
+                                <div class="col-md-4" style="width: 246px;height: 70px;color: #BAAA76">
                                     <div class="checkbox">
                                         <label>
                                             <input type="checkbox" value="{{$boisson->name}}" id="" name="boissons[]">
