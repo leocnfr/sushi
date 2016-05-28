@@ -1,6 +1,11 @@
 @inject('boissons','App\Product')
 <style>
+.col-md-4 > .checkbox:nth-of-type(2)
+{
+    border-left: 2px solid #BAAA76;
+    border-right: 2px solid #BAAA76;
 
+}
 </style>
 <div class="modal fade" id="autre" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
     <div class="modal-dialog" role="document" style="width: 920px;margin-top: 130px">
