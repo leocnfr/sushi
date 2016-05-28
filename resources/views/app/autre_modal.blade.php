@@ -79,4 +79,12 @@
         $('#modal-img').attr('src','/storage/uploads/'+src);
 
     })
+    var allBox = $(":checkbox");
+    allBox.click(function () {
+        allBox.removeAttr("checked");
+        $(this).attr("checked", "checked");
+    });
+    $(":button").click(function () {
+        alert($(":checkbox:checked").val());
+    });
 </script>
