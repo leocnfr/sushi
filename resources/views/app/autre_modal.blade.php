@@ -1,6 +1,6 @@
 @inject('boissons','App\Product')
 <style>
-.col-md-4 > .checkbox:nth-of-type(2)
+.col-md-4 > .bossion-list:nth-of-type(2)
 {
     border-left: 2px solid #BAAA76;
     border-right: 2px solid #BAAA76;
@@ -26,7 +26,7 @@
                     @foreach($boissons->showBoisson()->chunk(3) as $boissons)
                         <div class="row" style="width: 81%;margin: 0px auto">
                             @foreach($boissons as $boisson)
-                                <div class="col-md-4" style="width: 246px;height: 70px;color: #BAAA76">
+                                <div class="col-md-4 bossion-list" style="width: 246px;height: 70px;color: #BAAA76">
                                     <div class="checkbox">
                                         <label>
                                             <input type="checkbox" value="{{$boisson->name}}" id="" name="boissons[]">
