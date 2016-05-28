@@ -12,11 +12,14 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 
                 <div class="row" style="color: #BAAA76">
-                    <p>COMPOSITION DE MA FORMULE</p>
-                    <p>Chaque menu offert un bol de riz blanc et un boisson au choix dans le menu dessous</p>
-                    <p>BOISSON</p>
+                    <div class="row" style="width: 81%;margin: 0px auto">
+                        <p>COMPOSITION DE MA FORMULE</p>
+                        <p>Chaque menu offert un bol de riz blanc et un boisson au choix dans le menu dessous</p>
+                        <p>BOISSON</p>
+                    </div>
+
                     @foreach($boissons->showBoisson()->chunk(3) as $boissons)
-                        <div class="row" style="width: 90%;margin: 0px auto">
+                        <div class="row" style="width: 81%;margin: 0px auto">
                             @foreach($boissons as $boisson)
                                 <div class="col-md-4" style="width: 246px;height: 70px;color: #BAAA76">
                                     <div class="checkbox">
