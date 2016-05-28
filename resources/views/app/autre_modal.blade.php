@@ -40,15 +40,20 @@
                         </div>
 
                     @endforeach
-                    <p>AUTRES</p>
-                    <div class="col-md-4" style="width: 299px;height: 131px;color: #BAAA76">
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" value="" id="" name="">
-                                Riz blanc
-                            </label>
+                    <div class="row" style="width: 81%;margin: 0px auto">
+                        <p>AUTRES</p>
+                    </div>
+                    <div class="row" style="width: 81%;margin: 0px auto">
+                        <div class="col-md-4" style="width: 299px;height: 131px;color: #BAAA76">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" value="" id="" name="">
+                                    Riz blanc
+                                </label>
+                            </div>
                         </div>
                     </div>
+
                     {{--<div class="col-md-4" style="width: 299px;height: 131px;color: #BAAA76">--}}
                         {{--<div class="checkbox">--}}
                         	{{--<label>--}}
