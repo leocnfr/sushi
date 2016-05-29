@@ -132,36 +132,23 @@
         .item-list{
             padding: 10px;
         }
+        .pagination > li:first-child > span
+        {
+            border-radius: 50%;
+        }
+        .pagination > .active > span
+        {
+            border-radius: 50%;
+            background: #BAAA76;
+            color: black;
+        }
         .pagination > li > a, .pagination > li > span
         {
             color: #BAAA76;
             background: none;
-            border:none;
+            border: none;
             border-radius: 50%;
             margin: 0px 1px;
-        }
-        .pagination > li > a:hover, .pagination > li > span:hover, .pagination > li > a:focus, .pagination > li > span:focus
-        {
-            background: #BAAA76;
-            color: black;
-            border: 1px solid black;
-        }
-        .pagination > li:first-child > a
-        {
-            border-radius: 50%;
-            background: #BAAA76;
-            color: black;
-            border: none;
-        }
-        .pagination > li:last-child > a, .pagination > li:last-child > span{
-            border-radius: 50%;
-        }
-        .pagination > .disabled > span, .pagination > .disabled > span:hover, .pagination > .disabled > span:focus, .pagination > .disabled > a, .pagination > .disabled > a:hover, .pagination > .disabled > a:focus
-        {
-            background: #BAAA76;
-            color: black;
-            border: 1px solid black;
-            border-radius: 50%;
         }
         .result_price_list{
             padding: 0px;
