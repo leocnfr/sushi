@@ -32,7 +32,7 @@ class ProductController extends Controller
     //编辑产品
     public function edit($id){
         $product=Product::findOrFail($id);
-        $cates=Category::all();
+        $cates=Category::where('id','!=',$product->category->id);
         return view('products.edit',compact('product','cates'));
     }
     //更新

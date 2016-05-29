@@ -11,6 +11,7 @@
     <div class="form-group">
         <label for="">产品分类</label>
         <select name="cat" id="inputID" class="form-control" required>
+            <option value="{{$product->category->id}}">{{$product->category->cat_name}}</option>
             @foreach( $cates as $cate)
                 <option value="{{$cate->id}}">{{$cate->cat_name}}</option>
             @endforeach
