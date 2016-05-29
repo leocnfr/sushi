@@ -317,7 +317,7 @@
             </aside>
             <aside style="color: white;padding-bottom: 38px;margin-top: 10px">
                 <span style="margin-right:120px">Total</span>
-                <span>14.90€</span>
+                <span id="total_price">0€</span>
                 <button  id="btn_panier">
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     VOIR MON PANIER
@@ -368,21 +368,23 @@
         });
         $.get('/cartJson', function (response) {
             var html='';
+            var total=0;
             $.each(response, function (key,value) {
-                console.log(value);
+                total+=parseFloat(value.total);
                 html+='<li class="list-unstyled">';
                 html+='<span class="result_name">'+value.name+'</span>';
                 html+='<div class="result_number_info">';
                 html+='<i class="fa fa-minus" aria-hidden="true" id="minus"></i>';
-                html+='<input type="number" style="width: 15px;height: 15px" min="1" value="'+value.qty+'" id="product_number">';
+                html+='<span>'+value.qty+'</span> ';
                 html+='<i class="fa fa-plus" aria-hidden="true" id="plus"></i>';
                 html+='</div>';
                 html+='<span class="result_price ">'+value.price+'</span>';
                 html+='<p>'+value.boission+'</p>';
                 html+='</li>';
+
             });
             $('.result_price_list').html(html);
-
+            $('#total_price').html(total);
         })
     </script>
 @endsection
