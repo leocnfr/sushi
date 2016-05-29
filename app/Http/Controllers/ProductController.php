@@ -99,10 +99,10 @@ class ProductController extends Controller
 //            $product_menu=Product::where('cat_id',$request->get('cat'))->get();
 //        }
         $cates=Category::where('order','>','0')->orderBy('order')->get();
-        $products=Product::groupBy('cat_id')->orderBy('cat_id','desc')->where('cat_id','!=','6')->get();
+        $products=Product::groupBy('cat_id')->orderBy('cat_id','desc')->get();
         if($menu==null)
         {
-            $products=Product::orderBy('cat_id','desc')->paginate(9);
+            $products=Product::orderBy('cat_id','desc')->where('cat_id','!=','6')->paginate(9);
             return view('app.menus',compact('products','cates'));
         }else{
             $menu=str_replace('-',' ',$menu);
