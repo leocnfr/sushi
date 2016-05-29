@@ -158,6 +158,12 @@
             background: #BAAA76;
             color: black;
         }
+        .pagination > li > a:hover
+        {
+            border-radius: 50%;
+            background: #BAAA76;
+            color: black;
+        }
         .result_price_list{
             padding: 0px;
         }
