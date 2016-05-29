@@ -17,7 +17,7 @@ class OrderController extends Controller
         $product=Product::findOrFail($productId);
         $type=$request->get('type');
          if($type=='menu'){
-                 return Cart::add($productId,$product->name,1,$product->price)->rawId();
+                 return Cart::add($productId,$product->name,1,$product->price,['piece'=>$product->count])->rawId();
 
 //             Cart::add(37,$product->name,1,$product->price);
          }else{
@@ -29,7 +29,21 @@ class OrderController extends Controller
          }
 
     }
-
+    //查看panier数据
+    public function panier()
+    {
+        $carts = Cart::all();
+        return view('app.panier',compact('carts'));
+    }
+    //删除
+    public function destroy(Request $request)
+    {
+        $rawId=$request->get('rawId');
+        if(Cart::remove($rawId))
+        {
+            return '200';
+        };
+    }
     public function toJson()
     {
         $carts = Cart::all();

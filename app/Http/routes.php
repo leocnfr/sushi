@@ -99,9 +99,9 @@ Route::get('/test',function(){
 Route::get('/json','RelaisController@toJson');
 
 //panier
-Route::get('/panier',function(){
-   return view('app.panier');
-});
+Route::get('/panier','OrderController@panier');
+//删除购物车
+Route::post('/deletePanier','OrderController@destroy');
 
 //connection
 Route::get('/connection',function(){

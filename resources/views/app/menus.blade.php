@@ -329,12 +329,6 @@
     @include('app.autre_modal')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.16/vue.js"></script>
     <script>
-//        $('.button-ajouter').on('click', function (event) {
-//            var button = $(event.relatedTarget); // Button that triggered the modal
-//            productId=button.data('productId');
-//            console.log(productId);
-//            $('#cart-info').show();
-//        });
         $('.button-ajouter').click(function () {
             $.ajaxSetup(
                     {
@@ -369,8 +363,12 @@
         $.get('/cartJson', function (response) {
             var html='';
             var total=0;
+            var count=0;
+            var piece=0;
             $.each(response, function (key,value) {
                 total+=parseFloat(value.total);
+                piece+=parseInt(value.piece);
+                count+=parseInt(value.qty);
                 html+='<li class="list-unstyled">';
                 html+='<span class="result_name">'+value.name+'</span>';
                 html+='<div class="result_number_info">';
@@ -385,6 +383,8 @@
             });
             $('.result_price_list').html(html);
             $('#total_price').html(total);
+            $('#product-total-count').html(count);
+            $('#product-total-piece').html(piece);
         })
     </script>
 @endsection
