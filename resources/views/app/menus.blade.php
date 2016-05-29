@@ -274,18 +274,17 @@
                                 <p>{{$item->name}}</p>
                                 <span>{{$item->count}} pièce</span>
                                 <span class="pull-right">{{$item->price}}€</span>
-                                {{--@if(date('G',time())<12&&str_contains($item->send_time,'1'))--}}
-                                    {{--<button class="button-ajouter" data-productid="{{$item->id}}" data-toggle="modal" data-target="#autre">AJOUTER<i class="fa fa-plus-circle" aria-hidden="true"></i></button>--}}
-                                    {{--@elseif(date('G',time())<18&&12<date('G',time())&&str_contains($item->send_time,'2'))--}}
-                                    {{--<button class="button-ajouter" data-productid="{{$item->id}}" data-toggle="modal" data-target="#autre">AJOUTER<i class="fa fa-plus-circle" aria-hidden="true"></i></button>--}}
-                                {{--@else--}}
-                                    {{--@if(date('G',time())<12&&str_contains($item->send_time,'1'))--}}
-                                    {{--<small style="display: block;color: red">Indisponible only lunch</small>--}}
-                                    {{--@elseif(date('G',time())<18&&12<date('G',time())&&str_contains($item->send_time,'2'))--}}
-                                        {{--<small style="display: block;color: red">Indisponible only soire</small>--}}
-                                    {{--@endif--}}
-                                    {{--@endif--}}
-                                {{date('G',time())}}
+                                @if(date('G',time())<12&&str_contains($item->send_time,'1'))
+                                    <button class="button-ajouter" data-productid="{{$item->id}}" data-toggle="modal" data-target="#autre">AJOUTER<i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+                                    @elseif(date('G',time())<18&&12<=date('G',time())&&str_contains($item->send_time,'2'))
+                                    <button class="button-ajouter" data-productid="{{$item->id}}" data-toggle="modal" data-target="#autre">AJOUTER<i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+                                @else
+                                    @if(date('G',time())<=12&&str_contains($item->send_time,'1'))
+                                    <small style="display: block;color: red">Indisponible only lunch</small>
+                                    @elseif(date('G',time())<18&&12<=date('G',time())&&str_contains($item->send_time,'2'))
+                                        <small style="display: block;color: red">Indisponible only soire</small>
+                                    @endif
+                                    @endif
 
                             </div>
                         @endforeach
