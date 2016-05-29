@@ -279,9 +279,9 @@
                                     @elseif(date('G',time())<18&&12<=date('G',time())&&str_contains($item->send_time,'2'))
                                     <button class="button-ajouter" data-productid="{{$item->id}}" data-toggle="modal" data-target="#autre">AJOUTER<i class="fa fa-plus-circle" aria-hidden="true"></i></button>
                                 @else
-                                    @if(date('G',time())<=12&&str_contains($item->send_time,'1'))
-                                    <small style="display: block;color: red">Indisponible only lunch</small>
-                                    @elseif(date('G',time())<18&&12<=date('G',time())&&str_contains($item->send_time,'2'))
+                                    @if(date('G',time())<=12&&str_contains($item->send_time,'2'))
+                                    <small style="display: block;color: red">MENU MIDI NOUS VOUS OFFRONS QUE DU MIDI</small>
+                                    @elseif(date('G',time())<18&&12<=date('G',time())&&str_contains($item->send_time,'1'))
                                         <small style="display: block;color: red">Indisponible only soire</small>
                                     @endif
                                     @endif
@@ -364,6 +364,24 @@
         });
 
         $('.ajouter-disabled').click(function () {
+
+        });
+        $.get('/cartJson', function (response) {
+            var html='';
+            $.each(response, function (key,value) {
+                console.log(value);
+                html+='<li class="list-unstyled">';
+                html+='<span class="result_name">'+value.name+'</span>';
+                html+='<div class="result_number_info">';
+                html+='<i class="fa fa-minus" aria-hidden="true" id="minus"></i>';
+                html+='<input type="number" style="width: 15px;height: 15px" min="1" value="'+value.qty+'" id="product_number">';
+                html+='<i class="fa fa-plus" aria-hidden="true" id="plus"></i>';
+                html+='</div>';
+                html+='<span class="result_price ">'+value.price+'</span>';
+                html+='<p>'+value.boission+'</p>';
+                html+='</li>';
+            });
+            $('.result_price_list').html(html);
 
         })
     </script>
