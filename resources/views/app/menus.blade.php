@@ -135,6 +135,8 @@
         .pagination > li:first-child > span
         {
             border-radius: 50%;
+            background: none;
+            color: #BAAA76;
         }
         .pagination > .active > span
         {
