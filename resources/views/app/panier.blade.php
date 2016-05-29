@@ -30,6 +30,9 @@
             <span id="text">PANIER</span>
             <div id="panier-info">
                 <p>RECAPITULATIF DE VOTRE PANNIER</p>
+                @foreach($cart as $row)
+
+                @endforeach
             </div>
             <div id="livraison-info">
                 <div class="radio">

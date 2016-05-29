@@ -6,6 +6,15 @@
     border-right: 2px solid #BAAA76;
 
 }
+    .btn_boisson{
+        border: none;
+        background: #BAAA76;
+        color: black;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        width: 84.63px;
+    }
 </style>
 <div class="modal fade" id="autre" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
     <div class="modal-dialog" role="document" style="width: 920px;margin-top: 130px">
@@ -22,15 +31,16 @@
                         <p>Chaque menu offert un bol de riz blanc et un boisson au choix dans le menu dessous</p>
                         <p>BOISSON</p>
                         <small id="error" style="color: red;display: none">Veuillez choisir 1 accompagnements de la catégorie "Accompagnements offerts" maximum</small>
+                        <small id="error2" style="color: red;display: none"></small>
                     </div>
-
+                    <form action="" id="boission_form">
                     @foreach($boissons->showBoisson()->chunk(3) as $boissons)
                         <div class="row" style="width: 81%;margin: 0px auto">
                             @foreach($boissons as $boisson)
                                 <div class="col-md-4 bossion-list" style="width: 246px;height: 70px;color: #BAAA76">
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" value="{{$boisson->name}}" id="" name="boissons[]" class="check_boisson">
+                                            <input type="checkbox" value="{{$boisson->id}}" id="" name="boissons[]" class="check_boisson">
                                             {{$boisson->name}}
                                         </label>
                                         <img src="/storage/uploads/{{$boisson->productImage}}" alt="" style="width: 50px">
@@ -40,6 +50,7 @@
                         </div>
 
                     @endforeach
+                    </form>
                     <div class="row" style="width: 81%;margin: 0px auto">
                         <p>AUTRES</p>
                     </div>
@@ -53,9 +64,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row" style="width: 81%;margin: 0px auto">
-                        <button>NON,MERCI</button>
-                        <button>VALIDER</button>
+                    <div class="row " style="width: 81%;margin: 5px auto">
+                        <button class="pull-right btn_boisson " id="close_boisson" data-dismiss="modal" aria-label="Close" style="display: block">NON,MERCI</button>
+                    </div>
+                    <div class="row " style="width: 81%;margin: 5px auto">
+                        <button class="pull-right btn_boisson" style="display: block" id="boisson_submit">VALIDER</button>
                     </div>
 
                     {{--<div class="col-md-4" style="width: 299px;height: 131px;color: #BAAA76">--}}
@@ -73,6 +86,9 @@
     </div>
 </div>
 <script>
+    $('#close_boisson').click(function () {
+        document.getElementById('boission_form').reset();
+    });
     $('#autre').on('show.bs.modal', function (event) {
         var button = $(event.relatedTarget); // Button that triggered the modal
         var recipient = button.data('whatever');
@@ -87,7 +103,6 @@
         $('#price').html(price);
         $('#intro').html(content);
         $('#modal-img').attr('src','/storage/uploads/'+src);
-
     });
 
     $(".check_boisson").click( function() {
@@ -96,5 +111,24 @@
             $('#error').show();
         }
     } );
-    
+    $('#boisson_submit').click(function () {
+        $.ajaxSetup(
+                {
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    url:'/cart',
+                    type: "post"
+                });
+        if($(".check_boisson:checked").length==0)
+        {
+            return false
+        }else{
+            $.ajax({ data: {productId: $(".check_boisson:checked").val()} }).done(function (response) {
+
+            });
+        }
+
+
+    })
 </script>

@@ -186,6 +186,9 @@
             font-size: 16pt;
             width: 33%;
         }
+        .ajouter-disabled{
+            cursor: not-allowed;
+        }
     </style>
     <div class="container-fluid " style="padding:0;background: black ">
         @if(!isset($cate))
@@ -235,7 +238,12 @@
                                 <p>{{$item->name}}</p>
                                 <span>{{$item->count}} pièce</span>
                                 <span class="pull-right">{{$item->price}}€</span>
+                                @if(date('G',time())<12&&str_contains($item->send_time,'1'))
                                 <button class="button-ajouter" data-productid="{{$item->id}}" data-toggle="modal" data-target="#autre">AJOUTER<i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+                                 @else
+                                    <small>Indisponible</small>
+                                @endif
+
                             </div>
                         @endforeach
 
@@ -253,7 +261,18 @@
                                 <p>{{$item->name}}</p>
                                 <span>{{$item->count}} pièce</span>
                                 <span class="pull-right">{{$item->price}}€</span>
-                                <button class="button-ajouter" data-productid="{{$item->id}}" data-toggle="modal" data-target="#autre">AJOUTER<i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+                                @if(date('G',time())<12&&str_contains($item->send_time,'1'))
+                                    <button class="button-ajouter" data-productid="{{$item->id}}" data-toggle="modal" data-target="#autre">AJOUTER<i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+                                    @elseif(date('G',time())<18&&12<date('G',time())&&str_contains($item->send_time,'2'))
+                                    <button class="button-ajouter" data-productid="{{$item->id}}" data-toggle="modal" data-target="#autre">AJOUTER<i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+                                @else
+                                    @if(str_contains($item->send_time,'1'))
+                                    <small style="display: block;color: red">Indisponible only lunch</small>
+                                        @else
+                                        <small style="display: block;color: red">Indisponible only soire</small>
+                                    @endif
+                                    @endif
+
                             </div>
                         @endforeach
                     </div>
@@ -294,6 +313,7 @@
     </div>
     @include('app.modal')
     @include('app.autre_modal')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.16/vue.js"></script>
     <script>
 //        $('.button-ajouter').on('click', function (event) {
 //            var button = $(event.relatedTarget); // Button that triggered the modal
@@ -336,7 +356,10 @@
                $('li.sidebar-item').stop().animate({top:'20px'},500)
 
            }
-        })
+        });
 
+        $('.ajouter-disabled').click(function () {
+
+        })
     </script>
 @endsection
