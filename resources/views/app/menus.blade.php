@@ -138,6 +138,12 @@
             background: none;
             color: #BAAA76;
         }
+        .pagination > li:last-child > span
+        {
+            border-radius: 50%;
+            background: none;
+            color: #BAAA76;
+        }
         .pagination > .active > span
         {
             border-radius: 50%;

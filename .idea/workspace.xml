@@ -37,14 +37,14 @@
       <file leaf-file-name="menus.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/app/menus.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8730159">
-              <caret line="170" column="25" selection-start-line="170" selection-start-column="25" selection-end-line="170" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.74603176">
+              <caret line="144" column="27" selection-start-line="144" selection-start-column="27" selection-end-line="144" selection-end-column="27" />
               <folding>
-                <element signature="e#9988#10021#0#HTML" expanded="true" />
-                <element signature="e#10147#10180#0#HTML" expanded="true" />
-                <element signature="e#10551#10687#0#HTML" expanded="true" />
-                <element signature="e#10766#10827#0#HTML" expanded="true" />
-                <marker date="1464513255000" expanded="true" signature="13531:13555" placeholder="..." />
+                <element signature="e#10141#10174#0#HTML" expanded="true" />
+                <element signature="e#10300#10333#0#HTML" expanded="true" />
+                <element signature="e#10704#10840#0#HTML" expanded="true" />
+                <element signature="e#10919#10980#0#HTML" expanded="true" />
+                <marker date="1464513323000" expanded="true" signature="13684:13708" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -943,14 +943,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/app/menus.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8730159">
-          <caret line="170" column="25" selection-start-line="170" selection-start-column="25" selection-end-line="170" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.74603176">
+          <caret line="144" column="27" selection-start-line="144" selection-start-column="27" selection-end-line="144" selection-end-column="27" />
           <folding>
-            <element signature="e#9988#10021#0#HTML" expanded="true" />
-            <element signature="e#10147#10180#0#HTML" expanded="true" />
-            <element signature="e#10551#10687#0#HTML" expanded="true" />
-            <element signature="e#10766#10827#0#HTML" expanded="true" />
-            <marker date="1464513255000" expanded="true" signature="13531:13555" placeholder="..." />
+            <element signature="e#10141#10174#0#HTML" expanded="true" />
+            <element signature="e#10300#10333#0#HTML" expanded="true" />
+            <element signature="e#10704#10840#0#HTML" expanded="true" />
+            <element signature="e#10919#10980#0#HTML" expanded="true" />
+            <marker date="1464513323000" expanded="true" signature="13684:13708" placeholder="..." />
           </folding>
         </state>
       </provider>
