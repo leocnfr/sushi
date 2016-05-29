@@ -152,6 +152,12 @@
             border-radius: 50%;
             margin: 0px 1px;
         }
+        .pagination > .disabled > span, .pagination > .disabled > span:hover, .pagination > .disabled > span:focus, .pagination > .disabled > a, .pagination > .disabled > a:hover, .pagination > .disabled > a:focus
+        {
+            border-radius: 50%;
+            background: #BAAA76;
+            color: black;
+        }
         .result_price_list{
             padding: 0px;
         }
