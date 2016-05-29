@@ -164,6 +164,12 @@
             background: #BAAA76;
             color: black;
         }
+        .pagination > .active > span,.pagination > .active > span
+        {
+            border-radius: 50%;
+            background: #BAAA76;
+            color: black;
+        }
         .result_price_list{
             padding: 0px;
         }
