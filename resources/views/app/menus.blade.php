@@ -170,7 +170,7 @@
             background: #BAAA76;
             color: black;
         }
-        .pagination > .active > span,.pagination > .active > span
+        .pagination > .active > span,.pagination > .active > span:hover
         {
             border-radius: 50%;
             background: #BAAA76;
