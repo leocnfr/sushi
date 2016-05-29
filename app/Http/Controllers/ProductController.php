@@ -102,7 +102,7 @@ class ProductController extends Controller
         $products=Product::groupBy('cat_id')->orderBy('cat_id','desc')->get();
         if($menu==null)
         {
-            $products=Product::orderBy('cat_id','desc')->paginate(9);
+            $products=Product::orderBy('cat_id','desc')->where('cat_id','!=','6')->paginate(9);
             return view('app.menus',compact('products','cates'));
         }else{
             $menu=str_replace('-',' ',$menu);
