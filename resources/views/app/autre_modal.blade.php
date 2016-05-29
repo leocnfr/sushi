@@ -124,9 +124,23 @@
         {
             return false
         }else{
-            $.ajax({ data: {productId: $(".check_boisson:checked").val()} }).done(function (response) {
 
+            $.ajax({
+                data: {productId: $(".check_boisson:checked").val(),type:'boission',rawId:rawId}
+            }).done(function (response) {
+                var html='<li class="list-unstyled">';
+                html+='<span class="result_name">'+response.name+'</span>';
+                html+='<div class="result_number_info">';
+                html+='<i class="fa fa-minus" aria-hidden="true" id="minus"></i>';
+                html+='<input type="number" style="width: 15px;height: 15px" min="1" value="1" id="product_number">';
+                html+='<i class="fa fa-plus" aria-hidden="true" id="plus"></i>';
+                html+='</div>';
+                html+='<span class="result_price ">'+response.price+'</span>';
+                html+='</li>';
+                $('.result_price_list').append(html);
             });
+            $('#autre').modal('hide');
+            document.getElementById('boission_form').reset();
         }
 
 

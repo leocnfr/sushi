@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Product;
-use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use Cart;
 
 class OrderController extends Controller
 {
@@ -15,12 +15,25 @@ class OrderController extends Controller
     {
          $productId=$request->get('productId');
         $product=Product::findOrFail($productId);
+        $type=$request->get('type');
+         if($type=='menu'){
+                 return Cart::add($productId,$product->name,1,$product->price)->rawId();
 
-        return $product;
+//             Cart::add(37,$product->name,1,$product->price);
+         }else{
+             $rawId=$request->get('rawId');
+             Cart::update($rawId,['boission'=>$product->name]);
+             return Cart::get($rawId);
+//             Cart::update(37,[boission=>$product->name]);
+//             return Cart::get('37');
+         }
+
     }
 
     public function toJson()
     {
-
+        $carts = Cart::all();
+//        $carts=Cart::all();
+        return $carts;
     }
 }

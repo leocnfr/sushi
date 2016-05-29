@@ -279,9 +279,9 @@
                                     @elseif(date('G',time())<18&&12<date('G',time())&&str_contains($item->send_time,'2'))
                                     <button class="button-ajouter" data-productid="{{$item->id}}" data-toggle="modal" data-target="#autre">AJOUTER<i class="fa fa-plus-circle" aria-hidden="true"></i></button>
                                 @else
-                                    @if(str_contains($item->send_time,'1'))
+                                    @if(date('G',time())<12&&str_contains($item->send_time,'1'))
                                     <small style="display: block;color: red">Indisponible only lunch</small>
-                                        @else
+                                    @elseif(date('G',time())<18&&12<date('G',time())&&str_contains($item->send_time,'2'))
                                         <small style="display: block;color: red">Indisponible only soire</small>
                                     @endif
                                     @endif
@@ -299,6 +299,7 @@
             <aside id="result" style="min-height: 123px">
                 <p style="font-size: 19pt;font-weight: bold;margin-bottom: 30px">MON PANIER</p>
                 <ul class="result_price_list">
+                    <p>Votre panier est vide</p>
                    {{--<li class="list-unstyled">--}}
                        {{--<span class="result_name">MENU BOTAN</span>--}}
                        {{--<div class="result_number_info" >--}}
@@ -310,7 +311,7 @@
                    {{--</li>--}}
                 </ul>
             </aside>
-            <aside id="panier_inro">
+            <aside id="panier_inro" >
                 <span style="margin-right: 70px">Nombre de projduts</span> <span id="product-total-count">0</span> <br>
                 <span style="margin-right: 80px">Nombre de piece</span> <span id="product-total-piece">0</span>
             </aside>
@@ -345,17 +346,8 @@
                     });
 
             var productId=$(this).data('productid');
-            $.ajax({ data: {productId:productId} }).done(function (response) {
-//                var html='<li class="list-unstyled">';
-//                html+='<span class="result_name">'+response.name+'</span>';
-//                html+='<div class="result_number_info">';
-//                html+='<i class="fa fa-minus" aria-hidden="true" id="minus"></i>';
-//                html+='<input type="number" style="width: 15px;height: 15px" min="1" value="1" id="product_number">';
-//                html+='<i class="fa fa-plus" aria-hidden="true" id="plus"></i>';
-//                html+='</div>';
-//                html+='<span class="result_price ">'+response.price+'</span>';
-//                html+='</li>';
-//                $('.result_price_list').append(html);
+            $.ajax({ data: {productId:productId,type:'menu'} }).done(function (response) {
+                 rawId=response;
             });
 
         })
