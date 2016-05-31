@@ -10,6 +10,11 @@ use App\Http\Requests;
 class CategoryController extends Controller
 {
     //
+
+    public function __construct()
+    {
+        $this->middleware('auth:admin');
+    }
     public function show()
     {
         $cates= Category::latest()->paginate(10);

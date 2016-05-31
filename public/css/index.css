@@ -15,7 +15,8 @@ body{
     margin: 0px;
     border: 1px;
     width: 100%;
-    background-image:url("/images/top_bottom.png") ;
+    background: #151515;
+    /*background-image:url("/images/top_bottom.png") ;*/
     -webkit-background-size:cover;
     background-size:cover;
 }
@@ -111,7 +112,7 @@ height: 608px;
 {
     height: 107px;
     width: 100%;
-    background: rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.75);
     position: absolute;
     bottom: 0px;
     color: #BAAA76;

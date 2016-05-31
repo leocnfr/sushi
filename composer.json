@@ -9,8 +9,8 @@
         "laravel/framework": "5.2.*",
         "alexpechkarev/google-maps": "1.0.5",
         "overtrue/laravel-shopping-cart": "1.0.*",
-        "overtrue/laravel-shopping-cart": "1.0.*"
-
+        "overtrue/laravel-shopping-cart": "1.0.*",
+        "stripe/stripe-php": "3.*"
     },
 
     "require-dev": {
@@ -19,11 +19,8 @@
         "phpunit/phpunit": "~4.0",
         "symfony/css-selector": "2.8.*|3.0.*",
         "symfony/dom-crawler": "2.8.*|3.0.*",
-        "overtrue/laravel-shopping-cart": "1.0.*"
-
-
-
-
+        "overtrue/laravel-shopping-cart": "1.0.*",
+        "stripe/stripe-php": "3.*"
     },
     "autoload": {
         "classmap": [

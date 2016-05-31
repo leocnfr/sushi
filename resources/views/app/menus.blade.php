@@ -190,17 +190,26 @@
         }
         .result_number_info
         {
-            width: 33%;
+            width: 22%;
             display: inline-block;
             background: black;
-            padding: 0px 1px
+            padding: 0px 1px;
+            margin: 0px 20px;
+            float: left;
         }
         .result_price{
             font-size: 16pt;
             width: 33%;
+            height: 22px;
+            line-height: 22px;
+            bottom: 2px;
+            position: relative;
         }
         .ajouter-disabled{
             cursor: not-allowed;
+        }
+        .fa{
+            cursor: pointer;
         }
     </style>
     <div class="container-fluid " style="padding:0;background: black ">
@@ -276,7 +285,7 @@
                                 <span class="pull-right">{{$item->price}}€</span>
                                 @if(date('G',time())<12&&str_contains($item->send_time,'1'))
                                     <button class="button-ajouter" data-productid="{{$item->id}}" data-toggle="modal" data-target="#autre">AJOUTER<i class="fa fa-plus-circle" aria-hidden="true"></i></button>
-                                    @elseif(date('G',time())<18&&12<=date('G',time())&&str_contains($item->send_time,'2'))
+                                    @elseif(date('G',time())<24&&12<=date('G',time())&&str_contains($item->send_time,'2'))
                                     <button class="button-ajouter" data-productid="{{$item->id}}" data-toggle="modal" data-target="#autre">AJOUTER<i class="fa fa-plus-circle" aria-hidden="true"></i></button>
                                 @else
                                     @if(date('G',time())<=12&&str_contains($item->send_time,'2'))
@@ -318,7 +327,7 @@
             <aside style="color: white;padding-bottom: 38px;margin-top: 10px">
                 <span style="margin-right:120px">Total</span>
                 <span id="total_price">0€</span>
-                <button  id="btn_panier">
+                <button  id="btn_panier" onclick="window.location='/panier'">
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     VOIR MON PANIER
                 </button>
@@ -372,12 +381,12 @@
                 html+='<li class="list-unstyled">';
                 html+='<span class="result_name">'+value.name+'</span>';
                 html+='<div class="result_number_info">';
-                html+='<i class="fa fa-minus" aria-hidden="true" id="minus"></i>';
-                html+='<span>'+value.qty+'</span> ';
-                html+='<i class="fa fa-plus" aria-hidden="true" id="plus"></i>';
+                html+='<i class="fa fa-minus" aria-hidden="true" ></i>';
+                html+='<span style="margin: 0px 5px">'+value.qty+'</span> ';
+                html+='<i class="fa fa-plus qty-plus" aria-hidden="true"  data-rawid="'+value.__raw_id+'"></i>';
                 html+='</div>';
                 html+='<span class="result_price ">'+value.price+'</span>';
-                html+='<p>'+value.boission+'</p>';
+                html+='<p style="padding: 0px 30px;text-align: left">'+value.boission+'</p>';
                 html+='</li>';
 
             });
@@ -385,6 +394,22 @@
             $('#total_price').html(total);
             $('#product-total-count').html(count);
             $('#product-total-piece').html(piece);
+        });
+
+        $(".qty-plus").click(function () {
+            console.log(123);
+//            $.ajaxSetup(
+//                    {
+//                        headers: {
+//                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+//                        },
+//                        url:'/cart',
+//                        type: "post"
+//                    });
+//            var rawid=$(this).data('rawid');
+//            console.log(rawid);
+//            $.ajax({ rawid: {rawid:radiw} }).done(function (response) {
+//            });
         })
     </script>
 @endsection

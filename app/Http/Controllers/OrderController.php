@@ -10,6 +10,10 @@ use Cart;
 
 class OrderController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth:admin');
+    }
     //
     public function store(Request $request)
     {
@@ -17,9 +21,10 @@ class OrderController extends Controller
         $product=Product::findOrFail($productId);
         $type=$request->get('type');
          if($type=='menu'){
-                 return Cart::add($productId,$product->name,1,$product->price,['piece'=>$product->count])->rawId();
 
-//             Cart::add(37,$product->name,1,$product->price);
+             return Cart::add($productId,$product->name,1,$product->price,['piece'=>$product->count])->rawId();
+
+//          Cart::add(37,$product->name,1,$product->price);
          }else{
              $rawId=$request->get('rawId');
              Cart::update($rawId,['boission'=>$product->name]);

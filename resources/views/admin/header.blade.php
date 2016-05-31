@@ -11,9 +11,9 @@
             <span class="sr-only">Toggle navigation</span>
         </a>
         <!-- Navbar Right Menu -->
-        {{--<div class="navbar-custom-menu">--}}
-            {{--<ul class="nav navbar-nav">--}}
-                {{--<!-- Messages: style can be found in dropdown.less-->--}}
+        <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+                <!-- Messages: style can be found in dropdown.less-->
                 {{--<li class="dropdown messages-menu">--}}
                     {{--<!-- Menu toggle button -->--}}
                     {{--<a href="#" class="dropdown-toggle" data-toggle="dropdown">--}}
@@ -46,7 +46,7 @@
                     {{--</ul>--}}
                 {{--</li><!-- /.messages-menu -->--}}
 
-                {{--<!-- Notifications Menu -->--}}
+                <!-- Notifications Menu -->
                 {{--<li class="dropdown notifications-menu">--}}
                     {{--<!-- Menu toggle button -->--}}
                     {{--<a href="#" class="dropdown-toggle" data-toggle="dropdown">--}}
@@ -68,7 +68,7 @@
                         {{--<li class="footer"><a href="#">View all</a></li>--}}
                     {{--</ul>--}}
                 {{--</li>--}}
-                {{--<!-- Tasks Menu -->--}}
+                <!-- Tasks Menu -->
                 {{--<li class="dropdown tasks-menu">--}}
                     {{--<!-- Menu Toggle Button -->--}}
                     {{--<a href="#" class="dropdown-toggle" data-toggle="dropdown">--}}
@@ -76,7 +76,6 @@
                         {{--<span class="label label-danger">9</span>--}}
                     {{--</a>--}}
                     {{--<ul class="dropdown-menu">--}}
-                        {{--<li class="header">You have 9 tasks</li>--}}
                         {{--<li>--}}
                             {{--<!-- Inner menu: contains the tasks -->--}}
                             {{--<ul class="menu">--}}
@@ -103,17 +102,18 @@
                         {{--</li>--}}
                     {{--</ul>--}}
                 {{--</li>--}}
-                {{--<!-- User Account Menu -->--}}
-                {{--<li class="dropdown user user-menu">--}}
-                    {{--<!-- Menu Toggle Button -->--}}
-                    {{--<a href="#" class="dropdown-toggle" data-toggle="dropdown">--}}
-                        {{--<!-- The user image in the navbar-->--}}
-                        {{--<img src="{{ asset("/bower_components/admin-lte/dist/img/user2-160x160.jpg") }}" class="user-image" alt="User Image"/>--}}
-                        {{--<!-- hidden-xs hides the username on small devices so only the image appears. -->--}}
-                        {{--<span class="hidden-xs">Alexander Pierce</span>--}}
-                    {{--</a>--}}
-                    {{--<ul class="dropdown-menu">--}}
-                        {{--<!-- The user image in the menu -->--}}
+                <!-- User Account Menu -->
+                <li class="dropdown user user-menu">
+                    <!-- Menu Toggle Button -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <!-- The user image in the navbar-->
+                        <!-- hidden-xs hides the username on small devices so only the image appears. -->
+                        @if (Auth::guard('admin')->check())
+                        <span class="hidden-xs">{{Auth::guard('admin')->user()->name}}</span>
+                        @endif
+                    </a>
+                    <ul class="dropdown-menu">
+                        <!-- The user image in the menu -->
                         {{--<li class="user-header">--}}
                             {{--<img src="{{ asset("/bower_components/admin-lte/dist/img/user2-160x160.jpg") }}" class="img-circle" alt="User Image" />--}}
                             {{--<p>--}}
@@ -133,18 +133,18 @@
                                 {{--<a href="#">Friends</a>--}}
                             {{--</div>--}}
                         {{--</li>--}}
-                        {{--<!-- Menu Footer-->--}}
-                        {{--<li class="user-footer">--}}
+                        <!-- Menu Footer-->
+                        <li class="user-footer">
                             {{--<div class="pull-left">--}}
                                 {{--<a href="#" class="btn btn-default btn-flat">Profile</a>--}}
                             {{--</div>--}}
-                            {{--<div class="pull-right">--}}
-                                {{--<a href="#" class="btn btn-default btn-flat">Sign out</a>--}}
-                            {{--</div>--}}
-                        {{--</li>--}}
-                    {{--</ul>--}}
-                {{--</li>--}}
-            {{--</ul>--}}
-        {{--</div>--}}
+                            <div class="pull-right">
+                                <a href="{{url('admin/logout')}}" class="btn btn-default btn-flat">Sign out</a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
     </nav>
 </header>

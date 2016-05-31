@@ -27,7 +27,7 @@
 
                 <div class="row" style="color: #BAAA76">
                     <div class="row" style="width: 81%;margin: 0px auto">
-                        <p>COMPOSITION DE MA FORMULE</p>
+                        <p style="font-size: 20px;font-weight: bold">COMPOSITION DE MA FORMULE</p>
                         <p>Chaque menu offert un bol de riz blanc et un boisson au choix dans le menu dessous</p>
                         <p>BOISSON</p>
                         <small id="error" style="color: red;display: none">Veuillez choisir 1 accompagnements de la catégorie "Accompagnements offerts" maximum</small>

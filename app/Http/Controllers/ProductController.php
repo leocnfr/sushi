@@ -7,13 +7,19 @@ use App\Product;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth:admin');
+    }
     //显示产品
     public function index(Request $request)
     {
+        $admin=Auth::guard('admin')->user();
         if($request->get('cateBy'))
         {
             $cate=Category::where('cat_name',$request->get('cateBy'))->first();
@@ -22,7 +28,7 @@ class ProductController extends Controller
             $products=Product::latest()->paginate(10);
         }
         $cates=Category::all();
-        return view('products.products',compact('products','cates'));
+        return view('products.products',compact('products','cates','admin'));
     }
     //显示创建产品页面
     public function create(){
