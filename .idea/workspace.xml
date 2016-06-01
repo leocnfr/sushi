@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="757db07e-5d4b-47ff-a67a-dd6a19559214" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/app/panier.blade.php" afterPath="$PROJECT_DIR$/resources/views/app/panier.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/app/autre_modal.blade.php" afterPath="$PROJECT_DIR$/resources/views/app/autre_modal.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/app/menus.blade.php" afterPath="$PROJECT_DIR$/resources/views/app/menus.blade.php" />
     </list>
     <ignored path="sushi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,93 +26,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="panier.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/app/panier.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.43083003">
-              <caret line="466" column="40" selection-start-line="466" selection-start-column="40" selection-end-line="466" selection-end-column="40" />
-              <folding>
-                <element signature="e#5803#5867#0#HTML" expanded="true" />
-                <element signature="e#5888#5930#0#HTML" expanded="true" />
-                <element signature="e#6005#6025#0#HTML" expanded="true" />
-                <element signature="e#6949#6969#0#HTML" expanded="true" />
-                <element signature="e#7020#7040#0#HTML" expanded="true" />
-                <element signature="e#7136#7159#0#HTML" expanded="true" />
-                <element signature="e#7326#7385#0#HTML" expanded="true" />
-                <element signature="e#8175#8193#0#HTML" expanded="true" />
-                <element signature="e#8728#8753#0#HTML" expanded="true" />
-                <element signature="e#8795#8815#0#HTML" expanded="true" />
-                <element signature="e#8861#8881#0#HTML" expanded="true" />
-                <element signature="e#8919#8937#0#HTML" expanded="true" />
-                <element signature="e#9199#9238#0#HTML" expanded="true" />
-                <element signature="e#9296#9316#0#HTML" expanded="true" />
-                <element signature="e#9362#9382#0#HTML" expanded="true" />
-                <element signature="e#9421#9439#0#HTML" expanded="true" />
-                <element signature="e#9706#9745#0#HTML" expanded="true" />
-                <element signature="e#9804#9824#0#HTML" expanded="true" />
-                <element signature="e#9876#9912#0#HTML" expanded="true" />
-                <element signature="e#9960#9978#0#HTML" expanded="true" />
-                <element signature="e#10248#10287#0#HTML" expanded="true" />
-                <element signature="e#10345#10365#0#HTML" expanded="true" />
-                <element signature="e#10417#10437#0#HTML" expanded="true" />
-                <element signature="e#10476#10494#0#HTML" expanded="true" />
-                <element signature="e#10765#10816#0#HTML" expanded="true" />
-                <marker date="1464767108000" expanded="true" signature="14346:14360" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="points.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/app/points.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.137931">
-              <caret line="23" column="69" selection-start-line="23" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-              <folding>
-                <marker date="1464766542000" expanded="true" signature="3214:3228" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sidebar.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/sidebar.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.965517">
-              <caret line="64" column="79" selection-start-line="64" selection-start-column="79" selection-end-line="64" selection-end-column="79" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/user.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.310345">
-              <caret line="3" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="menus.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/app/menus.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="74.413795">
-              <caret line="284" column="67" selection-start-line="284" selection-start-column="67" selection-end-line="284" selection-end-column="67" />
-              <folding>
-                <element signature="e#14321#15210#0#HTML" expanded="false" />
-                <marker date="1464763065000" expanded="true" signature="14785:14800" placeholder="..." />
-                <marker date="1464763065000" expanded="true" signature="15096:15130" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.448276">
+            <state vertical-scroll-proportion="50.96552">
               <caret line="76" column="26" selection-start-line="76" selection-start-column="26" selection-end-line="76" selection-end-column="26" />
               <folding>
                 <element signature="e#7#392#0#PHP" expanded="true" />
@@ -120,42 +39,39 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="times.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/times.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.413793">
-              <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="welcome.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.655172">
-              <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="OrderController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/OrderController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+            <state vertical-scroll-proportion="-8.827586">
+              <caret line="24" column="111" selection-start-line="24" selection-start-column="111" selection-end-line="24" selection-end-column="111" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="connection.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/app/connection.blade.php">
+      <file leaf-file-name="menus.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/app/menus.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="93" column="18" selection-start-line="93" selection-start-column="18" selection-end-line="93" selection-end-column="18" />
-              <folding />
+            <state vertical-scroll-proportion="-18.068966">
+              <caret line="377" column="34" selection-start-line="368" selection-start-column="20" selection-end-line="377" selection-end-column="34" />
+              <folding>
+                <marker date="1464768460000" expanded="true" signature="14344:14359" placeholder="..." />
+                <marker date="1464768460000" expanded="true" signature="14655:14689" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="autre_modal.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/app/autre_modal.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.49407116">
+              <caret line="129" column="35" selection-start-line="129" selection-start-column="35" selection-end-line="129" selection-end-column="35" />
+              <folding>
+                <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <marker date="1464768680000" expanded="true" signature="6252:6267" placeholder="..." />
+                <marker date="1464768680000" expanded="true" signature="6547:6581" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -198,7 +114,6 @@
         <option value="$PROJECT_DIR$/resources/views/point.blade.php" />
         <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/resources/views/products/edit.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/app/autre_modal.blade.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/config/auth.php" />
         <option value="$PROJECT_DIR$/app/Admin.php" />
@@ -218,14 +133,15 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/RelaisController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/FrontController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/resources/views/welcome.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/sidebar.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/times.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/app/menus.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/app/points.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/app/panier.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/app/menus.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" />
+        <option value="$PROJECT_DIR$/resources/views/app/autre_modal.blade.php" />
       </list>
     </option>
   </component>
@@ -404,7 +320,7 @@
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
-    <property name="SearchEverywhereHistoryKey" value="pan&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/panier.blade.php&#10;menus&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/menus.blade.php&#10;menu&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/menus.blade.php&#10;pa&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/panier.blade.php&#10;sid&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/admin/sidebar.blade.php&#10;route&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/routes.php&#10;side&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/admin/sidebar.blade.php&#10;Or&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/OrderController.php&#10;pro&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/ProductController.php&#10;fo&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/footer.blade.php&#10;app/h&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/header.blade.php&#10;he&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/admin/header.blade.php&#10;ind&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/public/css/index.css&#10;foot&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/footer.blade.php&#10;produ&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/ProductController.php&#10;lo&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/admin/auth/login.blade.php&#10;Prodc&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/ProductController.php&#10;head&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/admin/header.blade.php&#10;Produc&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/ProductController.php&#10;Admin&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/AdminController.php&#10;Au&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/Admin/AuthController.php&#10;auth.&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/config/auth.php&#10;config/a&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/config/app.php&#10;prod&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/products/products.blade.php&#10;inde&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/public/css/index.css&#10;meu&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/vendor/monolog/monolog/src/Monolog/Processor/MemoryUsageProcessor.php&#10;au&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/autre_modal.blade.php&#10;men&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/menus.blade.php&#10;me&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/menus.blade.php&#10;O&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/OrderController.php&#10;o&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/OrderController.php&#10;Order&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/OrderController.php&#10;order&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/OrderController.php&#10;p&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/ProductController.php&#10;Prod&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Product.php&#10;edi&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/products/edit.blade.php&#10;pR&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/ProductController.php&#10;aut&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/autre_modal.blade.php&#10;Pro&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/ProductController.php&#10;m&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/menus.blade.php&#10;app&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/config/app.php&#10;a&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/autre_modal.blade.php&#10;Ord&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/OrderController.php&#10;header&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/header.blade.php&#10;produc&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/ProductController.php&#10;moda&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/modal.blade.php&#10;Produ&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/ProductController.php&#10;si&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/admin/sidebar.blade.php&#10;sideba&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/admin/sidebar.blade.php&#10;Ca&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Category.php" />
+    <property name="SearchEverywhereHistoryKey" value="aut&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/autre_modal.blade.php&#10;autre&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/autre_modal.blade.php&#10;menu&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/menus.blade.php&#10;Or&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/OrderController.php&#10;route&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/routes.php&#10;pan&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/panier.blade.php&#10;menus&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/menus.blade.php&#10;pa&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/panier.blade.php&#10;sid&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/admin/sidebar.blade.php&#10;side&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/admin/sidebar.blade.php&#10;pro&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/ProductController.php&#10;fo&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/footer.blade.php&#10;app/h&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/header.blade.php&#10;he&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/admin/header.blade.php&#10;ind&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/public/css/index.css&#10;foot&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/footer.blade.php&#10;produ&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/ProductController.php&#10;lo&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/admin/auth/login.blade.php&#10;Prodc&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/ProductController.php&#10;head&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/admin/header.blade.php&#10;Produc&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/ProductController.php&#10;Admin&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/AdminController.php&#10;Au&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/Admin/AuthController.php&#10;auth.&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/config/auth.php&#10;config/a&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/config/app.php&#10;prod&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/products/products.blade.php&#10;inde&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/public/css/index.css&#10;meu&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/vendor/monolog/monolog/src/Monolog/Processor/MemoryUsageProcessor.php&#10;au&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/autre_modal.blade.php&#10;men&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/menus.blade.php&#10;me&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/menus.blade.php&#10;O&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/OrderController.php&#10;o&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/OrderController.php&#10;Order&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/OrderController.php&#10;order&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/OrderController.php&#10;p&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/ProductController.php&#10;Prod&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Product.php&#10;edi&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/products/edit.blade.php&#10;pR&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/ProductController.php&#10;Pro&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/ProductController.php&#10;m&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/menus.blade.php&#10;app&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/config/app.php&#10;a&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/autre_modal.blade.php&#10;Ord&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/OrderController.php&#10;header&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/header.blade.php&#10;produc&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/ProductController.php&#10;moda&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/modal.blade.php&#10;Produ&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/ProductController.php&#10;si&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/admin/sidebar.blade.php&#10;sideba&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/admin/sidebar.blade.php" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="FullScreen" value="true" />
   </component>
@@ -613,13 +529,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.04754829">
           <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/app/autre_modal.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.7599206">
-          <caret line="29" column="67" selection-start-line="29" selection-start-column="67" selection-end-line="29" selection-end-column="67" />
         </state>
       </provider>
     </entry>
@@ -839,50 +748,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/app/connection.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="5.881423">
           <caret line="93" column="18" selection-start-line="93" selection-start-column="18" selection-end-line="93" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/OrderController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.448276">
-          <caret line="76" column="26" selection-start-line="76" selection-start-column="26" selection-end-line="76" selection-end-column="26" />
-          <folding>
-            <element signature="e#7#392#0#PHP" expanded="true" />
-            <element signature="e#394#411#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.655172">
+        <state vertical-scroll-proportion="0.6679842">
           <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/sidebar.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.965517">
-          <caret line="64" column="79" selection-start-line="64" selection-start-column="79" selection-end-line="64" selection-end-column="79" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/user.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.310345">
+        <state vertical-scroll-proportion="0.18972331">
           <caret line="3" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="11" />
           <folding />
         </state>
@@ -890,21 +772,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/times.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.413793">
+        <state vertical-scroll-proportion="0.25296444">
           <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/app/menus.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="74.413795">
-          <caret line="284" column="67" selection-start-line="284" selection-start-column="67" selection-end-line="284" selection-end-column="67" />
-          <folding>
-            <element signature="e#14321#15210#0#HTML" expanded="false" />
-            <marker date="1464763065000" expanded="true" signature="14785:14800" placeholder="..." />
-            <marker date="1464763065000" expanded="true" signature="15096:15130" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -920,7 +790,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/app/panier.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43083003">
+        <state vertical-scroll-proportion="-7.5172415">
           <caret line="466" column="40" selection-start-line="466" selection-start-column="40" selection-end-line="466" selection-end-column="40" />
           <folding>
             <element signature="e#5803#5867#0#HTML" expanded="true" />
@@ -949,6 +819,56 @@
             <element signature="e#10476#10494#0#HTML" expanded="true" />
             <element signature="e#10765#10816#0#HTML" expanded="true" />
             <marker date="1464767108000" expanded="true" signature="14346:14360" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/sidebar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8577075">
+          <caret line="64" column="79" selection-start-line="64" selection-start-column="79" selection-end-line="64" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="50.96552">
+          <caret line="76" column="26" selection-start-line="76" selection-start-column="26" selection-end-line="76" selection-end-column="26" />
+          <folding>
+            <element signature="e#7#392#0#PHP" expanded="true" />
+            <element signature="e#394#411#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/OrderController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.827586">
+          <caret line="24" column="111" selection-start-line="24" selection-start-column="111" selection-end-line="24" selection-end-column="111" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/app/menus.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.068966">
+          <caret line="377" column="34" selection-start-line="368" selection-start-column="20" selection-end-line="377" selection-end-column="34" />
+          <folding>
+            <marker date="1464768460000" expanded="true" signature="14344:14359" placeholder="..." />
+            <marker date="1464768460000" expanded="true" signature="14655:14689" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/app/autre_modal.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49407116">
+          <caret line="129" column="35" selection-start-line="129" selection-start-column="35" selection-end-line="129" selection-end-column="35" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <marker date="1464768680000" expanded="true" signature="6252:6267" placeholder="..." />
+            <marker date="1464768680000" expanded="true" signature="6547:6581" placeholder="..." />
           </folding>
         </state>
       </provider>

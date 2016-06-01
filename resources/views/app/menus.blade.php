@@ -339,21 +339,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.16/vue.js"></script>
     <script>
         $('.button-ajouter').click(function () {
-            $.ajaxSetup(
-                    {
-                        headers: {
-                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                        },
-                        url:'/cart',
-                        type: "post"
-                    });
-
-            var productId=$(this).data('productid');
-            $.ajax({ data: {productId:productId,type:'menu'} }).done(function (response) {
-                 rawId=response;
-            });
-
-        })
+            productId=$(this).data('productid');
+        });
         $('li.sidebar-item').hover(function () {
             var index = $(".sidebar-item").index(this);
            if (index=='1'){
@@ -387,7 +374,7 @@
                     html+='<i class="fa fa-plus qty-plus" aria-hidden="true"  data-rawid="'+value.__raw_id+'"></i>';
                     html+='</div>';
                     html+='<span class="result_price ">'+value.price+'</span>';
-                    html+='<p style="padding: 0px 30px;text-align: left">'+value.boission+'</p>';
+                    html+='<p style="padding: 0px 30px;text-align: left">'+value.boisson+'</p>';
                     html+='</li>';
 
                 });
