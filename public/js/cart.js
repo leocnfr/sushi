@@ -15,7 +15,7 @@ function getCart(){
                 count+=parseInt(value.qty);
                 html+='<li class="list-unstyled ">';
                 html+='<div class="row" style="margin: 0px;padding: 0px">';
-                html+='<span class="result_name col-md-3">'+value.name+'</span>';
+                html+='<span class="result_name col-md-3" style="padding: 0px">'+value.name+'</span>';
                 html+='<div class="result_number_info">';
                 html+='<span class="qty-minus"><i class="fa fa-minus" aria-hidden="true" ></i></span>';
                 html+='<span style="margin: 0px 5px">'+value.qty+'</span> ';
