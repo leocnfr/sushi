@@ -367,7 +367,8 @@
                                 <div class="circle4"></div>
                             </div>
                         </div>
-                    </div>                    <li class="list-group-item" style="height: 147px;font-size: 20px;">
+                    </div>
+                    <li class="list-group-item" style="height: 147px;font-size: 14px;">
                         <div class="row" style="margin: 0px">
                             <p style="opacity:0.6;width: 742.5px;display: inline-block;float:left;">Nombre de produits</p>
                             <span id="product-total-count">{{$count}}</span>
@@ -377,7 +378,7 @@
                             <span id="product-total-piece" style="float:left;display: inline-block;">{{$piece}}</span>
                         </div>
                     </li>
-                    <li class="list-group-item" style="font-size: 20px">
+                    <li class="list-group-item" style="font-size: 14px">
 
                         <div class="row" style="margin: 0px">
                             <p style="opacity:0.6;width: 742.5px;display: inline-block;float:left;">Total</p>
