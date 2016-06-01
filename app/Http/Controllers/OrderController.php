@@ -14,7 +14,16 @@ class OrderController extends Controller
     {
         $this->middleware('web');
     }
-    //
+
+    public function index()
+    {
+        return view('orders');
+    }
+
+    public function all()
+    {
+        return view('orders');
+    }
     public function store(Request $request)
     {
          $productId=$request->get('productId');
@@ -44,5 +53,14 @@ class OrderController extends Controller
         $carts = Cart::all();
 //        $carts=Cart::all();
         return $carts;
+    }
+
+    public function update(Request $request)
+    {
+        dd($request->all());
+        $rawid=$request->get('rawid');
+        $count=$request->get('count');
+        echo $count;
+//        Cart::update($rawid,$count);
     }
 }

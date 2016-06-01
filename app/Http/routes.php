@@ -76,6 +76,11 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/admin/times',['middleware'=>'auth:admin',function(){
         return view('times');
     }]);
+    Route::post('/admin/times','TimeController@store');
+    Route::delete('/admin/times','TimeController@destroy');
+    //订单管理
+    Route::get('/admin/order/today','OrderController@index');
+    Route::get('/admin/order/all','OrderController@all');
 });
 
 Route::get('/', function () {
@@ -129,6 +134,8 @@ Route::get('/cartJson','OrderController@toJson');
 Route::get('/pointrelais',function(){
     return view('app.points');
 });
+//商品数量加1
+Route::post('/addCart','OrderController@update');
 
 //付款
 Route::post('/payment',function(){

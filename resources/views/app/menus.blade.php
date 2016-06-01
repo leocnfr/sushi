@@ -181,12 +181,14 @@
         }
         .result_price_list>li
         {
+            margin-top: 15px;
             border-bottom: 1px dashed grey
         }
         .result_name{
             font-size: 12pt;
             float: left;
             width: 33%;
+            text-align: left;
         }
         .result_number_info
         {
@@ -204,6 +206,7 @@
             line-height: 22px;
             bottom: 2px;
             position: relative;
+            text-align: right;
         }
         .ajouter-disabled{
             cursor: not-allowed;
@@ -417,7 +420,7 @@
         </div>
         <div id="cart-info" class="col-md-2" style="background: rgba(94,93,91,0.4);margin-left: 18px;text-align: center;color: #BAAA76;width: 250px;padding: 0px;margin-top: 21.5px;">
 
-            <aside id="result" style="min-height: 123px">
+            <aside id="result" style="min-height: 123px;padding: 0px 10px">
                 <p style="font-size: 19pt;font-weight: bold;margin-bottom: 30px">MON PANIER</p>
                 <div id="loading" style="display: block;position:absolute;left: 40%;top: -5% ">
                     <div class="spinner">
@@ -492,21 +495,6 @@
         });
 
 
-        $(".qty-plus").click(function () {
-            console.log(123);
-//            $.ajaxSetup(
-//                    {
-//                        headers: {
-//                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-//                        },
-//                        url:'/cart',
-//                        type: "post"
-//                    });
-//            var rawid=$(this).data('rawid');
-//            console.log(rawid);
-//            $.ajax({ rawid: {rawid:radiw} }).done(function (response) {
-//            });
-        });
 
     </script>
 @endsection
