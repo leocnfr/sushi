@@ -24,7 +24,7 @@ class Product extends Model
 
     public function showBoisson()
     {
-        return Product::where('cat_id','6')->get();
+        return Product::where('cat_id','6')->where('is_show','!=',0)->get();
     }
 
 }
