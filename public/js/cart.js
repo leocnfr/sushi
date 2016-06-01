@@ -13,15 +13,19 @@ function getCart(){
                 total+=parseFloat(value.total);
                 piece+=parseInt(value.piece);
                 count+=parseInt(value.qty);
-                html+='<li class="list-unstyled">';
-                html+='<span class="result_name">'+value.name+'</span>';
+                html+='<li class="list-unstyled ">';
+                html+='<div class="row" style="margin: 0px;padding: 0px">';
+                html+='<span class="result_name col-md-3">'+value.name+'</span>';
                 html+='<div class="result_number_info">';
                 html+='<span class="qty-minus"><i class="fa fa-minus" aria-hidden="true" ></i></span>';
                 html+='<span style="margin: 0px 5px">'+value.qty+'</span> ';
                 html+='<span class="qty-plus" data-rawid="'+value.__raw_id+'" data-count="'+value.qty+'"><i class="fa fa-plus " aria-hidden="true" ></i></span>';
                 html+='</div>';
                 html+='<span class="result_price ">'+value.price+'</span>';
+                html+='</div>';
+                html+='<div class="row" style="margin: 0px ;padding: 0px">';
                 html+='<p style="text-align: left">'+value.boisson+'</p>';
+                html+='</div>';
                 html+='</li>';
 
             });
