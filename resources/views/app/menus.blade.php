@@ -34,6 +34,7 @@
             height: 117px;
             margin: 0px auto;
         }
+
         #content
         {
             color: #BAAA76;
@@ -326,6 +327,9 @@
                   -webkit-transform: scale(1.0);
               }
         }
+        #error{
+            font-size: 10px;
+        }
     </style>
     <div class="container-fluid " style="padding:0;background: black ">
         @if(!isset($cate))
@@ -381,9 +385,9 @@
                                     <button class="button-ajouter" data-productid="{{$item->id}}" data-toggle="modal" data-target="#autre">AJOUTER<i class="fa fa-plus-circle" aria-hidden="true"></i></button>
                                 @else
                                     @if(date('G',time())<=12&&str_contains($item->send_time,'2'))
-                                        <small style="display: block;color: red">MENU MIDI NOUS VOUS OFFRONS QUE DU SOIR</small>
+                                        <small id="error" style="visibility: hidden;color: red;display: block">MENU MIDI NOUS VOUS OFFRONS QUE DU SOIR</small>
                                     @elseif(date('G',time())<18&&12<=date('G',time())&&str_contains($item->send_time,'1'))
-                                        <small style="display: block;color: red">MENU MIDI NOUS VOUS OFFRONS QUE DU MIDI</small>
+                                        <small id="error" style="visibility: hidden;color: red;display: block">MENU MIDI NOUS VOUS OFFRONS QUE DU MIDI</small>
                                     @endif
                                 @endif
 
@@ -507,7 +511,11 @@
 
         });
 
-
+        $('.item').hover(function () {
+            $("#error").css('visibility','visible');
+        }, function () {
+            $('#error').css('visibility','hidden');
+        })
 
     </script>
 @endsection
