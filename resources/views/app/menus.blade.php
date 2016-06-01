@@ -211,6 +211,117 @@
         .fa{
             cursor: pointer;
         }
+        /*loading动画*/
+        .spinner {
+            margin: 100px auto;
+            width: 40px;
+            height: 40px;
+            position: relative;
+        }
+
+        .container1 > div, .container2 > div, .container3 > div {
+            width: 6px;
+            height: 6px;
+            background-color: #333;
+
+            border-radius: 100%;
+            position: absolute;
+            -webkit-animation: bouncedelay 1.2s infinite ease-in-out;
+            animation: bouncedelay 1.2s infinite ease-in-out;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+
+        .spinner .spinner-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .container2 {
+            -webkit-transform: rotateZ(45deg);
+            transform: rotateZ(45deg);
+        }
+
+        .container3 {
+            -webkit-transform: rotateZ(90deg);
+            transform: rotateZ(90deg);
+        }
+
+        .circle1 { top: 0; left: 0; }
+        .circle2 { top: 0; right: 0; }
+        .circle3 { right: 0; bottom: 0; }
+        .circle4 { left: 0; bottom: 0; }
+
+        .container2 .circle1 {
+            -webkit-animation-delay: -1.1s;
+            animation-delay: -1.1s;
+        }
+
+        .container3 .circle1 {
+            -webkit-animation-delay: -1.0s;
+            animation-delay: -1.0s;
+        }
+
+        .container1 .circle2 {
+            -webkit-animation-delay: -0.9s;
+            animation-delay: -0.9s;
+        }
+
+        .container2 .circle2 {
+            -webkit-animation-delay: -0.8s;
+            animation-delay: -0.8s;
+        }
+
+        .container3 .circle2 {
+            -webkit-animation-delay: -0.7s;
+            animation-delay: -0.7s;
+        }
+
+        .container1 .circle3 {
+            -webkit-animation-delay: -0.6s;
+            animation-delay: -0.6s;
+        }
+
+        .container2 .circle3 {
+            -webkit-animation-delay: -0.5s;
+            animation-delay: -0.5s;
+        }
+
+        .container3 .circle3 {
+            -webkit-animation-delay: -0.4s;
+            animation-delay: -0.4s;
+        }
+
+        .container1 .circle4 {
+            -webkit-animation-delay: -0.3s;
+            animation-delay: -0.3s;
+        }
+
+        .container2 .circle4 {
+            -webkit-animation-delay: -0.2s;
+            animation-delay: -0.2s;
+        }
+
+        .container3 .circle4 {
+            -webkit-animation-delay: -0.1s;
+            animation-delay: -0.1s;
+        }
+
+        @-webkit-keyframes bouncedelay {
+            0%, 80%, 100% { -webkit-transform: scale(0.0) }
+            40% { -webkit-transform: scale(1.0) }
+        }
+
+        @keyframes bouncedelay {
+            0%, 80%, 100% {
+                transform: scale(0.0);
+                -webkit-transform: scale(0.0);
+            } 40% {
+                  transform: scale(1.0);
+                  -webkit-transform: scale(1.0);
+              }
+        }
     </style>
     <div class="container-fluid " style="padding:0;background: black ">
         @if(!isset($cate))
@@ -305,19 +416,33 @@
 
         </div>
         <div id="cart-info" class="col-md-2" style="background: rgba(94,93,91,0.4);margin-left: 18px;text-align: center;color: #BAAA76;width: 250px;padding: 0px;margin-top: 21.5px;">
+
             <aside id="result" style="min-height: 123px">
                 <p style="font-size: 19pt;font-weight: bold;margin-bottom: 30px">MON PANIER</p>
+                <div id="loading" style="display: block;position:absolute;left: 40%;top: -5% ">
+                    <div class="spinner">
+                        <div class="spinner-container container1">
+                            <div class="circle1"></div>
+                            <div class="circle2"></div>
+                            <div class="circle3"></div>
+                            <div class="circle4"></div>
+                        </div>
+                        <div class="spinner-container container2">
+                            <div class="circle1"></div>
+                            <div class="circle2"></div>
+                            <div class="circle3"></div>
+                            <div class="circle4"></div>
+                        </div>
+                        <div class="spinner-container container3">
+                            <div class="circle1"></div>
+                            <div class="circle2"></div>
+                            <div class="circle3"></div>
+                            <div class="circle4"></div>
+                        </div>
+                    </div>
+                </div>
                 <ul class="result_price_list">
-                    <p>Votre panier est vide</p>
-                   {{--<li class="list-unstyled">--}}
-                       {{--<span class="result_name">MENU BOTAN</span>--}}
-                       {{--<div class="result_number_info" >--}}
-                           {{--<i class="fa fa-minus" aria-hidden="true" id="minus"></i>--}}
-                           {{--<input type="number" style="width: 15px;height: 15px" min="1" value="1" id="product_number">--}}
-                           {{--<i class="fa fa-plus" aria-hidden="true" id="plus"></i>--}}
-                       {{--</div>--}}
-                       {{--<span  class="result_price">15.90€</span>--}}
-                   {{--</li>--}}
+                    <p></p>
                 </ul>
             </aside>
             <aside id="panier_inro" >
@@ -356,6 +481,13 @@
         $('.ajouter-disabled').click(function () {
 
         });
+
+        $(document).ajaxStart(function(){
+            $('#loading').show();
+        }).ajaxStop(function () {
+            $('#loading').hide();
+
+        });
         $.get('/cartJson', function (response) {
             var html='';
             var total=0;
@@ -382,6 +514,8 @@
                 $('#total_price').html(total);
                 $('#product-total-count').html(count);
                 $('#product-total-piece').html(piece);
+            }else {
+                $('.result_price_list > p').html('Votre panier est vide')
             }
 
         });
@@ -400,6 +534,7 @@
 //            console.log(rawid);
 //            $.ajax({ rawid: {rawid:radiw} }).done(function (response) {
 //            });
-        })
+        });
+
     </script>
 @endsection
