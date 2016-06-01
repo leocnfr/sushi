@@ -51,6 +51,7 @@ class ProductController extends Controller
         {
             $product->send_time='';
         }
+        $product->is_show=$request->get('is_show');
         $product->name=$request->get('name');
         $product->price=$request->get('price');
         $product->content=$request->get('content');

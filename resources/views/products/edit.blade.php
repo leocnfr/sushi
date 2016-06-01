@@ -57,6 +57,39 @@
         </div>
     </div>
     <div class="form-group">
+        <label for="">产品是否显示</label>
+        @if($product->is_show==1)
+        <div class="checkbox">
+        	<label>
+        		<input type="radio" value="1" id="" checked name="is_show">显示
+
+        	</label>
+        </div>
+            @else
+            <div class="checkbox">
+                <label>
+                    <input type="radio" value="1" id=""name="is_show">显示
+
+                </label>
+            </div>
+            @endif
+        @if($product->is_show==0)
+        <div class="checkbox">
+            <label>
+                <input type="radio" value="0" id="" name="is_show" checked>不显示
+
+            </label>
+        </div>
+            @else
+            <div class="checkbox">
+                <label>
+                    <input type="radio" value="0" id="" name="is_show" >不显示
+
+                </label>
+            </div>
+            @endif
+    </div>
+    <div class="form-group">
         <label for="">产品介绍</label>
         <textarea id="textarea1" class="form-control" rows="15" name="content" required>
 			{{$product->content}}
