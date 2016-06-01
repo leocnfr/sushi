@@ -129,6 +129,7 @@ Route::get('/connection',function(){
     return view('app.connection');
 });
 //购物车数据
+Route::post('/delCart','OrderController@destroy');
 Route::post('/cart','OrderController@store');
 Route::get('/cartJson','OrderController@toJson');
 Route::get('/pointrelais',function(){

@@ -10,7 +10,7 @@ class Relais extends Model
     protected $table = 'relais';
 
     protected $fillable = [
-        'name', 'address', 'intro'
+        'name', 'address', 'intro','send_time'
     ];
     protected $guarded=['id'];
     //添加Relais
@@ -36,4 +36,5 @@ class Relais extends Model
     {
         return Relais::destroy($id);
     }
+
 }

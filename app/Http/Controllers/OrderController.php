@@ -39,15 +39,23 @@ class OrderController extends Controller
     public function panier()
     {
         $carts = Cart::all();
-        return view('app.panier',compact('carts'));
+        $count=Cart::count();
+        $piece=0;
+        $price=0;
+        foreach ($carts as $cart) {
+            $piece+=$cart->piece;
+            $price+=$cart->price;
+        }
+
+        return view('app.panier',compact('carts','piece','count','price'));
     }
     //删除
     public function destroy(Request $request)
     {
-        $rawId=$request->get('rawId');
+        $rawId=$request->get('rawid');
         if(Cart::remove($rawId))
         {
-            return '200';
+            return  Cart::all();
         };
     }
     public function toJson()
@@ -68,7 +76,7 @@ class OrderController extends Controller
             $count=$request->get('count')-1;
             Cart::update($rawid,$count);
         }
-
+        return  Cart::all();;
     }
 
 

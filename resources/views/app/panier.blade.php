@@ -33,7 +33,7 @@
         }
         .qty-info
         {
-            width: 6%;
+            width: 50px;
             display: inline-block;
             background: black;
             padding: 0px 1px;
@@ -205,6 +205,121 @@
             box-shadow: none;
             border-radius: 5px;
         }
+        .fa{
+            cursor: pointer;
+        }
+        /*loading动画*/
+        .spinner {
+            margin: 100px auto;
+            width: 40px;
+            height: 40px;
+            position: relative;
+        }
+
+        .container1 > div, .container2 > div, .container3 > div {
+            width: 6px;
+            height: 6px;
+            background-color: #333;
+
+            border-radius: 100%;
+            position: absolute;
+            -webkit-animation: bouncedelay 1.2s infinite ease-in-out;
+            animation: bouncedelay 1.2s infinite ease-in-out;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+
+        .spinner .spinner-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .container2 {
+            -webkit-transform: rotateZ(45deg);
+            transform: rotateZ(45deg);
+        }
+
+        .container3 {
+            -webkit-transform: rotateZ(90deg);
+            transform: rotateZ(90deg);
+        }
+
+        .circle1 { top: 0; left: 0; }
+        .circle2 { top: 0; right: 0; }
+        .circle3 { right: 0; bottom: 0; }
+        .circle4 { left: 0; bottom: 0; }
+
+        .container2 .circle1 {
+            -webkit-animation-delay: -1.1s;
+            animation-delay: -1.1s;
+        }
+
+        .container3 .circle1 {
+            -webkit-animation-delay: -1.0s;
+            animation-delay: -1.0s;
+        }
+
+        .container1 .circle2 {
+            -webkit-animation-delay: -0.9s;
+            animation-delay: -0.9s;
+        }
+
+        .container2 .circle2 {
+            -webkit-animation-delay: -0.8s;
+            animation-delay: -0.8s;
+        }
+
+        .container3 .circle2 {
+            -webkit-animation-delay: -0.7s;
+            animation-delay: -0.7s;
+        }
+
+        .container1 .circle3 {
+            -webkit-animation-delay: -0.6s;
+            animation-delay: -0.6s;
+        }
+
+        .container2 .circle3 {
+            -webkit-animation-delay: -0.5s;
+            animation-delay: -0.5s;
+        }
+
+        .container3 .circle3 {
+            -webkit-animation-delay: -0.4s;
+            animation-delay: -0.4s;
+        }
+
+        .container1 .circle4 {
+            -webkit-animation-delay: -0.3s;
+            animation-delay: -0.3s;
+        }
+
+        .container2 .circle4 {
+            -webkit-animation-delay: -0.2s;
+            animation-delay: -0.2s;
+        }
+
+        .container3 .circle4 {
+            -webkit-animation-delay: -0.1s;
+            animation-delay: -0.1s;
+        }
+
+        @-webkit-keyframes bouncedelay {
+            0%, 80%, 100% { -webkit-transform: scale(0.0) }
+            40% { -webkit-transform: scale(1.0) }
+        }
+
+        @keyframes bouncedelay {
+            0%, 80%, 100% {
+                transform: scale(0.0);
+                -webkit-transform: scale(0.0);
+            } 40% {
+                  transform: scale(1.0);
+                  -webkit-transform: scale(1.0);
+              }
+        }
+
     </style>
     <div class="container-fluid" style="background: black;min-height: 500px;">
         <div id="content">
@@ -213,38 +328,61 @@
             <div id="panier-info" style="background:#252524;margin-top: 26px;padding: 40px  34px ">
                 <p style="font-size: 20px;font-weight: bold;">RECAPITULATIF DE VOTRE PANNIER</p>
                 <ul class="list-group" style="border: none">
-                @foreach($carts as $cart)
-
-                    <li class="list-group-item">
+                    <li class="list-group-item" v-for="cart in carts">
                         <div class="col-md-5" style="margin: 0px;padding: 0px">
-                            <span style="font-size: 20px;font-weight: bold">{{$cart->name}}</span>
-                            <span>{{$cart->boisson}},</span>
-                            <span>{{$cart->riz}}</span>
+                            <span style="font-size: 20px;font-weight: bold">@{{cart.name}}</span>
+                            <span>@{{cart.boisson}},</span>
+                            <span>@{{cart.riz}}</span>
                         </div>
 
-                        <span style="font-size: 20px;font-weight: bold;width:150px;display: inline-block">{{$cart->piece}}piece</span>
+                        <span style="font-size: 20px;font-weight: bold;width:150px;display: inline-block">@{{cart.piece}}piece</span>
                         <div class="qty-info">
-                            <span class="qty-minus" data-rawid="{{$cart->__raw_id}}" data-count="{{$cart->qty}}" ><i class="fa fa-minus" aria-hidden="true" ></i></span>
-                           <span style="margin: 0px 5px;font-size: 20px">{{$cart->qty}}</span>
-                            <span class="qty-plus" data-rawid="{{$cart->__raw_id}}" data-count="{{$cart->qty}}" ><i class="fa fa-plus " aria-hidden="true" ></i></span>
+                            <span class="qty-minus" data-rawid="@{{cart.__raw_id}}" data-count="@{{cart.qty}}" v-on:click="delQty(cart)"><i class="fa fa-minus" aria-hidden="true" ></i></span>
+                            <span style="margin: 0px 5px;font-size: 20px">@{{cart.qty}}</span>
+                            <span class="qty-plus" data-rawid="@{{cart.__raw_id}}" data-count="@{{cart.qty}}" v-on:click="addQty(cart)"><i class="fa fa-plus " aria-hidden="true" ></i></span>
                         </div>
 
-                        <span style="font-size: 20px;width: 150px;display: inline-block;">{{$cart->price}}€</span>
-                        <span class="deletePanier " data-rawid="{{$cart->__raw_id}}" style="cursor: pointer;display: inline-block"><i class="fa fa-times"></i></span>
+                        <span style="font-size: 20px;width: 150px;display: inline-block;">@{{cart.price*cart.qty}}€</span>
+                        <span class="deletePanier " data-rawid="@{{cart.__raw_id}}" style="cursor: pointer;display: inline-block" v-on:click='delCart(cart)'><i class="fa fa-times"></i></span>
                     </li>
-                @endforeach
-                    <li class="list-group-item" style="height: 147px;font-size: 20pt;">
-                        <div class="row" style="margin: 0px">
-                            <p style="opacity:0.6;">Nombre de produits</p>
-                        </div>
-                        <div class="row" style="margin: 0px">
-                            <p style="opacity:0.6;">Nombre de pieces</p>
 
+                    <div id="loading" style="display: block;position:absolute;left: 40%; ">
+                        <div class="spinner">
+                            <div class="spinner-container container1">
+                                <div class="circle1"></div>
+                                <div class="circle2"></div>
+                                <div class="circle3"></div>
+                                <div class="circle4"></div>
+                            </div>
+                            <div class="spinner-container container2">
+                                <div class="circle1"></div>
+                                <div class="circle2"></div>
+                                <div class="circle3"></div>
+                                <div class="circle4"></div>
+                            </div>
+                            <div class="spinner-container container3">
+                                <div class="circle1"></div>
+                                <div class="circle2"></div>
+                                <div class="circle3"></div>
+                                <div class="circle4"></div>
+                            </div>
+                        </div>
+                    </div>                    <li class="list-group-item" style="height: 147px;font-size: 20pt;">
+                        <div class="row" style="margin: 0px">
+                            <p style="opacity:0.6;width: 742.5px;display: inline-block;float:left;">Nombre de produits</p>
+                            <span id="product-total-count">{{$count}}</span>
+                        </div>
+                        <div class="row" style="margin: 0px;">
+                            <p style="opacity:0.6;display: inline-block;float:left;width: 742.5px">Nombre de pieces</p>
+                            <span id="product-total-piece" style="float:left;display: inline-block;">{{$piece}}</span>
                         </div>
                     </li>
                     <li class="list-group-item" style="font-size: 33px">
-                        <span>Total</span>
-                        <span>1€</span>
+
+                        <div class="row" style="margin: 0px">
+                            <p style="opacity:0.6;width: 742.5px;display: inline-block;float:left;">Total</p>
+                            <span id="product-total-count">{{$price}}€</span>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -265,7 +403,7 @@
                             @inject('points','App\Relais')
                             <li data-value="Tout de boutique" data-place="all">Tout de boutique</li>
                             @foreach($points::all() as $key=>$point)
-                                <li data-place="{{$point->address}}" data-index="{{$key+1}}" data-value="{{$point->name}}" >{{$point->name}}</li>
+                                <li data-place="{{$point->address}}" data-index="{{$key+1}}" data-value="{{$point->name}}" data-id="{{$point->id}}">{{$point->name}}</li>
 
                             @endforeach
                         </ul>
@@ -284,8 +422,11 @@
                     <div class="select" style="width: 150px" id="select-time">
                         <p style="width: 110px">Heure</p>
                         <ul style="z-index: 1">
-                            <li data-value="10:30-11:00">10:30-11:00</li>
-                            <li data-value="11:30-12:00">11:30-12:00</li>
+                            @foreach($points::all() as $point)
+                            <li data-value="{{$point->send_time}}">{{$point->send_time}}</li>
+
+                            @endforeach
+
                         </ul>
                     </div>
                 </div>
@@ -447,6 +588,7 @@
                 var _this = $(this);
                 var place=_this.attr('data-place');
                 var index=_this.attr('data-index');
+                var id=_this.attr('data-id');
                 if (place=='all'){
                     $.get('/json', function (data) {
                         $.each(data, function (key,val) {
@@ -517,6 +659,49 @@
         });
         $('#livrison').click(function () {
             $('#show-livrison').show();
+        });
+    </script>
+    <script src="/js/vue.js"></script>
+    <script src="/js/vue-resource.min.js"></script>
+    <script>
+        Vue.http.headers.common['X-CSRF-TOKEN'] = document.querySelector('[name="csrf-token"]').getAttribute('content');
+
+        new Vue({
+            el:'body',
+            data:{
+                carts:[]
+            },
+            created: function () {
+                var vm=this;
+                this.$http.get('/cartJson', function (data) {
+                    vm.carts=data;
+                })
+            },
+            methods:{
+                delCart: function (cart) {
+                    this.$http.post('/delCart',{rawid:cart.__raw_id}, function (response) {
+                        this.carts=response
+
+                    });
+
+                },
+                addQty: function (cart) {
+                    this.$http.post('/updateCart',{rawid:cart.__raw_id,type:'add',count:cart.qty}, function (response) {
+                        this.carts=response
+                    })
+                },
+                delQty: function (cart) {
+                    this.$http.post('/updateCart',{rawid:cart.__raw_id,type:'minus',count:cart.qty}, function (response) {
+                        this.carts=response
+                    })
+                }
+            }
+        })
+        $(document).ajaxStart(function(){
+            $('#loading').show();
+        }).ajaxStop(function () {
+            $('#loading').hide();
+
         });
     </script>
 @endsection

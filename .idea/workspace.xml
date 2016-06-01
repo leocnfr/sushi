@@ -2,9 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="757db07e-5d4b-47ff-a67a-dd6a19559214" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/vue-resource.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/vue.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/app/header.blade.php" afterPath="$PROJECT_DIR$/resources/views/app/header.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Relais.php" afterPath="$PROJECT_DIR$/app/Relais.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Time.php" afterPath="$PROJECT_DIR$/app/Time.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/app/panier.blade.php" afterPath="$PROJECT_DIR$/resources/views/app/panier.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/pointrelais/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/pointrelais/edit.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/pointrelais/relais.blade.php" afterPath="$PROJECT_DIR$/resources/views/pointrelais/relais.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/times.blade.php" afterPath="$PROJECT_DIR$/resources/views/times.blade.php" />
     </list>
     <ignored path="sushi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,8 +37,8 @@
       <file leaf-file-name="OrderController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/OrderController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="35" column="123" selection-start-line="35" selection-start-column="123" selection-end-line="35" selection-end-column="123" />
+            <state vertical-scroll-proportion="2.2068965">
+              <caret line="57" column="32" selection-start-line="57" selection-start-column="32" selection-end-line="57" selection-end-column="32" />
               <folding>
                 <element signature="e#40#56#0#PHP" expanded="true" />
               </folding>
@@ -41,63 +49,46 @@
       <file leaf-file-name="menus.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/app/menus.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.586206">
-              <caret line="482" column="33" selection-start-line="482" selection-start-column="0" selection-end-line="483" selection-end-column="0" />
-              <folding>
-                <element signature="e#9007#9040#0#HTML" expanded="true" />
-                <element signature="e#16845#16883#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="autre_modal.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/app/autre_modal.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="134" column="105" selection-start-line="134" selection-start-column="105" selection-end-line="134" selection-end-column="105" />
+            <state vertical-scroll-proportion="-16.896551">
+              <caret line="509" column="11" selection-start-line="504" selection-start-column="8" selection-end-line="509" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cart.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/cart.js">
+      <file leaf-file-name="7572d88ff0dee31b9f1c41ac5cf7647b7c8d8620.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/storage/framework/views/7572d88ff0dee31b9f1c41ac5cf7647b7c8d8620.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="40" selection-start-line="21" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state vertical-scroll-proportion="-154.68965">
+              <caret line="340" column="66" selection-start-line="209" selection-start-column="0" selection-end-line="209" selection-end-column="8" />
               <folding>
-                <element signature="n#!!doc;n#getCart#0" expanded="false" />
-                <marker date="1464798888000" expanded="true" signature="513:537" placeholder="..." />
-                <marker date="1464798888000" expanded="true" signature="607:619" placeholder="..." />
-                <marker date="1464798888000" expanded="true" signature="903:918" placeholder="..." />
-                <marker date="1464798888000" expanded="true" signature="1294:1306" placeholder="..." />
-                <marker date="1464798888000" expanded="true" signature="1294:1319" placeholder="..." />
-                <marker date="1464798888000" expanded="true" signature="1357:1373" placeholder="..." />
-                <marker date="1464798888000" expanded="true" signature="1432:1448" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="8f7d57f06da04becb2aef055722584e04c42d1be.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/storage/framework/views/8f7d57f06da04becb2aef055722584e04c42d1be.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.068966">
-              <caret line="201" column="24" selection-start-line="196" selection-start-column="12" selection-end-line="201" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/app/header.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.034483">
-              <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
-              <folding>
-                <element signature="n#style#0;n#img#0;n#a#0;n#li#1;n#ul#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#a#0;n#li#1;n#ul#1;n#div#0;n#!!top" expanded="true" />
+                <marker date="1464812080000" expanded="true" signature="150:300" placeholder="{...}" />
+                <marker date="1464812080000" expanded="true" signature="327:414" placeholder="{...}" />
+                <marker date="1464812080000" expanded="true" signature="437:600" placeholder="{...}" />
+                <marker date="1464812080000" expanded="true" signature="624:729" placeholder="{...}" />
+                <marker date="1464812080000" expanded="true" signature="756:922" placeholder="{...}" />
+                <marker date="1464812080000" expanded="true" signature="947:1118" placeholder="{...}" />
+                <marker date="1464812080000" expanded="true" signature="1151:1331" placeholder="{...}" />
+                <marker date="1464812080000" expanded="true" signature="1346:1439" placeholder="{...}" />
+                <marker date="1464812080000" expanded="true" signature="1453:1625" placeholder="{...}" />
+                <marker date="1464812080000" expanded="true" signature="1656:1694" placeholder="{...}" />
+                <marker date="1464812080000" expanded="true" signature="1715:2042" placeholder="{...}" />
+                <marker date="1464812080000" expanded="true" signature="2069:2382" placeholder="{...}" />
+                <marker date="1464812080000" expanded="true" signature="2428:2531" placeholder="{...}" />
+                <marker date="1464812080000" expanded="true" signature="2694:2822" placeholder="{...}" />
+                <marker date="1464812080000" expanded="true" signature="2856:2896" placeholder="{...}" />
+                <marker date="1464812080000" expanded="true" signature="2921:3158" placeholder="{...}" />
+                <marker date="1464812080000" expanded="true" signature="3189:3588" placeholder="{...}" />
+                <marker date="1464812080000" expanded="true" signature="3615:3926" placeholder="{...}" />
+                <marker date="1464812080000" expanded="true" signature="3954:4299" placeholder="{...}" />
+                <marker date="1464812080000" expanded="true" signature="4467:4517" placeholder="{...}" />
+                <marker date="1464812080000" expanded="true" signature="4557:4605" placeholder="{...}" />
+                <marker date="1464812080000" expanded="true" signature="4644:4868" placeholder="..." />
+                <marker date="1464812080000" expanded="true" signature="4901:5140" placeholder="{...}" />
+                <marker date="1464812080000" expanded="true" signature="5176:5328" placeholder="{...}" />
+                <marker date="1464812080000" expanded="true" signature="5348:5533" placeholder="{...}" />
+                <marker date="1464812080000" expanded="true" signature="5545:5585" placeholder="{...}" />
+                <marker date="1464812080000" expanded="true" signature="20392:20406" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -106,54 +97,72 @@
       <file leaf-file-name="panier.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/app/panier.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.8089172">
-              <caret line="242" column="30" selection-start-line="242" selection-start-column="30" selection-end-line="242" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.9177378">
+              <caret line="704" column="11" selection-start-line="704" selection-start-column="11" selection-end-line="704" selection-end-column="11" />
               <folding>
-                <element signature="e#6167#6199#0#HTML" expanded="true" />
-                <element signature="e#6235#6276#0#HTML" expanded="true" />
-                <element signature="e#6479#6554#0#HTML" expanded="true" />
-                <element signature="e#6833#6872#0#HTML" expanded="true" />
-                <element signature="e#7125#7184#0#HTML" expanded="true" />
-                <element signature="e#7295#7340#0#HTML" expanded="true" />
-                <element signature="e#7478#7516#0#HTML" expanded="true" />
-                <element signature="e#7559#7578#0#HTML" expanded="true" />
-                <element signature="e#7611#7631#0#HTML" expanded="true" />
-                <element signature="e#7727#7746#0#HTML" expanded="true" />
-                <element signature="e#7927#7950#0#HTML" expanded="true" />
-                <marker date="1464802156000" expanded="true" signature="15338:15352" placeholder="..." />
+                <element signature="e#9132#9164#0#HTML" expanded="true" />
+                <element signature="e#9110#9409#0#HTML" expanded="false" />
+                <element signature="e#9818#9857#0#HTML" expanded="true" />
+                <element signature="e#10309#10354#0#HTML" expanded="true" />
+                <element signature="e#10482#10534#0#HTML" expanded="true" />
+                <element signature="e#11725#11763#0#HTML" expanded="true" />
+                <element signature="e#11858#11926#0#HTML" expanded="true" />
+                <element signature="e#12300#12341#0#HTML" expanded="true" />
+                <element signature="e#12854#12913#0#HTML" expanded="true" />
+                <element signature="e#14318#14343#0#HTML" expanded="true" />
+                <element signature="e#15011#15029#0#HTML" expanded="true" />
+                <element signature="e#16530#16581#0#HTML" expanded="true" />
+                <marker date="1464812148000" expanded="true" signature="20150:20164" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Cart.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/overtrue/laravel-shopping-cart/src/LaravelShoppingCart/Cart.php">
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="38" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="38" />
-              <folding>
-                <element signature="e#7#432#0#PHP" expanded="true" />
-                <element signature="e#475#518#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/css/index.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="190" column="30" selection-start-line="190" selection-start-column="30" selection-end-line="190" selection-end-column="30" />
+            <state vertical-scroll-proportion="-17.034483">
+              <caret line="138" column="24" selection-start-line="138" selection-start-column="14" selection-end-line="138" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="timeline.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bower_components/AdminLTE/pages/UI/timeline.html">
+      <file leaf-file-name="vue.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/vue.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Relais.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Relais.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-13.827586">
+              <caret line="34" column="41" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/pointrelais/edit.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.62069">
+              <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="times.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/times.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-14.344828">
+              <caret line="26" column="69" selection-start-line="26" selection-start-column="69" selection-end-line="26" selection-end-column="69" />
               <folding />
             </state>
           </provider>
@@ -175,8 +184,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/test.blade.php" />
-        <option value="$PROJECT_DIR$/app/Providers/ProductServiceProvider.php" />
         <option value="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" />
         <option value="$PROJECT_DIR$/resources/views/pointrelais/relais.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/category/category.blade.php" />
@@ -211,20 +218,22 @@
         <option value="$PROJECT_DIR$/resources/views/app/points.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/welcome.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/app/app_template.blade.php" />
-        <option value="$PROJECT_DIR$/app/Time.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/sidebar.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/orders.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/TimeController.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_06_01_134405_create_times_table.php" />
-        <option value="$PROJECT_DIR$/resources/views/times.blade.php" />
         <option value="$PROJECT_DIR$/storage/framework/views/8f7d57f06da04becb2aef055722584e04c42d1be.php" />
-        <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/public/css/index.css" />
         <option value="$PROJECT_DIR$/resources/views/app/autre_modal.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" />
         <option value="$PROJECT_DIR$/public/js/cart.js" />
         <option value="$PROJECT_DIR$/resources/views/app/menus.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/app/header.blade.php" />
+        <option value="$PROJECT_DIR$/app/Time.php" />
+        <option value="$PROJECT_DIR$/resources/views/times.blade.php" />
+        <option value="$PROJECT_DIR$/app/Relais.php" />
+        <option value="$PROJECT_DIR$/resources/views/pointrelais/edit.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" />
         <option value="$PROJECT_DIR$/resources/views/app/panier.blade.php" />
       </list>
     </option>
@@ -274,6 +283,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -369,7 +379,79 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sushi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sushi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="products" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sushi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sushi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sushi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sushi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sushi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sushi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -407,7 +489,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -418,22 +499,22 @@
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
-    <property name="SearchEverywhereHistoryKey" value="menu&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/menus.blade.php&#10;pan&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/panier.blade.php&#10;head&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/header.blade.php&#10;Order&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/OrderController.php&#10;autre&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/autre_modal.blade.php&#10;cAR&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/public/js/cart.js&#10;Or&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/OrderController.php&#10;Cartphp&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/vendor/overtrue/laravel-shopping-cart/src/LaravelShoppingCart/Cart.php&#10;Cart.php&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/vendor/overtrue/laravel-shopping-cart/src/LaravelShoppingCart/Cart.php&#10;Cart&#9;null&#9;null&#10;inde&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/public/css/index.css&#10;header&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/header.blade.php&#10;ca&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/public/js/cart.js&#10;route&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/routes.php&#10;men&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/menus.blade.php&#10;order&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/orders.blade.php&#10;Tim&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/TimeController.php&#10;Time&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/times.blade.php&#10;ROUTE&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/routes.php&#10;o&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/OrderController.php&#10;Ord&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/OrderController.php&#10;sid&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/admin/sidebar.blade.php&#10;time&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/times.blade.php&#10;aut&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/autre_modal.blade.php&#10;aute&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/vendor/stripe/stripe-php/tests/AuthenticationErrorTest.php&#10;autr&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/autre_modal.blade.php&#10;menus&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/menus.blade.php&#10;pa&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/panier.blade.php&#10;side&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/admin/sidebar.blade.php&#10;pro&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/ProductController.php&#10;fo&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/footer.blade.php&#10;app/h&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/header.blade.php&#10;he&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/admin/header.blade.php&#10;ind&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/public/css/index.css&#10;foot&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/footer.blade.php&#10;produ&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/ProductController.php&#10;lo&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/admin/auth/login.blade.php&#10;Prodc&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/ProductController.php&#10;Produc&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/ProductController.php&#10;Admin&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/AdminController.php&#10;Au&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/Admin/AuthController.php&#10;auth.&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/config/auth.php&#10;config/a&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/config/app.php&#10;prod&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/products/products.blade.php&#10;meu&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/vendor/monolog/monolog/src/Monolog/Processor/MemoryUsageProcessor.php&#10;au&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/autre_modal.blade.php&#10;me&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/menus.blade.php&#10;O&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/OrderController.php&#10;p&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/ProductController.php&#10;Prod&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Product.php" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/panier.blade.php&#10;menu&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/menus.blade.php&#10;route&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/routes.php&#10;oR&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/OrderController.php&#10;Or&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/OrderController.php&#10;pan&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/panier.blade.php&#10;edi&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/pointrelais/edit.blade.php&#10;Rel&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Relais.php&#10;time&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/times.blade.php&#10;Time&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Time.php&#10;Tim&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Time.php&#10;Prod&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Product.php&#10;editb&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/pointrelais/edit.blade.php&#10;Relai&#9;null&#9;null&#10;Cate&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Category.php&#10;panier&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/panier.blade.php&#10;head&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/header.blade.php&#10;Order&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/OrderController.php&#10;autre&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/autre_modal.blade.php&#10;cAR&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/public/js/cart.js&#10;Cartphp&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/vendor/overtrue/laravel-shopping-cart/src/LaravelShoppingCart/Cart.php&#10;Cart.php&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/vendor/overtrue/laravel-shopping-cart/src/LaravelShoppingCart/Cart.php&#10;Cart&#9;null&#9;null&#10;inde&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/public/css/index.css&#10;header&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/header.blade.php&#10;ca&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/public/js/cart.js&#10;men&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/menus.blade.php&#10;order&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/orders.blade.php&#10;ROUTE&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/routes.php&#10;o&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/OrderController.php&#10;Ord&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/OrderController.php&#10;sid&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/admin/sidebar.blade.php&#10;aut&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/autre_modal.blade.php&#10;aute&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/vendor/stripe/stripe-php/tests/AuthenticationErrorTest.php&#10;autr&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/autre_modal.blade.php&#10;menus&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/menus.blade.php&#10;pa&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/panier.blade.php&#10;side&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/admin/sidebar.blade.php&#10;pro&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/ProductController.php&#10;fo&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/footer.blade.php&#10;app/h&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/header.blade.php&#10;he&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/admin/header.blade.php&#10;ind&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/public/css/index.css&#10;foot&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/footer.blade.php&#10;produ&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/ProductController.php&#10;lo&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/admin/auth/login.blade.php&#10;Prodc&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/ProductController.php&#10;Produc&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/ProductController.php&#10;Admin&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/AdminController.php&#10;Au&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/Admin/AuthController.php" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/js" />
+      <recent name="$PROJECT_DIR$/public/images" />
+      <recent name="$PROJECT_DIR$/resources/views/admin/auth" />
+      <recent name="$PROJECT_DIR$/public/fonts" />
+      <recent name="$PROJECT_DIR$/public/css" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/css" />
       <recent name="$PROJECT_DIR$/resources/views" />
       <recent name="$PROJECT_DIR$/resources/views/products" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/images" />
-      <recent name="$PROJECT_DIR$/resources/views/admin/auth" />
-      <recent name="$PROJECT_DIR$/public/fonts" />
-      <recent name="$PROJECT_DIR$/public/js" />
-      <recent name="$PROJECT_DIR$/public/css" />
     </key>
   </component>
   <component name="RunManager">
@@ -494,24 +575,24 @@
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2113951" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21352503" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32786885" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23150685" sideWeight="0.503231" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16633664" sideWeight="0.49676898" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17326732" sideWeight="0.49676898" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970297" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32786885" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -554,62 +635,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/monolog/monolog/src/Monolog/Processor/MemoryUsageProcessor.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.04754829">
-          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-22.068966">
-          <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/products/products.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.1746032">
-          <caret line="61" column="20" selection-start-line="61" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="159.10345">
-          <caret line="54" column="31" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/auth.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.827586">
-          <caret line="77" column="10" selection-start-line="77" selection-start-column="10" selection-end-line="77" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Category.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.241379">
-          <caret line="31" column="71" selection-start-line="31" selection-start-column="71" selection-end-line="31" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/Authenticate.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-24.275862">
-          <caret line="23" column="50" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="35.310345">
@@ -785,13 +810,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Time.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.5172415">
-          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/sidebar.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -820,29 +838,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/times.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/orders.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1" column="27" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="137" column="24" selection-start-line="137" selection-start-column="14" selection-end-line="137" selection-end-column="24" />
-          <folding>
-            <element signature="e#7#392#0#PHP" expanded="false" />
-            <element signature="e#394#411#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -867,8 +866,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="38" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="38" />
           <folding>
-            <element signature="e#7#432#0#PHP" expanded="true" />
-            <element signature="e#475#518#0#PHP" expanded="true" />
+            <element signature="e#7#432#0#PHP" expanded="false" />
+            <element signature="e#475#518#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -881,31 +880,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/OrderController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="123" selection-start-line="35" selection-start-column="123" selection-end-line="35" selection-end-column="123" />
-          <folding>
-            <element signature="e#40#56#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/app/header.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.034483">
+        <state vertical-scroll-proportion="0.0">
           <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#a#0;n#li#1;n#ul#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#a#0;n#li#1;n#ul#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/storage/framework/views/8f7d57f06da04becb2aef055722584e04c42d1be.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.068966">
-          <caret line="201" column="24" selection-start-line="196" selection-start-column="12" selection-end-line="201" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -913,7 +891,7 @@
     <entry file="file://$PROJECT_DIR$/public/js/cart.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="40" selection-start-line="21" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <caret line="39" column="19" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
           <folding>
             <element signature="n#!!doc;n#getCart#0" expanded="false" />
             <marker date="1464798888000" expanded="true" signature="513:537" placeholder="..." />
@@ -927,34 +905,166 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/storage/framework/views/8f7d57f06da04becb2aef055722584e04c42d1be.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="218.48276">
+          <caret line="201" column="24" selection-start-line="196" selection-start-column="12" selection-end-line="201" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.758621">
+          <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/products/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1034483">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Category.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.344828">
+          <caret line="29" column="37" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Time.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.931034">
+          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/times.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.344828">
+          <caret line="26" column="69" selection-start-line="26" selection-start-column="69" selection-end-line="26" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Relais.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.827586">
+          <caret line="34" column="41" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pointrelais/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.62069">
+          <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/vue.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.034483">
+          <caret line="138" column="24" selection-start-line="138" selection-start-column="14" selection-end-line="138" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/OrderController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.2068965">
+          <caret line="57" column="32" selection-start-line="57" selection-start-column="32" selection-end-line="57" selection-end-column="32" />
+          <folding>
+            <element signature="e#40#56#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/framework/views/72717a4192b7c5c596d0963a618512f3365993fe.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5347044">
+          <caret line="27" column="33" selection-start-line="27" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/framework/views/7572d88ff0dee31b9f1c41ac5cf7647b7c8d8620.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-154.68965">
+          <caret line="340" column="66" selection-start-line="209" selection-start-column="0" selection-end-line="209" selection-end-column="8" />
+          <folding>
+            <marker date="1464812080000" expanded="true" signature="150:300" placeholder="{...}" />
+            <marker date="1464812080000" expanded="true" signature="327:414" placeholder="{...}" />
+            <marker date="1464812080000" expanded="true" signature="437:600" placeholder="{...}" />
+            <marker date="1464812080000" expanded="true" signature="624:729" placeholder="{...}" />
+            <marker date="1464812080000" expanded="true" signature="756:922" placeholder="{...}" />
+            <marker date="1464812080000" expanded="true" signature="947:1118" placeholder="{...}" />
+            <marker date="1464812080000" expanded="true" signature="1151:1331" placeholder="{...}" />
+            <marker date="1464812080000" expanded="true" signature="1346:1439" placeholder="{...}" />
+            <marker date="1464812080000" expanded="true" signature="1453:1625" placeholder="{...}" />
+            <marker date="1464812080000" expanded="true" signature="1656:1694" placeholder="{...}" />
+            <marker date="1464812080000" expanded="true" signature="1715:2042" placeholder="{...}" />
+            <marker date="1464812080000" expanded="true" signature="2069:2382" placeholder="{...}" />
+            <marker date="1464812080000" expanded="true" signature="2428:2531" placeholder="{...}" />
+            <marker date="1464812080000" expanded="true" signature="2694:2822" placeholder="{...}" />
+            <marker date="1464812080000" expanded="true" signature="2856:2896" placeholder="{...}" />
+            <marker date="1464812080000" expanded="true" signature="2921:3158" placeholder="{...}" />
+            <marker date="1464812080000" expanded="true" signature="3189:3588" placeholder="{...}" />
+            <marker date="1464812080000" expanded="true" signature="3615:3926" placeholder="{...}" />
+            <marker date="1464812080000" expanded="true" signature="3954:4299" placeholder="{...}" />
+            <marker date="1464812080000" expanded="true" signature="4467:4517" placeholder="{...}" />
+            <marker date="1464812080000" expanded="true" signature="4557:4605" placeholder="{...}" />
+            <marker date="1464812080000" expanded="true" signature="4644:4868" placeholder="..." />
+            <marker date="1464812080000" expanded="true" signature="4901:5140" placeholder="{...}" />
+            <marker date="1464812080000" expanded="true" signature="5176:5328" placeholder="{...}" />
+            <marker date="1464812080000" expanded="true" signature="5348:5533" placeholder="{...}" />
+            <marker date="1464812080000" expanded="true" signature="5545:5585" placeholder="{...}" />
+            <marker date="1464812080000" expanded="true" signature="20392:20406" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/app/menus.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.586206">
-          <caret line="482" column="33" selection-start-line="482" selection-start-column="0" selection-end-line="483" selection-end-column="0" />
-          <folding>
-            <element signature="e#9007#9040#0#HTML" expanded="true" />
-            <element signature="e#16845#16883#0#HTML" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-16.896551">
+          <caret line="509" column="11" selection-start-line="504" selection-start-column="8" selection-end-line="509" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/app/panier.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.8089172">
-          <caret line="242" column="30" selection-start-line="242" selection-start-column="30" selection-end-line="242" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.9177378">
+          <caret line="704" column="11" selection-start-line="704" selection-start-column="11" selection-end-line="704" selection-end-column="11" />
           <folding>
-            <element signature="e#6167#6199#0#HTML" expanded="true" />
-            <element signature="e#6235#6276#0#HTML" expanded="true" />
-            <element signature="e#6479#6554#0#HTML" expanded="true" />
-            <element signature="e#6833#6872#0#HTML" expanded="true" />
-            <element signature="e#7125#7184#0#HTML" expanded="true" />
-            <element signature="e#7295#7340#0#HTML" expanded="true" />
-            <element signature="e#7478#7516#0#HTML" expanded="true" />
-            <element signature="e#7559#7578#0#HTML" expanded="true" />
-            <element signature="e#7611#7631#0#HTML" expanded="true" />
-            <element signature="e#7727#7746#0#HTML" expanded="true" />
-            <element signature="e#7927#7950#0#HTML" expanded="true" />
-            <marker date="1464802156000" expanded="true" signature="15338:15352" placeholder="..." />
+            <element signature="e#9132#9164#0#HTML" expanded="true" />
+            <element signature="e#9110#9409#0#HTML" expanded="false" />
+            <element signature="e#9818#9857#0#HTML" expanded="true" />
+            <element signature="e#10309#10354#0#HTML" expanded="true" />
+            <element signature="e#10482#10534#0#HTML" expanded="true" />
+            <element signature="e#11725#11763#0#HTML" expanded="true" />
+            <element signature="e#11858#11926#0#HTML" expanded="true" />
+            <element signature="e#12300#12341#0#HTML" expanded="true" />
+            <element signature="e#12854#12913#0#HTML" expanded="true" />
+            <element signature="e#14318#14343#0#HTML" expanded="true" />
+            <element signature="e#15011#15029#0#HTML" expanded="true" />
+            <element signature="e#16530#16581#0#HTML" expanded="true" />
+            <marker date="1464812148000" expanded="true" signature="20150:20164" placeholder="..." />
           </folding>
         </state>
       </provider>
