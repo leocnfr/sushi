@@ -84,17 +84,17 @@
       <file leaf-file-name="menus.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/app/menus.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.58989596">
-              <caret line="384" column="119" selection-start-line="384" selection-start-column="119" selection-end-line="384" selection-end-column="119" />
+            <state vertical-scroll-proportion="0.54234767">
+              <caret line="383" column="120" selection-start-line="383" selection-start-column="120" selection-end-line="383" selection-end-column="120" />
               <folding>
                 <element signature="e#12010#12043#0#HTML" expanded="true" />
-                <element signature="e#12746#14657#0#HTML" expanded="false" />
-                <element signature="e#16528#16547#0#HTML" expanded="true" />
-                <element signature="e#16575#16612#0#HTML" expanded="true" />
-                <element signature="e#16742#16761#0#HTML" expanded="true" />
-                <element signature="e#16789#16827#0#HTML" expanded="true" />
-                <element signature="e#16956#17011#0#HTML" expanded="true" />
-                <element signature="e#17035#17073#0#HTML" expanded="true" />
+                <element signature="e#12762#14673#0#HTML" expanded="false" />
+                <element signature="e#16544#16563#0#HTML" expanded="true" />
+                <element signature="e#16591#16628#0#HTML" expanded="true" />
+                <element signature="e#16758#16777#0#HTML" expanded="true" />
+                <element signature="e#16805#16843#0#HTML" expanded="true" />
+                <element signature="e#16972#17027#0#HTML" expanded="true" />
+                <element signature="e#17051#17089#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -823,17 +823,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/app/menus.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.58989596">
-          <caret line="384" column="119" selection-start-line="384" selection-start-column="119" selection-end-line="384" selection-end-column="119" />
+        <state vertical-scroll-proportion="0.54234767">
+          <caret line="383" column="120" selection-start-line="383" selection-start-column="120" selection-end-line="383" selection-end-column="120" />
           <folding>
             <element signature="e#12010#12043#0#HTML" expanded="true" />
-            <element signature="e#12746#14657#0#HTML" expanded="false" />
-            <element signature="e#16528#16547#0#HTML" expanded="true" />
-            <element signature="e#16575#16612#0#HTML" expanded="true" />
-            <element signature="e#16742#16761#0#HTML" expanded="true" />
-            <element signature="e#16789#16827#0#HTML" expanded="true" />
-            <element signature="e#16956#17011#0#HTML" expanded="true" />
-            <element signature="e#17035#17073#0#HTML" expanded="true" />
+            <element signature="e#12762#14673#0#HTML" expanded="false" />
+            <element signature="e#16544#16563#0#HTML" expanded="true" />
+            <element signature="e#16591#16628#0#HTML" expanded="true" />
+            <element signature="e#16758#16777#0#HTML" expanded="true" />
+            <element signature="e#16805#16843#0#HTML" expanded="true" />
+            <element signature="e#16972#17027#0#HTML" expanded="true" />
+            <element signature="e#17051#17089#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
