@@ -463,7 +463,7 @@
 
                 </div>
                 <div class="row" style="margin: 0px">
-                    <span style="float: left;margin-right: 80px">Nombre de piece</span> <span id="product-total-piece" >0</span>
+                    <span style="float: left;margin-right: 85px">Nombre de piece</span> <span id="product-total-piece" >0</span>
 
                 </div>
             </aside>

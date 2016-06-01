@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="757db07e-5d4b-47ff-a67a-dd6a19559214" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/riz.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/cart.js" afterPath="$PROJECT_DIR$/public/js/cart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/app/autre_modal.blade.php" afterPath="$PROJECT_DIR$/resources/views/app/autre_modal.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/app/menus.blade.php" afterPath="$PROJECT_DIR$/resources/views/app/menus.blade.php" />
     </list>
     <ignored path="sushi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,10 +37,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrderController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="OrderController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/OrderController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6970297">
+            <state vertical-scroll-proportion="-12.137931">
               <caret line="35" column="123" selection-start-line="35" selection-start-column="123" selection-end-line="35" selection-end-column="123" />
               <folding>
                 <element signature="e#40#56#0#PHP" expanded="true" />
@@ -63,11 +59,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="menus.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="menus.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/app/menus.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.7586207">
-              <caret line="455" column="33" selection-start-line="455" selection-start-column="23" selection-end-line="455" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.6554455">
+              <caret line="465" column="61" selection-start-line="465" selection-start-column="61" selection-end-line="465" selection-end-column="61" />
               <folding>
                 <element signature="e#12015#12048#0#HTML" expanded="true" />
                 <element signature="e#12268#12301#0#HTML" expanded="true" />
@@ -76,7 +72,6 @@
                 <element signature="e#16584#16603#0#HTML" expanded="true" />
                 <element signature="e#16631#16668#0#HTML" expanded="true" />
                 <element signature="e#16798#16817#0#HTML" expanded="true" />
-                <element signature="e#16845#16883#0#HTML" expanded="true" />
                 <element signature="e#17012#17067#0#HTML" expanded="true" />
                 <element signature="e#17091#17129#0#HTML" expanded="true" />
               </folding>
@@ -226,12 +221,12 @@
         <option value="$PROJECT_DIR$/resources/views/app/panier.blade.php" />
         <option value="$PROJECT_DIR$/storage/framework/views/8f7d57f06da04becb2aef055722584e04c42d1be.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
-        <option value="$PROJECT_DIR$/resources/views/app/menus.blade.php" />
         <option value="$PROJECT_DIR$/public/css/index.css" />
         <option value="$PROJECT_DIR$/resources/views/app/header.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/app/autre_modal.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" />
         <option value="$PROJECT_DIR$/public/js/cart.js" />
+        <option value="$PROJECT_DIR$/resources/views/app/menus.blade.php" />
       </list>
     </option>
   </component>
@@ -422,7 +417,7 @@
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
-    <property name="SearchEverywhereHistoryKey" value="Order&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/OrderController.php&#10;autre&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/autre_modal.blade.php&#10;cAR&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/public/js/cart.js&#10;Or&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/OrderController.php&#10;Cartphp&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/vendor/overtrue/laravel-shopping-cart/src/LaravelShoppingCart/Cart.php&#10;Cart.php&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/vendor/overtrue/laravel-shopping-cart/src/LaravelShoppingCart/Cart.php&#10;Cart&#9;null&#9;null&#10;inde&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/public/css/index.css&#10;head&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/header.blade.php&#10;header&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/header.blade.php&#10;ca&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/public/js/cart.js&#10;route&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/routes.php&#10;menu&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/menus.blade.php&#10;men&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/menus.blade.php&#10;pan&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/panier.blade.php&#10;order&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/orders.blade.php&#10;Tim&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/TimeController.php&#10;Time&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/times.blade.php&#10;ROUTE&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/routes.php&#10;o&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/OrderController.php&#10;Ord&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/OrderController.php&#10;sid&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/admin/sidebar.blade.php&#10;time&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/times.blade.php&#10;aut&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/autre_modal.blade.php&#10;aute&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/vendor/stripe/stripe-php/tests/AuthenticationErrorTest.php&#10;autr&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/autre_modal.blade.php&#10;menus&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/menus.blade.php&#10;pa&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/panier.blade.php&#10;side&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/admin/sidebar.blade.php&#10;pro&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/ProductController.php&#10;fo&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/footer.blade.php&#10;app/h&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/header.blade.php&#10;he&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/admin/header.blade.php&#10;ind&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/public/css/index.css&#10;foot&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/footer.blade.php&#10;produ&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/ProductController.php&#10;lo&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/admin/auth/login.blade.php&#10;Prodc&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/ProductController.php&#10;Produc&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/ProductController.php&#10;Admin&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/AdminController.php&#10;Au&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/Admin/AuthController.php&#10;auth.&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/config/auth.php&#10;config/a&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/config/app.php&#10;prod&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/products/products.blade.php&#10;meu&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/vendor/monolog/monolog/src/Monolog/Processor/MemoryUsageProcessor.php&#10;au&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/autre_modal.blade.php&#10;me&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/menus.blade.php&#10;O&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/OrderController.php&#10;p&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/ProductController.php&#10;Prod&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Product.php" />
+    <property name="SearchEverywhereHistoryKey" value="menu&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/menus.blade.php&#10;Order&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/OrderController.php&#10;autre&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/autre_modal.blade.php&#10;cAR&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/public/js/cart.js&#10;Or&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/OrderController.php&#10;Cartphp&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/vendor/overtrue/laravel-shopping-cart/src/LaravelShoppingCart/Cart.php&#10;Cart.php&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/vendor/overtrue/laravel-shopping-cart/src/LaravelShoppingCart/Cart.php&#10;Cart&#9;null&#9;null&#10;inde&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/public/css/index.css&#10;head&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/header.blade.php&#10;header&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/header.blade.php&#10;ca&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/public/js/cart.js&#10;route&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/routes.php&#10;men&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/menus.blade.php&#10;pan&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/panier.blade.php&#10;order&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/orders.blade.php&#10;Tim&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/TimeController.php&#10;Time&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/times.blade.php&#10;ROUTE&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/routes.php&#10;o&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/OrderController.php&#10;Ord&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/OrderController.php&#10;sid&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/admin/sidebar.blade.php&#10;time&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/times.blade.php&#10;aut&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/autre_modal.blade.php&#10;aute&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/vendor/stripe/stripe-php/tests/AuthenticationErrorTest.php&#10;autr&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/autre_modal.blade.php&#10;menus&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/menus.blade.php&#10;pa&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/panier.blade.php&#10;side&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/admin/sidebar.blade.php&#10;pro&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/ProductController.php&#10;fo&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/footer.blade.php&#10;app/h&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/header.blade.php&#10;he&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/admin/header.blade.php&#10;ind&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/public/css/index.css&#10;foot&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/footer.blade.php&#10;produ&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/ProductController.php&#10;lo&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/admin/auth/login.blade.php&#10;Prodc&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/ProductController.php&#10;Produc&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/ProductController.php&#10;Admin&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/AdminController.php&#10;Au&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/Admin/AuthController.php&#10;auth.&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/config/auth.php&#10;config/a&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/config/app.php&#10;prod&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/products/products.blade.php&#10;meu&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/vendor/monolog/monolog/src/Monolog/Processor/MemoryUsageProcessor.php&#10;au&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/autre_modal.blade.php&#10;me&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/resources/views/app/menus.blade.php&#10;O&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/OrderController.php&#10;p&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Http/Controllers/ProductController.php&#10;Prod&#9;FILE&#9;file:///Users/YANTAO/laravel_project/sushi/app/Product.php" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="FullScreen" value="true" />
   </component>
@@ -881,25 +876,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/app/menus.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.7586207">
-          <caret line="455" column="33" selection-start-line="455" selection-start-column="23" selection-end-line="455" selection-end-column="33" />
-          <folding>
-            <element signature="e#12015#12048#0#HTML" expanded="true" />
-            <element signature="e#12268#12301#0#HTML" expanded="true" />
-            <element signature="e#14245#14278#0#HTML" expanded="true" />
-            <element signature="e#14498#14531#0#HTML" expanded="true" />
-            <element signature="e#16584#16603#0#HTML" expanded="true" />
-            <element signature="e#16631#16668#0#HTML" expanded="true" />
-            <element signature="e#16798#16817#0#HTML" expanded="true" />
-            <element signature="e#16845#16883#0#HTML" expanded="true" />
-            <element signature="e#17012#17067#0#HTML" expanded="true" />
-            <element signature="e#17091#17129#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bower_components/AdminLTE/pages/UI/timeline.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -971,10 +947,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/OrderController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6970297">
+        <state vertical-scroll-proportion="-12.137931">
           <caret line="35" column="123" selection-start-line="35" selection-start-column="123" selection-end-line="35" selection-end-column="123" />
           <folding>
             <element signature="e#40#56#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/app/menus.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6554455">
+          <caret line="465" column="61" selection-start-line="465" selection-start-column="61" selection-end-line="465" selection-end-column="61" />
+          <folding>
+            <element signature="e#12015#12048#0#HTML" expanded="true" />
+            <element signature="e#12268#12301#0#HTML" expanded="true" />
+            <element signature="e#14245#14278#0#HTML" expanded="true" />
+            <element signature="e#14498#14531#0#HTML" expanded="true" />
+            <element signature="e#16584#16603#0#HTML" expanded="true" />
+            <element signature="e#16631#16668#0#HTML" expanded="true" />
+            <element signature="e#16798#16817#0#HTML" expanded="true" />
+            <element signature="e#17012#17067#0#HTML" expanded="true" />
+            <element signature="e#17091#17129#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
