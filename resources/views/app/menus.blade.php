@@ -91,7 +91,7 @@
         }
         #btn_panier{
             display: block;
-            margin: 15px auto 15 auto;
+            margin: 15px auto 15px auto;
             background: #BAAA76;
             color: black;
             border: 0pt;
