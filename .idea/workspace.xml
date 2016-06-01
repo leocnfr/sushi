@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="757db07e-5d4b-47ff-a67a-dd6a19559214" name="Default" comment="" />
+    <list default="true" id="757db07e-5d4b-47ff-a67a-dd6a19559214" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/app/panier.blade.php" afterPath="$PROJECT_DIR$/resources/views/app/panier.blade.php" />
+    </list>
     <ignored path="sushi.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -25,8 +27,8 @@
       <file leaf-file-name="panier.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/app/panier.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.63241106">
-              <caret line="325" column="0" selection-start-line="325" selection-start-column="0" selection-end-line="325" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.43083003">
+              <caret line="466" column="40" selection-start-line="466" selection-start-column="40" selection-end-line="466" selection-end-column="40" />
               <folding>
                 <element signature="e#5803#5867#0#HTML" expanded="true" />
                 <element signature="e#5888#5930#0#HTML" expanded="true" />
@@ -53,7 +55,7 @@
                 <element signature="e#10417#10437#0#HTML" expanded="true" />
                 <element signature="e#10476#10494#0#HTML" expanded="true" />
                 <element signature="e#10765#10816#0#HTML" expanded="true" />
-                <marker date="1464766564000" expanded="true" signature="14346:14360" placeholder="..." />
+                <marker date="1464767108000" expanded="true" signature="14346:14360" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -918,8 +920,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/app/panier.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.63241106">
-          <caret line="325" column="0" selection-start-line="325" selection-start-column="0" selection-end-line="325" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.43083003">
+          <caret line="466" column="40" selection-start-line="466" selection-start-column="40" selection-end-line="466" selection-end-column="40" />
           <folding>
             <element signature="e#5803#5867#0#HTML" expanded="true" />
             <element signature="e#5888#5930#0#HTML" expanded="true" />
@@ -946,7 +948,7 @@
             <element signature="e#10417#10437#0#HTML" expanded="true" />
             <element signature="e#10476#10494#0#HTML" expanded="true" />
             <element signature="e#10765#10816#0#HTML" expanded="true" />
-            <marker date="1464766564000" expanded="true" signature="14346:14360" placeholder="..." />
+            <marker date="1464767108000" expanded="true" signature="14346:14360" placeholder="..." />
           </folding>
         </state>
       </provider>

@@ -463,6 +463,8 @@
             var date=_this.attr('data-value');
             if ( date =="Aujour'dui"){
                 $('#today-time').slideDown();
+                $('#autre-date').slideUp();
+                $('#autre-time').slideUp();
             }else {
                 $('#today-time').slideUp();
 
