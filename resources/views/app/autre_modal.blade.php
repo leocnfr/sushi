@@ -124,7 +124,7 @@
         {
             return false
         }else{
-            var html=''
+            var html='';
             $.ajax({
                 data: {boissonId: $(".check_boisson:checked").val(),productId:productId}
             }).done(function (value) {
