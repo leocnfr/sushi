@@ -391,10 +391,10 @@
             <div id="livraison-info" >
                 <div class="radio ">
                     <input type="radio" name="radio-1" id="emporter"  />
-                    <label for="emporter"></label> <span style="float:left;">A EMPORTEM</span>
+                    <label for="emporter"></label> <span style="float:left;"> LIVRISON</span>
 
                     <input type="radio" name="radio-1" id="livrison" checked="checked"/>
-                    <label for="livrison" style="margin-left: 10px"></label> <span style="float:left;">LIVRISON</span>
+                    <label for="livrison" style="margin-left: 10px"></label> <span style="float:left;">A EMPORTEM</span>
                 </div>
                 <div id="show-livrison">
                 <div class="content">
