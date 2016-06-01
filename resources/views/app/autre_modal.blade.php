@@ -51,7 +51,6 @@
                         </div>
 
                     @endforeach
-                    </form>
                     <div class="row" style="width: 81%;margin: 0px auto">
                         <p>AUTRES</p>
                     </div>
@@ -59,12 +58,15 @@
                         <div class="col-md-4" style="width: 299px;height: 131px;color: #BAAA76">
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" value="" id="" name="riz blanc">
+                                    <input type="checkbox" value="Riz blanc"  name="riz[]" class="check_riz">
                                     Riz blanc
                                 </label>
+                                <img src="/images/riz.png" alt="" style="width: 50px">
                             </div>
                         </div>
                     </div>
+                    </form>
+
                     <div class="row " style="width: 81%;margin: 5px auto">
                         <button class="pull-right btn_boisson " id="close_boisson" data-dismiss="modal" aria-label="Close" style="display: block">NON,MERCI</button>
                     </div>
@@ -123,14 +125,14 @@
                     url:'/cart',
                     type: "post"
                 });
-        if($(".check_boisson:checked").length==0)
+        if($(".check_boisson:checked").length==0||$(".check_riz:checked").length==0)
         {
             $('#error2').show();
             return false
         }else{
             var html='';
             $.ajax({
-                data: {boissonId: $(".check_boisson:checked").val(),productId:productId}
+                data: {boissonId: $(".check_boisson:checked").val(),productId:productId,riz:$(".check_riz:checked").val()}
             }).done(function () {
                 getCart();
             });

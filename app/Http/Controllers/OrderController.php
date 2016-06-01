@@ -28,10 +28,12 @@ class OrderController extends Controller
     {
          $productId=$request->get('productId');
         $boissonId=$request->get('boissonId');
+        $riz=$request->get('riz');
         $product=Product::findOrFail($productId);
         $boisson=Product::findOrFail($boissonId);
+
         $price=$product->price;
-        return Cart::add($productId,$product->name,1,$price,['boisson'=>$boisson->name,'piece'=>$product->count]);
+        return Cart::add($productId,$product->name,1,$price,['boisson'=>$boisson->name,'piece'=>$product->count,'riz'=>$riz]);
     }
     //查看panier数据
     public function panier()

@@ -25,6 +25,7 @@ function getCart(){
                 html+='</div>';
                 html+='<div class="row" style="margin: 0px ;padding: 0px">';
                 html+='<p style="text-align: left">'+value.boisson+'</p>';
+                html+='<p style="text-align: left">'+value.riz+'</p>';
                 html+='</div>';
                 html+='</li>';
 
