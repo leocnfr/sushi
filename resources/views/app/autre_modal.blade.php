@@ -35,7 +35,7 @@
                         </small>
                     </div>
                     <form action="" id="boission_form">
-                    @foreach($boissons->showBoisson()->chunk(3) as $boissons)
+                    @foreach($boissons->showBoisson2()->chunk(3) as $boissons)
                         <div class="row" style="width: 81%;margin: 0px auto">
                             @foreach($boissons as $boisson)
                                 <div class="col-md-4 bossion-list" style="width: 246px;height: 70px;color: #BAAA76">
