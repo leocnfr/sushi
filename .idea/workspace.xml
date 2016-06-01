@@ -84,10 +84,10 @@
       <file leaf-file-name="menus.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/app/menus.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.20802377">
-              <caret line="390" column="0" selection-start-line="390" selection-start-column="0" selection-end-line="390" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.58989596">
+              <caret line="384" column="119" selection-start-line="384" selection-start-column="119" selection-end-line="384" selection-end-column="119" />
               <folding>
-                <element signature="e#10538#12445#0#HTML" expanded="false" />
+                <element signature="e#12010#12043#0#HTML" expanded="true" />
                 <element signature="e#12746#14657#0#HTML" expanded="false" />
                 <element signature="e#16528#16547#0#HTML" expanded="true" />
                 <element signature="e#16575#16612#0#HTML" expanded="true" />
@@ -823,10 +823,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/app/menus.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20802377">
-          <caret line="390" column="0" selection-start-line="390" selection-start-column="0" selection-end-line="390" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.58989596">
+          <caret line="384" column="119" selection-start-line="384" selection-start-column="119" selection-end-line="384" selection-end-column="119" />
           <folding>
-            <element signature="e#10538#12445#0#HTML" expanded="false" />
+            <element signature="e#12010#12043#0#HTML" expanded="true" />
             <element signature="e#12746#14657#0#HTML" expanded="false" />
             <element signature="e#16528#16547#0#HTML" expanded="true" />
             <element signature="e#16575#16612#0#HTML" expanded="true" />
