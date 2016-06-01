@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="757db07e-5d4b-47ff-a67a-dd6a19559214" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/sidebar.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/sidebar.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/app/menus.blade.php" afterPath="$PROJECT_DIR$/resources/views/app/menus.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/app/panier.blade.php" afterPath="$PROJECT_DIR$/resources/views/app/panier.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/app/points.blade.php" afterPath="$PROJECT_DIR$/resources/views/app/points.blade.php" />
     </list>
     <ignored path="sushi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,8 +29,8 @@
       <file leaf-file-name="panier.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/app/panier.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4707379">
-              <caret line="284" column="54" selection-start-line="284" selection-start-column="54" selection-end-line="284" selection-end-column="54" />
+            <state vertical-scroll-proportion="0.63241106">
+              <caret line="325" column="0" selection-start-line="325" selection-start-column="0" selection-end-line="325" selection-end-column="0" />
               <folding>
                 <element signature="e#5803#5867#0#HTML" expanded="true" />
                 <element signature="e#5888#5930#0#HTML" expanded="true" />
@@ -52,14 +50,26 @@
                 <element signature="e#9421#9439#0#HTML" expanded="true" />
                 <element signature="e#9706#9745#0#HTML" expanded="true" />
                 <element signature="e#9804#9824#0#HTML" expanded="true" />
-                <element signature="e#9870#9906#0#HTML" expanded="true" />
-                <element signature="e#9954#9972#0#HTML" expanded="true" />
-                <element signature="e#10242#10281#0#HTML" expanded="true" />
-                <element signature="e#10339#10359#0#HTML" expanded="true" />
-                <element signature="e#10405#10425#0#HTML" expanded="true" />
-                <element signature="e#10464#10482#0#HTML" expanded="true" />
-                <element signature="e#10753#10804#0#HTML" expanded="true" />
-                <marker date="1464764055000" expanded="true" signature="14322:14336" placeholder="..." />
+                <element signature="e#9876#9912#0#HTML" expanded="true" />
+                <element signature="e#9960#9978#0#HTML" expanded="true" />
+                <element signature="e#10248#10287#0#HTML" expanded="true" />
+                <element signature="e#10345#10365#0#HTML" expanded="true" />
+                <element signature="e#10417#10437#0#HTML" expanded="true" />
+                <element signature="e#10476#10494#0#HTML" expanded="true" />
+                <element signature="e#10765#10816#0#HTML" expanded="true" />
+                <marker date="1464766564000" expanded="true" signature="14346:14360" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="points.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/app/points.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-12.137931">
+              <caret line="23" column="69" selection-start-line="23" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <folding>
+                <marker date="1464766542000" expanded="true" signature="3214:3228" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -95,16 +105,6 @@
                 <marker date="1464763065000" expanded="true" signature="14785:14800" placeholder="..." />
                 <marker date="1464763065000" expanded="true" signature="15096:15130" placeholder="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AuthController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -194,7 +194,6 @@
         <option value="$PROJECT_DIR$/storage/framework/views/8f7d57f06da04becb2aef055722584e04c42d1be.php" />
         <option value="$PROJECT_DIR$/resources/views/app/modal.blade.php" />
         <option value="$PROJECT_DIR$/app/Category.php" />
-        <option value="$PROJECT_DIR$/resources/views/app/points.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/user.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/products/create.blade.php" />
         <option value="$PROJECT_DIR$/app/Product.php" />
@@ -227,6 +226,7 @@
         <option value="$PROJECT_DIR$/resources/views/admin/sidebar.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/times.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/app/menus.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/app/points.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/app/panier.blade.php" />
       </list>
     </option>
@@ -246,10 +246,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1920" />
-    <option name="y" value="-85" />
-    <option name="width" value="1920" />
-    <option name="height" value="1080" />
+    <option name="width" value="1280" />
+    <option name="height" value="800" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -309,6 +307,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sushi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sushi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -457,18 +477,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1920" y="-85" width="1920" height="1080" extended-state="0" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20500532" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31098545" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32786885" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23150685" sideWeight="0.503231" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16699605" sideWeight="0.49676898" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23087431" sideWeight="0.49676898" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -588,13 +608,6 @@
         <state vertical-scroll-proportion="-3.5172415">
           <caret line="14" column="28" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="28" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/app/points.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.379311">
-          <caret line="123" column="12" selection-start-line="123" selection-start-column="12" selection-end-line="123" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -897,10 +910,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/app/points.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.137931">
+          <caret line="23" column="69" selection-start-line="23" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding>
+            <marker date="1464766542000" expanded="true" signature="3214:3228" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/app/panier.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4707379">
-          <caret line="284" column="54" selection-start-line="284" selection-start-column="54" selection-end-line="284" selection-end-column="54" />
+        <state vertical-scroll-proportion="0.63241106">
+          <caret line="325" column="0" selection-start-line="325" selection-start-column="0" selection-end-line="325" selection-end-column="0" />
           <folding>
             <element signature="e#5803#5867#0#HTML" expanded="true" />
             <element signature="e#5888#5930#0#HTML" expanded="true" />
@@ -920,14 +943,14 @@
             <element signature="e#9421#9439#0#HTML" expanded="true" />
             <element signature="e#9706#9745#0#HTML" expanded="true" />
             <element signature="e#9804#9824#0#HTML" expanded="true" />
-            <element signature="e#9870#9906#0#HTML" expanded="true" />
-            <element signature="e#9954#9972#0#HTML" expanded="true" />
-            <element signature="e#10242#10281#0#HTML" expanded="true" />
-            <element signature="e#10339#10359#0#HTML" expanded="true" />
-            <element signature="e#10405#10425#0#HTML" expanded="true" />
-            <element signature="e#10464#10482#0#HTML" expanded="true" />
-            <element signature="e#10753#10804#0#HTML" expanded="true" />
-            <marker date="1464764055000" expanded="true" signature="14322:14336" placeholder="..." />
+            <element signature="e#9876#9912#0#HTML" expanded="true" />
+            <element signature="e#9960#9978#0#HTML" expanded="true" />
+            <element signature="e#10248#10287#0#HTML" expanded="true" />
+            <element signature="e#10345#10365#0#HTML" expanded="true" />
+            <element signature="e#10417#10437#0#HTML" expanded="true" />
+            <element signature="e#10476#10494#0#HTML" expanded="true" />
+            <element signature="e#10765#10816#0#HTML" expanded="true" />
+            <marker date="1464766564000" expanded="true" signature="14346:14360" placeholder="..." />
           </folding>
         </state>
       </provider>

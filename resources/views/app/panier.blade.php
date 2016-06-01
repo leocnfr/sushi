@@ -279,7 +279,7 @@
                     </div>
                 </div>
                 <div class="content" style="padding-top: 30px;display: none" id="autre-date" >
-                    <div class="select" style="width: 150px" id="select-time">
+                    <div class="select" style="width: 150px" id="select-autre-date">
                         <p style="width: 110px;font-size: 12px">Date souhaitee</p>
                         <ul style="z-index: 1">
                             <li>{{date('d-m-Y',strtotime('+1 day'))}}</li>
@@ -289,7 +289,7 @@
                     </div>
                 </div>
                 <div class="content" style="padding-top: 30px;display: none" id="autre-time">
-                    <div class="select" style="width: 150px" id="select-time">
+                    <div class="select" style="width: 150px" id="select-autre-time">
                         <p style="width: 110px">Heure</p>
                         <ul style="z-index: 1">
                             <li data-value="10:30-11:00">10:30-11:00</li>
@@ -322,7 +322,7 @@
         })
 
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIbJ48RCsE-UPzW9y-3hmxWpNVKm6tYho" type="text/javascript"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIbJ48RCsE-UPzW9y-3hmxWpNVKm6tYho&language=fr" type="text/javascript"></script>
 
     <script>
         $("[data-toggle='tooltip']").tooltip();
@@ -477,6 +477,20 @@
         $('#select-time ul li').on('click', function(e){
             var _this = $(this);
             $('#select-time > p').text(_this.attr('data-value'));
+            _this.addClass('selected').siblings().removeClass('selected');
+            $('.select').removeClass('open');
+            e.stopPropagation();
+        });
+        $('#select-autre-time ul li').on('click', function(e){
+            var _this = $(this);
+            $('#select-autre-time > p').text(_this.attr('data-value'));
+            _this.addClass('selected').siblings().removeClass('selected');
+            $('.select').removeClass('open');
+            e.stopPropagation();
+        });
+        $('#select-autre-date ul li').on('click', function(e){
+            var _this = $(this);
+            $('#select-autre-date > p').text(_this.attr('data-value'));
             _this.addClass('selected').siblings().removeClass('selected');
             $('.select').removeClass('open');
             e.stopPropagation();
