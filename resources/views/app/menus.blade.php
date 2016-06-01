@@ -427,7 +427,7 @@
 
 
         </div>
-        <div id="cart-info" class="col-md-2" style="background: rgba(94,93,91,0.4);margin-left: 18px;text-align: center;color: #BAAA76;width: 250px;padding: 0px;margin-top: 21.5px;">
+        <div id="cart-info" class="col-md-2" style="background: rgba(94,93,91,0.4);margin-right: 18px;text-align: center;color: #BAAA76;width: 250px;padding: 0px;margin-top: 21.5px;float: right">
 
             <aside id="result" style="min-height: 123px;padding: 0px 10px">
                 <p style="font-size: 19pt;font-weight: bold;margin-bottom: 30px">MON PANIER</p>
