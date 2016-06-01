@@ -72,6 +72,10 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/admin/points',['middleware'=>'auth:admin',function(){
         return view('point');
     }]);
+    //送餐时间设置
+    Route::get('/admin/times',['middleware'=>'auth:admin',function(){
+        return view('times');
+    }]);
 });
 
 Route::get('/', function () {

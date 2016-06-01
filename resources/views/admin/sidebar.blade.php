@@ -62,7 +62,7 @@
             </li>
             <li><a href="{{url('/admin/users')}}"><i class="fa fa-user"></i><span>用户列表</span></a></li>
             <li><a href="{{url('/admin/points')}}"><i class="fa fa-user"></i><span>积分设置</span></a></li>
-
+            <li><a href="{{url('/admin/times')}}"><i class="fa fa-clock-o"></i><span>送餐时间</span></a></li>
 
             {{--<li><a href="#"><span>Another Link</span></a></li>--}}
 

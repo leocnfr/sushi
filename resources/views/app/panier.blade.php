@@ -264,12 +264,31 @@
                     <div class="select" style="width: 150px" id="select-date">
                         <p style="width: 110px">DATE</p>
                         <ul style="z-index: 1">
-                                <li data-value="Aujour'dui">Aujour'dui</li>
+                                <li data-value="Aujour'dui" >Aujour'dui</li>
                                 <li data-value="Autre">Autre</li>
                         </ul>
                     </div>
                 </div>
-                <div class="content" style="padding-top: 30px">
+                <div class="content" style="padding-top: 30px;display: none" id="today-time">
+                    <div class="select" style="width: 150px" id="select-time">
+                        <p style="width: 110px">Heure</p>
+                        <ul style="z-index: 1">
+                            <li data-value="10:30-11:00">10:30-11:00</li>
+                            <li data-value="11:30-12:00">11:30-12:00</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content" style="padding-top: 30px;display: none" id="autre-date" >
+                    <div class="select" style="width: 150px" id="select-time">
+                        <p style="width: 110px;font-size: 12px">Date souhaitee</p>
+                        <ul style="z-index: 1">
+                            <li>{{date('d-m-Y',strtotime('+1 day'))}}</li>
+                            <li>{{date('d-m-Y',strtotime('+2 day'))}}</li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="content" style="padding-top: 30px;display: none" id="autre-time">
                     <div class="select" style="width: 150px" id="select-time">
                         <p style="width: 110px">Heure</p>
                         <ul style="z-index: 1">
@@ -441,6 +460,15 @@
 
         $('#select-date ul li').on('click', function(e){
             var _this = $(this);
+            var date=_this.attr('data-value');
+            if ( date =="Aujour'dui"){
+                $('#today-time').slideDown();
+            }else {
+                $('#today-time').slideUp();
+
+                $('#autre-date').slideDown();
+                $('#autre-time').slideDown();
+            }
             $('#select-date > p').text(_this.attr('data-value'));
             _this.addClass('selected').siblings().removeClass('selected');
             $('.select').removeClass('open');
