@@ -49,7 +49,7 @@
         }
         #livraison-info
         {
-            background: rgba(94,93,91,0.4);
+            background:rgba(37,37,36,0.6);
             position: relative;
             height: 335px;
             padding: 20px 34px;
@@ -325,7 +325,7 @@
         <div id="content">
             <img  id="shop-img" src="/images/shopping-01.png" alt="shopping_log" >
             <span id="text">PANIER</span>
-            <div id="panier-info" style="background:#252524;margin-top: 26px;padding: 40px  34px ">
+            <div id="panier-info" style="background:rgba(37,37,36,0.6);margin-top: 26px;padding: 40px  34px ">
                 <p style="font-size: 20px;font-weight: bold;">RECAPITULATIF DE VOTRE PANNIER</p>
                 <ul class="list-group" style="border: none">
                     <li class="list-group-item" v-for="cart in carts">
