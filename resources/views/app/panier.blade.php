@@ -33,19 +33,19 @@
         }
         .qty-info
         {
-            background: black;
-            border: 1px solid;
-            margin: 0px 1px;
-            width: 40px;
-            height: 20px;
+            width: 6%;
             display: inline-block;
+            background: black;
+            padding: 0px 1px;
+            margin-right: 150px;
 
         }
         .list-group-item{
-            padding: 10px 0px;
+            padding: 35px 0px;
             background: none;
             border: none;
             border-bottom: 2px solid #BAAA76;
+            height: 100px;
         }
         #livraison-info
         {
@@ -216,21 +216,31 @@
                 @foreach($carts as $cart)
 
                     <li class="list-group-item">
-                        <span style="font-size: 20px;font-weight: bold">{{$cart->name}}</span>
-                        <span style="font-size: 20px;font-weight: bold">{{$cart->piece}}piece</span>
-                        <div class="qty-info">
-                            <i class="fa fa-minus" aria-hidden="true" id="minus"></i>
-                            <span>{{$cart->qty}}</span>
-                            <i class="fa fa-plus" aria-hidden="true" id="plus"></i>
+                        <div class="col-md-5" style="margin: 0px;padding: 0px">
+                            <span style="font-size: 20px;font-weight: bold">{{$cart->name}}</span>
+                            <span>{{$cart->boisson}},</span>
+                            <span>{{$cart->riz}}</span>
                         </div>
 
-                        <span>{{$cart->price}}€</span>
-                        <span class="deletePanier" data-rawid="{{$cart->__raw_id}}" style="cursor: pointer;"><i class="fa fa-times"></i></span>
+                        <span style="font-size: 20px;font-weight: bold;width:150px;display: inline-block">{{$cart->piece}}piece</span>
+                        <div class="qty-info">
+                            <span class="qty-minus" data-rawid="{{$cart->__raw_id}}" data-count="{{$cart->qty}}" ><i class="fa fa-minus" aria-hidden="true" ></i></span>
+                           <span style="margin: 0px 5px;font-size: 20px">{{$cart->qty}}</span>
+                            <span class="qty-plus" data-rawid="{{$cart->__raw_id}}" data-count="{{$cart->qty}}" ><i class="fa fa-plus " aria-hidden="true" ></i></span>
+                        </div>
+
+                        <span style="font-size: 20px;width: 150px;display: inline-block;">{{$cart->price}}€</span>
+                        <span class="deletePanier " data-rawid="{{$cart->__raw_id}}" style="cursor: pointer;display: inline-block"><i class="fa fa-times"></i></span>
                     </li>
                 @endforeach
-                    <li class="list-group-item">
-                        <p style="opacity:0.6;">Nombre de produits</p>
-                        <p style="opacity:0.6;">Nombre de pieces</p>
+                    <li class="list-group-item" style="height: 147px;font-size: 20pt;">
+                        <div class="row" style="margin: 0px">
+                            <p style="opacity:0.6;">Nombre de produits</p>
+                        </div>
+                        <div class="row" style="margin: 0px">
+                            <p style="opacity:0.6;">Nombre de pieces</p>
+
+                        </div>
                     </li>
                     <li class="list-group-item" style="font-size: 33px">
                         <span>Total</span>
@@ -305,6 +315,7 @@
             </div>
         </div>
     </div>
+    <script src="/js/cart.js"></script>
     <script>
         $('.deletePanier').click(function () {
             $.ajaxSetup(
