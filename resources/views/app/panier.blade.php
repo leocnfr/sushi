@@ -241,15 +241,16 @@
             <p style="font-size: 33pt;font-weight: bold;margin-top: 102px">Mode de livraison <i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="right"></i> </p>
             <div id="livraison-info" >
                 <div class="radio ">
-                    <input type="radio" name="radio-1" id="radio-1-1" checked="checked" />
-                    <label for="radio-1-1"></label> <span style="float:left;">A EMPORTEM</span>
+                    <input type="radio" name="radio-1" id="emporter"  />
+                    <label for="emporter"></label> <span style="float:left;">A EMPORTEM</span>
 
-                    <input type="radio" name="radio-1" id="radio-1-2" />
-                    <label for="radio-1-2" style="margin-left: 10px"></label> <span style="float:left;">LIVRISON</span>
+                    <input type="radio" name="radio-1" id="livrison" checked="checked"/>
+                    <label for="livrison" style="margin-left: 10px"></label> <span style="float:left;">LIVRISON</span>
                 </div>
+                <div id="show-livrison">
                 <div class="content">
                     <div class="select" id="select-place">
-                        <p>Selectionnez votre boutique</p>
+                        <p>Selectionnez un point relais</p>
                         <ul style="z-index: 1">
                             @inject('points','App\Relais')
                             <li data-value="Tout de boutique" data-place="all">Tout de boutique</li>
@@ -278,17 +279,17 @@
                         </ul>
                     </div>
                 </div>
-                <div class="content" style="padding-top: 30px;display: none" id="autre-date" >
+                <div class="content" style="padding-top: 25px;display: none" id="autre-date" >
                     <div class="select" style="width: 150px" id="select-autre-date">
                         <p style="width: 110px;font-size: 12px">Date souhaitee</p>
                         <ul style="z-index: 1">
-                            <li>{{date('d-m-Y',strtotime('+1 day'))}}</li>
-                            <li>{{date('d-m-Y',strtotime('+2 day'))}}</li>
+                            <li data-value="{{date('d-m-Y',strtotime('+1 day'))}}">{{date('d-m-Y',strtotime('+1 day'))}}</li>
+                            <li data-value="{{date('d-m-Y',strtotime('+2 day'))}}">{{date('d-m-Y',strtotime('+2 day'))}}</li>
 
                         </ul>
                     </div>
                 </div>
-                <div class="content" style="padding-top: 30px;display: none" id="autre-time">
+                <div class="content" style="padding-top: 25px;display: none" id="autre-time">
                     <div class="select" style="width: 150px" id="select-autre-time">
                         <p style="width: 110px">Heure</p>
                         <ul style="z-index: 1">
@@ -297,10 +298,9 @@
                         </ul>
                     </div>
                 </div>
-
+                </div>
                 <button id="btn-submit" style="position: relative;top: 30px;display: block">VALIDER</button>
                 <div id="map">
-
                 </div>
             </div>
         </div>
@@ -499,6 +499,13 @@
         });
         $(document).on('click', function(){
             $('.select').removeClass('open');
+        });
+
+        $('#emporter').click(function () {
+            $('#show-livrison').hide();
+        });
+        $('#livrison').click(function () {
+            $('#show-livrison').show();
         });
     </script>
 @endsection

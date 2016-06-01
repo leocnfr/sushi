@@ -5,7 +5,7 @@
 {!! csrf_field() !!}
 	<div class="form-group">
 		<label for=""></label>
-		<input type="text" class="form-control" name="name" id="" placeholder="送餐时间段">
+		<input type="time" class="form-control" name="name" id="" placeholder="送餐时间段">
 	</div>
 
     <button type="submit" class="btn btn-primary">Submit</button>
