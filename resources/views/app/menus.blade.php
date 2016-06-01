@@ -91,7 +91,7 @@
         }
         #btn_panier{
             display: block;
-            margin: 15px auto 0 auto;
+            margin: 15px auto 15px auto;
             background: #BAAA76;
             color: black;
             border: 0pt;
@@ -104,6 +104,7 @@
         }
         #panier_inro{
             height: 61px;
+            padding: 0px 10px;
         }
         #panier_inro>span:nth-of-type(n)
         {
@@ -449,11 +450,17 @@
                 </ul>
             </aside>
             <aside id="panier_inro" >
-                <span style="margin-right: 70px">Nombre de projduts</span> <span id="product-total-count">0</span> <br>
-                <span style="margin-right: 80px">Nombre de piece</span> <span id="product-total-piece">0</span>
+                <div class="row" style="margin: 0px">
+                    <span style="float:left;margin-right: 70px">Nombre de projduts</span> <span id="product-total-count" >0</span> <br>
+
+                </div>
+                <div class="row" style="margin: 0px">
+                    <span style="float: left;margin-right: 80px">Nombre de piece</span> <span id="product-total-piece" >0</span>
+
+                </div>
             </aside>
-            <aside style="color: white;padding-bottom: 38px;margin-top: 10px">
-                <span style="margin-right:120px">Total</span>
+            <aside style="color: white;padding: 0px 10px;margin-top: 10px">
+                <span style="margin-right:150px;float:left;">Total</span>
                 <span id="total_price">0€</span>
                 <button  id="btn_panier" onclick="window.location='/panier'">
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
