@@ -326,7 +326,7 @@
             <img  id="shop-img" src="/images/shopping-01.png" alt="shopping_log" >
             <span id="text">PANIER</span>
             <div id="panier-info" style="background:rgba(37,37,36,0.6);margin-top: 26px;padding: 40px  34px ">
-                <p style="font-size: 20px;font-weight: bold;">RECAPITULATIF DE VOTRE PANNIER</p>
+                <p style="font-size: 18px;font-weight: bold;">RECAPITULATIF DE VOTRE PANNIER</p>
                 <ul class="list-group" style="border: none">
                     <li class="list-group-item" v-for="cart in carts">
                         <div class="col-md-5" style="margin: 0px;padding: 0px">
@@ -386,7 +386,7 @@
                     </li>
                 </ul>
             </div>
-            <p style="font-size: 33pt;font-weight: bold;margin-top: 102px">Mode de livraison <i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="right"></i> </p>
+            <p style="font-size: 33px;font-weight: bold;margin-top: 102px">Mode de livraison <i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="right"></i> </p>
             <div id="livraison-info" >
                 <div class="radio ">
                     <input type="radio" name="radio-1" id="emporter"  />
