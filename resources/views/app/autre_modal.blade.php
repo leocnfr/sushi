@@ -127,18 +127,8 @@
             var html='';
             $.ajax({
                 data: {boissonId: $(".check_boisson:checked").val(),productId:productId}
-            }).done(function (value) {
-                html+='<li class="list-unstyled">';
-                html+='<span class="result_name">'+value.name+'</span>';
-                html+='<div class="result_number_info">';
-                html+='<i class="fa fa-minus" aria-hidden="true" ></i>';
-                html+='<span style="margin: 0px 5px">'+value.qty+'</span> ';
-                html+='<i class="fa fa-plus qty-plus" aria-hidden="true"  data-rawid="'+value.__raw_id+'"></i>';
-                html+='</div>';
-                html+='<span class="result_price ">'+value.price+'</span>';
-                html+='<p style="padding: 0px 30px;text-align: left">'+value.boisson+'</p>';
-                html+='</li>';
-                $('.result_price_list').append(html);
+            }).done(function () {
+                getCart();
             });
             $('#autre').modal('hide');
             document.getElementById('boission_form').reset();
