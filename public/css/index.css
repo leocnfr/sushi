@@ -183,3 +183,10 @@ height: 608px;
     display: none;
 
 }
+#panier-count
+{
+    color: #BAAA76;
+    background: none;
+    border-radius: 50%;
+    border: 1px solid #BAAA76;
+}

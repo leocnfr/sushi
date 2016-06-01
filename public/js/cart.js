@@ -39,11 +39,16 @@ function getCart(){
                 });
             $('.result_price_list').html(html);
             $('#total_price').html(total);
+            $('#panier-count').html(count).show();
             $('#product-total-count').html(count);
             $('#product-total-piece').html(piece);
 
         }else {
             $('.result_price_list').html('<p>Votre panier est vide</p>')
+            $('#total_price').html(0);
+            $('#panier-count').hide();
+            $('#product-total-count').html(0);
+            $('#product-total-piece').html(0);
         }
 
     });
