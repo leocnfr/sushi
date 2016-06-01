@@ -43,7 +43,7 @@ function getCart(){
             $('#product-total-piece').html(piece);
 
         }else {
-            $('.result_price_list > p').html('Votre panier est vide')
+            $('.result_price_list').html('<p>Votre panier est vide</p>')
         }
 
     });

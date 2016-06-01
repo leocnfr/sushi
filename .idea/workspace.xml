@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="757db07e-5d4b-47ff-a67a-dd6a19559214" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/cart.js" afterPath="$PROJECT_DIR$/public/js/cart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/app/autre_modal.blade.php" afterPath="$PROJECT_DIR$/resources/views/app/autre_modal.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/app/menus.blade.php" afterPath="$PROJECT_DIR$/resources/views/app/menus.blade.php" />
     </list>
     <ignored path="sushi.iws" />
@@ -77,20 +74,19 @@
       <file leaf-file-name="menus.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/app/menus.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.4390244">
-              <caret line="416" column="55" selection-start-line="416" selection-start-column="55" selection-end-line="416" selection-end-column="55" />
-              <caret line="414" column="55" selection-start-line="414" selection-start-column="55" selection-end-line="414" selection-end-column="55" />
+            <state vertical-scroll-proportion="-6.7586207">
+              <caret line="455" column="33" selection-start-line="455" selection-start-column="23" selection-end-line="455" selection-end-column="33" />
               <folding>
                 <element signature="e#12015#12048#0#HTML" expanded="true" />
                 <element signature="e#12268#12301#0#HTML" expanded="true" />
                 <element signature="e#14245#14278#0#HTML" expanded="true" />
                 <element signature="e#14498#14531#0#HTML" expanded="true" />
-                <element signature="e#16572#16591#0#HTML" expanded="true" />
-                <element signature="e#16619#16656#0#HTML" expanded="true" />
-                <element signature="e#16786#16805#0#HTML" expanded="true" />
-                <element signature="e#16833#16871#0#HTML" expanded="true" />
-                <element signature="e#17000#17055#0#HTML" expanded="true" />
-                <element signature="e#17079#17117#0#HTML" expanded="true" />
+                <element signature="e#16584#16603#0#HTML" expanded="true" />
+                <element signature="e#16631#16668#0#HTML" expanded="true" />
+                <element signature="e#16798#16817#0#HTML" expanded="true" />
+                <element signature="e#16845#16883#0#HTML" expanded="true" />
+                <element signature="e#17012#17067#0#HTML" expanded="true" />
+                <element signature="e#17091#17129#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -112,16 +108,16 @@
       <file leaf-file-name="cart.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/js/cart.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.46067417">
-              <caret line="19" column="106" selection-start-line="19" selection-start-column="106" selection-end-line="19" selection-end-column="106" />
+            <state vertical-scroll-proportion="0.65917605">
+              <caret line="45" column="70" selection-start-line="45" selection-start-column="70" selection-end-line="45" selection-end-column="70" />
               <folding>
                 <element signature="n#!!doc;n#getCart#0" expanded="false" />
-                <marker date="1464796150000" expanded="true" signature="513:537" placeholder="..." />
-                <marker date="1464796150000" expanded="true" signature="607:619" placeholder="..." />
-                <marker date="1464796150000" expanded="true" signature="903:918" placeholder="..." />
-                <marker date="1464796150000" expanded="true" signature="1294:1306" placeholder="..." />
-                <marker date="1464796150000" expanded="true" signature="1294:1319" placeholder="..." />
-                <marker date="1464796150000" expanded="true" signature="1357:1373" placeholder="..." />
+                <marker date="1464796598000" expanded="true" signature="513:537" placeholder="..." />
+                <marker date="1464796598000" expanded="true" signature="607:619" placeholder="..." />
+                <marker date="1464796598000" expanded="true" signature="903:918" placeholder="..." />
+                <marker date="1464796598000" expanded="true" signature="1294:1306" placeholder="..." />
+                <marker date="1464796598000" expanded="true" signature="1294:1319" placeholder="..." />
+                <marker date="1464796598000" expanded="true" signature="1357:1373" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -219,10 +215,10 @@
         <option value="$PROJECT_DIR$/resources/views/times.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/app/panier.blade.php" />
         <option value="$PROJECT_DIR$/storage/framework/views/8f7d57f06da04becb2aef055722584e04c42d1be.php" />
-        <option value="$PROJECT_DIR$/resources/views/app/menus.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/app/autre_modal.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" />
+        <option value="$PROJECT_DIR$/resources/views/app/menus.blade.php" />
         <option value="$PROJECT_DIR$/public/js/cart.js" />
       </list>
     </option>
@@ -803,26 +799,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/app/menus.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.4390244">
-          <caret line="416" column="55" selection-start-line="416" selection-start-column="55" selection-end-line="416" selection-end-column="55" />
-          <caret line="414" column="55" selection-start-line="414" selection-start-column="55" selection-end-line="414" selection-end-column="55" />
-          <folding>
-            <element signature="e#12015#12048#0#HTML" expanded="true" />
-            <element signature="e#12268#12301#0#HTML" expanded="true" />
-            <element signature="e#14245#14278#0#HTML" expanded="true" />
-            <element signature="e#14498#14531#0#HTML" expanded="true" />
-            <element signature="e#16572#16591#0#HTML" expanded="true" />
-            <element signature="e#16619#16656#0#HTML" expanded="true" />
-            <element signature="e#16786#16805#0#HTML" expanded="true" />
-            <element signature="e#16833#16871#0#HTML" expanded="true" />
-            <element signature="e#17000#17055#0#HTML" expanded="true" />
-            <element signature="e#17079#17117#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.724138">
@@ -842,18 +818,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/app/menus.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.7586207">
+          <caret line="455" column="33" selection-start-line="455" selection-start-column="23" selection-end-line="455" selection-end-column="33" />
+          <folding>
+            <element signature="e#12015#12048#0#HTML" expanded="true" />
+            <element signature="e#12268#12301#0#HTML" expanded="true" />
+            <element signature="e#14245#14278#0#HTML" expanded="true" />
+            <element signature="e#14498#14531#0#HTML" expanded="true" />
+            <element signature="e#16584#16603#0#HTML" expanded="true" />
+            <element signature="e#16631#16668#0#HTML" expanded="true" />
+            <element signature="e#16798#16817#0#HTML" expanded="true" />
+            <element signature="e#16845#16883#0#HTML" expanded="true" />
+            <element signature="e#17012#17067#0#HTML" expanded="true" />
+            <element signature="e#17091#17129#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/cart.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46067417">
-          <caret line="19" column="106" selection-start-line="19" selection-start-column="106" selection-end-line="19" selection-end-column="106" />
+        <state vertical-scroll-proportion="0.65917605">
+          <caret line="45" column="70" selection-start-line="45" selection-start-column="70" selection-end-line="45" selection-end-column="70" />
           <folding>
             <element signature="n#!!doc;n#getCart#0" expanded="false" />
-            <marker date="1464796150000" expanded="true" signature="513:537" placeholder="..." />
-            <marker date="1464796150000" expanded="true" signature="607:619" placeholder="..." />
-            <marker date="1464796150000" expanded="true" signature="903:918" placeholder="..." />
-            <marker date="1464796150000" expanded="true" signature="1294:1306" placeholder="..." />
-            <marker date="1464796150000" expanded="true" signature="1294:1319" placeholder="..." />
-            <marker date="1464796150000" expanded="true" signature="1357:1373" placeholder="..." />
+            <marker date="1464796598000" expanded="true" signature="513:537" placeholder="..." />
+            <marker date="1464796598000" expanded="true" signature="607:619" placeholder="..." />
+            <marker date="1464796598000" expanded="true" signature="903:918" placeholder="..." />
+            <marker date="1464796598000" expanded="true" signature="1294:1306" placeholder="..." />
+            <marker date="1464796598000" expanded="true" signature="1294:1319" placeholder="..." />
+            <marker date="1464796598000" expanded="true" signature="1357:1373" placeholder="..." />
           </folding>
         </state>
       </provider>

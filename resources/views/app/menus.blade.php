@@ -453,8 +453,8 @@
                         </div>
                     </div>
                 </div>
+                <p id="non-painer"></p>
                 <ul class="result_price_list">
-                    <p></p>
                 </ul>
             </aside>
             <aside id="panier_inro" >
