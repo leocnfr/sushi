@@ -17,9 +17,9 @@ function getCart(){
                 html+='<div class="row" style="margin: 0px;padding: 0px">';
                 html+='<span class="result_name col-md-3" style="padding: 0px">'+value.name+'</span>';
                 html+='<div class="result_number_info">';
-                html+='<span class="qty-minus"><i class="fa fa-minus" aria-hidden="true" ></i></span>';
+                html+='<span class="qty-minus" data-rawid="'+value.__raw_id+'" data-count="'+value.qty+'" ><i class="fa fa-minus" aria-hidden="true" ></i></span>';
                 html+='<span style="margin: 0px 5px">'+value.qty+'</span> ';
-                html+='<span class="qty-plus" data-rawid="'+value.__raw_id+'" data-count="'+value.qty+'"><i class="fa fa-plus " aria-hidden="true" ></i></span>';
+                html+='<span class="qty-plus" data-rawid="'+value.__raw_id+'" data-count="'+value.qty+'" ><i class="fa fa-plus " aria-hidden="true" ></i></span>';
                 html+='</div>';
                 html+='<span class="result_price ">'+value.price+'</span>';
                 html+='</div>';
@@ -49,4 +49,41 @@ function getCart(){
     });
 
 }
+
+$(document).ajaxStop(function () {
+    $('.qty-plus').click(function () {
+        var rawid= $(this).data('rawid');
+        var count=$(this).data('count');
+        $.ajaxSetup(
+            {
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                url:'/updateCart',
+                type: "post"
+            });
+        $.ajax({
+            data: {rawid: rawid,count:count,type:'add'}
+        }).done(function () {
+            getCart();
+        });
+    });
+    $('.qty-minus').click(function () {
+        var rawid= $(this).data('rawid');
+        var count=$(this).data('count');
+        $.ajaxSetup(
+            {
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                url:'/updateCart',
+                type: "post"
+            });
+        $.ajax({
+            data: {rawid: rawid,count:count,type:'minus'}
+        }).done(function () {
+            getCart();
+        });
+    })
+});
 

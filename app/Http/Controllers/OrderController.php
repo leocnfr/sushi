@@ -57,10 +57,17 @@ class OrderController extends Controller
 
     public function update(Request $request)
     {
-        dd($request->all());
-        $rawid=$request->get('rawid');
-        $count=$request->get('count');
-        echo $count;
-//        Cart::update($rawid,$count);
+        if($request->get('type')=='add'){
+            $rawid=$request->get('rawid');
+            $count=$request->get('count')+1;
+            Cart::update($rawid,$count);
+        }else{
+            $rawid=$request->get('rawid');
+            $count=$request->get('count')-1;
+            Cart::update($rawid,$count);
+        }
+
     }
+
+
 }

@@ -31,7 +31,8 @@
                         <p>Chaque menu offert un bol de riz blanc et un boisson au choix dans le menu dessous</p>
                         <p>BOISSON</p>
                         <small id="error" style="color: red;display: none">Veuillez choisir 1 accompagnements de la catégorie "Accompagnements offerts" maximum</small>
-                        <small id="error2" style="color: red;display: none"></small>
+                        <small id="error2" style="color: red;display: none">Veuillez selectionner des produits à ajouter dans votre formule
+                        </small>
                     </div>
                     <form action="" id="boission_form">
                     @foreach($boissons->showBoisson()->chunk(3) as $boissons)
@@ -87,6 +88,8 @@
 </div>
 <script>
     $('#close_boisson').click(function () {
+        $('#error2').hide();
+        $('#error').hide();
         document.getElementById('boission_form').reset();
     });
     $('#autre').on('show.bs.modal', function (event) {
@@ -122,6 +125,7 @@
                 });
         if($(".check_boisson:checked").length==0)
         {
+            $('#error2').show();
             return false
         }else{
             var html='';
@@ -131,6 +135,8 @@
                 getCart();
             });
             $('#autre').modal('hide');
+            $('#error2').hide();
+            $('#error').hide();
             document.getElementById('boission_form').reset();
         }
 
