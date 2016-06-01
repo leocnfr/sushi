@@ -50,14 +50,14 @@ body{
 .nav.navbar-nav li a:focus{
     background: none;
 }
-.nav.navbar-nav li:nth-of-type(2)
+.nav.navbar-nav.navbar-header li:nth-of-type(2)
 {
     border-left: 1px solid #BAAA76;
     border-right: 1px solid #BAAA76;
 
 }
 
-.nav.navbar-nav li:nth-of-type(3)
+.nav.navbar-nav.navbar-header li:nth-of-type(3)
 {
     border-right: 1px solid #BAAA76;
 }

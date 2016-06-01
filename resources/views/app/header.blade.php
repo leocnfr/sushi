@@ -3,7 +3,7 @@
 	<a class="navbar-brand" href="{{url('/show')}}">
         <img src="{{URL::asset('/images/logo.png')}}" alt="logo" style="width: 151px;height: 103px">
     </a>
-	<ul class="nav navbar-nav" style="left: 70px">
+	<ul class="nav navbar-nav navbar-header" style="left: 70px">
 		<li class="active" id="show-drop-bar" style="height: 63px">
 			<a href="{{url('/menus')}}">MENU</a>
 		</li>
@@ -17,7 +17,7 @@
             <a href="#">NEWS</a>
         </li>
 	</ul>
-    <ul class="nav navbar-nav navbar-right">
+    <ul class="nav navbar-nav navbar-right navbar-header">
         <li><a href="{{url('/compte')}}"><img src="{{URL::asset('/images/compte-01.png')}}" alt="compte" style="width: 21px"></a></li>
         <li><a href="{{url('/panier')}}"><img src="{{URL::asset('/images/shopping-01.png')}}"  alt="shopping" style="width: 26px"></a></li>
     </ul>

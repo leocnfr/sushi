@@ -94,7 +94,7 @@ Route::get('/show',function(){
  * menu展示
  */
 
-Route::get('/menus/{cat?}','ProductController@getMenu');
+Route::get('/menus/{cat?}','FrontController@getMenu');
 
 Route::get('/test',function(){
    return view('test');
@@ -108,7 +108,7 @@ Route::get('/test',function(){
 /*
  * relais to json
  */
-Route::get('/json','RelaisController@toJson');
+Route::get('/json','FrontController@toJson');
 
 //panier
 Route::get('/panier','OrderController@panier');
