@@ -691,7 +691,9 @@
                     this.total_price=total_price;
                     this.total_piece=total_piece;
                     this.total_count=total_count;
-                    $('#panier-count').html(total_count).show();
+                    if(total_count>0){
+                        $('#panier-count').html(total_count).show();
+                    }
 
                 })
             },
@@ -710,8 +712,9 @@
                         this.total_price=total_price;
                         this.total_piece=total_piece;
                         this.total_count=total_count;
-                        $('#panier-count').html(total_count).show();
-
+                        if(total_count>0){
+                            $('#panier-count').html(total_count).show();
+                        }
                     });
 
                 },
@@ -729,8 +732,9 @@
                         this.total_price=total_price;
                         this.total_piece=total_piece;
                         this.total_count=total_count;
-                        $('#panier-count').html(total_count).show();
-
+                        if(total_count>0){
+                            $('#panier-count').html(total_count).show();
+                        }
                     })
                 },
                 delQty: function (cart) {
@@ -747,8 +751,9 @@
                         this.total_price=total_price;
                         this.total_piece=total_piece;
                         this.total_count=total_count;
-                        $('#panier-count').html(total_count).show();
-
+                        if(total_count>0){
+                            $('#panier-count').html(total_count).show();
+                        }
                     })
                 }
             }
