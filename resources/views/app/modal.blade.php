@@ -29,36 +29,7 @@
                         <p style="font-size: 40px;font-weight: bold" id="name">MENU LUNCH A</p>
                         <span style="font-size: 35px;margin-right: 60px" id="count" >12pièce </span>
                         <span style="font-size: 35px" id="price">15.90€</span>
-                        {{--<table style="width: 500px;margin-top: 20px">--}}
-                            {{--<thead>--}}
-                                {{--<th></th>--}}
-                                {{--<th>Quantité</th>--}}
-                                {{--<th>Energie</th>--}}
-                                {{--<th>Protéines</th>--}}
-                                {{--<th>Lipides</th>--}}
-                                {{--<th>Glucides</th>--}}
-                            {{--</thead>--}}
-                           {{--<tbody>--}}
-                                {{--<tr>--}}
-                                    {{--<td>6 california thon cuit avocat</td>--}}
-                                    {{--<td>169</td>--}}
-                                    {{--<td>276</td>--}}
-                                    {{--<td>9.7</td>--}}
-                                    {{--<td>7.6</td>--}}
-                                    {{--<td>42.7</td>--}}
-                                {{--</tr>--}}
-                                {{--<tr>--}}
-                                    {{--<td>6 california thon cuit avocat</td>--}}
-                                    {{--<td>169</td>--}}
-                                    {{--<td>276</td>--}}
-                                    {{--<td>9.7</td>--}}
-                                    {{--<td>7.6</td>--}}
-                                    {{--<td>42.7</td>--}}
-                                {{--</tr>--}}
-                           {{--</tbody>--}}
-                        {{--</table>--}}
                         <div id="intro">
-
                         </div>
                     </div>
                 </div>

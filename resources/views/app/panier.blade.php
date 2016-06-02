@@ -199,6 +199,7 @@
         }
         #btn-submit{
             display: block;
+            width: 80px;
             background: #BAAA76;
             color: black;
             border: 0pt;
@@ -407,11 +408,6 @@
                     <div class="select" style="width: 150px" id="select-time">
                         <p style="width: 110px">Heure</p>
                         <ul style="z-index: 1">
-                            @foreach($points::all() as $point)
-                            <li data-value="{{$point->send_time}}">{{$point->send_time}}</li>
-
-                            @endforeach
-
                         </ul>
                     </div>
                 </div>
@@ -435,13 +431,19 @@
                     </div>
                 </div>
                 </div>
-                <button id="btn-submit" style="position: relative;top: 30px;display: block">VALIDER</button>
+                {{--没登录--}}
+                @if (Auth::guest())
+                    <a id="btn-submit" class="btn" style="position: relative;top: 30px;display: block">VALIDER</a>
+
+                @else
+                    @endif
                 <div id="map">
                 </div>
             </div>
         </div>
     </div>
     <script src="/js/cart.js"></script>
+
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIbJ48RCsE-UPzW9y-3hmxWpNVKm6tYho&language=fr" type="text/javascript"></script>
     <script src="/js/panier.js"></script>
     <script>
@@ -486,7 +488,7 @@
             map.setMapTypeId('map_style');
             var geocoder = new google.maps.Geocoder();
 
-//            var markers = [];
+            var markers = [];
 
 //            var image = '/images/position-icon.png';
             var image = {
@@ -496,11 +498,7 @@
                 anchor: new google.maps.Point(17, 34),
                 scaledSize: new google.maps.Size(25, 25)
             };
-            var beachMarker = new google.maps.Marker({
-                position: {lat: -33.890, lng: 151.274},
-                map: map,
-                icon: image
-            });
+
 
             function geocodeAddress(address,geocoder, resultsMap,index) {
                 var address = address;
@@ -513,7 +511,7 @@
 //                            position: results[0].geometry.location
 //                        });
                         var content="<div style='color: #BAAA76'>"+address+"</div>";
-                        addMarkerWithTimeout(results[0].geometry.location,400*(index+1),index,content)
+                        addMarker(results[0].geometry.location,index,content)
                     } else {
                         alert('Geocode was not successful for the following reason: ' + status);
                     }
@@ -529,31 +527,43 @@
                     infowindow.open(marker.get('map'), marker);
                 });
             }
-            function addMarkerWithTimeout(position, timeout,index,content) {
-                window.setTimeout(function () {
-                    var markers =new google.maps.Marker({
-                        position: position,
-                        map: map,
+            function addMarker(position,index,content){
+                var marker =new google.maps.Marker({
+                    position: position,
+                    map: map,
 //                        icon: image,
-                        animation: google.maps.Animation.DROP,
-                        label:(index+1)+''
-                    });
-                    attachSecretMessage(markers, content);
-
-                },timeout);
+                    animation: google.maps.Animation.DROP,
+                    label:(index+1)+''
+                });
+                attachSecretMessage(marker, content);
+                markers.push(marker)
+            }
+            function setMapOnAll(map) {
+                for (var i = 0; i < markers.length; i++) {
+                    markers[i].setMap(map);
+                }
             }
 
             function clearMarkers() {
                 setMapOnAll(null);
             }
-
+            function deleteMarkers() {
+                clearMarkers();
+                markers = [];
+            }
             $.get('/json', function (data) {
                 $.each(data, function (key,val) {
                     geocodeAddress(val.address,geocoder, map,key);
                 })
             });
+            //获得该地点营业时间
+            function getTime(id){
+                $.get('/timeJson',{id:id}, function (response) {
+                    $('#select-time > p').text(response);
+                })
+            }
             $('#select-place ul li').on('click', function(e){
-
+                deleteMarkers();
                 var _this = $(this);
                 var place=_this.attr('data-place');
                 var index=_this.attr('data-index');
@@ -565,6 +575,7 @@
                         })
                     });
                 }else {
+                    getTime(id);
                     geocodeAddress(place,geocoder,map,index);
                 }
                 $('#select-place > p').text(_this.attr('data-value'));
@@ -629,5 +640,7 @@
         $('#livrison').click(function () {
             $('#show-livrison').show();
         });
+
+
     </script>
 @endsection

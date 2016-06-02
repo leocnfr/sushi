@@ -137,7 +137,8 @@ Route::get('/pointrelais',function(){
 });
 //商品数量的增删
 Route::post('/updateCart','OrderController@update');
-
+//获得营业时间
+Route::get('/timeJson','JsonController@getTime');
 //付款
 Route::post('/payment',function(){
 
