@@ -39,8 +39,8 @@
       <file leaf-file-name="menus.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/app/menus.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7637795">
-              <caret line="390" column="0" selection-start-line="390" selection-start-column="0" selection-end-line="390" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.46981627">
+              <caret line="383" column="39" selection-start-line="383" selection-start-column="39" selection-end-line="383" selection-end-column="39" />
               <folding>
                 <element signature="e#10271#10322#0#HTML" expanded="true" />
                 <element signature="e#14998#15147#0#HTML" expanded="true" />
@@ -1069,8 +1069,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/app/menus.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7637795">
-          <caret line="390" column="0" selection-start-line="390" selection-start-column="0" selection-end-line="390" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.46981627">
+          <caret line="383" column="39" selection-start-line="383" selection-start-column="39" selection-end-line="383" selection-end-column="39" />
           <folding>
             <element signature="e#10271#10322#0#HTML" expanded="true" />
             <element signature="e#14998#15147#0#HTML" expanded="true" />
