@@ -124,7 +124,7 @@
             right: 0px;
             top: 135px;
             border-top: 15px solid transparent;
-            border-right: 15px solid rgba(94,93,91,0.4);
+            border-right: 15px solid rgba(37,37,36,0.6);
             border-bottom: 15px solid transparent;
         }
         .fa-plus-circle{
