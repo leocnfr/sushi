@@ -327,25 +327,7 @@
             <span id="text">PANIER</span>
             <div id="panier-info" style="background:rgba(37,37,36,0.6);margin-top: 26px;padding: 40px  34px ">
                 <p style="font-size: 18px;font-weight: bold;">RECAPITULATIF DE VOTRE PANNIER</p>
-                <ul class="list-group" style="border: none">
-                    <li class="list-group-item" v-for="cart in carts">
-                        <div class="col-md-5" style="margin: 0px;padding: 0px">
-                            <span style="font-size: 20px;font-weight: bold">@{{cart.name}}</span>
-                            <span>@{{cart.boisson}},</span>
-                            <span>@{{cart.riz}}</span>
-                        </div>
-
-                        <span style="font-size: 20px;font-weight: bold;width:150px;display: inline-block">@{{cart.piece*cart.qty}}piece</span>
-                        <div class="qty-info">
-                            <span class="qty-minus" data-rawid="@{{cart.__raw_id}}" data-count="@{{cart.qty}}" v-on:click="delQty(cart)"><i class="fa fa-minus" aria-hidden="true" ></i></span>
-                            <span style="margin: 0px 5px;font-size: 20px">@{{cart.qty}}</span>
-                            <span class="qty-plus" data-rawid="@{{cart.__raw_id}}" data-count="@{{cart.qty}}" v-on:click="addQty(cart)"><i class="fa fa-plus " aria-hidden="true" ></i></span>
-                        </div>
-
-                        <span style="font-size: 20px;width: 150px;display: inline-block;">@{{cart.price*cart.qty}}€</span>
-                        <span class="deletePanier " data-rawid="@{{cart.__raw_id}}" style="cursor: pointer;display: inline-block" v-on:click='delCart(cart)'><i class="fa fa-times"></i></span>
-                    </li>
-
+                <ul class="list-group" style="border: none" id="result">
                     <div id="loading" style="display: block;position:absolute;left: 40%; ">
                         <div class="spinner">
                             <div class="spinner-container container1">
@@ -368,21 +350,23 @@
                             </div>
                         </div>
                     </div>
+                    </ul>
+                <ul class="list-group" style="border: none">
                     <li class="list-group-item" style="height: 147px;font-size: 14px;">
                         <div class="row" style="margin: 0px">
                             <p style="opacity:0.6;width: 742.5px;display: inline-block;float:left;">Nombre de produits</p>
-                            <span id="product-total-count">@{{total_count}}</span>
+                            <span id="product-total-count"></span>
                         </div>
                         <div class="row" style="margin: 0px;">
                             <p style="opacity:0.6;display: inline-block;float:left;width: 742.5px">Nombre de pieces</p>
-                            <span id="product-total-piece" style="float:left;display: inline-block;">@{{total_piece}}</span>
+                            <span id="product-total-piece" style="float:left;display: inline-block;"></span>
                         </div>
                     </li>
                     <li class="list-group-item" style="font-size: 14px">
 
                         <div class="row" style="margin: 0px">
                             <p style="opacity:0.6;width: 742.5px;display: inline-block;float:left;">Total</p>
-                            <span id="product-total-count">@{{total_price}}€</span>
+                            <span id="total_price">0€</span>
                         </div>
                     </li>
                 </ul>
@@ -458,26 +442,10 @@
         </div>
     </div>
     <script src="/js/cart.js"></script>
-    <script>
-        $('.deletePanier').click(function () {
-            $.ajaxSetup(
-                    {
-                        headers: {
-                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                        },
-                        url:'/deletePanier',
-                        type: "post"
-                    });
-            var rawId=$(this).data('rawid');
-            console.log(rawId);
-            $.ajax({ data: {rawId:rawId} }).done(function (response) {
-            });
-        })
-
-    </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIbJ48RCsE-UPzW9y-3hmxWpNVKm6tYho&language=fr" type="text/javascript"></script>
-
+    <script src="/js/panier.js"></script>
     <script>
+        getCart();
         $("[data-toggle='tooltip']").tooltip();
         function initMap() {
             //map style
@@ -660,109 +628,6 @@
         });
         $('#livrison').click(function () {
             $('#show-livrison').show();
-        });
-    </script>
-    <script src="/js/vue.js"></script>
-    <script src="/js/vue-resource.min.js"></script>
-    <script>
-        Vue.http.headers.common['X-CSRF-TOKEN'] = document.querySelector('[name="csrf-token"]').getAttribute('content');
-
-        new Vue({
-            el:'body',
-            data:{
-                carts:[],
-                total_price:0,
-                total_piece:0,
-                total_count:0
-            },
-
-            created: function () {
-                var vm=this;
-                var total_price=0;
-                var total_count=0;
-                var total_piece=0;
-                this.$http.get('/cartJson', function (data) {
-                    vm.carts=data;
-                    $.each(data, function (key,val) {
-                        total_price+=parseFloat(val.total);
-                        total_count+=parseInt(val.qty);
-                        total_piece+=parseInt(val.piece*val.qty)
-                    })
-                    this.total_price=total_price;
-                    this.total_piece=total_piece;
-                    this.total_count=total_count;
-                    if(total_count>0){
-                        $('#panier-count').html(total_count).show();
-                    }
-
-                })
-            },
-            methods:{
-                delCart: function (cart) {
-                    var total_price=0;
-                    var total_count=0;
-                    var total_piece=0;
-                    this.$http.post('/delCart',{rawid:cart.__raw_id}, function (response) {
-                        this.carts=response;
-                        $.each(response, function (key,val) {
-                            total_price+=parseFloat(val.total);
-                            total_count+=parseInt(val.qty);
-                            total_piece+=parseInt(val.piece*val.qty)
-                        });
-                        this.total_price=total_price;
-                        this.total_piece=total_piece;
-                        this.total_count=total_count;
-                        if(total_count>0){
-                            $('#panier-count').html(total_count).show();
-                        }
-                    });
-
-                },
-                addQty: function (cart) {
-                    var total_price=0;
-                    var total_count=0;
-                    var total_piece=0;
-                    this.$http.post('/updateCart',{rawid:cart.__raw_id,type:'add',count:cart.qty}, function (response) {
-                        this.carts=response;
-                        $.each(response, function (key,val) {
-                            total_price+=parseFloat(val.total);
-                            total_count+=parseInt(val.qty);
-                            total_piece+=parseInt(val.piece*val.qty)
-                        });
-                        this.total_price=total_price;
-                        this.total_piece=total_piece;
-                        this.total_count=total_count;
-                        if(total_count>0){
-                            $('#panier-count').html(total_count).show();
-                        }
-                    })
-                },
-                delQty: function (cart) {
-                    var total_price=0;
-                    var total_count=0;
-                    var total_piece=0;
-                    this.$http.post('/updateCart',{rawid:cart.__raw_id,type:'minus',count:cart.qty}, function (response) {
-                        this.carts=response;
-                        $.each(response, function (key,val) {
-                            total_price+=parseFloat(val.total);
-                            total_count+=parseInt(val.qty);
-                            total_piece+=parseInt(val.piece*val.qty)
-                        });
-                        this.total_price=total_price;
-                        this.total_piece=total_piece;
-                        this.total_count=total_count;
-                        if(total_count>0){
-                            $('#panier-count').html(total_count).show();
-                        }
-                    })
-                }
-            }
-        })
-        $(document).ajaxStart(function(){
-            $('#loading').show();
-        }).ajaxStop(function () {
-            $('#loading').hide();
-
         });
     </script>
 @endsection

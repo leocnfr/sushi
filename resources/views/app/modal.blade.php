@@ -14,11 +14,11 @@
 </style>
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
     <div class="modal-dialog" role="document" style="width: 920px;margin-top: 130px">
-        <div class="modal-content" >
+        <div class="modal-content" style="background: black">
             {{--<div class="modal-header">--}}
                 {{--<h4 class="modal-title" id="exampleModalLabel">New message</h4>--}}
             {{--</div>--}}
-            <div class="modal-body" style="width: 920px;background: rgb(37,37,36);">
+            <div class="modal-body" style="width: 920px;background: rgba(37,37,36,0.6);">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 
                 <div class="row">

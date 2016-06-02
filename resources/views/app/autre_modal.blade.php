@@ -18,7 +18,7 @@
 </style>
 <div class="modal fade" id="autre" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
     <div class="modal-dialog" role="document" style="width: 920px;margin-top: 130px;background: black">
-        <div class="modal-content" >
+        <div class="modal-content" style="background: black">
             {{--<div class="modal-header">--}}
             {{--<h4 class="modal-title" id="exampleModalLabel">New message</h4>--}}
             {{--</div>--}}

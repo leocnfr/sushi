@@ -1,4 +1,7 @@
 /**
+ * Created by YANTAO on 16/6/2.
+ */
+/**
  * Created by YANTAO on 16/6/1.
  */
 
@@ -13,22 +16,21 @@ function getCart(){
                 total+=parseFloat(value.total);
                 piece+=parseInt(value.piece*value.qty);
                 count+=parseInt(value.qty);
-                html+='<li class="list-unstyled ">';
-                html+='<div class="row" style="margin: 0px;padding: 0px">';
-                html+='<span class="result_name col-md-3" style="padding: 0px">'+value.name+'</span>';
-                html+='<div class="result_number_info">';
-                html+='<span class="qty-minus" data-rawid="'+value.__raw_id+'" data-count="'+value.qty+'" ><i class="fa fa-minus" aria-hidden="true" ></i></span>';
-                html+='<span style="margin: 0px 5px">'+value.qty+'</span> ';
+                html+= '<li class="list-group-item">';
+                html+='<div class="col-md-5" style="margin: 0px;padding: 0px">';
+                html+='<span style="font-size: 20px;font-weight: bold">'+value.name+'</span>';
+                html+='<span>'+value.boisson+'</span>';
+                html+='<span>'+value.riz+'</span>';
+                html+='</div>';
+                html+='<span style="font-size: 20px;font-weight: bold;width:150px;display: inline-block">'+value.piece*value.qty+'piece</span>';
+                html+='<div class="qty-info">';
+                html+=' <span class="qty-minus" data-rawid="'+value.__raw_id+'" data-count="'+value.qty+'" ><i class="fa fa-minus" aria-hidden="true" ></i></span>';
+                html+='<span style="margin: 0px 5px;font-size: 20px">'+value.qty+'</span>';
                 html+='<span class="qty-plus" data-rawid="'+value.__raw_id+'" data-count="'+value.qty+'" ><i class="fa fa-plus " aria-hidden="true" ></i></span>';
                 html+='</div>';
-                html+='<span class="result_price ">'+value.total+'€</span>';
-                html+='</div>';
-                html+='<div class="row" style="margin: 0px ;padding: 0px">';
-                html+='<p style="text-align: left">'+value.boisson+'</p>';
-                html+='<p style="text-align: left">'+value.riz+'</p>';
-                html+='</div>';
-                html+='</li>';
-
+                html+='<span style="font-size: 20px;width: 150px;display: inline-block;">'+value.price*value.qty+'€</span>';
+                html+='<span class="deletePanier " data-rawid="'+value.__raw_id+'" style="cursor: pointer;display: inline-block" ><i class="fa fa-times"></i></span>';
+                html+=' </li>';
             });
             $.ajaxSetup(
                 {
@@ -38,15 +40,15 @@ function getCart(){
                     url:'/addCart',
                     type: "post"
                 });
-            $('.result_price_list').html(html);
+            $('#result').html(html);
             $('#total_price').html(total+'€');
             $('#panier-count').html(count).show();
             $('#product-total-count').html(count);
             $('#product-total-piece').html(piece);
 
         }else {
-            $('.result_price_list').html('<p>Votre panier est vide</p>');
-            $('#total_price').html(0);
+            $('#result').html('<p>Votre panier est vide</p>');
+            $('#total_price').html(0+'€');
             $('#panier-count').hide();
             $('#product-total-count').html(0);
             $('#product-total-piece').html(0);
@@ -87,6 +89,22 @@ $(document).ajaxStop(function () {
             });
         $.ajax({
             data: {rawid: rawid,count:count,type:'minus'}
+        }).done(function () {
+            getCart();
+        });
+    });
+    $('.deletePanier').click(function () {
+        var rawid= $(this).data('rawid');
+        $.ajaxSetup(
+            {
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                url:'/delCart',
+                type: "post"
+            });
+        $.ajax({
+            data: {rawid: rawid}
         }).done(function () {
             getCart();
         });
