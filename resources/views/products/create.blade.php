@@ -22,7 +22,7 @@
         </div>
         <div class="form-group">
             <label for="">产品图片</label>
-            <input type="file" class="form-control" name="productImage" id="" placeholder="" required>
+            <input id="file-0a" class="file form-control" type="file" multiple data-min-file-count="1" name="photo">
         </div>
         <div class="form-group">
             <label for="">产品价格</label>

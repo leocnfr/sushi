@@ -24,7 +24,7 @@
     <div class="form-group">
         <label for="">产品图片</label>
         <label for=""><img src="{{URL::asset('/storage/uploads/'.$product->productImage)}}" alt="" style="width: 50px;height: 50px"></label>
-        <input type="file" class="form-control" name="photo" id="" placeholder="" >
+        <input id="file-0a" class="file form-control" type="file" multiple data-min-file-count="1" name="photo">
     </div>
     <div class="form-group">
         <label for="">产品价格</label>

@@ -2,7 +2,7 @@
 @section('page_title','产品分类')
 @section('productactive','active')
 @section('content')
-    <form action="{{'/admin/category/store'}}" method="post" role="form" style="width: 200px" enctype="multipart/form-data">
+    <form action="{{'/admin/category/store'}}" method="post" role="form" style="width: 300px" enctype="multipart/form-data">
     	<legend>添加产品分类</legend>
         <div class="form-group">
     		<label for=""></label>
@@ -10,9 +10,9 @@
             {!! csrf_field() !!}
 
         </div>
-        <div class="form-group">
-            <label for="">分类展示图片</label>
-            <input type="file" class="form-control" name="src">
+        <div class="form-group-sm">
+            <label for="">分类图片</label>
+            <input id="file-0a" class="file form-control" type="file" multiple data-min-file-count="1" name="src">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
@@ -70,7 +70,7 @@
                         </div>
                         <div class="form-group">
                             <label for="">更换图片</label>
-                            <input type="file" class="form-control" name="src">
+                            <input id="file-0a" class="file form-control" type="file" multiple data-min-file-count="1" name="src">
                         </div>
                         <div class="form-group">
                             <label for="">显示顺序</label>
