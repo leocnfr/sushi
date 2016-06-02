@@ -387,7 +387,7 @@
                                     {{--@elseif(date('G',time())<18&&12<=date('G',time())&&str_contains($item->send_time,'1'))--}}
                                         {{--<small  style="color: red;display: block">MENU MIDI NOUS VOUS OFFRONS QUE DU MIDI</small>--}}
                                     {{--@endif--}}
-                                {{--@endif--}}
+                                @endif
 
                             </div>
                         @endforeach
