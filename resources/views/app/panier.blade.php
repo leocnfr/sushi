@@ -335,7 +335,7 @@
                             <span>@{{cart.riz}}</span>
                         </div>
 
-                        <span style="font-size: 20px;font-weight: bold;width:150px;display: inline-block">@{{cart.piece}}piece</span>
+                        <span style="font-size: 20px;font-weight: bold;width:150px;display: inline-block">@{{cart.piece*cart.qty}}piece</span>
                         <div class="qty-info">
                             <span class="qty-minus" data-rawid="@{{cart.__raw_id}}" data-count="@{{cart.qty}}" v-on:click="delQty(cart)"><i class="fa fa-minus" aria-hidden="true" ></i></span>
                             <span style="margin: 0px 5px;font-size: 20px">@{{cart.qty}}</span>
@@ -371,18 +371,18 @@
                     <li class="list-group-item" style="height: 147px;font-size: 14px;">
                         <div class="row" style="margin: 0px">
                             <p style="opacity:0.6;width: 742.5px;display: inline-block;float:left;">Nombre de produits</p>
-                            <span id="product-total-count">{{$count}}</span>
+                            <span id="product-total-count">@{{total_count}}</span>
                         </div>
                         <div class="row" style="margin: 0px;">
                             <p style="opacity:0.6;display: inline-block;float:left;width: 742.5px">Nombre de pieces</p>
-                            <span id="product-total-piece" style="float:left;display: inline-block;">{{$piece}}</span>
+                            <span id="product-total-piece" style="float:left;display: inline-block;">@{{total_piece}}</span>
                         </div>
                     </li>
                     <li class="list-group-item" style="font-size: 14px">
 
                         <div class="row" style="margin: 0px">
                             <p style="opacity:0.6;width: 742.5px;display: inline-block;float:left;">Total</p>
-                            <span id="product-total-count">{{$price}}€</span>
+                            <span id="product-total-count">@{{total_price}}€</span>
                         </div>
                     </li>
                 </ul>
@@ -670,30 +670,85 @@
         new Vue({
             el:'body',
             data:{
-                carts:[]
+                carts:[],
+                total_price:0,
+                total_piece:0,
+                total_count:0
             },
+
             created: function () {
                 var vm=this;
+                var total_price=0;
+                var total_count=0;
+                var total_piece=0;
                 this.$http.get('/cartJson', function (data) {
                     vm.carts=data;
+                    $.each(data, function (key,val) {
+                        total_price+=parseFloat(val.total);
+                        total_count+=parseInt(val.qty);
+                        total_piece+=parseInt(val.piece*val.qty)
+                    })
+                    this.total_price=total_price;
+                    this.total_piece=total_piece;
+                    this.total_count=total_count;
+                    $('#panier-count').html(total_count).show();
+
                 })
             },
             methods:{
                 delCart: function (cart) {
+                    var total_price=0;
+                    var total_count=0;
+                    var total_piece=0;
                     this.$http.post('/delCart',{rawid:cart.__raw_id}, function (response) {
-                        this.carts=response
+                        this.carts=response;
+                        $.each(response, function (key,val) {
+                            total_price+=parseFloat(val.total);
+                            total_count+=parseInt(val.qty);
+                            total_piece+=parseInt(val.piece*val.qty)
+                        });
+                        this.total_price=total_price;
+                        this.total_piece=total_piece;
+                        this.total_count=total_count;
+                        $('#panier-count').html(total_count).show();
 
                     });
 
                 },
                 addQty: function (cart) {
+                    var total_price=0;
+                    var total_count=0;
+                    var total_piece=0;
                     this.$http.post('/updateCart',{rawid:cart.__raw_id,type:'add',count:cart.qty}, function (response) {
-                        this.carts=response
+                        this.carts=response;
+                        $.each(response, function (key,val) {
+                            total_price+=parseFloat(val.total);
+                            total_count+=parseInt(val.qty);
+                            total_piece+=parseInt(val.piece*val.qty)
+                        });
+                        this.total_price=total_price;
+                        this.total_piece=total_piece;
+                        this.total_count=total_count;
+                        $('#panier-count').html(total_count).show();
+
                     })
                 },
                 delQty: function (cart) {
+                    var total_price=0;
+                    var total_count=0;
+                    var total_piece=0;
                     this.$http.post('/updateCart',{rawid:cart.__raw_id,type:'minus',count:cart.qty}, function (response) {
-                        this.carts=response
+                        this.carts=response;
+                        $.each(response, function (key,val) {
+                            total_price+=parseFloat(val.total);
+                            total_count+=parseInt(val.qty);
+                            total_piece+=parseInt(val.piece*val.qty)
+                        });
+                        this.total_price=total_price;
+                        this.total_piece=total_piece;
+                        this.total_count=total_count;
+                        $('#panier-count').html(total_count).show();
+
                     })
                 }
             }

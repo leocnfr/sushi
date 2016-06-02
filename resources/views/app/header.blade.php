@@ -21,8 +21,12 @@
         <li><a href="{{url('/compte')}}"><img src="{{URL::asset('/images/compte-01.png')}}" alt="compte" style="width: 21px"></a></li>
         <li>
             <a href="{{url('/panier')}}"><img src="{{URL::asset('/images/shopping-01.png')}}"  alt="shopping" style="width: 26px">
-                <span class="label label-primary pull-right" id="panier-count" style="display: none"></span></a>
+                <span class="label label-primary pull-right" id="panier-count" style="display: none"></span>
+
+            </a>
+
         </li>
+
     </ul>
 
 </div>

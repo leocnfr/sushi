@@ -11,7 +11,7 @@ function getCart(){
         if (response.length!=0){
             $.each(response, function (key,value) {
                 total+=parseFloat(value.total);
-                piece+=parseInt(value.piece);
+                piece+=parseInt(value.piece*value.qty);
                 count+=parseInt(value.qty);
                 html+='<li class="list-unstyled ">';
                 html+='<div class="row" style="margin: 0px;padding: 0px">';
@@ -21,7 +21,7 @@ function getCart(){
                 html+='<span style="margin: 0px 5px">'+value.qty+'</span> ';
                 html+='<span class="qty-plus" data-rawid="'+value.__raw_id+'" data-count="'+value.qty+'" ><i class="fa fa-plus " aria-hidden="true" ></i></span>';
                 html+='</div>';
-                html+='<span class="result_price ">'+value.price+'</span>';
+                html+='<span class="result_price ">'+value.total+'€</span>';
                 html+='</div>';
                 html+='<div class="row" style="margin: 0px ;padding: 0px">';
                 html+='<p style="text-align: left">'+value.boisson+'</p>';
