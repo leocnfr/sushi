@@ -364,7 +364,7 @@
             </ul>
         @endif
 
-        <div id="content" class="col-md-8" style="background: rgba(94,93,91,0.2);width: 788px">
+        <div id="content" class="col-md-8" style="background: rgba(94,93,91,0.3);width: 788px">
             @if(isset($cate))
                 @foreach($cate->product->chunk(3)  as $chunk)
                     <div class="row item-list">
@@ -429,7 +429,7 @@
 
 
         </div>
-        <div id="cart-info" class="col-md-2" style="background: rgba(94,93,91,0.2);margin-right: 18px;text-align: center;color: #BAAA76;width: 250px;padding: 0px;margin-top: 21.5px;float: right">
+        <div id="cart-info" class="col-md-2" style="background: rgba(94,93,91,0.3);margin-right: 18px;text-align: center;color: #BAAA76;width: 250px;padding: 0px;margin-top: 21.5px;float: right">
 
             <aside id="result" style="min-height: 123px;padding: 0px 10px">
                 <p style="font-size: 19pt;font-weight: bold;margin-bottom: 30px">MON PANIER</p>
