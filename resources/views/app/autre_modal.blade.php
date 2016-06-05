@@ -15,6 +15,12 @@
         border-radius: 5px;
         width: 84.63px;
     }
+    #close_boisson:hover{
+        opacity: 0.5;
+    }
+    #boisson_submit:hover{
+        opacity: 0.5;
+    }
 </style>
 <div class="modal fade" id="autre" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
     <div class="modal-dialog" role="document" style="width: 920px;margin-top: 130px;background: black">
@@ -68,7 +74,7 @@
                     </form>
 
                     <div class="row " style="width: 81%;margin: 5px auto">
-                        <button class="pull-right btn_boisson " id="close_boisson" data-dismiss="modal" aria-label="Close" style="display: block">NON,MERCI</button>
+                        <button class="pull-right btn_boisson " id="close_boisson" data-dismiss="modal" aria-label="Close" style="display: block;">NON,MERCI</button>
                     </div>
                     <div class="row " style="width: 81%;margin: 5px auto">
                         <button class="pull-right btn_boisson" style="display: block" id="boisson_submit">VALIDER</button>
