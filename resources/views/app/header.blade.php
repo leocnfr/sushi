@@ -1,5 +1,5 @@
 @inject('cates','App\Category')
-<div class="navbar">
+<div class="navbar" style="border-bottom:2px solid #BAAA76 ">
 	<a class="navbar-brand" href="{{url('/show')}}">
         <img src="{{URL::asset('/images/logo.png')}}" alt="logo" style="width: 151px;height: 103px">
     </a>
@@ -18,7 +18,12 @@
         </li>
 	</ul>
     <ul class="nav navbar-nav navbar-right navbar-header">
-        <li><a href="{{url('/compte')}}"><img src="{{URL::asset('/images/compte-01.png')}}" alt="compte" style="width: 21px"></a></li>
+        @if (Auth::guest())
+            <li><a href="{{url('/connexion')}}"><img src="{{URL::asset('/images/compte-01.png')}}" alt="compte" style="width: 21px"></a></li>
+
+        @else
+            {{ Auth::user()->name }}
+        @endif
         <li>
             <a href="{{url('/panier')}}"><img src="{{URL::asset('/images/shopping-01.png')}}"  alt="shopping" style="width: 26px">
                 <span class="label label-primary pull-right" id="panier-count" style="display: none"></span>

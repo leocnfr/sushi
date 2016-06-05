@@ -54,6 +54,9 @@
         .button-ajouter:focus{
             outline: none;
         }
+        .button-ajouter:hover {
+            opacity: 0.5;
+        }
         #sidebar>li:not(:last-child)
         {
             border-bottom: 1px solid #BAAA76;
@@ -102,6 +105,9 @@
         #btn_panier:focus
         {
             outline: none;
+        }
+        #btn_panier:hover{
+            opacity: 0.5;
         }
         #panier_inro{
             height: 61px;

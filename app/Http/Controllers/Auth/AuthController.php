@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
@@ -68,5 +70,31 @@ class AuthController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+    }
+
+    public function postRegister(Request $request)
+    {
+        $this->validate($request,
+            [
+                'nom'=>'required',
+                'prenom'=>'required',
+                'email'=>'required|unique:users',
+                'password'=>'required|min:6|confirmed',
+//                'password_confirmation'=>'confirm'
+
+            ]);
+        User::create([
+                'nom'=>$request->get('nom'),
+                'prenom'=>$request->get('prenom'),
+                'email'=>$request->get('email'),
+                'password'=>bcrypt($request->get('password'))
+            ]);
+            return redirect('/panier');
+    }
+
+    public function postLogin(Request $request)
+    {
+        dd(Auth::guard('web')->attempt(['email' => $request->get('email'), 'password' => $request->get('password')])) ;
+
     }
 }

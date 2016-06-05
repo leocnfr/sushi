@@ -3,6 +3,21 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <style>
+        select {
+            border: solid 1px #000;
+
+            appearance:none;
+            -moz-appearance:none;
+            -webkit-appearance:none;
+
+            padding-right: 14px;
+
+            background: url("http://ourjs.github.io/static/2015/arrow.png") no-repeat scroll right center transparent;
+
+        }
+
+
+        select::-ms-expand { display: none; }
         #content
         {
             width: 1010px;
@@ -69,7 +84,7 @@
             position: absolute;
             right: 20px;
         }
-
+        /*radio css*/
         .radio [type="radio"]{
             display: none;
         }
@@ -205,6 +220,9 @@
             border: 0pt;
             box-shadow: none;
             border-radius: 5px;
+        }
+        #btn-submit:hover{
+            opacity: 0.5;
         }
         .fa{
             cursor: pointer;
@@ -381,10 +399,13 @@
                     <input type="radio" name="radio-1" id="livrison" checked="checked"/>
                     <label for="livrison" style="margin-left: 10px"></label> <span style="float:left;">A EMPORTEM</span>
                 </div>
+                <br>
+                <input type="text" id="start_place" placeholder="entre votre place" style="display: block;width: 300px">
+                <p id="distance"></p>
                 <div id="show-livrison">
                 <div class="content">
                     <div class="select" id="select-place">
-                        <p>Selectionnez un point relais</p>
+                        <p id="end_place" data-place="" >Selectionnez un point relais</p>
                         <ul style="z-index: 1">
                             @inject('points','App\Relais')
                             <li data-value="Tout de boutique" data-place="all">Tout de boutique</li>
@@ -432,11 +453,15 @@
                 </div>
                 </div>
                 {{--没登录--}}
+                @inject('cart','Overtrue\LaravelShoppingCart\Cart')
                 @if (Auth::guest())
-                    <a id="btn-submit" class="btn" style="position: relative;top: 30px;display: block">VALIDER</a>
+                    <a id="btn-submit" class="btn" style="position: relative;top: 30px;display: block" href="{{url('/connexion')}}">VALIDER</a>
+                @elseif(cart::total()>0)
+                    <a id="btn-submit" class="btn" style="position: relative;top: 30px;display: block" href="{{url('/validation')}}">VALIDER</a>
+                    @esle
+                    <button id="btn-submit" class="btn" style="position: relative;top: 30px;display: block">VALIDER</button>
 
-                @else
-                    @endif
+                @endif
                 <div id="map">
                 </div>
             </div>
@@ -444,12 +469,15 @@
     </div>
     <script src="/js/cart.js"></script>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIbJ48RCsE-UPzW9y-3hmxWpNVKm6tYho&language=fr" type="text/javascript"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIbJ48RCsE-UPzW9y-3hmxWpNVKm6tYho&language=fr&libraries=places" type="text/javascript"></script>
     <script src="/js/panier.js"></script>
     <script>
         getCart();
         $("[data-toggle='tooltip']").tooltip();
         function initMap() {
+            //获取用户地址
+            var input =document.getElementById('start_place');
+            var directionsService = new google.maps.DirectionsService();
             //map style
             var styles = [
                 {
@@ -489,6 +517,7 @@
             var geocoder = new google.maps.Geocoder();
 
             var markers = [];
+            var autocomplete = new google.maps.places.Autocomplete(input);
 
 //            var image = '/images/position-icon.png';
             var image = {
@@ -517,16 +546,61 @@
                     }
                 });
             }
+            var infowindow = new google.maps.InfoWindow();
+
             function attachSecretMessage(marker, secretMessage) {
-                var infowindow = new google.maps.InfoWindow({
-                    content: secretMessage
-                });
+               infowindow.close();
+                infowindow.setContent(secretMessage);
                 marker.addListener('click', function() {
                     infowindow.close(marker.get('map'), marker);
                     map.setZoom(10);
-                    infowindow.open(marker.get('map'), marker);
+                    infowindow.open(map, marker);
                 });
             }
+            var marker1 = new google.maps.Marker({
+                map: map,
+                anchorPoint: new google.maps.Point(0, -29)
+            });
+            autocomplete.addListener('place_changed', function() {
+                calcRoute();
+                infowindow.close();
+                marker1.setVisible(false);
+                var place = autocomplete.getPlace();
+                if (!place.geometry) {
+                    window.alert("Autocomplete's returned place contains no geometry");
+                    return;
+                }
+
+                // If the place has a geometry, then present it on a map.
+                if (place.geometry.viewport) {
+                    map.fitBounds(place.geometry.viewport);
+                } else {
+                    map.setCenter(place.geometry.location);
+                    map.setZoom(17);  // Why 17? Because it looks good.
+                }
+                marker1.setIcon(/** @type {google.maps.Icon} */({
+                    url: place.icon,
+                    size: new google.maps.Size(71, 71),
+                    origin: new google.maps.Point(0, 0),
+                    anchor: new google.maps.Point(17, 34),
+                    scaledSize: new google.maps.Size(35, 35)
+                }));
+                marker1.setPosition(place.geometry.location);
+                marker1.setVisible(true);
+
+                var address = '';
+                if (place.address_components) {
+                    address = [
+                        (place.address_components[0] && place.address_components[0].short_name || ''),
+                        (place.address_components[1] && place.address_components[1].short_name || ''),
+                        (place.address_components[2] && place.address_components[2].short_name || '')
+                    ].join(' ');
+                }
+
+                infowindow.setContent('<div>Votre place<strong>' + place.name + '</strong><br>' + address);
+                infowindow.open(map, marker1);
+            });
+
             function addMarker(position,index,content){
                 var marker =new google.maps.Marker({
                     position: position,
@@ -538,6 +612,30 @@
                 attachSecretMessage(marker, content);
                 markers.push(marker)
             }
+
+            function calcRoute() {
+                var start = input;
+                var end = $('#end_place').attr('data-place');
+                var request = {
+                    origin: start,
+                    destination: end,
+                    travelMode: google.maps.TravelMode.DRIVING
+                };
+                directionsService.route(request, function (response, status) {
+                    if (status == google.maps.DirectionsStatus.OK) {
+                        directionsDisplay.setDirections(response);
+                        var route = response.routes[0];
+                        var distance;
+                        var summaryPanel = document.getElementById('distance');
+                        summaryPanel.innerHTML = '';
+                        distance=route.legs[0].distance.text;
+                        summaryPanel.innerHTML += distance;
+                    } else {
+//                        alert('请输入出发地和到达地');
+                    }
+                });
+            }
+
             function setMapOnAll(map) {
                 for (var i = 0; i < markers.length; i++) {
                     markers[i].setMap(map);
@@ -578,6 +676,7 @@
                     getTime(id);
                     geocodeAddress(place,geocoder,map,index);
                 }
+                $('#end_place').attr('data-place',place);
                 $('#select-place > p').text(_this.attr('data-value'));
                 _this.addClass('selected').siblings().removeClass('selected');
                 $('.select').removeClass('open');

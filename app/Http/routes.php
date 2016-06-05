@@ -125,9 +125,12 @@ Route::get('/panier','OrderController@panier');
 Route::post('/deletePanier','OrderController@destroy');
 
 //connection
-Route::get('/connection',function(){
+Route::get('/connexion',function(){
     return view('app.connection');
 });
+//注册
+Route::post('register', 'Auth\AuthController@postRegister');
+Route::post('login','Auth\AuthController@postLogin');
 //购物车数据
 Route::post('/delCart','OrderController@destroy');
 Route::post('/cart','OrderController@store');
