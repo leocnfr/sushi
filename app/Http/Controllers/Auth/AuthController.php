@@ -91,7 +91,8 @@ class AuthController extends Controller
                 'email'=>$request->get('email'),
                 'password'=>bcrypt($request->get('password'))
             ]);
-        dd(Auth::guard('web')->attempt(['email' => $request->get('email'), 'password' => $request->get('password')]));
+        
+        Auth::guard('web')->attempt(['email' => $request->get('email'), 'password' => $request->get('password')]);
             return redirect('/compte');
     }
 
