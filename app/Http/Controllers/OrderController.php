@@ -162,7 +162,6 @@ class OrderController extends Controller
         $earthRadius = 6367000;
         $lat1 = ($lat1 * pi() ) / 180;
         $lng1 = ($lng1 * pi() ) / 180;
-
         $lat2 = ($lat2 * pi() ) / 180;
         $lng2 = ($lng2 * pi() ) / 180;
         $calcLongitude = $lng2 - $lng1;
@@ -170,7 +169,6 @@ class OrderController extends Controller
         $stepOne = pow(sin($calcLatitude / 2), 2) + cos($lat1) * cos($lat2) * pow(sin($calcLongitude / 2), 2);
         $stepTwo = 2 * asin(min(1, sqrt($stepOne)));
         $calculatedDistance = $earthRadius * $stepTwo;
-
         return round($calculatedDistance);
     }
 
@@ -186,12 +184,19 @@ class OrderController extends Controller
             $distance=$this->getDistance($lat1,$lng1,$lat2,$lng2);
             if($distance<0.1){
                 array_push($orders,$order);
-                $total_menu+=$order->qty;
+                if($total_menu>5){
+                    $total_menu=5;
+                }else{
+                    $total_menu+=$order->qty;
+                }
             }
         }
         //foreach循环输出小于100米的订单数组
         foreach ($orders as $item) {
-            
+            $pro_price=$item->pro_price;
+            $point=($total_menu-1)*$item->qty;
+            $user=User::findOrFali($item->user_id)->first();
+            $user->point=$point-$pro_price;
         }
     }
 
