@@ -139,6 +139,7 @@ class OrderController extends Controller
         $html.='</table>';
         $order = new Orders();
         $order->user_id=Auth::user()->id;
+        $order->qty=$total_qty;
         $order->content=$html;
         $order->price=$total_price;
         $order->address=Auth::user()->address;
@@ -148,13 +149,52 @@ class OrderController extends Controller
             $order->is_pro=0;
         }else{
             //查询在此之前的订单距离小于100米的
-            
-        }
 
+        }
+        
         $order->save();
         Cart::destroy();
         return redirect()->back();
     }
+
+    public function getDistance($lat1,$lng1,$lat2,$lng2)
+    {
+        $earthRadius = 6367000;
+        $lat1 = ($lat1 * pi() ) / 180;
+        $lng1 = ($lng1 * pi() ) / 180;
+
+        $lat2 = ($lat2 * pi() ) / 180;
+        $lng2 = ($lng2 * pi() ) / 180;
+        $calcLongitude = $lng2 - $lng1;
+        $calcLatitude = $lat2 - $lat1;
+        $stepOne = pow(sin($calcLatitude / 2), 2) + cos($lat1) * cos($lat2) * pow(sin($calcLongitude / 2), 2);
+        $stepTwo = 2 * asin(min(1, sqrt($stepOne)));
+        $calculatedDistance = $earthRadius * $stepTwo;
+
+        return round($calculatedDistance);
+    }
+
+    public function points(Request $request){
+        $lat1=$request->get('lat');
+        $lng1=$request->get('lng');
+        $orders=array();
+        //计算和前面的订单的距离,小于100米的push到新的数组,记录total_menu;
+        foreach (Orders::all() as $order) {
+            $total_menu=0;
+            $lat2=$order->lat;
+            $lng2=$order->lng;
+            $distance=$this->getDistance($lat1,$lng1,$lat2,$lng2);
+            if($distance<0.1){
+                array_push($orders,$order);
+                $total_menu+=$order->qty;
+            }
+        }
+        //foreach循环输出小于100米的订单数组
+        foreach ($orders as $item) {
+            
+        }
+    }
+
 
 
 }
