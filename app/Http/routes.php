@@ -65,9 +65,7 @@ Route::group(['middleware' => 'web'], function () {
     Route::post('/admin/news/edit/{id}','NewsController@storeUpdate');
 
 //后台用户列表
-    Route::get('/admin/users',['middleware'=>'auth:admin',function(){
-        return view('user');
-    }]);
+    Route::get('/admin/users','UserController@showAll');
 //积分设置
     Route::get('/admin/points',['middleware'=>'auth:admin',function(){
         return view('point');
@@ -94,57 +92,66 @@ Route::get('/', function () {
 /**
  * 首页路由
  */
-Route::get('/show',function(){
-    $products=Product::groupBy('cat_id')->orderBy('cat_id','desc')->get();
-    return view('app.index',compact('products'));
-});
 
-/*
- * menu展示
- */
 
-Route::get('/menus/{cat?}','FrontController@getMenu');
+//Route::get('/home', 'HomeController@index');
+Route::group(['middleware' => 'web'], function () {
+    Route::auth();
+    Route::get('/show',function(){
+        $products=Product::groupBy('cat_id')->orderBy('cat_id','desc')->get();
+        return view('app.index',compact('products'));
+    });
 
-Route::get('/test',function(){
-   return view('test');
-});
+    /*
+     * menu展示
+     */
+
+    Route::get('/menus/{cat?}','FrontController@getMenu');
+
+    Route::get('/test',function(){
+        return view('test');
+    });
 
 //Route::get('testViewHello',function(){
 //    return view('welcome');
 //});
 
 
-/*
- * relais to json
- */
-Route::get('/json','FrontController@toJson');
+    /*
+     * relais to json
+     */
+    Route::get('/json','FrontController@toJson');
 
 //panier
-Route::get('/panier','OrderController@panier');
+    Route::get('/panier','OrderController@panier');
 //删除购物车
-Route::post('/deletePanier','OrderController@destroy');
+    Route::post('/deletePanier','OrderController@destroy');
 
 //connection
-Route::get('/connexion',function(){
-    return view('app.connection');
-});
+    Route::get('/connexion',function(){
+        return view('app.connection');
+    });
 //注册
-Route::post('register', 'Auth\AuthController@postRegister');
-Route::post('login','Auth\AuthController@postLogin');
+    Route::post('register', 'Auth\AuthController@postRegister');
+    Route::post('login','Auth\AuthController@postLogin');
 //购物车数据
-Route::post('/delCart','OrderController@destroy');
-Route::post('/cart','OrderController@store');
-Route::get('/cartJson','OrderController@toJson');
-Route::get('/pointrelais',function(){
-    return view('app.points');
-});
+    Route::post('/delCart','OrderController@destroy');
+    Route::post('/cart','OrderController@store');
+    Route::get('/cartJson','OrderController@toJson');
+    Route::get('/pointrelais',function(){
+        return view('app.points');
+    });
 //商品数量的增删
-Route::post('/updateCart','OrderController@update');
+    Route::post('/updateCart','OrderController@update');
 //获得营业时间
-Route::get('/timeJson','JsonController@getTime');
+    Route::get('/timeJson','JsonController@getTime');
 //付款
-Route::post('/payment',function(){
+    Route::post('/payment',function(){
 
+    });
+
+    Route::get('/compte',function(){
+        return view('app.compte');
+    });
+    Route::post('/saveInfo','UserController@saveInfo');
 });
-
-//Route::get('/home', 'HomeController@index');

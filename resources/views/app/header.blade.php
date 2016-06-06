@@ -20,9 +20,9 @@
     <ul class="nav navbar-nav navbar-right navbar-header">
         @if (Auth::guest())
             <li><a href="{{url('/connexion')}}"><img src="{{URL::asset('/images/compte-01.png')}}" alt="compte" style="width: 21px"></a></li>
-
         @else
-            {{ Auth::user()->name }}
+            <li><a href="{{url('/compte')}}">{{ Auth::user()->nom }}</a></li>
+
         @endif
         <li>
             <a href="{{url('/panier')}}"><img src="{{URL::asset('/images/shopping-01.png')}}"  alt="shopping" style="width: 26px">

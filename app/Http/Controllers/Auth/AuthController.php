@@ -89,12 +89,16 @@ class AuthController extends Controller
                 'email'=>$request->get('email'),
                 'password'=>bcrypt($request->get('password'))
             ]);
-            return redirect('/panier');
+            return redirect('/compte');
     }
 
     public function postLogin(Request $request)
     {
-        dd(Auth::guard('web')->attempt(['email' => $request->get('email'), 'password' => $request->get('password')])) ;
+        if(Auth::guard('web')->attempt(['email' => $request->get('email'), 'password' => $request->get('password')])){
+            return redirect('/panier');
+        }else{
+            return redirect()->back()->withInput();
+        };
 
     }
 }

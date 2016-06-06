@@ -37,6 +37,7 @@
             box-shadow: none ;
             font-size: 19px;
         }
+        /*radio css*/
         .radio [type="radio"]{
             display: none;
         }
@@ -79,85 +80,96 @@
             line-height: 20px;
             float: left;
         }
+        .form-group > label {
+            width: 150px;
+        }
+        .conn-btn{
+            background: #BAAA76;
+            color: black;
+            left: 55%;
+            position: relative;
+            margin-top: 50px;
+        }
+        .conn-btn:hover{
+            color:black;
+            opacity: 0.5;
+        }
+        .form-group{
+            display: block;
+        }
     </style>
-    <div class="container-fluid" style="background: black;min-height: 500px;">
-        <div id="content">
-            <div id="register">
+    <div class="container-fluid" style="background: black;min-height: 580px;">
+        <div id="content" style="margin-bottom: 108px;min-height: 600px;">
+            <div id="register" style="width: 50%">
                 <p class="title">NOUVEAU CLIENT?</p>
+                <form action="{{url('/register')}}" method="post">
+                    <div class="form-group">
+                        <div class="radio ">
+                            <span for="" style="float:left;display: inline-block;width: 140px">Genre</span>
+                            <input type="radio" name="radio-1" id="emporter"  />
+                            <label for="emporter"></label> <span style="float:left;"> M</span>
 
-                {{--<form action="{{url('/register') }}" method="post" role="form" >--}}
-                    {{--<div class="row form-group">--}}
-                		{{--<label for="" style="float:left;">Genre</label>--}}
-                        {{--<div class="radio ">--}}
-                            {{--<input type="radio" name="sex" id="m"  required/>--}}
-                            {{--<label for="m"></label> <span style="float:left;"> M</span>--}}
-                        {{--</div>--}}
-                        {{--<div class="radio">--}}
-                            {{--<input type="radio" name="radio-1" id="mme"  required/>--}}
-                            {{--<label for="mme"></label> <span style="float:left;"> Mme</span>--}}
-                        {{--</div>--}}
-                        {{--<div class="radio">--}}
-                            {{--<input type="radio" name="radio-1" id="mlle"  required/>--}}
-                            {{--<label for="mlle"></label> <span style="float:left;"> Mlle</span>--}}
-                        {{--</div>--}}
-                	{{--</div>--}}
-                    {{--<div class="form-group">--}}
-                        {{--<label for="">Nom</label>--}}
-                        {{--<input type="text" name="nom" required>--}}
-                    {{--</div>--}}
-                    {{--<div class="form-group">--}}
-                        {{--<label for="">Prenom</label>--}}
-                        {{--<input type="text" name="prenom" required>--}}
-                    {{--</div>--}}
-                    {{--<div class="form-group">--}}
-                        {{--<label for="">Email</label>--}}
-                        {{--<input type="email" name="email" required>--}}
-                    {{--</div>--}}
-                    {{--<div class="form-group">--}}
-                        {{--<label for="">Mot de passe</label>--}}
-                        {{--<input type="password" name="password" required>--}}
-                    {{--</div>--}}
-                    {{--<div class="form-group">--}}
-                        {{--<label for="">Confirmer le mot de passe</label>--}}
-                        {{--<input type="text" name="password_confirmation" required>--}}
-                    {{--</div>--}}
-                    {{--<div class="form-group">--}}
-                        {{--<button id="submmit" type="submit" formaction="{{url('/register')}}">CONNEXION</button>--}}
-                    {{--</div>--}}
-                    {{--{!! csrf_field() !!}--}}
-                {{--</form>--}}
+                            <input type="radio" name="radio-1" id="livrison" checked="checked"/>
+                            <label for="livrison" style="margin-left: 10px"></label> <span style="float:left;">Mme</span>
 
+                            <input type="radio" name="radio-1" id="livrison" checked="checked"/>
+                            <label for="livrison" style="margin-left: 10px"></label> <span style="float:left;">Mlle</span>
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="">Nom*</label>
+                        <input type="text" name="nom" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Prenom*</label>
+                        <input type="text" name="prenom" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Email*</label>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Password*</label>
+                        @if ($errors->has('password'))
+                            <span class="help-block">
+                            <strong>{{ $errors->first('password') }}</strong>
+                        </span>
+                        @endif
+                        <input type="password" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Confirm passe*</label>
+                        @if ($errors->has('password_confirmation'))
+                            <span class="help-block">
+                         <strong>{{ $errors->first('password_confirmation') }}</strong>
+                     </span>
+                        @endif
+                        <input type="password" name="password_confirmation">
+
+                    </div>
+                    <button formaction="{{url('/register')}}" formmethod="post" class="conn-btn btn">Connexion</button>
+                    {!! csrf_field() !!}
+                </form>
 
             </div>
-            <div id="login">
-                <p class="title">DEJA CLIENT</p>
+            <div id="login" style="width: 50%">
+                <p class="title">DEJA CLIENT?</p>
+                <form action="{{url('/login')}}" method="post">
+                    <div class="form-group">
+                        <label for="">Identifant</label>
+                        <input type="email" name="email">
+                    </div>
+                   <div class="form-group">
+                       <label for="">Mot de passe</label>
+                       <input type="password" name="password">
+                   </div>
+
+                    {!! csrf_field() !!}
+                    <button formaction="{{url('/login')}}" formmethod="post" class="btn conn-btn">Connexion</button>
+                </form>
             </div>
         </div>
     </div>
-    <form action="{{url('/register')}}" method="post">
-        @if ($errors->has('password_confirmation'))
-            <span class="help-block">
-                <strong>{{ $errors->first('password_confirmation') }}</strong>
-            </span>
-        @endif
-            @if ($errors->has('password'))
-                <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                </span>
-            @endif
-            <input type="text" name="nom" required>
-        <input type="text" name="prenom" required>
-        <input type="email" name="email" required>
-        <input type="password" name="password" required>
-        <input type="password" name="password_confirmation">
-        <button formaction="{{url('/register')}}" formmethod="post">submit</button>
-        {!! csrf_field() !!}
-    </form>
 
-    <form action="{{url('/login')}}" method="post">
-        <input type="email" name="email">
-        <input type="password" name="email">
-        {!! csrf_field() !!}
-        <button formaction="{{url('/login')}}" formmethod="post">Submit</button>
-    </form>
 @endsection
