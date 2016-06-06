@@ -106,13 +106,13 @@
                     <div class="form-group">
                         <div class="radio ">
                             <span for="" style="float:left;display: inline-block;width: 140px">Genre</span>
-                            <input type="radio" name="radio-1" id="emporter"  />
+                            <input type="radio" name="sex" id="emporter" value="M" />
                             <label for="emporter"></label> <span style="float:left;"> M</span>
 
-                            <input type="radio" name="radio-1" id="livrison" checked="checked"/>
+                            <input type="radio" name="sex" id="livrison"  value="Mme"/>
                             <label for="livrison" style="margin-left: 10px"></label> <span style="float:left;">Mme</span>
 
-                            <input type="radio" name="radio-1" id="livrison" checked="checked"/>
+                            <input type="radio" name="sex" id="livrison" value="mlle"/>
                             <label for="livrison" style="margin-left: 10px"></label> <span style="float:left;">Mlle</span>
                         </div>
 

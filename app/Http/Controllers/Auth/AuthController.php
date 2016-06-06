@@ -78,6 +78,7 @@ class AuthController extends Controller
             [
                 'nom'=>'required',
                 'prenom'=>'required',
+                'sex'=>'required',
                 'email'=>'required|unique:users',
                 'password'=>'required|min:6|confirmed',
 //                'password_confirmation'=>'confirm'
@@ -85,6 +86,7 @@ class AuthController extends Controller
             ]);
         User::create([
                 'nom'=>$request->get('nom'),
+                'sex'=>$request->get('sex'),
                 'prenom'=>$request->get('prenom'),
                 'email'=>$request->get('email'),
                 'password'=>bcrypt($request->get('password'))
