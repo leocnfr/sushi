@@ -79,6 +79,7 @@ Route::group(['middleware' => 'web'], function () {
     //订单管理
     Route::get('/admin/order/today','OrderController@index');
     Route::get('/admin/order/all','OrderController@all');
+
 });
 
 Route::get('/', function () {
@@ -154,4 +155,5 @@ Route::group(['middleware' => 'web'], function () {
         return view('app.compte');
     });
     Route::post('/saveInfo','UserController@saveInfo');
+    Route::post('/saveOrder','OrderController@saveOrder');
 });

@@ -2,11 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Orders;
 use App\Product;
+use App\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use Cart;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class OrderController extends Controller
 {
@@ -17,12 +22,15 @@ class OrderController extends Controller
 
     public function index()
     {
-        return view('orders');
+
+        $orders=Orders::where('created_at',date('Y-m-d'));
+        return view('orders',compact('orders'));
     }
 
     public function all()
     {
-        return view('orders');
+        $orders=Orders::all();
+        return view('orders',compact('orders'));
     }
     public function store(Request $request)
     {
@@ -76,7 +84,76 @@ class OrderController extends Controller
             $count=$request->get('count')-1;
             Cart::update($rawid,$count);
         }
-        return  Cart::all();;
+        return  Cart::all();
+    }
+
+    public function saveOrder(Request $request)
+    {
+        $html='';
+        $total_price=(int)0;
+        $total_qty=0;
+        $html.='<table style="border: 1px solid black;border-collapse: collapse;">';
+        $html.='<tr style="border: 1px solid black">';
+        $html.='<td style="border: 1px solid black">';
+        $html.='menu';
+        $html.='</td>';
+        $html.='<td style="border: 1px solid black">';
+        $html.='qty';
+        $html.='</td>';
+        $html.='<td style="border: 1px solid black">';
+        $html.='riz';
+        $html.='</td>';
+        $html.='<td style="border: 1px solid black">';
+        $html.='boisson';
+        $html.='</td>';
+        $html.='<td style="border: 1px solid black">';
+        $html.='price';
+        $html.='</td>';
+        $html.='</tr>';
+        foreach (Cart::all() as $cart) {
+            $total_price+=(float)$cart->total;
+            $total_qty+=$cart->qty;
+            $html.='<tr style="border: 1px solid black">';
+            $html.='<td style="border: 1px solid black">';
+            $html.=$cart->name;
+            $html.='</td>';
+            $html.='<td style="border: 1px solid black">';
+            $html.=$cart->qty;
+            $html.='</td>';
+            $html.='<td style="border: 1px solid black">';
+            $html.=$cart->riz;
+            $html.='</td>';
+            $html.='<td style="border: 1px solid black">';
+            $html.=$cart->boisson;
+            $html.='</td>';
+            $html.='<td style="border: 1px solid black">';
+            $html.=$cart->total;
+            $html.='</td>';
+            $html.='</tr>';
+        }
+        $html.='<tr style="border: 1px solid black">';
+        $html.='<td style="border: 1px solid black">';
+        $html.='total:'.$total_price;
+        $html.='</td>';
+        $html.='</tr>';
+        $html.='</table>';
+        $order = new Orders();
+        $order->user_id=Auth::user()->id;
+        $order->content=$html;
+        $order->price=$total_price;
+        $order->address=Auth::user()->address;
+        $order->zip_code=Auth::user()->zip_code;
+        if($total_qty>5)
+        {
+            $order->is_pro=0;
+        }else{
+            //查询在此之前的订单距离小于100米的
+            
+        }
+
+        $order->save();
+        Cart::destroy();
+        return redirect()->back();
     }
 
 

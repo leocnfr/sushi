@@ -56,7 +56,10 @@
             <li class="treeview @yield('orderactive')">
                 <a href="#"><i class="fa fa-shopping-cart"></i><span>订单管理</span>  <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="{{url("/admin/order/today")}}">今日订单<small class="label pull-right bg-yellow">12</small></a></li>
+                    <li><a href="{{url("/admin/order/today")}}">今日订单
+                            @inject('order','App\Orders')
+                            <small class="label pull-right bg-yellow">{{$order->countOrder()}}</small>
+                        </a></li>
                     <li><a href="{{url("/admin/order/all")}}">全部订单</a></li>
                 </ul>
             </li>
