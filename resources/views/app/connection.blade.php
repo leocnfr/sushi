@@ -118,14 +118,29 @@
 
                     </div>
                     <div class="form-group">
+                        @if ($errors->has('nom'))
+                            <span class="help-block">
+                         <strong>{{ $errors->first('nom') }}</strong>
+                     </span>
+                        @endif
                         <label for="">Nom*</label>
                         <input type="text" name="nom" required>
                     </div>
                     <div class="form-group">
+                        @if ($errors->has('prenom'))
+                            <span class="help-block">
+                         <strong>{{ $errors->first('prenom') }}</strong>
+                     </span>
+                        @endif
                         <label for="">Prenom*</label>
                         <input type="text" name="prenom" required>
                     </div>
                     <div class="form-group">
+                        @if ($errors->has('email'))
+                            <span class="help-block">
+                         <strong>{{ $errors->first('email') }}</strong>
+                     </span>
+                        @endif
                         <label for="">Email*</label>
                         <input type="email" name="email" required>
                     </div>
