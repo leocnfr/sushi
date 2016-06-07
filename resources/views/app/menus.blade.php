@@ -374,7 +374,7 @@
             </ul>
         @endif
 
-        <div id="content" class="col-md-8" style="background: rgba(37,37,36,0.6);width: 788px">
+        <div id="content" class="col-md-8" style="background: rgba(37,37,36,0.6);">
             @if(isset($cate))
                 @foreach($cate->product->chunk(3)  as $chunk)
                     <div class="row item-list">
