@@ -18,7 +18,6 @@
         }
         .item
         {
-            font-weight: bold;
             font-size: 16px;
 
         }
@@ -449,7 +448,7 @@
         <div id="cart-info" class="col-md-2" style="background: rgba(37,37,36,0.6);margin-right: 18px;text-align: center;color: #BAAA76;width: 250px;padding: 0px;margin-top: 21.5px;float: right">
 
             <aside id="result" style="min-height: 123px;padding: 0px 10px">
-                <p style="font-size: 19pt;font-weight: bold;margin-bottom: 30px">MON PANIER</p>
+                <p style="font-size: 19pt;margin-bottom: 30px">MON PANIER</p>
                 <div id="loading" style="display: block;position:absolute;left: 40%;top: -5% ">
                     <div class="spinner">
                         <div class="spinner-container container1">

@@ -38,7 +38,6 @@ body{
 {
     color: #BAAA76;
     font-size: 20px;
-    font-weight: bold;
     padding: 0px;
     margin: 0px;
     line-height: 36px;
@@ -82,7 +81,6 @@ height: 608px;
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a
 {
     font-size: 18px;
-    font-weight: bold;
     color: #BAAA76;
 }
 .navbar.navbar-default.navbar-foot
@@ -117,7 +115,6 @@ height: 608px;
     bottom: 0px;
     color: #BAAA76;
     font-size: 33px;
-    font-weight: bold;
 }
 
 #commandBtn
