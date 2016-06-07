@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="757db07e-5d4b-47ff-a67a-dd6a19559214" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/app/menus.blade.php" afterPath="$PROJECT_DIR$/resources/views/app/menus.blade.php" />
     </list>
     <ignored path="sushi.iws" />
@@ -85,11 +84,11 @@
       <file leaf-file-name="menus.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/app/menus.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.91888463">
-              <caret line="435" column="50" selection-start-line="435" selection-start-column="50" selection-end-line="435" selection-end-column="50" />
+            <state vertical-scroll-proportion="0.65779465">
+              <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
               <folding>
-                <element signature="e#10547#10598#0#HTML" expanded="true" />
-                <element signature="e#11266#11301#0#HTML" expanded="true" />
+                <element signature="e#10555#10606#0#HTML" expanded="true" />
+                <element signature="e#11274#11309#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -818,11 +817,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/app/menus.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.91888463">
-          <caret line="435" column="50" selection-start-line="435" selection-start-column="50" selection-end-line="435" selection-end-column="50" />
+        <state vertical-scroll-proportion="0.65779465">
+          <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
           <folding>
-            <element signature="e#10547#10598#0#HTML" expanded="true" />
-            <element signature="e#11266#11301#0#HTML" expanded="true" />
+            <element signature="e#10555#10606#0#HTML" expanded="true" />
+            <element signature="e#11274#11309#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -27,7 +27,7 @@
             box-shadow: -1px 2px 10px 3px rgba(0, 0, 0, 0.3) inset;
 
         }
-        .item>img{
+        .item-content>img{
             display: block;
             margin: 0px auto;
             cursor: pointer;
