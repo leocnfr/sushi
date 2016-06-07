@@ -20,6 +20,10 @@
         {
             font-weight: bold;
             font-size: 16px;
+
+        }
+        .item-content
+        {
             box-shadow: -1px 2px 10px 3px rgba(0, 0, 0, 0.3) inset;
 
         }
@@ -409,26 +413,29 @@
                     <div class="row item-list">
                         @foreach($chunk as $item)
                             <div class="col-md-4 item" >
-                                <a  data-toggle="modal" data-target="#exampleModal" data-name="{{$item->name}}" data-count="{{$item->count}}" data-price="{{$item->price}}" data-content="{{$item->content}}" data-src="{{$item->productImage}}">
-                                    <img src="{{URL::asset('/storage/uploads/'.$item->productImage)}}" alt="" style="width: 152px;height: 117px;">
-                                </a>
+                                <div class="item-content">
+                                    <a  data-toggle="modal" data-target="#exampleModal" data-name="{{$item->name}}" data-count="{{$item->count}}" data-price="{{$item->price}}" data-content="{{$item->content}}" data-src="{{$item->productImage}}">
+                                        <img src="{{URL::asset('/storage/uploads/'.$item->productImage)}}" alt="" style="width: 152px;height: 117px;">
+                                    </a>
 
-                                <p>{{$item->name}}</p>
-                                <span>{{$item->count}} pièce</span>
-                                <span class="pull-right">{{$item->price}}€</span>
-                                <button class="button-ajouter" data-productid="{{$item->id}}" data-toggle="modal" data-target="#autre">AJOUTER<i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+                                    <p>{{$item->name}}</p>
+                                    <span>{{$item->count}} pièce</span>
+                                    <span class="pull-right">{{$item->price}}€</span>
+                                    <button class="button-ajouter" data-productid="{{$item->id}}" data-toggle="modal" data-target="#autre">AJOUTER<i class="fa fa-plus-circle" aria-hidden="true"></i></button>
 
-                            {{--@if(date('G',time())<12&&str_contains($item->send_time,'1'))--}}
+                                    {{--@if(date('G',time())<12&&str_contains($item->send_time,'1'))--}}
                                     {{--<button class="button-ajouter" data-productid="{{$item->id}}" data-toggle="modal" data-target="#autre">AJOUTER<i class="fa fa-plus-circle" aria-hidden="true"></i></button>--}}
                                     {{--@elseif(date('G',time())<24&&12<=date('G',time())&&str_contains($item->send_time,'2'))--}}
                                     {{--<button class="button-ajouter" data-productid="{{$item->id}}" data-toggle="modal" data-target="#autre">AJOUTER<i class="fa fa-plus-circle" aria-hidden="true"></i></button>--}}
-                                {{--@else--}}
+                                    {{--@else--}}
                                     {{--@if(date('G',time())<=12&&str_contains($item->send_time,'2'))--}}
-                                        {{--<small  style="color: red;display: block">MENU MIDI NOUS VOUS OFFRONS QUE DU SOIR</small>--}}
+                                    {{--<small  style="color: red;display: block">MENU MIDI NOUS VOUS OFFRONS QUE DU SOIR</small>--}}
                                     {{--@elseif(date('G',time())<18&&12<=date('G',time())&&str_contains($item->send_time,'1'))--}}
-                                        {{--<small  style="color: red;display: block">MENU MIDI NOUS VOUS OFFRONS QUE DU MIDI</small>--}}
+                                    {{--<small  style="color: red;display: block">MENU MIDI NOUS VOUS OFFRONS QUE DU MIDI</small>--}}
                                     {{--@endif--}}
                                     {{--@endif--}}
+                                </div>
+
 
                             </div>
                         @endforeach
