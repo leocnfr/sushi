@@ -20,6 +20,7 @@
         {
             font-weight: bold;
             font-size: 16px;
+            box-shadow: -1px 2px 10px 3px rgba(0, 0, 0, 0.3) inset;
 
         }
         .item>img{
@@ -61,15 +62,15 @@
         {
             border-bottom: 1px solid #BAAA76;
         }
-        .col-md-4.item:nth-of-type(2n)
-        {
-            border-left: 2px solid rgba(186,170,118,0.4);
-        }
-        .col-md-4.item:nth-of-type(3n)
-        {
-            border-left: 2px solid rgba(186,170,118,0.4);
+        /*.col-md-4.item:nth-of-type(2n)*/
+        /*{*/
+            /*border-left: 2px solid rgba(186,170,118,0.4);*/
+        /*}*/
+        /*.col-md-4.item:nth-of-type(3n)*/
+        /*{*/
+            /*border-left: 2px solid rgba(186,170,118,0.4);*/
 
-        }
+        /*}*/
         .sidebar-item
         {
             top: 24px;

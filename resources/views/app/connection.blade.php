@@ -21,7 +21,7 @@
         .title
         {
             font-size: 25pt;
-            font-weight: blod;
+            font-weight: bold;
         }
         .radio
         {

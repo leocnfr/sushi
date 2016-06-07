@@ -59,7 +59,7 @@
                     <li>
                         <a href="{{url("/admin/order/today")}}">今日订单
                         @inject('order','App\Orders')
-                        <small class="label  bg-yellow">{{$order->countOrder()}}</small>
+                        <small class="label bg-yellow">{{$order->countOrder()}}</small>
                             <i class="fa fa-angle-left pull-right"></i>
                         </a>
                         <ul class="treeview-menu">

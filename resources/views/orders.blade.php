@@ -6,6 +6,7 @@
             <td>用户</td>
             <td>送餐内容</td>
             <td>地址</td>
+            <td></td>
         </tr>
         @foreach($orders as $order)
             <tr>
