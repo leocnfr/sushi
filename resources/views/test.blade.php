@@ -18,6 +18,6 @@
     </style>
 </head>
 <body>
-
+{{phpinfo()}}
 </body>
 </html>
