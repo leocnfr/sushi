@@ -23,7 +23,7 @@
         }
         .item-content
         {
-            box-shadow: -1px 2px 10px 3px rgba(0, 0, 0, 0.3) inset;
+            box-shadow: -1px 2px 10px 3px rgba(0, 0, 0, 0.3);
 
         }
         .item-content>img{
@@ -338,6 +338,21 @@
               }
         }
 
+        #content img
+        {
+                display: block; margin: 0 auto;
+            }
+
+        .item-content
+        {
+            padding: 10px;
+        }
+        .pull-left{
+            color:#8c8c8c
+        }
+        .pull-right{
+            color:#8c8c8c
+        }
     </style>
     <div class="container-fluid " style="padding:0;background: #111111 ">
         @if(!isset($cate))
@@ -382,12 +397,12 @@
                             <div class="col-md-4 item" >
                                 <div class="item-content">
                                     <a  data-toggle="modal" data-target="#exampleModal" data-name="{{$item->name}}" data-count="{{$item->count}}" data-price="{{$item->price}}" data-content="{{$item->content}}" data-src="{{$item->productImage}}">
-                                        <img src="{{URL::asset('/storage/uploads/'.$item->productImage)}}" alt="" style="width: 152px;height: 117px;">
+                                        <img src="{{URL::asset('/storage/uploads/'.$item->productImage)}}" alt="" style="width: 152px;height: 117px; ">
                                     </a>
 
                                     <p>{{$item->name}}</p>
-                                    <span>{{$item->count}} pièce</span>
-                                    <span class="pull-right">{{$item->price}}€</span>
+                                    <span class="pull-left">{{$item->count}} pièce</span>
+                                    <span class="pull-right" >{{$item->price}}€</span>
                                     {{--@if(date('G',time())<12&&str_contains($item->send_time,'1'))--}}
                                     <button class="button-ajouter" data-productid="{{$item->id}}" data-toggle="modal" data-target="#autre">AJOUTER<i class="fa fa-plus-circle" aria-hidden="true"></i></button>
                                     {{--                                @elseif(date('G',time())<24&&12<=date('G',time())&&str_contains($item->send_time,'2'))--}}
