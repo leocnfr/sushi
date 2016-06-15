@@ -348,10 +348,10 @@
             padding: 10px;
         }
         .pull-left{
-            color:#8c8c8c
+            color:#8c8c8c !important;
         }
         .pull-right{
-            color:#8c8c8c
+            color:#8c8c8c !important;
         }
     </style>
     <div class="container-fluid " style="padding:0;background: #111111 ">
