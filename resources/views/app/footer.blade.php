@@ -6,7 +6,7 @@
         font-weight:normal;
     }
 </style>
-<nav class="navbar navbar-default navbar-foot" role="navigation">
+<nav class="navbar navbar-default navbar-foot navbar-foot1" role="navigation">
 	<ul class="nav navbar-nav navbar-foot" >
 		<li>
 			<a href="#">CONTACTEZ-NOUS</a>
@@ -28,7 +28,7 @@
         </li>
 	</ul>
     </nav>
-    <nav class="navbar navbar-default navbar-foot" role="navigation"  style="height: 60px">
+    <nav class="navbar navbar-default navbar-foot navbar-foot2" role="navigation"  style="height: 60px">
 
     <ul class="nav navbar-nav navbar-bottom " style="padding-top: 0px;height: 36px;width: 100%">
         <li style="border: none">

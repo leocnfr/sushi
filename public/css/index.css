@@ -83,6 +83,18 @@ height: 608px;
     font-size: 14px;
     color: #BAAA76;
 }
+.navbar-foot2
+{
+    background-image: url("/images/bg-footer2.jpg");
+}
+.navbar-foot1
+{
+    background-image: url("/images/bg-footer.jpg");
+}
+.nav-top1
+{
+    background-image: url("/images/bartop.jpg");
+}
 .navbar-bottom a{
     font-size: 12px; color:#8c8c8c !important;
 }
