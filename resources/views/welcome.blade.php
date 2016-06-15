@@ -31,7 +31,7 @@
 
 <body>
 
-<div id="loading">Loading.....</div>
+<div id="loading">Loading....&é.</div>
 <textarea id="content"></textarea>
 <button name="btnLoad">Load</button>
 
