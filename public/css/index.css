@@ -37,7 +37,7 @@ body{
 .nav.navbar-nav li a
 {
     color: #BAAA76;
-    font-size: 20px;
+    font-size: 14px;
     padding: 0px;
     margin: 0px;
     line-height: 36px;
@@ -80,8 +80,23 @@ height: 608px;
 }
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a
 {
-    font-size: 18px;
+    font-size: 14px;
     color: #BAAA76;
+}
+.navbar-foot2
+{
+    background-image: url("/images/bg-footer2.jpg");
+}
+.navbar-foot1
+{
+    background-image: url("/images/bg-footer.jpg");
+}
+.nav-top1
+{
+    background-image: url("/images/bartop.jpg");
+}
+.navbar-bottom a{
+    font-size: 12px; color:#8c8c8c !important;
 }
 .navbar.navbar-default.navbar-foot
 {

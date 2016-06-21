@@ -1,5 +1,5 @@
 @inject('cates','App\Category')
-<div class="navbar" style="border-bottom:2px solid #BAAA76;font-size: 14px; ">
+<div class="navbar nav-top1" style="border-bottom:2px solid #BAAA76; ">
 	<a class="navbar-brand" href="{{url('/show')}}">
         <img src="{{URL::asset('/images/logo.png')}}" alt="logo" style="width: 151px;height: 103px">
     </a>
@@ -11,7 +11,7 @@
 			<a href="#">PROMOTION</a>
 		</li>
         <li>
-            <a href="/pointrelais">PIOINTS RELIAS</a>
+            <a href="/pointrelais">PIOINTS RELAIS</a>
         </li>
         <li>
             <a href="#">NEWS</a>
