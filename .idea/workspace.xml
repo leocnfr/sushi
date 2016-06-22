@@ -34,10 +34,13 @@
 =======
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/bootstrap.css" afterPath="$PROJECT_DIR$/public/css/bootstrap.css" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 3afbf92991d65a853bcae71e97235439c5ab397c
 =======
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/app/menus.blade.php" afterPath="$PROJECT_DIR$/resources/views/app/menus.blade.php" />
 >>>>>>> ff31ae489f523dce0e9cf8aca57a5cbd596c9ce7
+=======
+>>>>>>> 78b103a5a84136ba304460e6115a1a50699713b6
     </list>
     <ignored path="sushi.iws" />
     <ignored path=".idea/workspace.xml" />
