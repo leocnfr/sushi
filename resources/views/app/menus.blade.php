@@ -7,7 +7,7 @@
 
         #sidebar
         {
-            width: 10%;
+            width: 180px;
             height: 514px;
             background: black;
             color: #BAAA76;
