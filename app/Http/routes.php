@@ -27,7 +27,7 @@ Route::group(['middleware' => 'web'], function () {
     /**
      * PRODUCT 产品路由
      */
-    Route::get('/admin/products{cateBy?}','ProductController@index');
+    Route::get('/admin/products{cateBy?}','ProductController@show');
     Route::get('/admin/products/create','ProductController@create');
     Route::get('/admin/products/{id}','ProductController@edit');
     Route::put('/admin/product/update/','ProductController@update');

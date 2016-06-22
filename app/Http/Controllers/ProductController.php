@@ -16,8 +16,13 @@ class ProductController extends Controller
     {
         $this->middleware('auth:admin');
     }
+    //显示dashboard
+    public function index()
+    {
+        return view('admin.index');
+    }
     //显示产品
-    public function index(Request $request)
+    public function show(Request $request)
     {
         $admin=Auth::guard('admin')->user();
         if($request->get('cateBy'))
