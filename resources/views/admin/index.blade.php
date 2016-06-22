@@ -8,7 +8,6 @@
         }
     </style>
     <script src="/js/Chart.bundle.js"></script>
-    <script src="/js/jquery-1.10.2.min.js"></script>
     <div style="width: 75%">
         <h4>每日订单数量</h4>
         <canvas id="chart"></canvas>
@@ -29,11 +28,6 @@
                     backgroundColor: [
                         "#FF6384",
                         "#36A2EB"
-                    ],
-                    backgroundColor: [
-                        "#FF6384",
-                        "#36A2EB",
-                        "#FFCE56"
                     ]
                 }]
             }
