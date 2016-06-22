@@ -65,7 +65,9 @@ Route::group(['middleware' => 'web'], function () {
     Route::post('/admin/news/edit/{id}','NewsController@storeUpdate');
 
 //后台用户列表
-    Route::get('/admin/users','UserController@showAll');
+    Route::get('/admin/users{query?}','UserController@showAll');
+    Route::delete('/admin/users','UserController@destroy');
+    Route::get('/admin/users/{id}','UserController@edit');
 //积分设置
     Route::get('/admin/points',['middleware'=>'auth:admin',function(){
         return view('point');

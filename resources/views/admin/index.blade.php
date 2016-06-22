@@ -10,10 +10,12 @@
     <script src="/js/Chart.bundle.js"></script>
     <div style="width: 75%">
         <h4>每日订单数量</h4>
+        <input type="date">
         <canvas id="chart"></canvas>
     </div>
     <div style="width: 75%">
         <h4>每月订单数量</h4>
+        <input type="month">
         <canvas id="myChart"></canvas>
     </div>
     <script>
