@@ -158,4 +158,6 @@ Route::group(['middleware' => 'web'], function () {
     });
     Route::post('/saveInfo','UserController@saveInfo');
     Route::post('/saveOrder','OrderController@saveOrder');
+    Route::get('/pdf','PdfController@create');
 });
+
