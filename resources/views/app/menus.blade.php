@@ -4,9 +4,10 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <style>
+
         #sidebar
         {
-            width: 142px;
+            width: 10%;
             height: 514px;
             background: black;
             color: #BAAA76;
@@ -460,7 +461,7 @@
 
 
         </div>
-        <div id="cart-info" class="col-md-2" style="background: rgba(37,37,36,0.6);margin-right: 18px;text-align: center;color: #BAAA76;width: 250px;padding: 0px;margin-top: 21.5px;float: right">
+        <div id="cart-info" class="col-md-2" style="background: rgba(37,37,36,0.6);margin-right: 18px;text-align: center;color: #BAAA76;width: 20%;padding: 0px;margin-top: 21.5px;float: right">
 
             <aside id="result" style="min-height: 123px;padding: 0px 10px">
                 <p style="font-size: 19pt;margin-bottom: 30px">MON PANIER</p>
