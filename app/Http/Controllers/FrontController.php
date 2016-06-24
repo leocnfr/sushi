@@ -23,12 +23,12 @@ class FrontController extends Controller
         $products=Product::groupBy('cat_id')->orderBy('cat_id','desc')->get();
         if($menu==null)
         {
-            $products=Product::where('cat_id','!=',6)->orderBy('cat_id','desc')->paginate(9);
+            $products=Product::where('cat_id','!=',6)->orderBy('cat_id','desc')->paginate(12);
             return view('app.menus',compact('products','cates'));
         }else{
             $menu=str_replace('-',' ',$menu);
             $cate=Category::where('cat_name',$menu)->first();
-            $products=Product::where('cat_id',$cate->id)->paginate(9);
+            $products=Product::where('cat_id',$cate->id)->paginate(12);
             return view('app.menus',compact('products','cate','cates'));
         }
 
