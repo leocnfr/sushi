@@ -11,7 +11,9 @@
         "overtrue/laravel-shopping-cart": "1.0.*",
         "kptive/payment-sips-bundle": "dev-master",
         "jms/payment-core-bundle": "master-dev",
-        "barryvdh/laravel-dompdf": "0.6.*"
+        "barryvdh/laravel-dompdf": "0.6.*",
+        "stripe/stripe-php": "3.*"
+
 
     },
 
