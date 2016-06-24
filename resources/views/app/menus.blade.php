@@ -46,7 +46,7 @@
             color: #BAAA76;
             margin-top: 21.5px;
             margin-bottom: 83px;
-            margin-left: 15px;
+            margin-left: 10px;
         }
         .button-ajouter
         {
@@ -392,7 +392,7 @@
             {{--</ul>--}}
         {{--@endif--}}
 
-        <div id="content" class="col-md-9" style="background: rgba(37,37,36,0.6);">
+        <div id="content" class="col-md-9" style="background: rgba(37,37,36,0.6);width: 77vw">
                 @foreach($products->chunk(4) as $chunk)
                     <div class="row item-list">
                         @foreach($chunk as $item)
