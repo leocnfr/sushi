@@ -42,9 +42,11 @@
 
         #content
         {
+
             color: #BAAA76;
             margin-top: 21.5px;
             margin-bottom: 83px;
+            margin-left: 15px;
         }
         .button-ajouter
         {
@@ -392,7 +394,7 @@
 
         <div id="content" class="col-md-9" style="background: rgba(37,37,36,0.6);">
             @if(isset($cate))
-                @foreach($cate->product->chunk(4)  as $chunk)
+                @foreach($products->chunk(4)  as $chunk)
                     <div class="row item-list">
                         @foreach($chunk as $item)
                             <div class="col-md-3 item" >
