@@ -357,7 +357,7 @@
             color:#8c8c8c !important;
         }
     </style>
-    <div class="container-fluid " style="padding:0;background: #111111 ">
+    <div class="container-fluid " style="padding:0;background: #111111;min-height: 70vh">
         {{--@if(!isset($cate))--}}
         {{--<ul id="sidebar" class="col-md-2">--}}
             {{--@foreach($cates->getMenu() as $key=>$value)--}}
