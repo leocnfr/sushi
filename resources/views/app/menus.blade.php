@@ -393,22 +393,22 @@
         {{--@endif--}}
 
         <div id="content" class="col-md-9" style="background: rgba(37,37,36,0.6);">
-            @if(isset($cate))
-                @foreach($products->chunk(4)  as $chunk)
-                    <div class="row item-list">
-                        @foreach($chunk as $item)
-                            <div class="col-md-3 item" >
-                                <div class="item-content">
-                                    <a  data-toggle="modal" data-target="#exampleModal" data-name="{{$item->name}}" data-count="{{$item->count}}" data-price="{{$item->price}}" data-content="{{$item->content}}" data-src="{{$item->productImage}}">
-                                        <img src="{{URL::asset('/storage/uploads/'.$item->productImage)}}" alt="" style="width: 152px;height: 117px; ">
-                                    </a>
+            {{--@if(isset($cate))--}}
+                {{--@foreach($products->chunk(4)  as $chunk)--}}
+                    {{--<div class="row item-list">--}}
+                        {{--@foreach($chunk as $item)--}}
+                            {{--<div class="col-md-3 item" >--}}
+                                {{--<div class="item-content">--}}
+                                    {{--<a  data-toggle="modal" data-target="#exampleModal" data-name="{{$item->name}}" data-count="{{$item->count}}" data-price="{{$item->price}}" data-content="{{$item->content}}" data-src="{{$item->productImage}}">--}}
+                                        {{--<img src="{{URL::asset('/storage/uploads/'.$item->productImage)}}" alt="" style="width: 152px;height: 117px; ">--}}
+                                    {{--</a>--}}
 
-                                    <p>{{$item->name}}</p>
+                                    {{--<p>{{$item->name}}</p>--}}
 
-                                    <span>{{$item->count}} pièce</span>
-                                    <span class="pull-right" >{{$item->price}}€</span>
+                                    {{--<span>{{$item->count}} pièce</span>--}}
+                                    {{--<span class="pull-right" >{{$item->price}}€</span>--}}
                                     {{--@if(date('G',time())<12&&str_contains($item->send_time,'1'))--}}
-                                    <button class="button-ajouter" data-productid="{{$item->id}}" data-toggle="modal" data-target="#autre">AJOUTER<i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+                                    {{--<button class="button-ajouter" data-productid="{{$item->id}}" data-toggle="modal" data-target="#autre">AJOUTER<i class="fa fa-plus-circle" aria-hidden="true"></i></button>--}}
                                     {{--                                @elseif(date('G',time())<24&&12<=date('G',time())&&str_contains($item->send_time,'2'))--}}
                                     {{--                                    <button class="button-ajouter" data-productid="{{$item->id}}" data-toggle="modal" data-target="#autre">AJOUTER<i class="fa fa-plus-circle" aria-hidden="true"></i></button>--}}
                                     {{--@else--}}
@@ -418,15 +418,15 @@
                                     {{--<small  style="color: red;display: block">MENU MIDI NOUS VOUS OFFRONS QUE DU MIDI</small>--}}
                                     {{--@endif--}}
                                     {{--@endif--}}
-                                </div>
+                                {{--</div>--}}
 
 
-                            </div>
-                        @endforeach
+                            {{--</div>--}}
+                        {{--@endforeach--}}
 
-                    </div>
-                @endforeach
-                @else
+                    {{--</div>--}}
+                {{--@endforeach--}}
+                {{--@else--}}
                     @foreach($products->chunk(4) as $chunk)
                     <div class="row item-list">
                         @foreach($chunk as $item)
@@ -460,7 +460,7 @@
                     </div>
                 @endforeach
                 {!! $products->render() !!}
-            @endif
+            {{--@endif--}}
 
 
         </div>
