@@ -356,53 +356,54 @@
         }
     </style>
     <div class="container-fluid " style="padding:0;background: #111111 ">
-        @if(!isset($cate))
-        <ul id="sidebar" class="col-md-2">
-            @foreach($cates->getMenu() as $key=>$value)
-                <li class="sidebar-item list-unstyled">
-                    <a href="{{url('/menus/'.str_slug($value->cat_name))}}">
-                        <p>{{$value->cat_name}}</p>
-                        <img src="{{URL::asset('/storage/uploads/'.$value->src)}}" alt="{{$value->cat_name}}" style="width: 119px;height: 68px">
-                    </a>
+        {{--@if(!isset($cate))--}}
+        {{--<ul id="sidebar" class="col-md-2">--}}
+            {{--@foreach($cates->getMenu() as $key=>$value)--}}
+                {{--<li class="sidebar-item list-unstyled">--}}
+                    {{--<a href="{{url('/menus/'.str_slug($value->cat_name))}}">--}}
+                        {{--<p>{{$value->cat_name}}</p>--}}
+                        {{--<img src="{{URL::asset('/storage/uploads/'.$value->src)}}" alt="{{$value->cat_name}}" style="width: 119px;height: 68px">--}}
+                    {{--</a>--}}
 
-                </li>
-            @endforeach
+                {{--</li>--}}
+            {{--@endforeach--}}
 
-        </ul>
-        @else
-            <ul id="sidebar" class="col-md-2">
-                <li class="sidebar-item list-unstyled">
-                    <a href="{{url('/menus/'.str_slug($cates->getSideMenu($cate->id)->cat_name))}}">
-                    <p>{{$cates->getSideMenu($cate->id)->cat_name}}</p>
-                    <img src="{{URL::asset('/storage/uploads/'.$cates->getSideMenu($cate->id)->src)}}" alt="{{$cates->getSideMenu($cate->id)->cat_name}}" style="width: 119px;height: 68px">
-                    </a>
-                </li>
-                @foreach($cates->getOther($cate->id) as $key=>$value)
-                    <li class="sidebar-item list-unstyled">
-                        <a href="{{url('/menus/'.str_slug($value->cat_name))}}">
-                        <p>{{$value->cat_name}}</p>
-                        <img src="{{URL::asset('/storage/uploads/'.$value->src)}}" alt="{{$value->cat_name}}" style="width: 119px;height: 68px">
-                        </a>
-                    </li>
-                @endforeach
-                <div id="triangle-left"></div>
+        {{--</ul>--}}
+        {{--@else--}}
+            {{--<ul id="sidebar" class="col-md-2">--}}
+                {{--<li class="sidebar-item list-unstyled">--}}
+                    {{--<a href="{{url('/menus/'.str_slug($cates->getSideMenu($cate->id)->cat_name))}}">--}}
+                    {{--<p>{{$cates->getSideMenu($cate->id)->cat_name}}</p>--}}
+                    {{--<img src="{{URL::asset('/storage/uploads/'.$cates->getSideMenu($cate->id)->src)}}" alt="{{$cates->getSideMenu($cate->id)->cat_name}}" style="width: 119px;height: 68px">--}}
+                    {{--</a>--}}
+                {{--</li>--}}
+                {{--@foreach($cates->getOther($cate->id) as $key=>$value)--}}
+                    {{--<li class="sidebar-item list-unstyled">--}}
+                        {{--<a href="{{url('/menus/'.str_slug($value->cat_name))}}">--}}
+                        {{--<p>{{$value->cat_name}}</p>--}}
+                        {{--<img src="{{URL::asset('/storage/uploads/'.$value->src)}}" alt="{{$value->cat_name}}" style="width: 119px;height: 68px">--}}
+                        {{--</a>--}}
+                    {{--</li>--}}
+                {{--@endforeach--}}
+                {{--<div id="triangle-left"></div>--}}
 
-            </ul>
-        @endif
+            {{--</ul>--}}
+        {{--@endif--}}
 
         <div id="content" class="col-md-8" style="background: rgba(37,37,36,0.6);">
             @if(isset($cate))
-                @foreach($cate->product->chunk(3)  as $chunk)
+                @foreach($cate->product->chunk(4)  as $chunk)
                     <div class="row item-list">
                         @foreach($chunk as $item)
-                            <div class="col-md-4 item" >
+                            <div class="col-md-3 item" >
                                 <div class="item-content">
                                     <a  data-toggle="modal" data-target="#exampleModal" data-name="{{$item->name}}" data-count="{{$item->count}}" data-price="{{$item->price}}" data-content="{{$item->content}}" data-src="{{$item->productImage}}">
                                         <img src="{{URL::asset('/storage/uploads/'.$item->productImage)}}" alt="" style="width: 152px;height: 117px; ">
                                     </a>
 
                                     <p>{{$item->name}}</p>
-                                    <span class="pull-left">{{$item->count}} pièce</span>
+
+                                    <span>{{$item->count}} pièce</span>
                                     <span class="pull-right" >{{$item->price}}€</span>
                                     {{--@if(date('G',time())<12&&str_contains($item->send_time,'1'))--}}
                                     <button class="button-ajouter" data-productid="{{$item->id}}" data-toggle="modal" data-target="#autre">AJOUTER<i class="fa fa-plus-circle" aria-hidden="true"></i></button>
@@ -424,10 +425,10 @@
                     </div>
                 @endforeach
                 @else
-                    @foreach($products->chunk(3) as $chunk)
+                    @foreach($products->chunk(4) as $chunk)
                     <div class="row item-list">
                         @foreach($chunk as $item)
-                            <div class="col-md-4 item" >
+                            <div class="col-md-3 item" >
                                 <div class="item-content">
                                     <a  data-toggle="modal" data-target="#exampleModal" data-name="{{$item->name}}" data-count="{{$item->count}}" data-price="{{$item->price}}" data-content="{{$item->content}}" data-src="{{$item->productImage}}">
                                         <img src="{{URL::asset('/storage/uploads/'.$item->productImage)}}" alt="" style="width: 152px;height: 117px;">
