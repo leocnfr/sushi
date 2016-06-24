@@ -3,7 +3,7 @@
     <style>
         #content
         {
-            width: 1000px;
+            width: 80vw;
             margin: 0px auto;
             color: #BAAA76;
             background: black;
@@ -86,7 +86,6 @@
         .conn-btn{
             background: #BAAA76;
             color: black;
-            left: 55%;
             position: relative;
             margin-top: 50px;
         }
@@ -97,22 +96,25 @@
         .form-group{
             display: block;
         }
+        input{
+            width: 20vw;
+        }
     </style>
     <div class="container-fluid" style="background: black;min-height: 580px;">
         <div id="content" style="margin-bottom: 108px;min-height: 600px;">
-            <div id="register" style="width: 50%">
+            <div id="register" style="width: 45%">
                 <p class="title">NOUVEAU CLIENT?</p>
                 <form action="{{url('/register')}}" method="post">
                     <div class="form-group">
                         <div class="radio ">
                             <span for="" style="float:left;display: inline-block;width: 140px">Genre</span>
-                            <input type="radio" name="sex" id="emporter" value="M" />
+                            <input type="radio" name="sex"  value="M" />
                             <label for="emporter"></label> <span style="float:left;"> M</span>
 
-                            <input type="radio" name="sex" id="livrison"  value="Mme"/>
+                            <input type="radio" name="sex"   value="Mme"/>
                             <label for="livrison" style="margin-left: 10px"></label> <span style="float:left;">Mme</span>
 
-                            <input type="radio" name="sex" id="livrison" value="mlle"/>
+                            <input type="radio" name="sex"  value="mlle"/>
                             <label for="livrison" style="margin-left: 10px"></label> <span style="float:left;">Mlle</span>
                         </div>
 
@@ -124,7 +126,7 @@
                      </span>
                         @endif
                         <label for="">Nom*</label>
-                        <input type="text" name="nom" required>
+                        <input type="text" name="nom" required class="pull-right">
                     </div>
                     <div class="form-group">
                         @if ($errors->has('prenom'))
@@ -133,7 +135,7 @@
                      </span>
                         @endif
                         <label for="">Prenom*</label>
-                        <input type="text" name="prenom" required>
+                        <input type="text" name="prenom" required class="pull-right">
                     </div>
                     <div class="form-group">
                         @if ($errors->has('email'))
@@ -142,7 +144,7 @@
                      </span>
                         @endif
                         <label for="">Email*</label>
-                        <input type="email" name="email" required>
+                        <input type="email" name="email" required class="pull-right">
                     </div>
                     <div class="form-group">
                         <label for="">Password*</label>
@@ -151,7 +153,7 @@
                             <strong>{{ $errors->first('password') }}</strong>
                         </span>
                         @endif
-                        <input type="password" name="password" required>
+                        <input type="password" name="password" required class="pull-right">
                     </div>
                     <div class="form-group">
                         <label for="">Confirm passe*</label>
@@ -160,28 +162,28 @@
                          <strong>{{ $errors->first('password_confirmation') }}</strong>
                      </span>
                         @endif
-                        <input type="password" name="password_confirmation">
+                        <input type="password" name="password_confirmation" class="pull-right">
 
                     </div>
-                    <button formaction="{{url('/register')}}" formmethod="post" class="conn-btn btn">Connexion</button>
+                    <button formaction="{{url('/register')}}" formmethod="post" class="conn-btn btn pull-right">Connexion</button>
                     {!! csrf_field() !!}
                 </form>
 
             </div>
-            <div id="login" style="width: 50%">
+            <div id="login" style="width: 45%;float: right;">
                 <p class="title">DEJA CLIENT?</p>
                 <form action="{{url('/login')}}" method="post">
                     <div class="form-group">
                         <label for="">Identifant</label>
-                        <input type="email" name="email">
+                        <input type="email" name="email" class="pull-right">
                     </div>
                    <div class="form-group">
                        <label for="">Mot de passe</label>
-                       <input type="password" name="password">
+                       <input type="password" name="password" class="pull-right">
                    </div>
 
                     {!! csrf_field() !!}
-                    <button formaction="{{url('/login')}}" formmethod="post" class="btn conn-btn">Connexion</button>
+                    <button formaction="{{url('/login')}}" formmethod="post" class="btn conn-btn pull-right">Connexion</button>
                 </form>
             </div>
         </div>

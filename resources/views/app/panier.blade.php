@@ -20,7 +20,7 @@
         select::-ms-expand { display: none; }
         #content
         {
-            width: 1010px;
+            width: 80vw;
             margin: 0px auto;
             color: #BAAA76;
             top:34px;
