@@ -427,7 +427,6 @@
                     {{--</div>--}}
                 {{--@endforeach--}}
                 {{--@else--}}
-                    {{dd($products)}}
                     @foreach($products->chunk(4) as $chunk)
                     <div class="row item-list">
                         @foreach($chunk as $item)
