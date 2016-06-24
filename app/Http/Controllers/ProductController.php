@@ -28,7 +28,7 @@ class ProductController extends Controller
         if($request->get('cateBy'))
         {
             $cate=Category::where('cat_name',$request->get('cateBy'))->first();
-            $products=Product::where('cat_id',$cate->id)->latest()->get()->paginate(10);
+            $products=Product::where('cat_id',$cate->id)->latest()->paginate(10);
         }else{
             $products=Product::latest()->paginate(10);
         }
