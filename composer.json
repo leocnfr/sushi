@@ -25,7 +25,9 @@
         "symfony/dom-crawler": "2.8.*|3.0.*",
         "overtrue/laravel-shopping-cart": "1.0.*",
         "kptive/payment-sips-bundle": "dev-master",
-        "jms/payment-core-bundle": "master-dev"
+        "jms/payment-core-bundle": "master-dev",
+        "stripe/stripe-php": "3.*"
+
 
     },
     "autoload": {

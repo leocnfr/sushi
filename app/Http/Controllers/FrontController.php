@@ -40,4 +40,10 @@ class FrontController extends Controller
     {
         return Relais::all();
     }
+    
+    //新闻页面显示
+    public function news()
+    {
+        return view('app.news');
+    }
 }
