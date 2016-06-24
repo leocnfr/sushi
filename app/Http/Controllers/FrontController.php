@@ -28,6 +28,7 @@ class FrontController extends Controller
         }else{
             $menu=str_replace('-',' ',$menu);
             $cate=Category::where('cat_name',$menu)->first();
+            $products=Product::where('cat_id',$cate->id)->paginate(9);
             return view('app.menus',compact('products','cate','cates'));
         }
 
