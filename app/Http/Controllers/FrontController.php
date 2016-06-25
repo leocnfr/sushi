@@ -46,4 +46,10 @@ class FrontController extends Controller
     {
         return view('app.news');
     }
+    
+    //付款确认页面
+    public function checkout()
+    {
+        return view('app.checkout');
+    }
 }

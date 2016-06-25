@@ -25,7 +25,7 @@
         }
         .radio
         {
-            display: inline;
+            display: inline-block;
         }
         #submmit
         {
@@ -108,14 +108,14 @@
                     <div class="form-group">
                         <div class="radio ">
                             <span for="" style="float:left;display: inline-block;width: 140px">Genre</span>
-                            <input type="radio" name="sex"  value="M" />
-                            <label for="emporter"></label> <span style="float:left;"> M</span>
+                            <input type="radio" name="sex"  value="M" id="m"/>
+                            <label for="m"></label> <span style="float:left;"> M</span>
 
-                            <input type="radio" name="sex"   value="Mme"/>
-                            <label for="livrison" style="margin-left: 10px"></label> <span style="float:left;">Mme</span>
+                            <input type="radio" name="sex" id="mme"  value="Mme"/>
+                            <label for="mme" style="margin-left: 10px"></label> <span style="float:left;">Mme</span>
 
-                            <input type="radio" name="sex"  value="mlle"/>
-                            <label for="livrison" style="margin-left: 10px"></label> <span style="float:left;">Mlle</span>
+                            <input type="radio" id="mlle" name="sex"  value="mlle"/>
+                            <label for="mlle" style="margin-left: 10px"></label> <span style="float:left;">Mlle</span>
                         </div>
 
                     </div>

@@ -340,7 +340,7 @@
         }
 
     </style>
-    <div class="container-fluid" style="background: black;min-height: 500px;">
+    <div class="container-fluid" style="background: #111111;min-height: 500px;">
         <div id="content">
             <img  id="shop-img" src="/images/shopping-01.png" alt="shopping_log" >
             <span id="text">PANIER</span>
