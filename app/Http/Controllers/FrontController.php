@@ -6,8 +6,8 @@ use App\Category;
 use App\Product;
 use App\Relais;
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
+use Cart;
 
 class FrontController extends Controller
 {
@@ -50,6 +50,8 @@ class FrontController extends Controller
     //付款确认页面
     public function checkout()
     {
-        return view('app.checkout');
+        $orders=Cart::all();
+        $total=Cart::totalPrice();
+        return view('app.checkout',compact('orders','total'));
     }
 }

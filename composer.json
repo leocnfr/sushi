@@ -10,8 +10,8 @@
         "alexpechkarev/google-maps": "1.0.5",
         "overtrue/laravel-shopping-cart": "1.0.*",
         "barryvdh/laravel-dompdf": "0.6.*",
-        "stripe/stripe-php": "3.*"
-
+        "stripe/stripe-php": "3.*",
+        "laravelcollective/html": "5.2.*"
 
     },
 

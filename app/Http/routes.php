@@ -161,5 +161,6 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/pdf','PdfController@create');
     Route::get('/news','FrontController@news');
     Route::get('/checkout','FrontController@checkout');
+    Route::post('/payment','OrderController@payment');
 });
 
