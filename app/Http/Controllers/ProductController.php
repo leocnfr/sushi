@@ -87,8 +87,8 @@ class ProductController extends Controller
         $product->content=$request->get('content');
         $product->count=$request->get('count');
         $product->cat_id=$request->get('cat_id');
-        $file=$request->file('productImage');
-        $request->file('productImage')->move(('storage/uploads'),$file->getClientOriginalName());
+        $file=$request->file('photo');
+        $request->file('photo')->move(('storage/uploads'),$file->getClientOriginalName());
         $product->productImage=$file->getClientOriginalName();
         $product->save();
         return redirect('/admin/products');

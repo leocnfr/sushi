@@ -18,8 +18,14 @@
             <div style="width: 70%;float:left;">
                 <section>
                     <h3>MES INFORMATIONS PERSONNELLES</h3>
+<<<<<<< HEAD
+                    <p>{{Auth::user()->prenom}} {{Auth::user()->nom}}</p>
+                    <p>{{Auth::user()->email}}</p>
+                    <button>MODIFIER</button>
+=======
                     <p>Prénom / Nom: <span style="margin-left: 20px;">{{Auth::user()->prenom}} {{Auth::user()->nom}}</span></p>
                     <p>E-mail: <span style="margin-left: 20px;">{{Auth::user()->email}}</span></p>
+>>>>>>> 2945e5449b2eaa367d10b9634bbf43511053f8b0
                 </section>
                 <section>
                     <form action="{{url('/saveInfo')}}" method="post">

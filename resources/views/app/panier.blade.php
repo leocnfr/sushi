@@ -401,62 +401,33 @@
                 </div>
                 <br>
                 <div id="show-livrison">
-                <div class="content">
-                    <input type="text" id="start_place" placeholder="entre votre place" style="display: block;width: 300px">
-                    <p>Distance: <span id="distance"></span></p>
-                    <div class="select" id="select-place">
-                        <p id="end_place" data-place="" >Selectionnez un point relais</p>
-                        <ul style="z-index: 1">
-                            @inject('points','App\Relais')
-                            <li data-value="Tout de boutique" data-place="all">Tout de boutique</li>
-                            @foreach($points::all() as $key=>$point)
-                                <li data-place="{{$point->address}}" data-index="{{$key+1}}" data-value="{{$point->name}}" data-id="{{$point->id}}">{{$point->name}}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                </div>
-                <div class="content" style="padding-top: 30px">
-                    <div class="select" style="width: 150px" id="select-date">
-                        <p style="width: 110px">DATE</p>
-                        <ul style="z-index: 1">
-                                <li data-value="Aujour'dui" >Aujour'dui</li>
-                                <li data-value="Autre">Autre</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="content" style="padding-top: 30px;display: none" id="today-time">
-                    <div class="select" style="width: 150px" id="select-time">
-                        <p style="width: 110px">Heure</p>
-                        <ul style="z-index: 1">
-                        </ul>
-                    </div>
-                </div>
-                <div class="content" style="padding-top: 25px;display: none" id="autre-date" >
-                    <div class="select" style="width: 150px" id="select-autre-date">
-                        <p style="width: 110px;font-size: 12px">Date souhaitee</p>
-                        <ul style="z-index: 1">
-                            <li data-value="{{date('d-m-Y',strtotime('+1 day'))}}">{{date('d-m-Y',strtotime('+1 day'))}}</li>
-                            <li data-value="{{date('d-m-Y',strtotime('+2 day'))}}">{{date('d-m-Y',strtotime('+2 day'))}}</li>
+                    <div class="content">
+                        <input type="text" id="start_place" placeholder="entre votre place" style="display: block;width: 300px">
+                        <p>Distance: <span id="distance"></span></p>
+                        <div class="select" id="select-place">
+                            <p id="end_place" data-place="" >Selectionnez un point relais</p>
+                            <ul style="z-index: 1">
+                                @inject('points','App\Relais')
+                                <li data-value="Tout de boutique" data-place="all">Tout de boutique</li>
+                                @foreach($points::all() as $key=>$point)
+                                    <li data-place="{{$point->address}}" data-index="{{$key+1}}" data-value="{{$point->name}}" data-id="{{$point->id}}">{{$point->name}}</li>
+                                @endforeach
+                            </ul>
+                        </div>
 
-                        </ul>
                     </div>
-                </div>
-                <div class="content" style="padding-top: 25px;display: none" id="autre-time">
-                    <div class="select" style="width: 150px" id="select-autre-time">
-                        <p style="width: 110px">Heure</p>
-                        <ul style="z-index: 1">
-                            <li data-value="10:30-11:00">10:30-11:00</li>
-                            <li data-value="11:30-12:00">11:30-12:00</li>
-                        </ul>
-                    </div>
-                </div>
                 </div>
                 <div id="show-emporter" style="display: none">
-                    <form action="{{url('/saveOrder')}}" method="post">
+                    <form action="{{url('/saveorderinfo')}}" method="post">
                         {{csrf_field()}}
+                        <input type="hidden" name="liv_tpye" value="emporter">
+                        <select name="" id="">
+                            <option value="">Address</option>
+                        </select>
+
                         <input type="text" id="start_place2" placeholder="entre votre place" style="display: block;width: 300px" name="address">
-                        <input type="text" id="lat">
-                        <input type="text" id="lng">
+                        <input type="hidden" id="lat">
+                        <input type="hidden" id="lng">
                         @inject('cart','Overtrue\LaravelShoppingCart\Cart')
                         @if (Auth::guest())
                             <a id="btn-submit" class="btn" style="position: relative;top: 30px;display: block" href="{{url('/connexion')}}">VALIDER</a>
@@ -465,6 +436,48 @@
                         @endif
                     </form>
                 </div>
+
+
+                <div class="content" style="padding-top: 30px">
+                        <div class="select" style="width: 150px" id="select-date">
+                            <p style="width: 110px">DATE</p>
+                            <ul style="z-index: 1">
+                                    <li data-value="Aujour'dui" >Aujour'dui</li>
+                                    <li data-value="Autre">Autre</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="content" style="padding-top: 30px;display: none" id="today-time">
+                        <div class="select" style="width: 150px" id="select-time">
+                            <p style="width: 110px">Heure</p>
+                            <ul style="z-index: 1">
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="content" style="padding-top: 25px;display: none" id="autre-date" >
+                        <div class="select" style="width: 150px" id="select-autre-date">
+                            <p style="width: 110px;font-size: 12px">Date souhaitee</p>
+                            <ul style="z-index: 1">
+                                <li data-value="{{date('d-m-Y',strtotime('+1 day'))}}">{{date('d-m-Y',strtotime('+1 day'))}}</li>
+                                <li data-value="{{date('d-m-Y',strtotime('+2 day'))}}">{{date('d-m-Y',strtotime('+2 day'))}}</li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="content" style="padding-top: 25px;display: none" id="autre-time">
+                        <div class="select" style="width: 150px" id="select-autre-time">
+                            <p style="width: 110px">Heure</p>
+                            <ul style="z-index: 1">
+                                <li data-value="10:30-11:00">10:30-11:00</li>
+                                <li data-value="11:30-12:00">11:30-12:00</li>
+                            </ul>
+                        </div>
+                    </div>
+                    @if (Auth::guest())
+                        <a id="btn-submit" class="btn" style="position: relative;top: 30px;display: block" href="{{url('/connexion')}}">VALIDER</a>
+                    @elseif(cart::total()>0)
+                        <button id="btn-submit" class="btn" style="position: relative;top: 30px;display: block" >VALIDER</button>
+                    @endif
                 {{--没登录--}}
 
                 <div id="map">
@@ -789,6 +802,7 @@
             $('#show-livrison').hide();
         });
         $('#livrison').click(function () {
+
             $('#show-livrison').show();
             $('#show-emporter').hide();
         });

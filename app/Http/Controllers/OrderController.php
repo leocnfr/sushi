@@ -7,12 +7,12 @@ use App\Product;
 use App\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
 use Cart;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Stripe\Charge;
+use Stripe\Customer;
 use Stripe\Error\Card;
 use Stripe\Stripe;
 
@@ -160,6 +160,12 @@ class OrderController extends Controller
         return redirect()->back();
     }
 
+    public function saveorderinf(Request $request)
+    {
+        $liv_type=$request->get('liv_tpye');
+        $address=$request->get('address');
+        return view('/checkout');
+    }
     public function getDistance($lat1,$lng1,$lat2,$lng2)
     {
         $earthRadius = 6367000;
@@ -207,25 +213,27 @@ class OrderController extends Controller
     public function payment(Request $request)
     {
 
-        $amount=Cart::totalPrice();
+        $amount=Cart::totalPrice()*100;
         $products=Cart::all();
+        $menus_id=[];
+        $menus_name=[];
         foreach ($products as $product)
         {
-            echo  $product->id;
+              array_push($menus_id,$product->id);
+              array_push($menus_name,$product->name);
         }
         $token = $request->input('stripeToken');
-        $emailCheck = Auth::user()->email;
 
         Stripe::setApiKey(env('STRIPE_SK'));
-        if (!isset($emailCheck)) {
+//        if (!isset($emailCheck)) {
             // Create a new Stripe customer
             try {
                 $customer = Customer::create([
                     'source' => $token,
                     'email' => Auth::user()->email,
                     'metadata' => [
-                        "First Name" => $first_name,
-                        "Last Name" => $last_name
+                        "First Name" => Auth::user()->nom,
+                        "Last Name" => Auth::user()->prenom
                     ]
                 ]);
             } catch (Card $e) {
@@ -236,16 +244,16 @@ class OrderController extends Controller
 
             $customerID = $customer->id;
             // Create a new user in the database with Stripe
-            $user = User::create([
-                'first_name' => $first_name,
-                'last_name' => $last_name,
-                'email' => $email,
-                'stripe_customer_id' => $customerID,
-            ]);
-        } else {
-            $customerID = User::where('email', $email)->value('stripe_customer_id');
-            $user = User::where('email', $email)->first();
-        }
+//            $user = User::create([
+//                'first_name' => Auth::user()->nom,
+//                'last_name' => Auth::user()->prenom,
+//                'email' => Auth::user()->email,
+//                'stripe_customer_id' => $customerID,
+//            ]);
+//        } else {
+//            $customerID = User::where('email', $email)->value('stripe_customer_id');
+//            $user = User::where('email', $email)->first();
+//        }
 
 
         try {
@@ -254,7 +262,7 @@ class OrderController extends Controller
                 'currency' => 'eur',
                 'customer' => $customerID,
                 'metadata' => [
-                    'product_name' =>'test'
+                    'product_name' =>implode(',',$menus_name)
                 ]
             ]);
         } catch (Card $e) {
@@ -262,6 +270,13 @@ class OrderController extends Controller
                 ->withErrors($e->getMessage())
                 ->withInput();
         }
+        //把购物车内容存进order数据库
+        Orders::create([
+            'user_id'=>Auth::user()->id,
+            'menus'=>implode(',',$menus_id),
+        ]);
+        return redirect()->back();
     }
-
+    
+    
 }
