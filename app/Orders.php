@@ -9,7 +9,7 @@ class Orders extends Model
 {
     //
     protected $table='orders';
-    protected $fillable=['user_id','content','price','address','zip_code'];
+    protected $fillable=['user_id','menus','price','address','zip_code'];
 
     public function showUser($userId)
     {
@@ -22,4 +22,5 @@ class Orders extends Model
         return count(Orders::all());
     }
 
+    
 }

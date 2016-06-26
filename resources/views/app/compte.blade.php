@@ -17,6 +17,7 @@
                     <h3>MES INFORMATIONS PERSONNELLES</h3>
                     <p>{{Auth::user()->prenom}} {{Auth::user()->nom}}</p>
                     <p>{{Auth::user()->email}}</p>
+                    <button>MODIFIER</button>
                 </section>
                 <section>
                     <form action="{{url('/saveInfo')}}" method="post">

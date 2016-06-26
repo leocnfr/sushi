@@ -160,6 +160,7 @@ Route::group(['middleware' => 'web'], function () {
     Route::post('/saveOrder','OrderController@saveOrder');
     Route::get('/pdf','PdfController@create');
     Route::get('/news','FrontController@news');
+    Route::post('/saveorderinfo','OrderController@saveorderinf');
     Route::get('/checkout','FrontController@checkout');
     Route::post('/payment','OrderController@payment');
 });
