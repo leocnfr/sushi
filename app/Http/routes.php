@@ -27,7 +27,7 @@ Route::group(['middleware' => 'web'], function () {
     /**
      * PRODUCT 产品路由
      */
-    Route::get('/admin/products{cateBy?}','ProductController@index');
+    Route::get('/admin/products{cateBy?}','ProductController@show');
     Route::get('/admin/products/create','ProductController@create');
     Route::get('/admin/products/{id}','ProductController@edit');
     Route::put('/admin/product/update/','ProductController@update');
@@ -65,7 +65,9 @@ Route::group(['middleware' => 'web'], function () {
     Route::post('/admin/news/edit/{id}','NewsController@storeUpdate');
 
 //后台用户列表
-    Route::get('/admin/users','UserController@showAll');
+    Route::get('/admin/users{query?}','UserController@showAll');
+    Route::delete('/admin/users','UserController@destroy');
+    Route::get('/admin/users/{id}','UserController@edit');
 //积分设置
     Route::get('/admin/points',['middleware'=>'auth:admin',function(){
         return view('point');
@@ -156,4 +158,9 @@ Route::group(['middleware' => 'web'], function () {
     });
     Route::post('/saveInfo','UserController@saveInfo');
     Route::post('/saveOrder','OrderController@saveOrder');
+    Route::get('/pdf','PdfController@create');
+    Route::get('/news','FrontController@news');
+    Route::get('/checkout','FrontController@checkout');
+    Route::post('/payment','OrderController@payment');
 });
+

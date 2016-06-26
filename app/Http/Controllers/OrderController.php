@@ -12,6 +12,9 @@ use App\Http\Requests;
 use Cart;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Stripe\Charge;
+use Stripe\Error\Card;
+use Stripe\Stripe;
 
 class OrderController extends Controller
 {
@@ -200,6 +203,65 @@ class OrderController extends Controller
         }
     }
 
+    //付款
+    public function payment(Request $request)
+    {
 
+        $amount=Cart::totalPrice();
+        $products=Cart::all();
+        foreach ($products as $product)
+        {
+            echo  $product->id;
+        }
+        $token = $request->input('stripeToken');
+        $emailCheck = Auth::user()->email;
+
+        Stripe::setApiKey(env('STRIPE_SK'));
+        if (!isset($emailCheck)) {
+            // Create a new Stripe customer
+            try {
+                $customer = Customer::create([
+                    'source' => $token,
+                    'email' => Auth::user()->email,
+                    'metadata' => [
+                        "First Name" => $first_name,
+                        "Last Name" => $last_name
+                    ]
+                ]);
+            } catch (Card $e) {
+                return redirect()->route('order')
+                    ->withErrors($e->getMessage())
+                    ->withInput();
+            }
+
+            $customerID = $customer->id;
+            // Create a new user in the database with Stripe
+            $user = User::create([
+                'first_name' => $first_name,
+                'last_name' => $last_name,
+                'email' => $email,
+                'stripe_customer_id' => $customerID,
+            ]);
+        } else {
+            $customerID = User::where('email', $email)->value('stripe_customer_id');
+            $user = User::where('email', $email)->first();
+        }
+
+
+        try {
+            $charge = Charge::create([
+                'amount' => $amount,
+                'currency' => 'eur',
+                'customer' => $customerID,
+                'metadata' => [
+                    'product_name' =>'test'
+                ]
+            ]);
+        } catch (Card $e) {
+            return redirect()->route('order')
+                ->withErrors($e->getMessage())
+                ->withInput();
+        }
+    }
 
 }

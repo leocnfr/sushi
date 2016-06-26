@@ -6,8 +6,8 @@ use App\Category;
 use App\Product;
 use App\Relais;
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
+use Cart;
 
 class FrontController extends Controller
 {
@@ -23,11 +23,12 @@ class FrontController extends Controller
         $products=Product::groupBy('cat_id')->orderBy('cat_id','desc')->get();
         if($menu==null)
         {
-            $products=Product::where('cat_id','!=',6)->orderBy('cat_id','desc')->paginate(9);
+            $products=Product::where('cat_id','!=',6)->orderBy('cat_id','desc')->paginate(12);
             return view('app.menus',compact('products','cates'));
         }else{
             $menu=str_replace('-',' ',$menu);
             $cate=Category::where('cat_name',$menu)->first();
+            $products=Product::where('cat_id',$cate->id)->paginate(12);
             return view('app.menus',compact('products','cate','cates'));
         }
 
@@ -38,5 +39,19 @@ class FrontController extends Controller
     public function toJson()
     {
         return Relais::all();
+    }
+    
+    //新闻页面显示
+    public function news()
+    {
+        return view('app.news');
+    }
+    
+    //付款确认页面
+    public function checkout()
+    {
+        $orders=Cart::all();
+        $total=Cart::totalPrice();
+        return view('app.checkout',compact('orders','total'));
     }
 }

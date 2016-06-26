@@ -79,9 +79,8 @@ class AuthController extends Controller
                 'nom'=>'required',
                 'prenom'=>'required',
                 'sex'=>'required',
-                'email'=>'required|unique:users',
+                'email'=>'required|unique:users|email',
                 'password'=>'required|min:6|confirmed',
-//                'password_confirmation'=>'confirm'
 
             ]);
         User::create([
@@ -98,6 +97,7 @@ class AuthController extends Controller
 
     public function postLogin(Request $request)
     {
+
         if(Auth::guard('web')->attempt(['email' => $request->get('email'), 'password' => $request->get('password')])){
             return redirect('/panier');
         }else{

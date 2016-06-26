@@ -20,7 +20,7 @@
         select::-ms-expand { display: none; }
         #content
         {
-            width: 1010px;
+            width: 80vw;
             margin: 0px auto;
             color: #BAAA76;
             top:34px;
@@ -340,7 +340,7 @@
         }
 
     </style>
-    <div class="container-fluid" style="background: black;min-height: 500px;">
+    <div class="container-fluid" style="background: #111111;min-height: 500px;">
         <div id="content">
             <img  id="shop-img" src="/images/shopping-01.png" alt="shopping_log" >
             <span id="text">PANIER</span>
