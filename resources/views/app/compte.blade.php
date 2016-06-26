@@ -3,8 +3,11 @@
     <style>
         .label{
             color: #BAAA76;
-            font-size: 20px;
+            font-size: 14px;
+            width: 100px;
+        height: 40px !important;
         }
+
     </style>
     <div class="container-fluid" style="min-height: 600px;background: black;color: #BAAA76">
         <div id="content" style="width: 1000px;margin: 0px auto">
@@ -15,60 +18,67 @@
             <div style="width: 70%;float:left;">
                 <section>
                     <h3>MES INFORMATIONS PERSONNELLES</h3>
-                    <p>{{Auth::user()->prenom}} {{Auth::user()->nom}}</p>
-                    <p>{{Auth::user()->email}}</p>
+                    <p>Prénom / Nom: <span style="margin-left: 20px;">{{Auth::user()->prenom}} {{Auth::user()->nom}}</span></p>
+                    <p>E-mail: <span style="margin-left: 20px;">{{Auth::user()->email}}</span></p>
                 </section>
                 <section>
                     <form action="{{url('/saveInfo')}}" method="post">
                         {{csrf_field()}}
-                    <h3>MES ADDRESS</h3>
-                        <div class="form-group">
-                            <label for="">Nom de societe</label>
-                            <input type="text" name="societe" value="{{Auth::user()->societe}}">
+                    <div style="width: 500px; border-top:thin solid #baaa76; "><h3>Mon Adresse</h3></div>
+                        <div class="form-group" style="width: 467px;">
+                            <label for="">Nom de société</label>
+                            <input class="pull-right" type="text" name="societe" value="{{Auth::user()->societe}}">
                         </div>
-                        <div class="form-group">
-                            <label for="">Telephone</label>
-                            <input type="text" name="tel" required value="{{Auth::user()->tel}}">
+                        <div class="form-group" style="width: 467px;">
+                            <label for="">Téléphone</label>
+                            <input class="pull-right" type="text" name="tel" required value="{{Auth::user()->tel}}">
                         </div>
-                        
-                    <input id="autocomplete" placeholder="Enter your address" onFocus="geolocate()" type="text" style="width: 300px" name="address" required value="{{Auth::user()->address}}">
-                    <table id="address" >
+                        <div class="form-group" style="width: 467px;">
+                            <label for="">Adresse</label>
+                            <input id="autocomplete" class="pull-right" placeholder="Enter your address" onFocus="geolocate()" type="text" style="width: 300px" name="address" required value="{{Auth::user()->address}}">
+                        </div>
+
+                    <div style="padding: 15px; background-color: #292929; width: 500px; border-radius: 8px;">
+                        <table id="address" style="width: 450px; height:200px;">
                         <tr>
-                            <td class="label">Street address</td>
+                            <td class="label">Adresse</td>
                             <td class="slimField">
-                                <input class="field" id="street_number" disabled="true">
+                                <input class="pull-right" class="field" id="street_number" disabled="true" style="width: 30px">
                             </td>
-                            <td class="wideField" colspan="2">
-                                <input class="field" id="route" disabled="true">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="label">City</td>
+
                             <td class="wideField" colspan="3">
-                                <input class="field" id="locality" disabled="true">
+                                 <input class="field pull-right" id="route" disabled="true" >
                             </td>
                         </tr>
                         <tr>
-                            <td class="label">State</td>
-                            <td class="slimField"><input class="field" id="administrative_area_level_1" disabled="true">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="label">Country</td>
+                            <td class="label">Ville</td>
                             <td class="wideField" colspan="3">
-                                <input class="field" id="country" disabled="true"></input>
+                                <input class="pull-right" class="field" id="locality" disabled="true">
                             </td>
                         </tr>
                         <tr>
-                            <td class="label">Zip code</td>
-                            <td class="wideField">
-                                <input class="field" id="postal_code" disabled="true" name="post"></input>
+                            <td  class="label">Province</td>
+                            <td class="slimField" colspan="3">
+                                <input  class="pull-right" class="field" id="administrative_area_level_1" disabled="true">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label">Pays</td>
+                            <td class="wideField" colspan="3">
+                                <input class="field pull-right"  class="pull-right id="country" disabled="true"></input>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label">Code postal</td>
+                            <td class="wideField" colspan="3">
+                                <input class="field pull-right"  id="postal_code" disabled="true" name="post"></input>
                             </td>
                         </tr>
                     </table>
-                        <div class="form-group">
+                    </div>
+                        <div class="form-group" style="width: 467px;">
                             <label for="">Intitulé de l'adresse *</label>
-                            <input type="text" name="lib_address" required value="{{Auth::user()->lib_address}}">
+                            <input type="text" name="lib_address" class="pull-right" required value="{{Auth::user()->lib_address}}">
                         </div>
                         <button type="submit">ENREGISTRER</button>
 
