@@ -1,6 +1,6 @@
 <style>
     table{
-        width: 920px;
+        width: 500px;
         margin-top: 20px;
         font-size: 13px;
     }
@@ -21,7 +21,7 @@
             {{--</div>--}}
             <div class="modal-body" style="width: 920px;background: rgba(37,37,36,0.6);">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <table>
+                <table style="width: 920px !important;">
                     <tr>
                         <td><img id="modal-img" src="{{URL::asset('/storage/uploads/menu1.png')}}" style="width: 353px;height: 275px;display: block;margin: 0px auto"></td>
                         <td width="560" style="color: #BAAA76;text-align: center;border-left: 1px solid #BAAA76;min-height: 244px; padding: 10px;">

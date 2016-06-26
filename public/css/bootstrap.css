@@ -1088,6 +1088,26 @@ body {
   color: #333;
   background-color: #fff;
 }
+@media (min-width: 992px) {
+    body {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #333;
+        background-color: #fff;
+        min-height: 1000px;
+    }
+}
+@media (min-width: 768px) {
+    body {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #333;
+        background-color: #fff;
+        min-height: 1000px;
+    }
+}
 input,
 button,
 select,
