@@ -22,14 +22,14 @@ class OrderController extends Controller
     {
         $this->middleware('web');
     }
-
+    //显示今天的订单
     public function index()
     {
 
         $orders=Orders::where('created_at',date('Y-m-d'));
         return view('orders',compact('orders'));
     }
-
+    //显示所有的订单
     public function all()
     {
         $orders=Orders::all();
@@ -42,7 +42,6 @@ class OrderController extends Controller
         $riz=$request->get('riz');
         $product=Product::findOrFail($productId);
         $boisson=Product::findOrFail($boissonId);
-
         $price=$product->price;
         return Cart::add($productId,$product->name,1,$price,['boisson'=>$boisson->name,'piece'=>$product->count,'riz'=>$riz]);
     }
@@ -81,6 +80,10 @@ class OrderController extends Controller
         if($request->get('type')=='add'){
             $rawid=$request->get('rawid');
             $count=$request->get('count')+1;
+            if ($count>1&&$count<=5)
+            {
+                $price=Cart::get($rawid)->price;
+            }
             Cart::update($rawid,$count);
         }else{
             $rawid=$request->get('rawid');

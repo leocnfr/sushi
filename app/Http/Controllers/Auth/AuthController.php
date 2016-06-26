@@ -102,7 +102,7 @@ class AuthController extends Controller
             return redirect('/panier');
         }else{
             return redirect()->back()->withInput();
-        };
+        }
 
     }
 }
