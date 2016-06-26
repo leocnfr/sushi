@@ -95,6 +95,7 @@
         }
         .form-group{
             display: block;
+            font-size: 14px;
         }
         input{
             width: 20vw;
@@ -126,7 +127,7 @@
                      </span>
                         @endif
                         <label for="">Nom*</label>
-                        <input type="text" name="nom" required class="pull-right">
+                        <input type="text" name="nom" required >
                     </div>
                     <div class="form-group">
                         @if ($errors->has('prenom'))
@@ -135,7 +136,7 @@
                      </span>
                         @endif
                         <label for="">Prenom*</label>
-                        <input type="text" name="prenom" required class="pull-right">
+                        <input type="text" name="prenom" required >
                     </div>
                     <div class="form-group">
                         @if ($errors->has('email'))
@@ -144,7 +145,7 @@
                      </span>
                         @endif
                         <label for="">Email*</label>
-                        <input type="email" name="email" required class="pull-right">
+                        <input type="email" name="email" required >
                     </div>
                     <div class="form-group">
                         <label for="">Password*</label>
@@ -153,7 +154,7 @@
                             <strong>{{ $errors->first('password') }}</strong>
                         </span>
                         @endif
-                        <input type="password" name="password" required class="pull-right">
+                        <input type="password" name="password" required >
                     </div>
                     <div class="form-group">
                         <label for="">Confirm passe*</label>
@@ -162,10 +163,10 @@
                          <strong>{{ $errors->first('password_confirmation') }}</strong>
                      </span>
                         @endif
-                        <input type="password" name="password_confirmation" class="pull-right">
+                        <input type="password" name="password_confirmation" >
 
                     </div>
-                    <button formaction="{{url('/register')}}" formmethod="post" class="conn-btn btn pull-right">Connexion</button>
+                    <button formaction="{{url('/register')}}" formmethod="post" class="conn-btn btn">Connexion</button>
                     {!! csrf_field() !!}
                 </form>
 
@@ -175,15 +176,15 @@
                 <form action="{{url('/login')}}" method="post">
                     <div class="form-group">
                         <label for="">Identifant</label>
-                        <input type="email" name="email" class="pull-right">
+                        <input type="email" name="email">
                     </div>
                    <div class="form-group">
                        <label for="">Mot de passe</label>
-                       <input type="password" name="password" class="pull-right">
+                       <input type="password" name="password" >
                    </div>
 
                     {!! csrf_field() !!}
-                    <button formaction="{{url('/login')}}" formmethod="post" class="btn conn-btn pull-right">Connexion</button>
+                    <button formaction="{{url('/login')}}" formmethod="post" class="btn conn-btn">Connexion</button>
                 </form>
             </div>
         </div>
