@@ -66,7 +66,7 @@
         {
             background:rgba(37,37,36,0.6);
             position: relative;
-            height: 335px;
+            height: 376px;
             padding: 20px 34px;
             margin-bottom: 82px;
 
@@ -77,8 +77,8 @@
             top:20px;
         }
         #map {
-            height: 265px;
-            width: 345px;
+            height: 300px;
+            width: 600px;
             margin: 0 auto;
             top: 20px;
             position: absolute;
@@ -129,7 +129,7 @@
         }
         /*下拉菜单*/
         .content{
-            padding-top: 5%;
+            padding-top: 10px;
         }
         .content .select{
             width: 300px;
@@ -377,15 +377,15 @@
                             <span id="product-total-count"></span>
                         </div>
                         <div class="row" style="margin: 0px;">
-                            <p style="opacity:0.6;display: inline-block;float:left;width: 742.5px">Nombre de pieces</p>
+                            <p style="opacity:0.6;display: inline-block;float:left;width: 742.5px">Nombre de pièces</p>
                             <span id="product-total-piece" style="float:left;display: inline-block;"></span>
                         </div>
                     </li>
                     <li class="list-group-item" style="font-size: 14px">
 
                         <div class="row" style="margin: 0px">
-                            <p style="opacity:0.6;width: 742.5px;display: inline-block;float:left;">Total</p>
-                            <span id="total_price">0€</span>
+                            <p style="opacity:0.6;width: 742.5px;display: inline-block;float:left; font-size: 20px;">Total</p>
+                            <span id="total_price" style="font-size: 20px;">0€</span>
                         </div>
                     </li>
                 </ul>
@@ -394,15 +394,16 @@
             <div id="livraison-info" >
                 <div class="radio ">
                     <input type="radio" name="radio-1" id="emporter"  />
-                    <label for="emporter"></label> <span style="float:left;"> LIVRISON</span>
+                    <label for="emporter"></label> <span style="float:left;"> LIVRAISON</span>
 
                     <input type="radio" name="radio-1" id="livrison" checked="checked"/>
-                    <label for="livrison" style="margin-left: 10px"></label> <span style="float:left;">A EMPORTEM</span>
+                    <label for="livrison" style="margin-left: 10px"></label> <span style="float:left;">A EMPORTER</span>
                 </div>
                 <br>
                 <div id="show-livrison">
                     <div class="content">
-                        <input type="text" id="start_place" placeholder="entre votre place" style="display: block;width: 300px">
+                        <p>Votre adresse: </p>
+                        <input type="text" id="start_place" placeholder="saisir votre adresse" style="display: block;width: 300px">
                         <p>Distance: <span id="distance"></span></p>
                         <div class="select" id="select-place">
                             <p id="end_place" data-place="" >Selectionnez un point relais</p>
@@ -425,7 +426,7 @@
                             <option value="">Address</option>
                         </select>
 
-                        <input type="text" id="start_place2" placeholder="entre votre place" style="display: block;width: 300px" name="address">
+                        <input type="text" id="start_place2" placeholder="saisir votre adresse" style="display: block;width: 300px" name="address">
                         <input type="hidden" id="lat">
                         <input type="hidden" id="lng">
                         @inject('cart','Overtrue\LaravelShoppingCart\Cart')
@@ -442,7 +443,7 @@
                         <div class="select" style="width: 150px" id="select-date">
                             <p style="width: 110px">DATE</p>
                             <ul style="z-index: 1">
-                                    <li data-value="Aujour'dui" >Aujour'dui</li>
+                                    <li data-value="Aujour'dui" >Aujourd'hui</li>
                                     <li data-value="Autre">Autre</li>
                             </ul>
                         </div>
@@ -456,7 +457,7 @@
                     </div>
                     <div class="content" style="padding-top: 25px;display: none" id="autre-date" >
                         <div class="select" style="width: 150px" id="select-autre-date">
-                            <p style="width: 110px;font-size: 12px">Date souhaitee</p>
+                            <p style="width: 110px;font-size: 12px">Date souhaitée</p>
                             <ul style="z-index: 1">
                                 <li data-value="{{date('d-m-Y',strtotime('+1 day'))}}">{{date('d-m-Y',strtotime('+1 day'))}}</li>
                                 <li data-value="{{date('d-m-Y',strtotime('+2 day'))}}">{{date('d-m-Y',strtotime('+2 day'))}}</li>
