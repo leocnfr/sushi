@@ -60,7 +60,7 @@
             background: none;
             border: none;
             border-bottom: 2px solid #BAAA76;
-            height: 100px;
+            height: 140px;
         }
         #livraison-info
         {

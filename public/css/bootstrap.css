@@ -5846,14 +5846,16 @@ button.list-group-item-danger.active:focus {
   border-radius: 3px;
 }
 .close {
-  float: right;
+    position: absolute;
+    top: 15px;
+    right: 15px;
   font-size: 21px;
   font-weight: bold;
   line-height: 1;
-  color: #000;
+  color: #e3e3e3;
   text-shadow: 0 1px 0 #fff;
   filter: alpha(opacity=20);
-  opacity: .2;
+  opacity: .8;
 }
 .close:hover,
 .close:focus {

@@ -167,7 +167,8 @@ class OrderController extends Controller
     {
         $liv_type=$request->get('liv_tpye');
         $address=$request->get('address');
-        return view('/checkout');
+
+        return redirect()->action('FrontController@checkout');
     }
     public function getDistance($lat1,$lng1,$lat2,$lng2)
     {

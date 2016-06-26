@@ -1,6 +1,6 @@
 <style>
     table{
-        width: 500px;
+        width: 920px;
         margin-top: 20px;
         font-size: 13px;
     }
@@ -14,25 +14,25 @@
 </style>
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
     <div class="modal-dialog" role="document" style="width: 920px;margin-top: 130px">
+
         <div class="modal-content" style="background: black">
             {{--<div class="modal-header">--}}
                 {{--<h4 class="modal-title" id="exampleModalLabel">New message</h4>--}}
             {{--</div>--}}
             <div class="modal-body" style="width: 920px;background: rgba(37,37,36,0.6);">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <table>
+                    <tr>
+                        <td><img id="modal-img" src="{{URL::asset('/storage/uploads/menu1.png')}}" style="width: 353px;height: 275px;display: block;margin: 0px auto"></td>
+                        <td width="560" style="color: #BAAA76;text-align: center;border-left: 1px solid #BAAA76;min-height: 244px; padding: 10px;">
+                            <p style="font-size: 40px;font-weight: bold" id="name">MENU LUNCH A</p>
+                            <span style="font-size: 35px;margin-right: 60px" id="count" >12pièce </span>
+                            <span style="font-size: 35px" id="price">15.90€</span>
+                            <div id="intro">
+                            </div></td>
+                    </tr>
+                </table>
 
-                <div class="row">
-                    <div class="col-md-5" >
-                        <img id="modal-img" src="{{URL::asset('/storage/uploads/menu1.png')}}" style="width: 353px;height: 275px;display: block;margin: 0px auto">
-                    </div>
-                    <div class="col-md-7" style="color: #BAAA76;text-align: center;border-left: 1px solid #BAAA76;min-height: 244px">
-                        <p style="font-size: 40px;font-weight: bold" id="name">MENU LUNCH A</p>
-                        <span style="font-size: 35px;margin-right: 60px" id="count" >12pièce </span>
-                        <span style="font-size: 35px" id="price">15.90€</span>
-                        <div id="intro">
-                        </div>
-                    </div>
-                </div>
             </div>
 
         </div>

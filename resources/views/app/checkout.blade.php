@@ -62,7 +62,7 @@
     <div id="main">
         <p>VALIDATION ET PAIEMENT</p>
         <div id="checkout">
-            <p>RECAPITULATIF DE VOTRE COMMANDE ET PAIEMENT</p>
+            <p style="font-size: 14px;">RECAPITULATIF DE VOTRE COMMANDE ET PAIEMENT</p>
             <div id="menu-info">
                 <ol>
                     @foreach($orders as $order)
